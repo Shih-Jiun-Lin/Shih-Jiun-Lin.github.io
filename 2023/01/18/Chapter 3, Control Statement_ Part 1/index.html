@@ -546,31 +546,55 @@ Statement: Part 1</h1>
 <ul>
 <li>The sequence structure</li>
 <li>The selection strcture</li>
-<li>The repetition structure ## Selection Statements</li>
+<li>The repetition structure</li>
+</ul>
+<h2 id="selection-statements">Selection Statements</h2>
+<ul>
 <li>To choose among courses of action.</li>
 <li>if: A single-selection statement</li>
 <li>if...else: A double-selection statement</li>
-<li>switch: A multiselection statement ### Conditional
-Operators(?:)</li>
-<li>Closely related to the if..else function.</li>
-<li>Ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> x{<span class="number">0</span>}, y{<span class="number">1</span>};</span><br><span class="line">    result=x&lt;y?<span class="string">"x&lt;y"</span>:<span class="string">"x&gt;y"</span>;</span><br><span class="line">    std::cout&lt;&lt;result;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> Accodring to the code, it will cout x<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.09ex;" xmlns="http://www.w3.org/2000/svg" width="1.76ex" height="1.312ex" role="img" focusable="false" viewBox="0 -540 778 580"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="3C" d="M694 -11T694 -19T688 -33T678 -40Q671 -40 524 29T234 166L90 235Q83 240 83 250Q83 261 91 266Q664 540 678 540Q681 540 687 534T694 519T687 505Q686 504 417 376L151 250L417 124Q686 -4 687 -5Q694 -11 694 -19Z"></path></g></g></g></svg></mjx-container></span>y in the command prompt.</li>
-<li>Another way to declare integers: int x{0} equals to int x=0 ##
-Repetition Statements(Looping Statements)</li>
+<li>switch: A multiselection statement</li>
+</ul>
+<h3 id="conditional-operators">Conditional Operators(?:)</h3>
+<ul>
+<li><p>Closely related to the if..else function. Ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> x{<span class="number">0</span>}, y{<span class="number">1</span>};</span><br><span class="line">    result=x&lt;y?<span class="string">"x&lt;y"</span>:<span class="string">"x&gt;y"</span>;</span><br><span class="line">    std::cout&lt;&lt;result;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+Accodring to the code, it will cout x<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.09ex;" xmlns="http://www.w3.org/2000/svg" width="1.76ex" height="1.312ex" role="img" focusable="false" viewBox="0 -540 778 580"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="3C" d="M694 -11T694 -19T688 -33T678 -40Q671 -40 524 29T234 166L90 235Q83 240 83 250Q83 261 91 266Q664 540 678 540Q681 540 687 534T694 519T687 505Q686 504 417 376L151 250L417 124Q686 -4 687 -5Q694 -11 694 -19Z"></path></g></g></g></svg></mjx-container></span>y in the command prompt.</p></li>
+<li><p>Another way to declare integers: int x{0} equals to int
+x=0</p></li>
+</ul>
+<h2 id="repetition-statementslooping-statements">Repetition
+Statements(Looping Statements)</h2>
+<ul>
 <li>while: do the action zero or more times.</li>
 <li>do...while: do the action at least once.</li>
-<li>for: do the action zero or more times. ### Counter Controlled
-Repetition</li>
+<li>for: do the action zero or more times.</li>
+</ul>
+<h3 id="counter-controlled-repetition">Counter Controlled
+Repetition</h3>
+<ul>
 <li>Counter variables are normally initialized to zero or one, depending
 on their use.</li>
 <li>Remember to initialize the counter varible, or it might contain some
-garbage variable. ## How to change the tpye of a object <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="built_in">static_cast</span>&lt;type&gt;(object);</span><br><span class="line">    (type)object;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> ##
-setprecision() <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#inlcude <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    std::cout&lt;&lt;std::<span class="built_in">setprecision</span>(<span class="number">2</span>)&lt;&lt;floatnum; <span class="comment">//start from the first num after fixed point</span></span><br><span class="line">    std::cout&lt;&lt;fixed::std::<span class="built_in">setprecision</span>(<span class="number">2</span>)&lt;&lt;floatnum; <span class="comment">//start from the first num before fixed point</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> ## Common Keywords in C++ and C <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/qm5wD9b.png"> ## Assignment Operators <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/JHI93gS.png"> ## Preincrement and
-Postincrement</li>
+garbage variable.</li>
+</ul>
+<h2 id="how-to-change-the-tpye-of-a-object">How to change the tpye of a
+object</h2>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="built_in">static_cast</span>&lt;type&gt;(object);</span><br><span class="line">    (type)object;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<h2 id="setprecision">setprecision()</h2>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#inlcude <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    std::cout&lt;&lt;std::<span class="built_in">setprecision</span>(<span class="number">2</span>)&lt;&lt;floatnum; <span class="comment">//start from the first num after fixed point</span></span><br><span class="line">    std::cout&lt;&lt;fixed::std::<span class="built_in">setprecision</span>(<span class="number">2</span>)&lt;&lt;floatnum; <span class="comment">//start from the first num before fixed point</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<h2 id="common-keywords-in-c-and-c">Common Keywords in C++ and C</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/qm5wD9b.png"></p>
+<h2 id="assignment-operators">Assignment Operators</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/JHI93gS.png"></p>
+<h2 id="preincrement-and-postincrement">Preincrement and
+Postincrement</h2>
+<ul>
 <li>Preincrement =&gt; Increment a by 1, then use the new value of a in
 the expression in which a resides.</li>
 <li>Postincrement =&gt; Use the current value of a in the expression in
-which a resides, then increment a by 1. Ex:</li>
+which a resides, then increment a by 1.</li>
 </ul>
+<p>Ex:</p>
 <pre class="c++="><code>#include &lt;iostream&gt;
 int main(){
     int a=1;
@@ -661,7 +685,11 @@ int main(){
     <div class="post-toc">
         <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>Contents</strong></div>
         <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#chapter-3-control-statement-part-1"><span class="nav-text">Chapter 3, Control
-Statement: Part 1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#control-structure"><span class="nav-text">Control Structure</span></a></li></ol></li></ol>
+Statement: Part 1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#control-structure"><span class="nav-text">Control Structure</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#selection-statements"><span class="nav-text">Selection Statements</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#conditional-operators"><span class="nav-text">Conditional Operators(?:)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#repetition-statementslooping-statements"><span class="nav-text">Repetition
+Statements(Looping Statements)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#counter-controlled-repetition"><span class="nav-text">Counter Controlled
+Repetition</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#how-to-change-the-tpye-of-a-object"><span class="nav-text">How to change the tpye of a
+object</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#setprecision"><span class="nav-text">setprecision()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#common-keywords-in-c-and-c"><span class="nav-text">Common Keywords in C++ and C</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#assignment-operators"><span class="nav-text">Assignment Operators</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#preincrement-and-postincrement"><span class="nav-text">Preincrement and
+Postincrement</span></a></li></ol></li></ol>
     </div>
 </div>
             </div>

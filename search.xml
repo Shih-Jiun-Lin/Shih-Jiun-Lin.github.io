@@ -186,8 +186,7 @@ only)</li>
 <li>One -&gt; set 0</li>
 <li>The other -&gt; set 1</li>
 <li>It will preserve 0/1 if there is no inputs</li>
-<li><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/CM0A35v.png"><br>
-</li>
+<li><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/CM0A35v.png"></li>
 </ol>
 <ul>
 <li>Simple SR Flip-Flop Circuit <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/UxaHn8a.png"></li>
@@ -195,7 +194,7 @@ only)</li>
 </ul>
 <h2 id="hexadecimalhex十六進位">Hexadecimal(Hex，十六進位)</h2>
 <ol type="1">
-<li>Reason of using Hex -&gt;
+<li>Reason of using Hex
 <ul>
 <li>Binary is too long for human to remember</li>
 <li>Binary to Hex is straightforward</li>
@@ -217,7 +216,7 @@ only)</li>
 <h2 id="memory-techniques">Memory techniques</h2>
 <ol type="1">
 <li>Random access memory (Ram): Memory in which individual cells can be
-easily accessed in any order
+easily randomly accessed.
 <ul>
 <li>Type: Static Memory(SRAM), Dynamic Memory(DRAM), Synchronous
 DRAM(SDRAM)</li>
@@ -231,6 +230,8 @@ DRAM(SDRAM)</li>
 bytes <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0.081ex;" xmlns="http://www.w3.org/2000/svg" width="1.76ex" height="0.968ex" role="img" focusable="false" viewBox="0 -464 778 428"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2243" d="M55 283Q55 356 103 409T217 463Q262 463 297 447T395 382Q431 355 446 344T493 320T554 307H558Q613 307 652 344T694 433Q694 464 708 464T722 432Q722 356 673 304T564 251H554Q510 251 465 275T387 329T310 382T223 407H219Q164 407 122 367Q91 333 85 295T76 253T69 250Q55 250 55 283ZM56 56Q56 71 72 76H706Q722 70 722 56Q722 44 707 36H70Q56 43 56 56Z"></path></g></g></g></svg></mjx-container></span> <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.05ex;" xmlns="http://www.w3.org/2000/svg" width="3.25ex" height="2.005ex" role="img" focusable="false" viewBox="0 -864 1436.6 886"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"></path></g><g data-mml-node="TeXAtom" transform="translate(1033,393.1) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mn"><path data-c="36" d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z"></path></g></g></g></g></g></svg></mjx-container></span> bytes</li>
 <li>Gigabyte: <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.919ex" height="1.887ex" role="img" focusable="false" viewBox="0 -833.9 1290.1 833.9"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="TeXAtom" transform="translate(533,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mn"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"></path></g></g></g></g></g></svg></mjx-container></span> = 1073741824
 bytes <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0.081ex;" xmlns="http://www.w3.org/2000/svg" width="1.76ex" height="0.968ex" role="img" focusable="false" viewBox="0 -464 778 428"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2243" d="M55 283Q55 356 103 409T217 463Q262 463 297 447T395 382Q431 355 446 344T493 320T554 307H558Q613 307 652 344T694 433Q694 464 708 464T722 432Q722 356 673 304T564 251H554Q510 251 465 275T387 329T310 382T223 407H219Q164 407 122 367Q91 333 85 295T76 253T69 250Q55 250 55 283ZM56 56Q56 71 72 76H706Q722 70 722 56Q722 44 707 36H70Q56 43 56 56Z"></path></g></g></g></svg></mjx-container></span> <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.05ex;" xmlns="http://www.w3.org/2000/svg" width="3.25ex" height="2.005ex" role="img" focusable="false" viewBox="0 -864 1436.6 886"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"></path></g><g data-mml-node="TeXAtom" transform="translate(1033,393.1) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mn"><path data-c="39" d="M352 287Q304 211 232 211Q154 211 104 270T44 396Q42 412 42 436V444Q42 537 111 606Q171 666 243 666Q245 666 249 666T257 665H261Q273 665 286 663T323 651T370 619T413 560Q456 472 456 334Q456 194 396 97Q361 41 312 10T208 -22Q147 -22 108 7T68 93T121 149Q143 149 158 135T173 96Q173 78 164 65T148 49T135 44L131 43Q131 41 138 37T164 27T206 22H212Q272 22 313 86Q352 142 352 280V287ZM244 248Q292 248 321 297T351 430Q351 508 343 542Q341 552 337 562T323 588T293 615T246 625Q208 625 181 598Q160 576 154 546T147 441Q147 358 152 329T172 282Q197 248 244 248Z"></path></g></g></g></g></g></svg></mjx-container></span> bytes</li>
+<li>Gigabyte: <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.919ex" height="1.904ex" role="img" focusable="false" viewBox="0 -841.7 1290.1 841.7"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="TeXAtom" transform="translate(533,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mn"><path data-c="34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"></path></g></g></g></g></g></svg></mjx-container></span> = 1073741824
+bytes <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0.081ex;" xmlns="http://www.w3.org/2000/svg" width="1.76ex" height="0.968ex" role="img" focusable="false" viewBox="0 -464 778 428"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2243" d="M55 283Q55 356 103 409T217 463Q262 463 297 447T395 382Q431 355 446 344T493 320T554 307H558Q613 307 652 344T694 433Q694 464 708 464T722 432Q722 356 673 304T564 251H554Q510 251 465 275T387 329T310 382T223 407H219Q164 407 122 367Q91 333 85 295T76 253T69 250Q55 250 55 283ZM56 56Q56 71 72 76H706Q722 70 722 56Q722 44 707 36H70Q56 43 56 56Z"></path></g></g></g></svg></mjx-container></span> <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.05ex;" xmlns="http://www.w3.org/2000/svg" width="4.05ex" height="2.005ex" role="img" focusable="false" viewBox="0 -864 1790.1 886"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"></path></g><g data-mml-node="TeXAtom" transform="translate(1033,393.1) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" transform="translate(500,0)"></path></g></g></g></g></g></svg></mjx-container></span> bytes</li>
 </ul></li>
 </ol>
 <h2 id="mass-storage">Mass Storage</h2>
@@ -674,46 +675,6 @@ the priority of each request.</li>
       </tags>
   </entry>
   <entry>
-    <title>Introduction to C++ Programing</title>
-    <url>/2023/01/18/Chapter%202,%20Introduction%20to%20C++%20Programing/</url>
-    <content><![CDATA[<h1 id="chapter-2-introduction-to-c-programing">Chapter 2, Introduction
-to C++ Programing</h1>
-<h2 id="the-sturcture-of-basic-c-program">The Sturcture of Basic C++
-Program</h2>
-<ul>
-<li>The lines start with # are processed by the preprocessor.</li>
-<li>&lt;iostream&gt; is the input/output stream header file.</li>
-<li>The int main() means that the main program will return an integar
-value.</li>
-<li>std::cout specifies that we are using namspace std. ## The Use of
-Escape Sequence <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/G8kcne8.png"> ## The
-Declaration of Variables</li>
-<li>void -&gt; Function does not return a value.</li>
-<li>int -&gt; Declare integar variables.</li>
-<li>char -&gt; Declare character variables.
-<ul>
-<li>char can also be stored as integer.</li>
-</ul></li>
-<li>float -&gt; Declare floating-point variables.</li>
-<li>double -&gt; Declare double-precision variables.</li>
-<li>bool -&gt; To hold a boolean value, true/false. ## Arithmetic
-Operators <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/IhflKJP.png"></li>
-<li>The rules of operator precedence as generally same as those in
-algebra.</li>
-<li>Exponentiation -&gt; Import &lt;math.h&gt; ## Equality and
-Relational Operators <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rmHds4R.png"></li>
-</ul>
-]]></content>
-      <categories>
-        <category>大學課堂筆記-程式設計</category>
-        <category>C++</category>
-        <category>彰師大</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Chaper 7 Pointers</title>
     <url>/2023/01/18/Chaper%207%20Pointers/</url>
     <content><![CDATA[<h1 id="chaper-7-pointers">Chaper 7 Pointers</h1>
@@ -806,6 +767,94 @@ c-string.</li>
 <p>Reference(How it works):https://www.geeksforgeeks.org/selection-sort/
 * Easy to program but inefficient. Ex:</p>
 <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">swap_double</span><span class="params">(<span class="type">int</span> &amp;a, <span class="type">int</span> &amp;b)</span></span>{</span><br><span class="line">	<span class="type">double</span> temp=a;</span><br><span class="line">	a=b;</span><br><span class="line">	b=temp;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">sort</span><span class="params">(vector&lt;<span class="type">int</span>&gt; &amp;vec)</span></span>{</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;vec.<span class="built_in">size</span>()<span class="number">-1</span>; i++){</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=i+<span class="number">1</span>; j&lt;vec.<span class="built_in">size</span>(); j++){</span><br><span class="line">            <span class="keyword">if</span>(vec[j]&lt;vec[i]){</span><br><span class="line">                <span class="built_in">swap_double</span>(vec[j], vec[i]);</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; test={<span class="number">0</span>, <span class="number">7</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">10</span>};</span><br><span class="line">    <span class="built_in">sort</span>(test);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;test.<span class="built_in">size</span>(); i++){</span><br><span class="line">        cout&lt;&lt;test[i]&lt;&lt;<span class="string">" "</span>;    </span><br><span class="line">    }</span><br><span class="line">}  </span><br></pre></td></tr></table></figure></div>
+]]></content>
+      <categories>
+        <category>大學課堂筆記-程式設計</category>
+        <category>C++</category>
+        <category>彰師大</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Introduction to C++ Programing</title>
+    <url>/2023/01/18/Chaper%208%20Sequential-Access%20Files/</url>
+    <content><![CDATA[<h1 id="chaper-8-sequential-access-files">Chaper 8 Sequential-Access
+Files</h1>
+<h2 id="fstream">fstream</h2>
+<ul>
+<li>ofstream and ifstream is include in fstream
+<ul>
+<li>ofstream: creats and writes files</li>
+<li>ifstream: reads from files</li>
+</ul></li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/BXqxxcS.png"> Ex1(Input data to txt):
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    fstream file;</span><br><span class="line">    file.<span class="built_in">open</span>(<span class="string">"test.txt"</span>, ios::out);</span><br><span class="line">    string name, birthday;</span><br><span class="line">    <span class="keyword">if</span>(!file){</span><br><span class="line">        cerr&lt;&lt;<span class="string">"File could not be open."</span>&lt;&lt;endl; </span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);    <span class="comment">//exit with error</span></span><br><span class="line">    }</span><br><span class="line">    cout&lt;&lt;<span class="string">"Input the name and birthday(input end-of-file to end the program):"</span>;</span><br><span class="line">    <span class="keyword">while</span>(cin&gt;&gt;name&gt;&gt;birthday){</span><br><span class="line">        outClientFile&lt;&lt;name&lt;&lt;<span class="string">' '</span>&lt;&lt;birthday&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">        cout&lt;&lt;<span class="string">"Input the name and birthday(input end-of-file to end the program):"</span>;</span><br><span class="line">    }</span><br><span class="line">    outClientFile.<span class="built_in">close</span>();</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> Ex2(Read from txt): <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="function">fstream <span class="title">file</span><span class="params">(<span class="string">"test.txt"</span>, ios::in)</span></span>;</span><br><span class="line">    string name, birthday;</span><br><span class="line">    <span class="keyword">if</span>(!file){</span><br><span class="line">        cerr&lt;&lt;<span class="string">"The file cannot be opened."</span>;</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">while</span>(file&gt;&gt;name&gt;&gt;birthday){</span><br><span class="line">        cout&lt;&lt;name&lt;&lt;<span class="string">" "</span>&lt;&lt;birthday&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    }</span><br><span class="line">    outClientFile.<span class="built_in">close</span>();</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> * Reading from a
+specific line(seekg(), seekp())
+Reference:　http://c.biancheng.net/view/1541.html</p>
+<pre><code>* name.seekg(0); =&gt; reposition the pointer to location 0.
+* To read a sequential file again, we need to add name.clear() before the seekg.</code></pre>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/8Ourtup.png"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/QbXSudS.png"> * Telling you the
+current location(tellg(), tellp())</p>
+]]></content>
+      <categories>
+        <category>大學課堂筆記-程式設計</category>
+        <category>C++</category>
+        <category>彰師大</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Control Statement-Part 1</title>
+    <url>/2023/01/18/Chapter%203,%20Control%20Statement_%20Part%201/</url>
+    <content><![CDATA[<h1 id="chapter-3-control-statement-part-1">Chapter 3, Control
+Statement: Part 1</h1>
+<h2 id="control-structure">Control Structure</h2>
+<ul>
+<li>The sequence structure</li>
+<li>The selection strcture</li>
+<li>The repetition structure ## Selection Statements</li>
+<li>To choose among courses of action.</li>
+<li>if: A single-selection statement</li>
+<li>if...else: A double-selection statement</li>
+<li>switch: A multiselection statement ### Conditional
+Operators(?:)</li>
+<li>Closely related to the if..else function.</li>
+<li>Ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> x{<span class="number">0</span>}, y{<span class="number">1</span>};</span><br><span class="line">    result=x&lt;y?<span class="string">"x&lt;y"</span>:<span class="string">"x&gt;y"</span>;</span><br><span class="line">    std::cout&lt;&lt;result;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> Accodring to the code, it will cout x<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.09ex;" xmlns="http://www.w3.org/2000/svg" width="1.76ex" height="1.312ex" role="img" focusable="false" viewBox="0 -540 778 580"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="3C" d="M694 -11T694 -19T688 -33T678 -40Q671 -40 524 29T234 166L90 235Q83 240 83 250Q83 261 91 266Q664 540 678 540Q681 540 687 534T694 519T687 505Q686 504 417 376L151 250L417 124Q686 -4 687 -5Q694 -11 694 -19Z"></path></g></g></g></svg></mjx-container></span>y in the command prompt.</li>
+<li>Another way to declare integers: int x{0} equals to int x=0 ##
+Repetition Statements(Looping Statements)</li>
+<li>while: do the action zero or more times.</li>
+<li>do...while: do the action at least once.</li>
+<li>for: do the action zero or more times. ### Counter Controlled
+Repetition</li>
+<li>Counter variables are normally initialized to zero or one, depending
+on their use.</li>
+<li>Remember to initialize the counter varible, or it might contain some
+garbage variable. ## How to change the tpye of a object <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="built_in">static_cast</span>&lt;type&gt;(object);</span><br><span class="line">    (type)object;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> ##
+setprecision() <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#inlcude <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    std::cout&lt;&lt;std::<span class="built_in">setprecision</span>(<span class="number">2</span>)&lt;&lt;floatnum; <span class="comment">//start from the first num after fixed point</span></span><br><span class="line">    std::cout&lt;&lt;fixed::std::<span class="built_in">setprecision</span>(<span class="number">2</span>)&lt;&lt;floatnum; <span class="comment">//start from the first num before fixed point</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> ## Common Keywords in C++ and C <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/qm5wD9b.png"> ## Assignment Operators <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/JHI93gS.png"> ## Preincrement and
+Postincrement</li>
+<li>Preincrement =&gt; Increment a by 1, then use the new value of a in
+the expression in which a resides.</li>
+<li>Postincrement =&gt; Use the current value of a in the expression in
+which a resides, then increment a by 1. Ex:</li>
+</ul>
+<pre class="c++="><code>#include &lt;iostream&gt;
+int main(){
+    int a=1;
+    std::cout&lt;&lt;a&lt;&lt;"\n";
+    std::cout&lt;&lt;a++&lt;&lt;"\n"; //do a=a+1 after cout
+    std::cout&lt;&lt;a&lt;&lt;"\n";
+
+    int b=1;
+    std::cout&lt;&lt;b&lt;&lt;"\n";
+    std::cout&lt;&lt;++b&lt;&lt;"\n"; //do b=b+1 before cout
+    std::cout&lt;&lt;b&lt;&lt;"\n";
+}</code></pre>
 ]]></content>
       <categories>
         <category>大學課堂筆記-程式設計</category>
@@ -1037,62 +1086,6 @@ https://ithelp.ithome.com.tw/articles/10250721</li>
       </tags>
   </entry>
   <entry>
-    <title>Control Statement-Part 1</title>
-    <url>/2023/01/18/Chapter%203,%20Control%20Statement_%20Part%201/</url>
-    <content><![CDATA[<h1 id="chapter-3-control-statement-part-1">Chapter 3, Control
-Statement: Part 1</h1>
-<h2 id="control-structure">Control Structure</h2>
-<ul>
-<li>The sequence structure</li>
-<li>The selection strcture</li>
-<li>The repetition structure ## Selection Statements</li>
-<li>To choose among courses of action.</li>
-<li>if: A single-selection statement</li>
-<li>if...else: A double-selection statement</li>
-<li>switch: A multiselection statement ### Conditional
-Operators(?:)</li>
-<li>Closely related to the if..else function.</li>
-<li>Ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> x{<span class="number">0</span>}, y{<span class="number">1</span>};</span><br><span class="line">    result=x&lt;y?<span class="string">"x&lt;y"</span>:<span class="string">"x&gt;y"</span>;</span><br><span class="line">    std::cout&lt;&lt;result;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> Accodring to the code, it will cout x<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.09ex;" xmlns="http://www.w3.org/2000/svg" width="1.76ex" height="1.312ex" role="img" focusable="false" viewBox="0 -540 778 580"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="3C" d="M694 -11T694 -19T688 -33T678 -40Q671 -40 524 29T234 166L90 235Q83 240 83 250Q83 261 91 266Q664 540 678 540Q681 540 687 534T694 519T687 505Q686 504 417 376L151 250L417 124Q686 -4 687 -5Q694 -11 694 -19Z"></path></g></g></g></svg></mjx-container></span>y in the command prompt.</li>
-<li>Another way to declare integers: int x{0} equals to int x=0 ##
-Repetition Statements(Looping Statements)</li>
-<li>while: do the action zero or more times.</li>
-<li>do...while: do the action at least once.</li>
-<li>for: do the action zero or more times. ### Counter Controlled
-Repetition</li>
-<li>Counter variables are normally initialized to zero or one, depending
-on their use.</li>
-<li>Remember to initialize the counter varible, or it might contain some
-garbage variable. ## How to change the tpye of a object <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="built_in">static_cast</span>&lt;type&gt;(object);</span><br><span class="line">    (type)object;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> ##
-setprecision() <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#inlcude <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    std::cout&lt;&lt;std::<span class="built_in">setprecision</span>(<span class="number">2</span>)&lt;&lt;floatnum; <span class="comment">//start from the first num after fixed point</span></span><br><span class="line">    std::cout&lt;&lt;fixed::std::<span class="built_in">setprecision</span>(<span class="number">2</span>)&lt;&lt;floatnum; <span class="comment">//start from the first num before fixed point</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> ## Common Keywords in C++ and C <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/qm5wD9b.png"> ## Assignment Operators <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/JHI93gS.png"> ## Preincrement and
-Postincrement</li>
-<li>Preincrement =&gt; Increment a by 1, then use the new value of a in
-the expression in which a resides.</li>
-<li>Postincrement =&gt; Use the current value of a in the expression in
-which a resides, then increment a by 1. Ex:</li>
-</ul>
-<pre class="c++="><code>#include &lt;iostream&gt;
-int main(){
-    int a=1;
-    std::cout&lt;&lt;a&lt;&lt;"\n";
-    std::cout&lt;&lt;a++&lt;&lt;"\n"; //do a=a+1 after cout
-    std::cout&lt;&lt;a&lt;&lt;"\n";
-
-    int b=1;
-    std::cout&lt;&lt;b&lt;&lt;"\n";
-    std::cout&lt;&lt;++b&lt;&lt;"\n"; //do b=b+1 before cout
-    std::cout&lt;&lt;b&lt;&lt;"\n";
-}</code></pre>
-]]></content>
-      <categories>
-        <category>大學課堂筆記-程式設計</category>
-        <category>C++</category>
-        <category>彰師大</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Control Statement-Part 2</title>
     <url>/2023/01/18/Chapter%204,%20Control%20Statement_%20Part%202/</url>
     <content><![CDATA[<h1 id="chapter-4-control-statement-part-2">Chapter 4, Control
@@ -1117,6 +1110,46 @@ process. ## Boolalpha <div class="highlight-container" data-rel="C++"><figure cl
 &amp;&amp; will only be considered if the left side is true. * The
 &amp;&amp; operator has a higher precedence than ||; * Any nonezero
 value is interpreted as ture. Which means if(a=5){...} will be true.</p>
+]]></content>
+      <categories>
+        <category>大學課堂筆記-程式設計</category>
+        <category>C++</category>
+        <category>彰師大</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Introduction to C++ Programing</title>
+    <url>/2023/01/18/Chapter%202,%20Introduction%20to%20C++%20Programing/</url>
+    <content><![CDATA[<h1 id="chapter-2-introduction-to-c-programing">Chapter 2, Introduction
+to C++ Programing</h1>
+<h2 id="the-sturcture-of-basic-c-program">The Sturcture of Basic C++
+Program</h2>
+<ul>
+<li>The lines start with # are processed by the preprocessor.</li>
+<li>&lt;iostream&gt; is the input/output stream header file.</li>
+<li>The int main() means that the main program will return an integar
+value.</li>
+<li>std::cout specifies that we are using namspace std. ## The Use of
+Escape Sequence <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/G8kcne8.png"> ## The
+Declaration of Variables</li>
+<li>void -&gt; Function does not return a value.</li>
+<li>int -&gt; Declare integar variables.</li>
+<li>char -&gt; Declare character variables.
+<ul>
+<li>char can also be stored as integer.</li>
+</ul></li>
+<li>float -&gt; Declare floating-point variables.</li>
+<li>double -&gt; Declare double-precision variables.</li>
+<li>bool -&gt; To hold a boolean value, true/false. ## Arithmetic
+Operators <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/IhflKJP.png"></li>
+<li>The rules of operator precedence as generally same as those in
+algebra.</li>
+<li>Exponentiation -&gt; Import &lt;math.h&gt; ## Equality and
+Relational Operators <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rmHds4R.png"></li>
+</ul>
 ]]></content>
       <categories>
         <category>大學課堂筆記-程式設計</category>
@@ -1197,27 +1230,29 @@ function. <div class="highlight-container" data-rel="C++"><figure class="iseeu h
       </tags>
   </entry>
   <entry>
-    <title>Introduction to C++ Programing</title>
-    <url>/2023/01/18/Chaper%208%20Sequential-Access%20Files/</url>
-    <content><![CDATA[<h1 id="chaper-8-sequential-access-files">Chaper 8 Sequential-Access
-Files</h1>
-<h2 id="fstream">fstream</h2>
-<ul>
-<li>ofstream and ifstream is include in fstream
-<ul>
-<li>ofstream: creats and writes files</li>
-<li>ifstream: reads from files</li>
-</ul></li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/BXqxxcS.png"> Ex1(Input data to txt):
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    fstream file;</span><br><span class="line">    file.<span class="built_in">open</span>(<span class="string">"test.txt"</span>, ios::out);</span><br><span class="line">    string name, birthday;</span><br><span class="line">    <span class="keyword">if</span>(!file){</span><br><span class="line">        cerr&lt;&lt;<span class="string">"File could not be open."</span>&lt;&lt;endl; </span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);    <span class="comment">//exit with error</span></span><br><span class="line">    }</span><br><span class="line">    cout&lt;&lt;<span class="string">"Input the name and birthday(input end-of-file to end the program):"</span>;</span><br><span class="line">    <span class="keyword">while</span>(cin&gt;&gt;name&gt;&gt;birthday){</span><br><span class="line">        outClientFile&lt;&lt;name&lt;&lt;<span class="string">' '</span>&lt;&lt;birthday&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">        cout&lt;&lt;<span class="string">"Input the name and birthday(input end-of-file to end the program):"</span>;</span><br><span class="line">    }</span><br><span class="line">    outClientFile.<span class="built_in">close</span>();</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> Ex2(Read from txt): <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="function">fstream <span class="title">file</span><span class="params">(<span class="string">"test.txt"</span>, ios::in)</span></span>;</span><br><span class="line">    string name, birthday;</span><br><span class="line">    <span class="keyword">if</span>(!file){</span><br><span class="line">        cerr&lt;&lt;<span class="string">"The file cannot be opened."</span>;</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">while</span>(file&gt;&gt;name&gt;&gt;birthday){</span><br><span class="line">        cout&lt;&lt;name&lt;&lt;<span class="string">" "</span>&lt;&lt;birthday&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    }</span><br><span class="line">    outClientFile.<span class="built_in">close</span>();</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> * Reading from a
-specific line(seekg(), seekp())
-Reference:　http://c.biancheng.net/view/1541.html</p>
-<pre><code>* name.seekg(0); =&gt; reposition the pointer to location 0.
-* To read a sequential file again, we need to add name.clear() before the seekg.</code></pre>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/8Ourtup.png"></p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/QbXSudS.png"> * Telling you the
-current location(tellg(), tellp())</p>
+    <title>自我介紹</title>
+    <url>/2023/01/17/%E8%87%AA%E6%88%91%E4%BB%8B%E7%B4%B9/</url>
+    <content><![CDATA[<h3 id="大家好我是itzlanjiao目前就讀彰化師範大學電子工程學系大一本網站的目的是為了對大學四年的課堂內容及個人手做小專題做些紀錄及分享歡迎你的到來">大家好，我是ItzLanJiao，目前就讀彰化師範大學電子工程學系大一，本網站的目的是為了對大學四年的課堂內容及個人手做小專題做些紀錄及分享，歡迎你的到來!</h3>
+]]></content>
+      <tags>
+        <tag>Introduction</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>補充資料</title>
+    <url>/2023/01/18/%E8%A3%9C%E5%85%85%E8%B3%87%E6%96%99/</url>
+    <content><![CDATA[<h1 id="補充資料">補充資料</h1>
+<h2 id="literal-constant">Literal Constant</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/s7Ps4NN.png"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/QjOdk1K.png"></p>
+<p>Ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	cout&lt;&lt;<span class="number">75</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">0113</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">0x4b</span>&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//Decimal, Octal, Hexadecimal</span></span><br><span class="line">	cout&lt;&lt;<span class="number">75</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">75u</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">75l</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">75ul</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">75lu</span>&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//int, unsigned, unsigned long, usigned long</span></span><br><span class="line">	cout&lt;&lt;<span class="number">6.02e23</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">1.6e-19</span>&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//6.02*10^23</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
+<h2 id="bitwise-operators">Bitwise Operators</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/7AphOD4.png"></p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bitset&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">int</span> x=<span class="number">0b00000001</span>;</span><br><span class="line">	<span class="type">int</span> y=<span class="number">0b00000000</span>;</span><br><span class="line">	cout&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(x&lt;&lt;<span class="number">1</span>)&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(x&gt;&gt;<span class="number">1</span>)&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//left / right shift for 1 bit </span></span><br><span class="line">	cout&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(~x)&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(x|y)&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(x&amp;y)&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(x^y)&lt;&lt;<span class="string">"\n"</span>; <span class="comment">// not, or, and, xor</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<h2 id="dynamic-memory-allocation">Dynamic Memory allocation</h2>
+<p>Reference: http://ccy.dd.ncu.edu.tw/~chen/course/Cpp/ch5/6.htm <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/kxplKpS.png"></p>
+<p>Ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">int</span> *p;</span><br><span class="line">	p=<span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">	*p=<span class="number">100</span>;</span><br><span class="line">	cout&lt;&lt;*p;</span><br><span class="line">	<span class="keyword">delete</span> p; <span class="comment">//release the memory space</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> Ex2: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">int</span> *p=<span class="keyword">new</span> <span class="type">int</span> [<span class="number">5</span>];</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++){</span><br><span class="line">		*(p+i)=i;</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++){</span><br><span class="line">		cout&lt;&lt;*(p+i)&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">delete</span> []p; <span class="comment">//release memory space</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
+<h2 id="linked-list寒假學">Linked List(寒假學)</h2>
 ]]></content>
       <categories>
         <category>大學課堂筆記-程式設計</category>
@@ -1294,40 +1329,6 @@ size，資料所在位置可能會移動。如果變小就擦掉尾巴的資料�
 <p>用法1(insert(), erase(), clear(), empty()) <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="comment">//initialization</span></span><br><span class="line">    map&lt;string, <span class="type">int</span>&gt; m ={</span><br><span class="line">        {<span class="string">"One"</span>, <span class="number">1</span>},</span><br><span class="line">        {<span class="string">"Two"</span>, <span class="number">2</span>},</span><br><span class="line">        {<span class="string">"Three"</span>, <span class="number">3</span>}</span><br><span class="line">    };</span><br><span class="line">    m.<span class="built_in">insert</span>(<span class="built_in">pair</span>&lt;string, <span class="type">int</span>&gt;(<span class="string">"Four"</span>, <span class="number">4</span>));</span><br><span class="line">    m[<span class="string">"Five"</span>]=<span class="number">5</span>;</span><br><span class="line">    cout&lt;&lt;m[<span class="string">"Five"</span>]&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    m.<span class="built_in">erase</span>(<span class="string">"Five"</span>);</span><br><span class="line">    cout&lt;&lt;m.<span class="built_in">size</span>()&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    m.<span class="built_in">clear</span>();</span><br><span class="line">    <span class="keyword">if</span>(m.<span class="built_in">empty</span>()){</span><br><span class="line">        cout&lt;&lt;<span class="string">"empty"</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> ## Algorithm
 * 常用演算法。</p>
 <p>用法1(sort(), reverse()) <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; v;</span><br><span class="line">    <span class="type">int</span> input;</span><br><span class="line">    <span class="keyword">while</span>(cin&gt;&gt;input&amp;&amp;input!=<span class="number">-1</span>){</span><br><span class="line">        v.<span class="built_in">push_back</span>(input);</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">sort</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>());</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;v.<span class="built_in">size</span>(); i++){</span><br><span class="line">        cout&lt;&lt;v[i]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">    }</span><br><span class="line">    cout&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    <span class="built_in">reverse</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>());</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;v.<span class="built_in">size</span>(); i++){</span><br><span class="line">        cout&lt;&lt;v[i]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
-]]></content>
-      <categories>
-        <category>大學課堂筆記-程式設計</category>
-        <category>C++</category>
-        <category>彰師大</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>自我介紹</title>
-    <url>/2023/01/17/%E8%87%AA%E6%88%91%E4%BB%8B%E7%B4%B9/</url>
-    <content><![CDATA[<h3 id="大家好我是itzlanjiao目前就讀彰化師範大學電子工程學系大一本網站的目的是為了對大學四年的課堂內容及個人手做小專題做些紀錄及分享歡迎你的到來">大家好，我是ItzLanJiao，目前就讀彰化師範大學電子工程學系大一，本網站的目的是為了對大學四年的課堂內容及個人手做小專題做些紀錄及分享，歡迎你的到來!</h3>
-]]></content>
-      <tags>
-        <tag>Introduction</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>補充資料</title>
-    <url>/2023/01/18/%E8%A3%9C%E5%85%85%E8%B3%87%E6%96%99/</url>
-    <content><![CDATA[<h1 id="補充資料">補充資料</h1>
-<h2 id="literal-constant">Literal Constant</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/s7Ps4NN.png"></p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/QjOdk1K.png"></p>
-<p>Ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	cout&lt;&lt;<span class="number">75</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">0113</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">0x4b</span>&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//Decimal, Octal, Hexadecimal</span></span><br><span class="line">	cout&lt;&lt;<span class="number">75</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">75u</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">75l</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">75ul</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">75lu</span>&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//int, unsigned, unsigned long, usigned long</span></span><br><span class="line">	cout&lt;&lt;<span class="number">6.02e23</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">1.6e-19</span>&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//6.02*10^23</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
-<h2 id="bitwise-operators">Bitwise Operators</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/7AphOD4.png"></p>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bitset&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">int</span> x=<span class="number">0b00000001</span>;</span><br><span class="line">	<span class="type">int</span> y=<span class="number">0b00000000</span>;</span><br><span class="line">	cout&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(x&lt;&lt;<span class="number">1</span>)&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(x&gt;&gt;<span class="number">1</span>)&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//left / right shift for 1 bit </span></span><br><span class="line">	cout&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(~x)&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(x|y)&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(x&amp;y)&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(x^y)&lt;&lt;<span class="string">"\n"</span>; <span class="comment">// not, or, and, xor</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-<h2 id="dynamic-memory-allocation">Dynamic Memory allocation</h2>
-<p>Reference: http://ccy.dd.ncu.edu.tw/~chen/course/Cpp/ch5/6.htm <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/kxplKpS.png"></p>
-<p>Ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">int</span> *p;</span><br><span class="line">	p=<span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">	*p=<span class="number">100</span>;</span><br><span class="line">	cout&lt;&lt;*p;</span><br><span class="line">	<span class="keyword">delete</span> p; <span class="comment">//release the memory space</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> Ex2: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">int</span> *p=<span class="keyword">new</span> <span class="type">int</span> [<span class="number">5</span>];</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++){</span><br><span class="line">		*(p+i)=i;</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++){</span><br><span class="line">		cout&lt;&lt;*(p+i)&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">delete</span> []p; <span class="comment">//release memory space</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
-<h2 id="linked-list寒假學">Linked List(寒假學)</h2>
 ]]></content>
       <categories>
         <category>大學課堂筆記-程式設計</category>

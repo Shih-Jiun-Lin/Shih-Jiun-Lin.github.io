@@ -1248,29 +1248,32 @@ Program</h2>
 <li>&lt;iostream&gt; is the input/output stream header file.</li>
 <li>The int main() means that the main program will return an integar
 value.</li>
-<li>std::cout specifies that we are using namspace std. ## The Use of
-Escape Sequence <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/G8kcne8.png"> ## The
-Declaration of Variables</li>
-<li>void -&gt; Function does not return a value.</li>
-<li>int -&gt; Declare integar variables.</li>
-<li>char -&gt; Declare character variables.
+<li>std::cout specifies that we are using namspace std.</li>
+</ul>
+<h2 id="the-use-of-escape-sequence">The Use of Escape Sequence</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/G8kcne8.png"></p>
+<h2 id="the-declaration-of-variables">The Declaration of Variables</h2>
+<ul>
+<li><p>void =&gt; Function does not return a value.</p></li>
+<li><p>int =&gt; Declare integar variables.</p></li>
+<li><p>char =&gt; Declare character variables.</p>
 <ul>
 <li>char can also be stored as integer.</li>
 </ul></li>
-<li>float -&gt; Declare floating-point variables.</li>
-<li>double -&gt; Declare double-precision variables.</li>
-<li>bool -&gt; To hold a boolean value, true/false. ## Arithmetic
-Operators <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/IhflKJP.png"></li>
-<li>The rules of operator precedence as generally same as those in
-algebra.</li>
-<li>Exponentiation -&gt; Import &lt;math.h&gt; ## Equality and
-Relational Operators <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rmHds4R.png"></li>
+<li><p>float =&gt; Declare floating-point variables.</p></li>
+<li><p>double =&gt; Declare double-precision variables.</p></li>
+<li><p>bool =&gt; To hold a boolean value, true/false. ## Arithmetic
+Operators <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/IhflKJP.png"></p></li>
+<li><p>The rules of operator precedence as generally same as those in
+algebra.</p></li>
+<li><p>Exponentiation -&gt; Import &lt;math.h&gt;</p></li>
 </ul>
+<h2 id="equality-and-relational-operators">Equality and Relational
+Operators</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rmHds4R.png"></p>
 ]]></content>
       <categories>
         <category>大學課堂筆記-程式設計</category>
-        <category>C++</category>
-        <category>彰師大</category>
       </categories>
       <tags>
         <tag>C++</tag>

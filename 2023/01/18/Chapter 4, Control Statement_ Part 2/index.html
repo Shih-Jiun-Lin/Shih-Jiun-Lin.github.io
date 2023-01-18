@@ -48,7 +48,11 @@
     
     
     
-<meta name="generator" content="Hexo 6.3.0"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
 
 
 <body>
@@ -354,7 +358,15 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/%E5%A4%A7%E5%AD%B8%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98/">大學課堂筆記</a>&nbsp;
+                        <a href="/categories/%E5%A4%A7%E5%AD%B8%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98-%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/">大學課堂筆記-程式設計</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E5%A4%A7%E5%AD%B8%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98-%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/C/">C++</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E5%A4%A7%E5%AD%B8%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98-%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/C/%E5%BD%B0%E5%B8%AB%E5%A4%A7/">彰師大</a>&nbsp;
                     </li>
                 
             </ul>
@@ -376,7 +388,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>335 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>336 Words</span>
         </span>
     
     
@@ -397,59 +409,56 @@
             
 
             <div class="article-content markdown-body">
-                <h1 id="Chapter-4-Control-Statement-Part-2"><a href="#Chapter-4-Control-Statement-Part-2" class="headerlink" title="Chapter 4, Control Statement: Part 2"></a>Chapter 4, Control Statement: Part 2</h1><h2 id="do…while"><a href="#do…while" class="headerlink" title="do…while"></a>do…while</h2><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;<span class="keyword">while</span>;(condition)</span><br></pre></td></tr></table></figure></div>
+                <h1 id="chapter-4-control-statement-part-2">Chapter 4, Control
+Statement: Part 2</h1>
+<h2 id="do...while">do...while</h2>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;<span class="keyword">while</span>;(condition)</span><br></pre></td></tr></table></figure></div>
 <ul>
-<li>do…while always check the continuation after the code inside the {} has been excecuted. Therefore, it will execute at least one time.<br><img  
+<li>do...while always check the continuation after the code inside the
+{} has been excecuted. Therefore, it will execute at least one time.
+<img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://i.imgur.com/OQEIHFE.png"
-                     
-                ></li>
-</ul>
-<h2 id="switch-case"><a href="#switch-case" class="headerlink" title="switch case"></a>switch case</h2><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(expression)&#123;</span><br><span class="line">    <span class="keyword">case</span> constant1:</span><br><span class="line">        <span class="comment">//execute while expression is constant1;</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> constant2:</span><br><span class="line">        <span class="comment">//execute while expression is constant2;</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;F&#x27;</span>:</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;f&#x27;</span>:</span><br><span class="line">        <span class="comment">//execute while expression is F or f;</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>+<span class="number">2</span>:</span><br><span class="line">        <span class="comment">//not allowed</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>+<span class="number">4</span>:</span><br><span class="line">        <span class="comment">//not allowed</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        ...</span><br><span class="line">        <span class="comment">//code to be executed if expression doesn&#x27;t</span></span><br><span class="line">        <span class="comment">// match any constant</span></span><br><span class="line">        </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<ul>
-<li>Perform many different actions based on the value of expression.<br><img  
+                      
+                > ## switch case
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(expression)&#123;</span><br><span class="line">    <span class="keyword">case</span> constant1:</span><br><span class="line">        <span class="comment">//execute while expression is constant1;</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> constant2:</span><br><span class="line">        <span class="comment">//execute while expression is constant2;</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;F&#x27;</span>:</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;f&#x27;</span>:</span><br><span class="line">        <span class="comment">//execute while expression is F or f;</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>+<span class="number">2</span>:</span><br><span class="line">        <span class="comment">//not allowed</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>+<span class="number">4</span>:</span><br><span class="line">        <span class="comment">//not allowed</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        ...</span><br><span class="line">        <span class="comment">//code to be executed if expression doesn&#x27;t</span></span><br><span class="line">        <span class="comment">// match any constant</span></span><br><span class="line">        </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
+<li>Perform many different actions based on the value of expression.
+<img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://i.imgur.com/ygwibqG.png"
-                     
+                      
                 ></li>
 </ul>
-<h2 id="setw"><a href="#setw" class="headerlink" title="setw()"></a>setw()</h2><p>*　setw() &#x3D;&gt; print spaces to make it tidy.<br><img  
+<h2 id="setw">setw()</h2>
+<p><em>　setw() =&gt; print spaces to make it tidy. <img 
+
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://i.imgur.com/rY3G69w.png"
-                     
-                ></p>
-<h2 id="EOF"><a href="#EOF" class="headerlink" title="EOF"></a>EOF</h2><ul>
-<li>EOF &#x3D;&gt; End of file by entering ctrl+z.<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cin&gt;&gt;sth;</span><br><span class="line"><span class="keyword">while</span>(cin.<span class="built_in">get</span>()!=EOF)&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
-</ul>
-<h2 id="cin-get-vs-cin-gt-gt"><a href="#cin-get-vs-cin-gt-gt" class="headerlink" title="cin.get() vs cin&gt;&gt;"></a>cin.get() vs cin&gt;&gt;</h2><ul>
-<li>cin.get() -&gt; only read one character.</li>
-<li>cin -&gt; depends on &gt;&gt;.<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> grade, aC&#123;<span class="number">0</span>&#125;, bC&#123;<span class="number">0</span>&#125;, cC&#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="keyword">while</span>((grade=std::cin.<span class="built_in">get</span>())!=EOF)&#123;</span><br><span class="line">        <span class="keyword">switch</span>(grade)&#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;a&#x27;</span>:</span><br><span class="line">            aC++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;b&#x27;</span>:</span><br><span class="line">            bC++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;c&#x27;</span>:</span><br><span class="line">            cC++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;\n&#x27;</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;\t&#x27;</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27; &#x27;</span>:</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    std::cout&lt;&lt;aC&lt;&lt;<span class="string">&#x27; &#x27;</span>&lt;&lt;bC&lt;&lt;<span class="string">&#x27; &#x27;</span>&lt;&lt;cC;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
-</ul>
-<h2 id="C-Modified-Data-Types"><a href="#C-Modified-Data-Types" class="headerlink" title="C++ Modified Data Types"></a>C++ Modified Data Types</h2><p><img  
+                      
+                > ## EOF </em> EOF =&gt; End of
+file by entering ctrl+z. <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cin&gt;&gt;sth;</span><br><span class="line"><span class="keyword">while</span>(cin.<span class="built_in">get</span>()!=EOF)&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> ## cin.get() vs cin&gt;&gt; *
+cin.get() -&gt; only read one character. * cin -&gt; depends on
+&gt;&gt;. <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> grade, aC&#123;<span class="number">0</span>&#125;, bC&#123;<span class="number">0</span>&#125;, cC&#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="keyword">while</span>((grade=std::cin.<span class="built_in">get</span>())!=EOF)&#123;</span><br><span class="line">        <span class="keyword">switch</span>(grade)&#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;a&#x27;</span>:</span><br><span class="line">            aC++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;b&#x27;</span>:</span><br><span class="line">            bC++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;c&#x27;</span>:</span><br><span class="line">            cC++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;\n&#x27;</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;\t&#x27;</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27; &#x27;</span>:</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    std::cout&lt;&lt;aC&lt;&lt;<span class="string">&#x27; &#x27;</span>&lt;&lt;bC&lt;&lt;<span class="string">&#x27; &#x27;</span>&lt;&lt;cC;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> ## C++ Modified Data Types <img 
+
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://i.imgur.com/tTgVBZW.png"
-                     
-                ></p>
-<h2 id="Continue-vs-Break"><a href="#Continue-vs-Break" class="headerlink" title="Continue vs Break"></a>Continue vs Break</h2><ul>
-<li>Continue -&gt; Only skip a specific process.</li>
-<li>Break -&gt; Skip the whole process.</li>
-</ul>
-<h2 id="Boolalpha"><a href="#Boolalpha" class="headerlink" title="Boolalpha"></a>Boolalpha</h2><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">std::cout&lt;&lt;<span class="literal">true</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">std::cout&lt;&lt;std::boolalpha;</span><br><span class="line">std::cout&lt;&lt;<span class="literal">true</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line"><span class="comment">//The result will be 1 and true.</span></span><br></pre></td></tr></table></figure></div>
-<h2 id="Operator’s-Precedence"><a href="#Operator’s-Precedence" class="headerlink" title="Operator’s Precedence"></a>Operator’s Precedence</h2><p><img  
+                      
+                > ## Continue vs Break * Continue
+-&gt; Only skip a specific process. * Break -&gt; Skip the whole
+process. ## Boolalpha <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">std::cout&lt;&lt;<span class="literal">true</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">std::cout&lt;&lt;std::boolalpha;</span><br><span class="line">std::cout&lt;&lt;<span class="literal">true</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line"><span class="comment">//The result will be 1 and true.</span></span><br></pre></td></tr></table></figure></div> ## Operator's Precedence <img 
+
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://i.imgur.com/MyvXHDH.png"
-                     
-                ></p>
-<ul>
-<li>The right side of the &amp;&amp; will only be considered if the left side is true.</li>
-<li>The &amp;&amp; operator has a higher precedence than ||;</li>
-<li>Any nonezero value is interpreted as ture. Which means if(a&#x3D;5){…} will be true.</li>
-</ul>
+                      
+                > * The right side of the
+&amp;&amp; will only be considered if the left side is true. * The
+&amp;&amp; operator has a higher precedence than ||; * Any nonezero
+value is interpreted as ture. Which means if(a=5){...} will be true.</p>
 
             </div>
 
@@ -527,7 +536,8 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>Contents</strong></div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-4-Control-Statement-Part-2"><span class="nav-text">Chapter 4, Control Statement: Part 2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#do%E2%80%A6while"><span class="nav-text">do…while</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#switch-case"><span class="nav-text">switch case</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#setw"><span class="nav-text">setw()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EOF"><span class="nav-text">EOF</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cin-get-vs-cin-gt-gt"><span class="nav-text">cin.get() vs cin&gt;&gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-Modified-Data-Types"><span class="nav-text">C++ Modified Data Types</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Continue-vs-Break"><span class="nav-text">Continue vs Break</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Boolalpha"><span class="nav-text">Boolalpha</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Operator%E2%80%99s-Precedence"><span class="nav-text">Operator’s Precedence</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#chapter-4-control-statement-part-2"><span class="nav-text">Chapter 4, Control
+Statement: Part 2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#do...while"><span class="nav-text">do...while</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#setw"><span class="nav-text">setw()</span></a></li></ol></li></ol>
     </div>
 </div>
             </div>

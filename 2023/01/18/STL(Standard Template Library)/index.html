@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    <meta name="description" content="Hexo Theme Redefine">
+    <meta name="author" content="Shih Jiun Lin">
+    <link rel="canonical" href="http://example.com/2023/01/18/STL(Standard%20Template%20Library)/" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
+    <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no">
+    <link rel="shortcut icon" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no">
+    
+    <title>
+        
+            STL(Standard Template Library) |
+        
+        Shih-Jiun-Lin&#39;s Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<link rel="stylesheet" href="/css/fonts.css">
+
+    
+    <link rel="preconnect" href="https://evan.beee.top" crossorigin>
+    <script id="hexo-configurations">
+    let REDEFINE = window.REDEFINE || {};
+    REDEFINE.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.xml"};
+    REDEFINE.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#005080","avatar":"https://scontent-hkg4-2.xx.fbcdn.net/v/t1.6435-9/70899392_1700286993440218_5774458773556953088_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=iBCVayjTOr8AX8TBEWz&_nc_ht=scontent-hkg4-2.xx&oh=00_AfAmQlO1Y3qBnfF5_L2XihrdBGlMKeof-lZCAoQpK_vIQg&oe=63EE348C","favicon":"https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no","article_img_align":"center","right_side_width":"210px","content_max_width":"1000px","nav_color":{"left":"#3649f7","right":"#36daf7","transparency":35},"hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_image":{"light":"https://lh3.googleusercontent.com/ixSu1XqCZxzWrc_qPqo7BEIWTmPuPaf78ZuOz4WmoztYIMV1KPIgS2N_FGSWP64r2nhh55paCAlFaKB3jjJo4JopFLViLnluanyhBmmdGn4baC0ZY-9FWsaEM_f-tgRWv5pCehETi5wD6do-yaNYCMbqlRVmAD8_86UiWPJz8QqQfLN7O3csy1ezIH5NfnyPfgNMS9KhrblAZmUA5eIejicZePVvzHJZI5bRI11EAVhK1Gc2kFBxu53mMaH8i0pvCNX4wrdz31cUGVenRVRsHKpwfWIdydeIGNX83cyE9uuv-bFIjt2mEVBdmohIXGeP6_BNh96komgPEeMtklBKv1hI0gHGZE96fzml5AoIczlTXYZeF4-yaEA6OIcZZEES7J1GXXnnJrYtzqEU8vxOccLxaJSuygKKrZx46MNFbpBZN9pYpoMmqJKIo9khPYHQypvxNKCwCYl8ltaCij9EZsFI7dKjCGGWZybMaT8NQ-eGzoDsvBV2CiGZ6sgBX_VcEECH0zkeGRZNEFurMmxsHLNrFYFdVgdrVS9xeWLBFr4OpFsuxC4JQFzd2_Plrf6Wxl3YnHPnRhQphIR-NnmVJfsMdrW9nRHWDtPYGJOO8sUBHl-AiklFx7-LDQs3tDLqPEvrOw1bhgb4W0rPo6yJHKZ71GqIW9AnFXrLJs3g1iYMPl9y833MH95f8j9pkUo0k3oZPhzDyie_BEw0LDKA7WjPG7k_H_IQhsUe_Z1u1nL4aHZOfi3fFJ8WnWc6-JVxyoc79yiRhbHlYB-Dv0nqjOD_YFDqsquEMS4iCR1_bsXb8ekh-PlDM1AhnvTaGwH-HMmNINWaevr7AlkMZWvwzUjshhroTeJf0PKsqeEFj-uXMFYBRuI-NdlvBQC1eIuRaE6TrZSZguozSSQcmibfz6yjdplXr5_TrQrxUvvz_uJFQCzwMU0aGe3_Nleeazu8TdvRSlZEwII6njrl7mM=w1343-h1008-no?authuser=0# background image of the first screen, use relative path or external link (if your website is in subdirectory, use external link)","dark":"https://lh3.googleusercontent.com/B01xYBVbZkUR86-vZfLiECMp3GD-iAYwKGbbbehgps_4DWvPLHpyUjtmuURqqHMf_W2sCFLJKchmCynDrtjAIkn6rV_mtutdzLdp2ENu5-G6jqfSNzRzSoebjclyS8IO6LVZ1xkTHDtcRuLgZjCEEyIftY-H0HeJaBwHqTPQDgO-vkskuAxN1viOQRV58BxWMQG881LbGYUsNH6Lsj9t-woZUfyLV2abmvKXIVGlDP4mbq5E1kFrBcXoWpCWXH5_VvB5lK1dbS322NUQIYIoijVwOn10F5haC-bhZMILVfEZ0Bft6qNkVInO7JnZSba1_Kc2g2DUV0HfZ8iLLRFA0h2s6wwh0UowqkAukNnRO4li8b0gPwp52unE3mcU_uwJkfaudpGRE3g5k9DrBeCKSppIgBjxfZ8wkMlYPHXw4Oorha8ta49epcNtesB3-QlQWEYmehzM_iIMmmmDHNqnpVFJvzzJ-U-GtNSXuPdWjhAmA8_mhi4E-w_S9Mcqefy3IMGXxeR0cZAK-69Oum9_sRCEVCE19P2YJzHt1TCnOENuinfT2-Rose4CVP3edMN9ScARfmpvRoYiV6rS3wxcBoQAqxDWH5tjzaKeL0rZPpnu63dVp4vxpGQdRQMU6DPuGk8EdIqZMIghoVaNGiF4LADJvAzDloXcXcApyLaqvptrssYd1dw-GvHe12O-_eHKTwYDmKoXqGJh45S2qqcaXywK6VXFd6I3VGrj812dx-onYqDvQzCFhbOgTdFT2Hlt3XiqRBsqZdVFzgjkbXqod-IYb1GsrCMvQNewvsi4yio3F8zrcGagyc9HFQ3uvQmxNPGJdjjU3atwLJFMDrZFmTHrLElfvxW30vLyhl7F-0rlvlrjgg5n3H6KzVMvyNwwxw_sLufWD4jNJLL_own4VGilHg3lc5jxLC4YzFBWDq1wg22VOSgWklbOgEGG_C2w1V80DE0Pk7oJEK8tspk=w1691-h951-no?authuser=0"},"title_color":{"light":"#fff","dark":"#d1d1b6"},"description":"一個喜歡搞小發明的大學生!"},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_block":{"copy":true,"style":"mac"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"0.5.2","friend_links":{"columns":2}};
+    REDEFINE.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+    
+    
+<link rel="stylesheet" href="/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/css/brands.min.css">
+
+    
+<link rel="stylesheet" href="/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/css/regular.min.css">
+
+    
+    
+    
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+    
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Shih-Jiun-Lin&#39;s Blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        主頁面
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/archives"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-archive"></i>
+                                        
+                                        照時間分類
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/tags"  >
+                                    
+                                        
+                                            <i class="fa-solid fa-tags"></i>
+                                        
+                                        照標籤分類
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/categories"  >
+                                    
+                                        
+                                            <i class="fa-solid fa-star"></i>
+                                        
+                                        照種類分類
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown" 
+                                    href="#" onClick="return false;">
+                                    
+                                        
+                                            <i class="fa-regular fa-user"></i>
+                                        
+                                        關於我&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                    
+                                        <li>
+                                        <a href="/about">ME
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://www.instagram.com/l__junjun__l/?hl=zh-tw">INSTAGRAM
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://github.com/Shih-Jiun-Lin">GITHUB
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://www.ncue.edu.tw/">SCHOOL
+                                        </a>
+                                        </li>
+                                    
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                主頁面
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/archives"  >
+                             
+                                
+                                    <i class="fa-regular fa-archive"></i>
+                                
+                                照時間分類
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/tags"  >
+                             
+                                
+                                    <i class="fa-solid fa-tags"></i>
+                                
+                                照標籤分類
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/categories"  >
+                             
+                                
+                                    <i class="fa-solid fa-star"></i>
+                                
+                                照種類分類
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="has-dropdown" 
+                        href="#" onClick="return false;">
+                            
+                                
+                                    <i class="fa-regular fa-user"></i>
+                                
+                                關於我&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                              
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" href="/about">ME</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://www.instagram.com/l__junjun__l/?hl=zh-tw">INSTAGRAM</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://github.com/Shih-Jiun-Lin">GITHUB</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://www.ncue.edu.tw/">SCHOOL</a>
+                            </li>
+                        
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+            <div class="article-title">
+                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">STL(Standard Template Library)</h1></span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="https://scontent-hkg4-2.xx.fbcdn.net/v/t1.6435-9/70899392_1700286993440218_5774458773556953088_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=iBCVayjTOr8AX8TBEWz&_nc_ht=scontent-hkg4-2.xx&oh=00_AfAmQlO1Y3qBnfF5_L2XihrdBGlMKeof-lZCAoQpK_vIQg&oe=63EE348C">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Shih Jiun Lin</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="pc">2023-01-18 12:34:50</span>
+        <span class="mobile">2023-01-18 12:34</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E5%A4%A7%E5%AD%B8%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98-%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/">大學課堂筆記-程式設計</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E5%A4%A7%E5%AD%B8%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98-%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/C/">C++</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E5%A4%A7%E5%AD%B8%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98-%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/C/%E5%BD%B0%E5%B8%AB%E5%A4%A7/">彰師大</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/C/">C++</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>1.7k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>9 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <h1 id="stlstandard-template-library">STL(Standard Template
+Library)</h1>
+<h2 id="vector">Vector</h2>
+<ul>
+<li>用法基本跟array一樣，可以把它想成動態陣列。</li>
+<li>宣告時可以不用確定大小</li>
+<li>宣告一向量時，所有範圍內的值會被初始成0。</li>
+<li>可以使用'=='比較兩向量時</li>
+<li>使用'='時，會將一向量的值賦予到另一向量。</li>
+<li>vector<int> v2(v1);=&gt;複製v1到v2。</li>
+<li>集合尾端增刪元素很快 : O(1)</li>
+<li>集合中間增刪元素比較費時 : O(n)</li>
+<li>erase(a, b); =&gt; 刪除 <span
+class="math inline">\([a,b)\)</span>.</li>
+<li>begin()=&gt;第一個元素</li>
+<li>end()=&gt;最後一個元素的下一個(沒有值)</li>
+<li>erase(v.begin(), v.end()) =&gt; erase every elements.</li>
+<li>pop_back()只會將vector的大小做修改，但值還是會存在原本的位置。</li>
+<li>vector[100]=vector<span class="math inline">\(.\)</span>at(100);
+<ul>
+<li>使用"[]"並不會在超過向量大小時顯示錯誤。</li>
+<li>使用".at()"會在超過向量大小時顯示錯誤。</li>
+</ul></li>
+</ul>
+<p>用法1(push_back and pop_back): <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; vec; <span class="comment">//declaration of vector</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>; i&lt;=<span class="number">3</span>; i++)&#123;</span><br><span class="line">		vec.<span class="built_in">push_back</span>(i);	<span class="comment">//push_back to put elements into vector</span></span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;vec.<span class="built_in">size</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;	</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++)&#123;</span><br><span class="line">		cout&lt;&lt;vec[i]&lt;&lt;<span class="string">&quot;\n&quot;</span>;	<span class="comment">//cout each element</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++)&#123;</span><br><span class="line">		vec.<span class="built_in">pop_back</span>();	<span class="comment">//pop_back to remove the last element from the vector</span></span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;vec.<span class="built_in">size</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> 用法二(insert and erase)
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; vec;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(i==<span class="number">1</span>) <span class="keyword">continue</span>;</span><br><span class="line">		<span class="keyword">else</span> vec.<span class="built_in">push_back</span>(i+<span class="number">1</span>); </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;vec.<span class="built_in">size</span>(); i++)&#123;</span><br><span class="line">		cout&lt;&lt;vec[i]&lt;&lt;<span class="string">&#x27; &#x27;</span>;				<span class="comment">//cout 1 3</span></span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	vec.<span class="built_in">insert</span>(vec.<span class="built_in">begin</span>()+<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;vec.<span class="built_in">size</span>(); i++)&#123;</span><br><span class="line">		cout&lt;&lt;vec[i]&lt;&lt;<span class="string">&#x27; &#x27;</span>;				<span class="comment">//cout 1 2 3</span></span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	vec.<span class="built_in">erase</span>(vec.<span class="built_in">begin</span>()+<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;vec.<span class="built_in">size</span>(); i++)&#123;</span><br><span class="line">		cout&lt;&lt;vec[i]&lt;&lt;<span class="string">&#x27; &#x27;</span>;				<span class="comment">//cout 1 3</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> 用法三(empty(), size(), resize(), capacity(), reserve())
+Reference:https://stackoverflow.com/questions/7397768/choice-between-vectorresize-and-vectorreserve
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; vec;</span><br><span class="line">	<span class="keyword">if</span>(vec.<span class="built_in">empty</span>())&#123;</span><br><span class="line">		cout&lt;&lt;boolalpha&lt;&lt;vec.<span class="built_in">empty</span>()&lt;&lt;<span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">		cout&lt;&lt;<span class="string">&quot;size of vector &quot;</span>&lt;&lt;vec.<span class="built_in">size</span>()&lt;&lt;<span class="string">&#x27;\n&#x27;</span>; </span><br><span class="line">	&#125;</span><br><span class="line">	vec.<span class="built_in">resize</span>(<span class="number">3</span>);		</span><br><span class="line">	cout&lt;&lt;vec.<span class="built_in">size</span>()&lt;&lt;<span class="string">&#x27;\n&#x27;</span>;		<span class="comment">//current size</span></span><br><span class="line">	cout&lt;&lt;vec.<span class="built_in">capacity</span>()&lt;&lt;<span class="string">&#x27;\n&#x27;</span>;		<span class="comment">//current maximum capacity</span></span><br><span class="line">	vec.<span class="built_in">reserve</span>(<span class="number">4</span>);		</span><br><span class="line">	cout&lt;&lt;vec.<span class="built_in">size</span>()&lt;&lt;<span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    cout&lt;&lt;vec.<span class="built_in">capacity</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> * capacity and size * 容量 (capacity) : 是這個 vector
+擁有的空間。 * 長度 (size) : 是實際儲存了元素的空間大小。capacity
+永遠不小於 size。 * reserve() vs resize() * reserve()
+的目的是擴大容量。做完時，vector 的長度不變，capacity
+只會長大不會縮小，資料所在位置可能會移動 (因為會重配空間)。因為 vector
+一開始是空的，立刻預留顯然比填了資料後才預留省了拷貝資料的時間。 *
+resize() 的目的是改變 vector 的長度。做完時，vector
+的長度會改變為指定的大小，capacity 則視需要調整，確保不小於
+size，資料所在位置可能會移動。如果變小就擦掉尾巴的資料，如果變大就補零。補零如果會超過容量，會做重配空間的動作。
+*
+白話文就是reserve()創造空間，但沒有隨機產生值，因此不能做訪問。resize()則是除了創造空間，也隨機產生值，故可直接訪問。
+* 二維vector *將眾多一維vector塞入二維vector。 <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; test_2D;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++)&#123;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; temp;</span><br><span class="line">        <span class="type">static</span> <span class="type">int</span> counter=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;<span class="number">3</span>; j++)&#123;</span><br><span class="line">            temp.<span class="built_in">push_back</span>(counter);</span><br><span class="line">            counter++;</span><br><span class="line">        &#125;</span><br><span class="line">        test_2D.<span class="built_in">push_back</span>(temp);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;test_2D.<span class="built_in">size</span>(); i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;test_2D[<span class="number">0</span>].<span class="built_in">size</span>(); j++)&#123;</span><br><span class="line">            cout&lt;&lt;test_2D[i][j]&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> Result:
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/8mMfbp6.png"
+                      
+                ></p>
+<h2 id="queue">Queue</h2>
+<ul>
+<li>僅能取得(操作)頭與尾的element.</li>
+<li>具有fifo(first in first out)的特性.</li>
+<li>用法1(push(), pop(), front(), back(), size(), empty()) <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	queue&lt;<span class="type">int</span>&gt; q;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++)&#123;</span><br><span class="line">		q.<span class="built_in">push</span>(i+<span class="number">1</span>);	<span class="comment">//adding elements</span></span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;Size: &quot;</span>&lt;&lt;q.<span class="built_in">size</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;First element: &quot;</span>&lt;&lt;q.<span class="built_in">front</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;Last element: &quot;</span>&lt;&lt;q.<span class="built_in">back</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++)&#123;</span><br><span class="line">		q.<span class="built_in">pop</span>();		<span class="comment">//remove the first element</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(q.<span class="built_in">empty</span>())&#123;</span><br><span class="line">		cout&lt;&lt;boolalpha&lt;&lt;q.<span class="built_in">empty</span>(); <span class="comment">//return 1 if q is empty</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+## Stack</li>
+<li>僅能取得(操作)最上層的element.</li>
+<li>具有lifo(last in first out)的特性.</li>
+</ul>
+<p>用法1(psuh(), pop(), top(), size(), empty()) <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	stack&lt;<span class="type">int</span>&gt; s;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++)&#123;</span><br><span class="line">		s.<span class="built_in">push</span>(i+<span class="number">1</span>);    <span class="comment">//not reference</span></span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;Size: &quot;</span>&lt;&lt;s.<span class="built_in">size</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;The top stack: &quot;</span>&lt;&lt;s.<span class="built_in">top</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>; <span class="comment">//reference</span></span><br><span class="line">	s.<span class="built_in">pop</span>();	<span class="comment">//removing the first stack</span></span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;Size:&quot;</span>&lt;&lt;s.<span class="built_in">size</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; s.<span class="built_in">size</span>()!=<span class="number">0</span>; i++)&#123;</span><br><span class="line">		s.<span class="built_in">pop</span>();</span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;size: &quot;</span>&lt;&lt;s.<span class="built_in">size</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	<span class="keyword">if</span>(s.<span class="built_in">empty</span>())&#123;</span><br><span class="line">		cout&lt;&lt;<span class="string">&quot;empty&quot;</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> ## Set *
+就是集合。 * 可用於快速查找elements 是否存在。 *
+每個elements皆是唯一的，不可重複。 * 每個elements皆不能做修改。 *
+具有順序性。 * 操作簡單。 * elements 太多會拖慢速度。 <img 
+
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/1mdMgul.png"
+                      
+                ></p>
+<p>用法1(insert(), count(), erase(), clear(), empty()) <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;set&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    set&lt;<span class="type">int</span>&gt; s;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">10</span>;i&lt;=<span class="number">50</span>; i+=<span class="number">10</span>)&#123;</span><br><span class="line">        s.<span class="built_in">insert</span>(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(s.<span class="built_in">count</span>(<span class="number">10</span>))&#123;</span><br><span class="line">        cout&lt;&lt;boolalpha&lt;&lt;<span class="literal">true</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    s.<span class="built_in">erase</span>(<span class="number">10</span>);</span><br><span class="line">    <span class="keyword">if</span>(s.<span class="built_in">count</span>(<span class="number">10</span>))&#123;</span><br><span class="line">        cout&lt;&lt;boolalpha&lt;&lt;<span class="literal">true</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        cout&lt;&lt;boolalpha&lt;&lt;<span class="literal">false</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>; </span><br><span class="line">    &#125;</span><br><span class="line">    s.<span class="built_in">clear</span>();</span><br><span class="line">    <span class="keyword">if</span>(s.<span class="built_in">empty</span>())&#123;</span><br><span class="line">        cout&lt;&lt;<span class="string">&quot;empty&quot;</span>&lt;&lt;<span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></p>
+<h2 id="map">Map</h2>
+<ul>
+<li>有排序關聯式容器。</li>
+<li>map中的元素會根據對應的鍵值(key)做排序。</li>
+<li>鍵值具有唯一性。</li>
+<li>高效率，使用簡單。 <img 
+
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/anN3pMV.png"
+                      
+                ></li>
+</ul>
+<p>用法1(insert(), erase(), clear(), empty()) <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">//initialization</span></span><br><span class="line">    map&lt;string, <span class="type">int</span>&gt; m =&#123;</span><br><span class="line">        &#123;<span class="string">&quot;One&quot;</span>, <span class="number">1</span>&#125;,</span><br><span class="line">        &#123;<span class="string">&quot;Two&quot;</span>, <span class="number">2</span>&#125;,</span><br><span class="line">        &#123;<span class="string">&quot;Three&quot;</span>, <span class="number">3</span>&#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    m.<span class="built_in">insert</span>(<span class="built_in">pair</span>&lt;string, <span class="type">int</span>&gt;(<span class="string">&quot;Four&quot;</span>, <span class="number">4</span>));</span><br><span class="line">    m[<span class="string">&quot;Five&quot;</span>]=<span class="number">5</span>;</span><br><span class="line">    cout&lt;&lt;m[<span class="string">&quot;Five&quot;</span>]&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    m.<span class="built_in">erase</span>(<span class="string">&quot;Five&quot;</span>);</span><br><span class="line">    cout&lt;&lt;m.<span class="built_in">size</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    m.<span class="built_in">clear</span>();</span><br><span class="line">    <span class="keyword">if</span>(m.<span class="built_in">empty</span>())&#123;</span><br><span class="line">        cout&lt;&lt;<span class="string">&quot;empty&quot;</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> ## Algorithm
+* 常用演算法。</p>
+<p>用法1(sort(), reverse()) <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; v;</span><br><span class="line">    <span class="type">int</span> input;</span><br><span class="line">    <span class="keyword">while</span>(cin&gt;&gt;input&amp;&amp;input!=<span class="number">-1</span>)&#123;</span><br><span class="line">        v.<span class="built_in">push_back</span>(input);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">sort</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>());</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;v.<span class="built_in">size</span>(); i++)&#123;</span><br><span class="line">        cout&lt;&lt;v[i]&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    <span class="built_in">reverse</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>());</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;v.<span class="built_in">size</span>(); i++)&#123;</span><br><span class="line">        cout&lt;&lt;v[i]&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></p>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：STL(Standard Template Library)</li>
+        <li>Post author：Shih Jiun Lin</li>
+        <li>Create time：2023-01-18 12:34:50</li>
+        <li>
+            Post link：https://shih-jiun-lin.github.io/2023/01/18/STL(Standard Template Library)/
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+                </div>
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/C/">#C++</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                            rel="prev"
+                            href="/2023/01/18/Chaper%207%20Pointers/"
+                            >
+                                <span class="left arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </span>
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">Chaper 7 Pointers</span>
+                                    <span class="post-nav-item">Prev posts</span>
+                                </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/01/18/%E8%A3%9C%E5%85%85%E8%B3%87%E6%96%99/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">補充資料</span>
+                                    <span class="post-nav-item">Next posts</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>Contents</strong></div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#stlstandard-template-library"><span class="nav-text">STL(Standard Template
+Library)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#vector"><span class="nav-text">Vector</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#queue"><span class="nav-text">Queue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#map"><span class="nav-text">Map</span></a></li></ol></li></ol>
+    </div>
+</div>
+            </div>
+        
+    </div>
+</div>
+
+
+                
+
+            </div>
+
+
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2023&nbsp;<i class="fa-solid fa-heart icon-animate"></i>&nbsp;<a href="/">Shih Jiun Lin. All Rights Reserved.</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalviews&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v0.5.2</a>
+        </div>
+        
+        
+        <script async data-pjax defer>
+            function odometer_init(){
+                    let el = document.getElementsByClassName('odometer');
+                    for (i = 0; i < el.length; i++) {
+                        od = new Odometer({
+                            el: el[i],
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    }
+            }
+            odometer_init();
+        </script>
+        <div id="start_time_div" style="display:none">
+            2023/1/17 23:59:59
+        </div>
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fa-solid fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fa-solid fa-left-right"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fa-solid fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fa-solid fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fa-solid fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+
+    
+<script src="/js/runtime.js"></script>
+
+    
+<script src="/js/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/css/odometer-theme-minimal.css">
+
+
+
+<div class="post-scripts pjax">
+    
+        
+<script src="/js/toc-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
+    
+</div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            REDEFINE.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            REDEFINE.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            REDEFINE.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

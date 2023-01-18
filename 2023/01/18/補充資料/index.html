@@ -6,7 +6,7 @@
     <meta name="keywords" content="Hexo Theme Redefine">
     <meta name="description" content="Hexo Theme Redefine">
     <meta name="author" content="Shih Jiun Lin">
-    <link rel="canonical" href="http://example.com/2023/01/18/2023-01-17-Data%20Manipulation(I)/" />
+    <link rel="canonical" href="http://example.com/2023/01/18/%E8%A3%9C%E5%85%85%E8%B3%87%E6%96%99/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
     <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no" sizes="192x192">
     <link rel="apple-touch-icon" sizes="180x180" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no">
@@ -14,7 +14,7 @@
     
     <title>
         
-            Data Manipulation(I) |
+            補充資料 |
         
         Shih-Jiun-Lin&#39;s Blog
     </title>
@@ -332,7 +332,7 @@
     <div class="post-page-container">
         <div class="article-content-container">
             <div class="article-title">
-                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">Data Manipulation(I)</h1></span>
+                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">補充資料</h1></span>
             </div>
 
             
@@ -349,8 +349,8 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="pc">2023-01-18 01:29:47</span>
-        <span class="mobile">2023-01-18 01:29</span>
+        <span class="pc">2023-01-18 12:34:50</span>
+        <span class="mobile">2023-01-18 12:34</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -358,11 +358,15 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/%E5%A4%A7%E5%AD%B8%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98-%E8%A8%88%E7%AE%97%E6%A9%9F%E6%A6%82%E8%AB%96/">大學課堂筆記-計算機概論</a>&nbsp;
+                        <a href="/categories/%E5%A4%A7%E5%AD%B8%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98-%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/">大學課堂筆記-程式設計</a>&nbsp;
                     </li>
                 
                     <li>
-                        &gt; <a href="/categories/%E5%A4%A7%E5%AD%B8%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98-%E8%A8%88%E7%AE%97%E6%A9%9F%E6%A6%82%E8%AB%96/%E5%BD%B0%E5%B8%AB%E5%A4%A7/">彰師大</a>&nbsp;
+                        &gt; <a href="/categories/%E5%A4%A7%E5%AD%B8%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98-%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/C/">C++</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E5%A4%A7%E5%AD%B8%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98-%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/C/%E5%BD%B0%E5%B8%AB%E5%A4%A7/">彰師大</a>&nbsp;
                     </li>
                 
             </ul>
@@ -374,7 +378,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/%E8%A8%88%E7%AE%97%E6%A9%9F%E6%A6%82%E8%AB%96/">計算機概論</a>&nbsp;
+                        <a href="/tags/C/">C++</a>&nbsp;
                     </li>
                 
             </ul>
@@ -384,7 +388,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>394 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>331 Words</span>
         </span>
     
     
@@ -405,145 +409,39 @@
             
 
             <div class="article-content markdown-body">
-                <h1 id="data-manipulationi">Data Manipulation(I)</h1>
-<h2 id="the-communication-between-cpu-and-memory">The communication
-between CPU and memory</h2>
+                <h1 id="補充資料">補充資料</h1>
+<h2 id="literal-constant">Literal Constant</h2>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://i.imgur.com/sEBH2IU.png"
-                      
-                > Register -&gt; CPU
-Cache * Adding values in memory 1. Get value A from the memory and put
-it in a register. 2. Get value B from the memory and put it in another
-register. 3. Activate the additional circuit and put the final value
-into another register. 4. Store the result the memory. * Machine
-instruction 1. Data transfer * load, store, I/O 2. Arithmetic/logic *
-and, or, add, sub... * shift, halt 3. Control * jump, halt 4. RISC -&gt;
-Reduced instruction set computing * Ex: PRC, SPRC 5. CISC -&gt; Complex
-instruction set computing * Ex: x86，x64 ## Example of machine
-instruction <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/UYGKbh0.png"
-                      
-                > * 3 -&gt;
-store * 5 -&gt; register No.5 * A7 -&gt; memory cell A7 -&gt; Store the
-content of register No.5 to memory cell A7. ## The machine instruction
-of adding two values <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/Xa7EtHE.png"
-                      
-                > ##
-Program execution * Machine cycle <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/N1Jiuk9.png"
-                      
-                > * Fetch <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/pJF8QS9.png"
+                     data-src="https://i.imgur.com/s7Ps4NN.png"
                       
                 ></p>
-<ul>
-<li>Clock -&gt; how many machine cycle a cpu is able to do in one second
-## Arithmetic and logic unit(ALU)</li>
-<li>Arithmetic operations</li>
-<li>Logic/bit operations</li>
-<li><img  
+<p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://i.imgur.com/pfBxlEH.png"
+                     data-src="https://i.imgur.com/QjOdk1K.png"
                       
-                > ## Shift/Rotation</li>
-<li>Logic shift
-<ul>
-<li>10100000 -&gt; 01010000(right) 10100000 -&gt; 01000000(left) Both
-moving left and right add a 0</li>
-</ul></li>
-<li>Arithmetic shift
-<ul>
-<li>10100000 -&gt; 11010000(right, the number is divided by 2) Moving
-right，copy the leftest bit. 10100000 -&gt; 11000000(left, the number is
-multiplied by 2) Moving left，add a 0 to the right.</li>
-</ul></li>
-<li>Rotation
-<ul>
-<li>10100000 -&gt; 01010000(right) 10100000 -&gt; 01000001(left) ##
-Controllers and peripheral devices <img 
+                ></p>
+<p>Ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	cout&lt;&lt;<span class="number">75</span>&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;<span class="number">0113</span>&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;<span class="number">0x4b</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>; <span class="comment">//Decimal, Octal, Hexadecimal</span></span><br><span class="line">	cout&lt;&lt;<span class="number">75</span>&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;<span class="number">75u</span>&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;<span class="number">75l</span>&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;<span class="number">75ul</span>&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;<span class="number">75lu</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>; <span class="comment">//int, unsigned, unsigned long, usigned long</span></span><br><span class="line">	cout&lt;&lt;<span class="number">6.02e23</span>&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;<span class="number">1.6e-19</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>; <span class="comment">//6.02*10^23</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></p>
+<h2 id="bitwise-operators">Bitwise Operators</h2>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/7AphOD4.png"
+                      
+                ></p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bitset&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> x=<span class="number">0b00000001</span>;</span><br><span class="line">	<span class="type">int</span> y=<span class="number">0b00000000</span>;</span><br><span class="line">	cout&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(x&lt;&lt;<span class="number">1</span>)&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(x&gt;&gt;<span class="number">1</span>)&lt;&lt;<span class="string">&quot;\n&quot;</span>; <span class="comment">//left / right shift for 1 bit </span></span><br><span class="line">	cout&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(~x)&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(x|y)&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(x&amp;y)&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(x^y)&lt;&lt;<span class="string">&quot;\n&quot;</span>; <span class="comment">// not, or, and, xor</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h2 id="dynamic-memory-allocation">Dynamic Memory allocation</h2>
+<p>Reference: http://ccy.dd.ncu.edu.tw/~chen/course/Cpp/ch5/6.htm <img 
 
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://i.imgur.com/AZ4fwQH.png"
+                     data-src="https://i.imgur.com/kxplKpS.png"
                       
-                ></li>
-</ul></li>
-<li>Specialized -&gt; SATA...</li>
-<li>General -&gt; USB, HDMI... ## Memory-mapped I/O</li>
-<li>The periphral devices are recognized as part of the memory. <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/YFL6td3.png"
-                      
-                > ## Communication</li>
-<li>DMA(direct memory access)
-<ul>
-<li>Authorized controllers can access data directly from main memory
-without notifying CPU</li>
-</ul></li>
-<li>Hand shaking
-<ul>
-<li>Two way communication</li>
-<li>Coordinating activities</li>
-</ul></li>
-<li>Parallel/Serial</li>
-<li>Transfer rate unit -&gt; bit per second ## Pipelining(accelerating
-the process) ex -&gt; pre-fetching<img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/gPsrUkp.png"
-                      
-                ></li>
-<li>Throughput -&gt; Total amount of work accomplished in a given amount
-of time</li>
-<li>Pre-fetching issus -&gt; conditional jump ## Parallel/distributed
-computing</li>
-<li>Parallel
-<ul>
-<li>Multiprocessor</li>
-<li>MIMD，SISD，SIMD，MISD(M-&gt;Multiple，S-&gt;Single，I-&gt;Instruction,
-D-&gt;Dataset)</li>
-</ul></li>
-<li>Distributed
-<ul>
-<li>Linking computers via network</li>
-<li>Seperate processors and memory</li>
-</ul></li>
-<li>Issues
-<ul>
-<li>Data dependency</li>
-<li>Load balancing</li>
-<li>Synchronization</li>
-<li>Reliability ## How to parallelize? <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/xrTQCOL.png"
-                      
-                > ## Speed up and Scaling</li>
-</ul></li>
-<li>Amdahl's law(阿姆達爾定律)</li>
-<li>Gain = <span
-class="math inline">\(\frac{1}{\frac{P}{M}+(1-P)}\)</span>(P -&gt;
-proportion that is parallelizable, S -&gt; proportion that is serial
-only)</li>
-</ul>
+                ></p>
+<p>Ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> *p;</span><br><span class="line">	p=<span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">	*p=<span class="number">100</span>;</span><br><span class="line">	cout&lt;&lt;*p;</span><br><span class="line">	<span class="keyword">delete</span> p; <span class="comment">//release the memory space</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> Ex2: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> *p=<span class="keyword">new</span> <span class="type">int</span> [<span class="number">5</span>];</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++)&#123;</span><br><span class="line">		*(p+i)=i;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++)&#123;</span><br><span class="line">		cout&lt;&lt;*(p+i)&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">delete</span> []p; <span class="comment">//release memory space</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></p>
+<h2 id="linked-list寒假學">Linked List(寒假學)</h2>
 
             </div>
 
@@ -551,11 +449,11 @@ only)</li>
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li>Post title：Data Manipulation(I)</li>
+        <li>Post title：補充資料</li>
         <li>Post author：Shih Jiun Lin</li>
-        <li>Create time：2023-01-18 01:29:47</li>
+        <li>Create time：2023-01-18 12:34:50</li>
         <li>
-            Post link：https://shih-jiun-lin.github.io/2023/01/18/2023-01-17-Data Manipulation(I)/
+            Post link：https://shih-jiun-lin.github.io/2023/01/18/補充資料/
         </li>
         <li>
             Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
@@ -570,7 +468,7 @@ only)</li>
                 <ul class="post-tags-box">
                     
                         <li class="tag-item">
-                            <a href="/tags/%E8%A8%88%E7%AE%97%E6%A9%9F%E6%A6%82%E8%AB%96/">#計算機概論</a>&nbsp;
+                            <a href="/tags/C/">#C++</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -582,13 +480,13 @@ only)</li>
                         <div class="article-prev">
                             <a class="prev"
                             rel="prev"
-                            href="/2023/01/18/2023-01-17-Data%20Storage(I)/"
+                            href="/2023/01/18/STL(Standard%20Template%20Library)/"
                             >
                                 <span class="left arrow-icon flex-center">
                                     <i class="fa-solid fa-chevron-left"></i>
                                 </span>
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">Data Storage(I)</span>
+                                    <span class="post-nav-title-item">STL(Standard Template Library)</span>
                                     <span class="post-nav-item">Prev posts</span>
                                 </span>
                             </a>
@@ -598,10 +496,10 @@ only)</li>
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/01/17/%E8%87%AA%E6%88%91%E4%BB%8B%E7%B4%B9/"
+                            href="/2023/01/18/Chaper%208%20Sequential-Access%20Files/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">自我介紹</span>
+                                    <span class="post-nav-title-item">Introduction to C++ Programing</span>
                                     <span class="post-nav-item">Next posts</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -621,8 +519,7 @@ only)</li>
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>Contents</strong></div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#data-manipulationi"><span class="nav-text">Data Manipulation(I)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#the-communication-between-cpu-and-memory"><span class="nav-text">The communication
-between CPU and memory</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A3%9C%E5%85%85%E8%B3%87%E6%96%99"><span class="nav-text">補充資料</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#literal-constant"><span class="nav-text">Literal Constant</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bitwise-operators"><span class="nav-text">Bitwise Operators</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dynamic-memory-allocation"><span class="nav-text">Dynamic Memory allocation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#linked-list%E5%AF%92%E5%81%87%E5%AD%B8"><span class="nav-text">Linked List(寒假學)</span></a></li></ol></li></ol>
     </div>
 </div>
             </div>

@@ -6,7 +6,7 @@
     <meta name="keywords" content="Hexo Theme Redefine">
     <meta name="description" content="Hexo Theme Redefine">
     <meta name="author" content="Shih Jiun Lin">
-    <link rel="canonical" href="http://example.com/2023/01/18/2023-01-17-Data%20Manipulation(I)/" />
+    <link rel="canonical" href="http://example.com/categories/%E5%A4%A7%E5%AD%B8%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98-%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/C/%E5%BD%B0%E5%B8%AB%E5%A4%A7" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
     <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no" sizes="192x192">
     <link rel="apple-touch-icon" sizes="180x180" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no">
@@ -14,7 +14,7 @@
     
     <title>
         
-            Data Manipulation(I) |
+            Category: 彰師大 |
         
         Shih-Jiun-Lin&#39;s Blog
     </title>
@@ -143,7 +143,7 @@
                         
                             <li class="menu-item">
                                 <!-- Menu -->
-                                <a class="" 
+                                <a class="active" 
                                     href="/categories"  >
                                     
                                         
@@ -266,7 +266,7 @@
             
                 
                     <li class="drawer-menu-item flex-center">
-                        <a class="" 
+                        <a class="active" 
                         href="/categories"  >
                              
                                 
@@ -329,304 +329,91 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="post-page-container">
-        <div class="article-content-container">
-            <div class="article-title">
-                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">Data Manipulation(I)</h1></span>
-            </div>
-
-            
-                <div class="article-header">
-                    <div class="avatar">
-                        <img src="https://scontent-hkg4-2.xx.fbcdn.net/v/t1.6435-9/70899392_1700286993440218_5774458773556953088_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=iBCVayjTOr8AX8TBEWz&_nc_ht=scontent-hkg4-2.xx&oh=00_AfAmQlO1Y3qBnfF5_L2XihrdBGlMKeof-lZCAoQpK_vIQg&oe=63EE348C">
-                    </div>
-                    <div class="info">
-                        <div class="author">
-                            <span class="name">Shih Jiun Lin</span>
-                            
-                        </div>
-                        <div class="meta-info">
-                            <div class="article-meta-info">
-    <span class="article-date article-meta-item">
-        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="pc">2023-01-18 01:29:47</span>
-        <span class="mobile">2023-01-18 01:29</span>
-    </span>
-    
-        <span class="article-categories article-meta-item">
-            <i class="fa-regular fa-folders"></i>&nbsp;
-            <ul>
-                
-                    <li>
-                        <a href="/categories/%E5%A4%A7%E5%AD%B8%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98-%E8%A8%88%E7%AE%97%E6%A9%9F%E6%A6%82%E8%AB%96/">大學課堂筆記-計算機概論</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        &gt; <a href="/categories/%E5%A4%A7%E5%AD%B8%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98-%E8%A8%88%E7%AE%97%E6%A9%9F%E6%A6%82%E8%AB%96/%E5%BD%B0%E5%B8%AB%E5%A4%A7/">彰師大</a>&nbsp;
-                    </li>
-                
-            </ul>
-        </span>
-    
-    
-        <span class="article-tags article-meta-item">
-            <i class="fa-regular fa-tags"></i>&nbsp;
-            <ul>
-                
-                    <li>
-                        <a href="/tags/%E8%A8%88%E7%AE%97%E6%A9%9F%E6%A6%82%E8%AB%96/">計算機概論</a>&nbsp;
-                    </li>
-                
-            </ul>
-        </span>
-    
-
-    
-    
-        <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>394 Words</span>
-        </span>
-    
-    
-        <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>2 Mins</span>
-        </span>
-    
-    
-        <span class="article-pv article-meta-item">
-            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
-        </span>
-    
-</div>
-
-                        </div>
-                    </div>
-                </div>
-            
-
-            <div class="article-content markdown-body">
-                <h1 id="data-manipulationi">Data Manipulation(I)</h1>
-<h2 id="the-communication-between-cpu-and-memory">The communication
-between CPU and memory</h2>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/sEBH2IU.png"
-                      
-                > Register -&gt; CPU
-Cache * Adding values in memory 1. Get value A from the memory and put
-it in a register. 2. Get value B from the memory and put it in another
-register. 3. Activate the additional circuit and put the final value
-into another register. 4. Store the result the memory. * Machine
-instruction 1. Data transfer * load, store, I/O 2. Arithmetic/logic *
-and, or, add, sub... * shift, halt 3. Control * jump, halt 4. RISC -&gt;
-Reduced instruction set computing * Ex: PRC, SPRC 5. CISC -&gt; Complex
-instruction set computing * Ex: x86，x64 ## Example of machine
-instruction <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/UYGKbh0.png"
-                      
-                > * 3 -&gt;
-store * 5 -&gt; register No.5 * A7 -&gt; memory cell A7 -&gt; Store the
-content of register No.5 to memory cell A7. ## The machine instruction
-of adding two values <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/Xa7EtHE.png"
-                      
-                > ##
-Program execution * Machine cycle <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/N1Jiuk9.png"
-                      
-                > * Fetch <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/pJF8QS9.png"
-                      
-                ></p>
-<ul>
-<li>Clock -&gt; how many machine cycle a cpu is able to do in one second
-## Arithmetic and logic unit(ALU)</li>
-<li>Arithmetic operations</li>
-<li>Logic/bit operations</li>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/pfBxlEH.png"
-                      
-                > ## Shift/Rotation</li>
-<li>Logic shift
-<ul>
-<li>10100000 -&gt; 01010000(right) 10100000 -&gt; 01000000(left) Both
-moving left and right add a 0</li>
-</ul></li>
-<li>Arithmetic shift
-<ul>
-<li>10100000 -&gt; 11010000(right, the number is divided by 2) Moving
-right，copy the leftest bit. 10100000 -&gt; 11000000(left, the number is
-multiplied by 2) Moving left，add a 0 to the right.</li>
-</ul></li>
-<li>Rotation
-<ul>
-<li>10100000 -&gt; 01010000(right) 10100000 -&gt; 01000001(left) ##
-Controllers and peripheral devices <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/AZ4fwQH.png"
-                      
-                ></li>
-</ul></li>
-<li>Specialized -&gt; SATA...</li>
-<li>General -&gt; USB, HDMI... ## Memory-mapped I/O</li>
-<li>The periphral devices are recognized as part of the memory. <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/YFL6td3.png"
-                      
-                > ## Communication</li>
-<li>DMA(direct memory access)
-<ul>
-<li>Authorized controllers can access data directly from main memory
-without notifying CPU</li>
-</ul></li>
-<li>Hand shaking
-<ul>
-<li>Two way communication</li>
-<li>Coordinating activities</li>
-</ul></li>
-<li>Parallel/Serial</li>
-<li>Transfer rate unit -&gt; bit per second ## Pipelining(accelerating
-the process) ex -&gt; pre-fetching<img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/gPsrUkp.png"
-                      
-                ></li>
-<li>Throughput -&gt; Total amount of work accomplished in a given amount
-of time</li>
-<li>Pre-fetching issus -&gt; conditional jump ## Parallel/distributed
-computing</li>
-<li>Parallel
-<ul>
-<li>Multiprocessor</li>
-<li>MIMD，SISD，SIMD，MISD(M-&gt;Multiple，S-&gt;Single，I-&gt;Instruction,
-D-&gt;Dataset)</li>
-</ul></li>
-<li>Distributed
-<ul>
-<li>Linking computers via network</li>
-<li>Seperate processors and memory</li>
-</ul></li>
-<li>Issues
-<ul>
-<li>Data dependency</li>
-<li>Load balancing</li>
-<li>Synchronization</li>
-<li>Reliability ## How to parallelize? <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/xrTQCOL.png"
-                      
-                > ## Speed up and Scaling</li>
-</ul></li>
-<li>Amdahl's law(阿姆達爾定律)</li>
-<li>Gain = <span
-class="math inline">\(\frac{1}{\frac{P}{M}+(1-P)}\)</span>(P -&gt;
-proportion that is parallelizable, S -&gt; proportion that is serial
-only)</li>
-</ul>
-
-            </div>
-
-            
-                <div class="post-copyright-info">
-                    <div class="article-copyright-info-container">
-    <ul>
-        <li>Post title：Data Manipulation(I)</li>
-        <li>Post author：Shih Jiun Lin</li>
-        <li>Create time：2023-01-18 01:29:47</li>
-        <li>
-            Post link：https://shih-jiun-lin.github.io/2023/01/18/2023-01-17-Data Manipulation(I)/
-        </li>
-        <li>
-            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
-        </li>
-    </ul>
-</div>
-
-                </div>
-            
-
-            
-                <ul class="post-tags-box">
-                    
-                        <li class="tag-item">
-                            <a href="/tags/%E8%A8%88%E7%AE%97%E6%A9%9F%E6%A6%82%E8%AB%96/">#計算機概論</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            
-
-            
-                <div class="article-nav">
-                    
-                        <div class="article-prev">
-                            <a class="prev"
-                            rel="prev"
-                            href="/2023/01/18/2023-01-17-Data%20Storage(I)/"
-                            >
-                                <span class="left arrow-icon flex-center">
-                                    <i class="fa-solid fa-chevron-left"></i>
-                                </span>
-                                <span class="title flex-center">
-                                    <span class="post-nav-title-item">Data Storage(I)</span>
-                                    <span class="post-nav-item">Prev posts</span>
-                                </span>
-                            </a>
-                        </div>
-                    
-                    
-                        <div class="article-next">
-                            <a class="next"
-                            rel="next"
-                            href="/2023/01/17/%E8%87%AA%E6%88%91%E4%BB%8B%E7%B4%B9/"
-                            >
-                                <span class="title flex-center">
-                                    <span class="post-nav-title-item">自我介紹</span>
-                                    <span class="post-nav-item">Next posts</span>
-                                </span>
-                                <span class="right arrow-icon flex-center">
-                                    <i class="fa-solid fa-chevron-right"></i>
-                                </span>
-                            </a>
-                        </div>
-                    
-                </div>
-            
-
-            
+    <div class="category-container">
+        <div class="category-name">
+            <i class="fa-solid fa-folder"></i>&nbsp;彰師大
         </div>
-
-        
-            <div class="toc-content-container">
-                <div class="post-toc-wrap">
-    <div class="post-toc">
-        <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>Contents</strong></div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#data-manipulationi"><span class="nav-text">Data Manipulation(I)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#the-communication-between-cpu-and-memory"><span class="nav-text">The communication
-between CPU and memory</span></a></li></ol></li></ol>
-    </div>
-</div>
+        <div class="category-post-list">
+            
+<div class="archive-list-container">
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2023</span>
+                <span class="archive-year-post-count">[8]</span>
             </div>
-        
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/2023/01/18/Chaper%207%20Pointers/"
+                        >Chaper 7 Pointers</a>
+                        <span class="article-date">01-18</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/2023/01/18/STL(Standard%20Template%20Library)/"
+                        >STL(Standard Template Library)</a>
+                        <span class="article-date">01-18</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/2023/01/18/%E8%A3%9C%E5%85%85%E8%B3%87%E6%96%99/"
+                        >補充資料</a>
+                        <span class="article-date">01-18</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/2023/01/18/Chaper%208%20Sequential-Access%20Files/"
+                        >Introduction to C++ Programing</a>
+                        <span class="article-date">01-18</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/2023/01/18/Chapter%205%20Functions%20and%20Introduction%20to%20Recursion/"
+                        >Functions and Introduction to Recursion</a>
+                        <span class="article-date">01-18</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/2023/01/18/Chapter%204,%20Control%20Statement_%20Part%202/"
+                        >Control Statement-Part 2</a>
+                        <span class="article-date">01-18</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/2023/01/18/Chapter%203,%20Control%20Statement_%20Part%201/"
+                        >Control Statement-Part 1</a>
+                        <span class="article-date">01-18</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/2023/01/18/Chapter%202,%20Introduction%20to%20C++%20Programing/"
+                        >Introduction to C++ Programing</a>
+                        <span class="article-date">01-18</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+</div>
+
+        </div>
+    </div>
+    <div class="category-paginator">
+        <div class="paginator">
+    
+
+    
+</div>
+
     </div>
 </div>
 
@@ -696,23 +483,6 @@ between CPU and memory</span></a></li></ol></li></ol>
         </div>
     </div>
 
-    
-        <div class="post-tools">
-            <div class="post-tools-container">
-    <ul class="tools-list">
-        <!-- TOC aside toggle -->
-        
-            <li class="tools-item page-aside-toggle">
-                <i class="fa-regular fa-outdent"></i>
-            </li>
-        
-
-        <!-- go comment -->
-        
-    </ul>
-</div>
-
-        </div>
     
 
     <div class="right-bottom-side-tools">
@@ -842,14 +612,6 @@ between CPU and memory</span></a></li></ol></li></ol>
 
 
 <div class="post-scripts pjax">
-    
-        
-<script src="/js/toc-toggle.js"></script>
-
-<script src="/js/libs/anime.min.js"></script>
-
-<script src="/js/toc.js"></script>
-
     
 </div>
 

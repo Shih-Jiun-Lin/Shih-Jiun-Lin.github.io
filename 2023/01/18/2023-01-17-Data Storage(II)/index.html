@@ -48,7 +48,11 @@
     
     
     
-<meta name="generator" content="Hexo 6.3.0"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
 
 
 <body>
@@ -354,7 +358,11 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/%E5%A4%A7%E5%AD%B8%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98/">大學課堂筆記</a>&nbsp;
+                        <a href="/categories/%E5%A4%A7%E5%AD%B8%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98-%E8%A8%88%E7%AE%97%E6%A9%9F%E6%A6%82%E8%AB%96/">大學課堂筆記-計算機概論</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E5%A4%A7%E5%AD%B8%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98-%E8%A8%88%E7%AE%97%E6%A9%9F%E6%A6%82%E8%AB%96/%E5%BD%B0%E5%B8%AB%E5%A4%A7/">彰師大</a>&nbsp;
                     </li>
                 
             </ul>
@@ -376,7 +384,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>765 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>746 Words</span>
         </span>
     
     
@@ -397,217 +405,276 @@
             
 
             <div class="article-content markdown-body">
-                <h1 id="Data-Storage-II"><a href="#Data-Storage-II" class="headerlink" title="Data Storage(II)"></a>Data Storage(II)</h1><h2 id="Fraction-in-binary"><a href="#Fraction-in-binary" class="headerlink" title="Fraction in binary"></a>Fraction in binary</h2><ol>
-<li>The rules is the same <img  
+                <h1 id="data-storageii">Data Storage(II)</h1>
+<h2 id="fraction-in-binary">Fraction in binary</h2>
+<ol type="1">
+<li><p>The rules is the same <img 
+
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://i.imgur.com/pqwL1v6.png"
-                     
-                ></li>
-</ol>
-<h2 id="Float-point-notation-and-decoding"><a href="#Float-point-notation-and-decoding" class="headerlink" title="Float-point notation and decoding"></a>Float-point notation and decoding</h2><ol>
-<li>8 bits representation<img  
+                      
+                > ## Float-point notation and
+decoding</p></li>
+<li><p>8 bits representation<img 
+
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://i.imgur.com/6YrHIlt.png"
-                     
-                ><img  
+                      
+                ><img 
+
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://i.imgur.com/BDVrmtA.png"
-                     
-                ><ul>
-<li>Ex (Use the table of binary): 10010101 -&gt; 1(001)(0101) -&gt; ($-2^{1}$)$\times$($\frac{1}{4}$+$\frac{1}{16}$)&#x3D;-$\frac{5}{8}$</li>
-</ul>
-</li>
-<li>On the widely used 64-bit computers，the exponent takes 11 bits，and the mantissa takes 52 bits</li>
-</ol>
-<h2 id="Truncation-error"><a href="#Truncation-error" class="headerlink" title="Truncation error"></a>Truncation error</h2><ol>
-<li>The precision is beyond the limitation of mantissa.<ul>
-<li>Ex (Use the table of binary): 2$\frac{5}{8}$ -&gt; 10.101(base two，fixed point) -&gt; .10101 $\times$  $2^{2}$ -&gt; 0(010)(1010) -&gt; 2$\frac{1}{2}$</li>
-</ul>
-</li>
-</ol>
-<h2 id="Normalized-form"><a href="#Normalized-form" class="headerlink" title="Normalized form"></a>Normalized form</h2><ol>
+                      
+                ></p>
+<ul>
+<li>Ex (Use the table of binary): 10010101 -&gt; 1(001)(0101) -&gt;
+(<span class="math inline">\(-2^{1}\)</span>)<span
+class="math inline">\(\times\)</span>(<span
+class="math inline">\(\frac{1}{4}\)</span>+<span
+class="math inline">\(\frac{1}{16}\)</span>)=-<span
+class="math inline">\(\frac{5}{8}\)</span></li>
+</ul></li>
+<li><p>On the widely used 64-bit computers，the exponent takes 11
+bits，and the mantissa takes 52 bits ## Truncation error</p></li>
+<li><p>The precision is beyond the limitation of mantissa.</p>
+<ul>
+<li>Ex (Use the table of binary): 2<span
+class="math inline">\(\frac{5}{8}\)</span> -&gt; 10.101(base two，fixed
+point) -&gt; .10101 <span class="math inline">\(\times\)</span> <span
+class="math inline">\(2^{2}\)</span> -&gt; 0(010)(1010) -&gt; 2<span
+class="math inline">\(\frac{1}{2}\)</span> ## Normalized form</li>
+</ul></li>
 <li><ul>
-<li>The first bit of mantissa is 1 </li>
-<li>0’s floating-point representation is all 0</li>
-</ul>
-</li>
+<li>The first bit of mantissa is 1</li>
+<li>0's floating-point representation is all 0</li>
+</ul></li>
 <li><p>Normalization:</p>
 <ul>
-<li>Ex (Use the table of binary): 00100011 -&gt; 0(010)(0011) -&gt; .0011 $\times$ $2^{2}$ -&gt; .1100 $\times$ $2^{0}$ -&gt; 0(000)(1100)</li>
-</ul>
-</li>
+<li>Ex (Use the table of binary): 00100011 -&gt; 0(010)(0011) -&gt;
+.0011 <span class="math inline">\(\times\)</span> <span
+class="math inline">\(2^{2}\)</span> -&gt; .1100 <span
+class="math inline">\(\times\)</span> <span
+class="math inline">\(2^{0}\)</span> -&gt; 0(000)(1100)</li>
+</ul></li>
 <li><p>IEEE normalized form</p>
 <ul>
-<li>The left-most bit in mantissa is always 1 (Ex: .0101 -&gt; 1.0101)</li>
-<li>Standard normalized form is (s)(eee)(mmmm) -&gt; ($-1^{s}$) $\times$ 1.mmmm $\times$ $2^{(eee-4)}$<ul>
-<li>Ex(Use the table of binary): 01100011 -&gt; (0)(110)(0011) -&gt; $(-1)^{0}$ $\times$ 1.0011 $\times$ $2^{(6-4)}$</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="Loss-of-digits"><a href="#Loss-of-digits" class="headerlink" title="Loss of digits"></a>Loss of digits</h2><p>Ex (Use the table of excess): </p>
+<li>The left-most bit in mantissa is always 1 (Ex: .0101 -&gt;
+1.0101)</li>
+<li>Standard normalized form is (s)(eee)(mmmm) -&gt; (<span
+class="math inline">\(-1^{s}\)</span>) <span
+class="math inline">\(\times\)</span> 1.mmmm <span
+class="math inline">\(\times\)</span> <span
+class="math inline">\(2^{(eee-4)}\)</span>
 <ul>
-<li>4 + $\frac{1}{4}$ + $\frac{1}{4}$ &#x3D; (01111000 + 00111000) + 00111000 -&gt; make the exponent the same (01111000 + 01110000) + 01110000 &#x3D; 4 (the result is wrong)</li>
-<li>4 + $\frac{1}{4}$ + $\frac{1}{4}$ &#x3D; 01111000 + (00111000 + 00111000) &#x3D; 4$\frac{1}{2}$</li>
-</ul>
-<h2 id="Data-compression"><a href="#Data-compression" class="headerlink" title="Data compression"></a>Data compression</h2><ul>
+<li>Ex(Use the table of binary): 01100011 -&gt; (0)(110)(0011) -&gt;
+<span class="math inline">\((-1)^{0}\)</span> <span
+class="math inline">\(\times\)</span> 1.0011 <span
+class="math inline">\(\times\)</span> <span
+class="math inline">\(2^{(6-4)}\)</span> ## Loss of digits Ex (Use the
+table of excess):</li>
+</ul></li>
+</ul></li>
+</ol>
+<ul>
+<li>4 + <span class="math inline">\(\frac{1}{4}\)</span> + <span
+class="math inline">\(\frac{1}{4}\)</span> = (01111000 + 00111000) +
+00111000 -&gt; make the exponent the same (01111000 + 01110000) +
+01110000 = 4 (the result is wrong)</li>
+<li>4 + <span class="math inline">\(\frac{1}{4}\)</span> + <span
+class="math inline">\(\frac{1}{4}\)</span> = 01111000 + (00111000 +
+00111000) = 4<span class="math inline">\(\frac{1}{2}\)</span> ## Data
+compression</li>
 <li>Two types -&gt; Lossy and Lossless</li>
-<li>Lossless<ol>
-<li>Run-length encoding(RLE)<ul>
-<li>After the process of compressing ，wwwwwww is being recognized as 7w,</li>
-</ul>
+<li>Lossless
+<ol type="1">
+<li>Run-length encoding(RLE)
+<ul>
+<li>After the process of compressing ，wwwwwww is being recognized as
+7w,<br />
 </li>
+</ul></li>
 <li>Frequency-dependent encoding -&gt; Huffman encoding</li>
-<li>Dictionary encoding -&gt; Adaptive dictionary encoding, LZW encoding<ul>
+<li>Dictionary encoding -&gt; Adaptive dictionary encoding, LZW encoding
+<ul>
 <li>Defining the value by yourself</li>
-</ul>
-</li>
-</ol>
-</li>
-<li>Lossy<ol>
-<li>Relative &#x2F; difference encoding</li>
-</ol>
-</li>
-<li>Huffman encoding<ul>
-<li>Ex: AAABBBAABCAAAABD<ul>
-<li>Traditional encoding -&gt; Code book: A -&gt; 00; B -&gt; 01; C -&gt; 10; D -&gt; 11, represent in 2 bits it will be 000000010101000001100000000111</li>
-<li>Huffman encoding -&gt; <ol>
-<li>Count the occurrences:  A(9); B(5); C(1); D(1)</li>
-<li>Build a huffman tree:<br>                        <img  
+</ul></li>
+</ol></li>
+<li>Lossy
+<ol type="1">
+<li>Relative / difference encoding</li>
+</ol></li>
+<li>Huffman encoding
+<ul>
+<li>Ex: AAABBBAABCAAAABD
+<ul>
+<li>Traditional encoding -&gt; Code book: A -&gt; 00; B -&gt; 01; C
+-&gt; 10; D -&gt; 11, represent in 2 bits it will be
+000000010101000001100000000111</li>
+<li>Huffman encoding -&gt;
+<ol type="1">
+<li>Count the occurrences: A(9); B(5); C(1); D(1)</li>
+<li>Build a huffman tree: <img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://i.imgur.com/nWxGAT7.png"
-                     
-                ></li>
-</ol>
-<p>  According to the tree, the code book is A -&gt; 0, B -&gt; 10, C -&gt; 110, D -&gt; 111. Through the huffman encoding，the string will be transfered into 0001010100010110</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>LZW encoding<ul>
-<li>Is a kind of dictionary encoding that does not need to store the dictionary</li>
-<li>The concept is to generate more values to the dictionary(Usually we use the ascii code to represent numbers and words, so no addition dictionary is needed)<ul>
-<li>Code book: x -&gt; 1, y -&gt; 2, space -&gt; 3    <ul>
-<li>Ex: xyx xyx xyx xyx<br>  -&gt; 1<br>  -&gt; 12<br>  -&gt; 121<br>  -&gt; 1213<br>  Then you append 1213 to the dictionary as 4<br>  -&gt; 12134<br>  -&gt;121343434</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="Images-audios-and-videos"><a href="#Images-audios-and-videos" class="headerlink" title="Images, audios and videos"></a>Images, audios and videos</h2><ul>
-<li>Images: <ol>
+                      
+                >
+According to the tree, the code book is A -&gt; 0, B -&gt; 10, C -&gt;
+110, D -&gt; 111. Through the huffman encoding，the string will be
+transfered into 0001010100010110</li>
+</ol></li>
+</ul></li>
+</ul></li>
+<li>LZW encoding
+<ul>
+<li>Is a kind of dictionary encoding that does not need to store the
+dictionary</li>
+<li>The concept is to generate more values to the dictionary(Usually we
+use the ascii code to represent numbers and words, so no addition
+dictionary is needed)
+<ul>
+<li>Code book: x -&gt; 1, y -&gt; 2, space -&gt; 3
+<ul>
+<li>Ex: xyx xyx xyx xyx -&gt; 1 -&gt; 12 -&gt; 121 -&gt; 1213 Then you
+append 1213 to the dictionary as 4 -&gt; 12134 -&gt;121343434 ## Images,
+audios and videos</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Images:
+<ol type="1">
 <li>GIF: 256 colors, dictionary encoding</li>
-<li>JPEG: Lossy &#x2F; lossless encoding</li>
-</ol>
-</li>
-<li>Audios: <ol>
+<li>JPEG: Lossy / lossless encoding</li>
+</ol></li>
+<li>Audios:
+<ol type="1">
 <li>MP3: Lossy encoding</li>
-</ol>
-</li>
-<li>Videos: <ol>
-<li>MPEG: Lossy encoding</li>
-</ol>
-</li>
-</ul>
-<h2 id="Communication-errors"><a href="#Communication-errors" class="headerlink" title="Communication errors"></a>Communication errors</h2><ul>
+</ol></li>
+<li>Videos:
+<ol type="1">
+<li>MPEG: Lossy encoding ## Communication errors</li>
+</ol></li>
 <li>The reason of compressing data is to remove redundency</li>
-<li>To correct the communication error -&gt; we add redundancy </li>
-<li>Error detection -&gt; instead of correcting errors, it can only check if the errors occurs<ul>
-<li>Applications(detection): <ol>
+<li>To correct the communication error -&gt; we add redundancy</li>
+<li>Error detection -&gt; instead of correcting errors, it can only
+check if the errors occurs
+<ul>
+<li>Applications(detection):
+<ol type="1">
 <li>ID numbers</li>
 <li>ISBN</li>
 <li>Parity code</li>
-</ol>
-</li>
-</ul>
-</li>
-<li>Error correcting -&gt; Can correct errors to some degree</li>
-</ul>
-<h2 id="Application-of-error-detections-x2F-corrections"><a href="#Application-of-error-detections-x2F-corrections" class="headerlink" title="Application of error detections &#x2F; corrections"></a>Application of error detections &#x2F; corrections</h2><ul>
+</ol></li>
+</ul></li>
+<li>Error correcting -&gt; Can correct errors to some degree ##
+Application of error detections / corrections</li>
 <li>Taiwan ID:<img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://i.imgur.com/GrBxbtA.png"
-                     
-                ><ol>
-<li>Convert the first English letter into a number(xy):<br>  <img  
+                      
+                >
+<ol type="1">
+<li>Convert the first English letter into a number(xy): <img 
+
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://i.imgur.com/MzCD1dk.png"
-                     
+                      
                 ></li>
-<li>$d_1$ &#x3D; x + 9y</li>
-<li>$d_2$ &#x3D; $\sum_{i &#x3D; 1}^8$ i $\cdot$ $a_i$ &#x3D; 1 $\cdot$ $a_1$ + 2 $\cdot$ $a_2$ … +8 $\cdot$ $a_8$</li>
-<li>Check code -&gt; $a_9$ &#x3D; 10 - (($d_1$ + $d_2$) mod 10)</li>
-</ol>
-</li>
-<li>ISBN-10<br>ISBN　template: 0-273-75139</li>
+<li><span class="math inline">\(d_1\)</span> = x + 9y</li>
+<li><span class="math inline">\(d_2\)</span> = <span
+class="math inline">\(\sum_{i = 1}^8\)</span> i <span
+class="math inline">\(\cdot\)</span> <span
+class="math inline">\(a_i\)</span> = 1 <span
+class="math inline">\(\cdot\)</span> <span
+class="math inline">\(a_1\)</span> + 2 <span
+class="math inline">\(\cdot\)</span> <span
+class="math inline">\(a_2\)</span> ... +8 <span
+class="math inline">\(\cdot\)</span> <span
+class="math inline">\(a_8\)</span></li>
+<li>Check code -&gt; <span class="math inline">\(a_9\)</span> = 10 -
+((<span class="math inline">\(d_1\)</span> + <span
+class="math inline">\(d_2\)</span>) mod 10)</li>
+</ol></li>
+<li>ISBN-10 ISBN　template: 0-273-75139</li>
 </ul>
-<ol>
-<li>Compute S &#x3D; 0 $\cdot$ 10 + 2 $\cdot$ 9 +7 $\cdot$ 8 + 3 $\cdot$ 7 + 7 $\cdot$ 6 + 5 $\cdot$ 5 + 1 $\cdot$ 4 + 3 $\cdot$ 3 + 9 $\cdot$ 2 &#x3D; 193</li>
-<li>M &#x3D; S mod 11 &#x3D; 6 </li>
-<li>N &#x3D; 11 - M &#x3D;5<ul>
-<li>If N &#x3D; 10 the check code is X</li>
-<li>If N &#x3D; 11 the check code is 0</li>
+<ol type="1">
+<li>Compute S = 0 <span class="math inline">\(\cdot\)</span> 10 + 2
+<span class="math inline">\(\cdot\)</span> 9 +7 <span
+class="math inline">\(\cdot\)</span> 8 + 3 <span
+class="math inline">\(\cdot\)</span> 7 + 7 <span
+class="math inline">\(\cdot\)</span> 6 + 5 <span
+class="math inline">\(\cdot\)</span> 5 + 1 <span
+class="math inline">\(\cdot\)</span> 4 + 3 <span
+class="math inline">\(\cdot\)</span> 3 + 9 <span
+class="math inline">\(\cdot\)</span> 2 = 193</li>
+<li>M = S mod 11 = 6</li>
+<li>N = 11 - M =5
+<ul>
+<li>If N = 10 the check code is X</li>
+<li>If N = 11 the check code is 0</li>
 <li>Otherwise, the check code is the number N</li>
-</ul>
-</li>
-<li>The ISBN code  0-273-75139-5</li>
+</ul></li>
+<li>The ISBN code 0-273-75139-5</li>
 </ol>
 <ul>
-<li>Parity Bits<ol>
-<li>Making the quantity of 1s odd<br>  <img  
+<li>Parity Bits
+<ol type="1">
+<li>Making the quantity of 1s odd <img 
+
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://i.imgur.com/gaBDWYj.png"
-                     
+                      
                 ></li>
-<li>The technique is used in  communication and RAID</li>
-</ol>
-</li>
-<li>An error-correcting code(ECC)<ol>
-<li>(3, 1) repetition code (can correct 1-bit errors) -&gt; seperate the data into groups with 1 bit in each group, and add two bits to authenticate the data<br> <img  
+<li>The technique is used in communication and RAID</li>
+</ol></li>
+<li>An error-correcting code(ECC)
+<ol type="1">
+<li>(3, 1) repetition code (can correct 1-bit errors) -&gt; seperate the
+data into groups with 1 bit in each group, and add two bits to
+authenticate the data <img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://i.imgur.com/SOldZpS.png"
-                     
+                      
                 ></li>
-</ol>
-</li>
-<li>Hamming distance<ol>
-<li>Comparing two binary data， hamming distance is the amount of different bits.</li>
-</ol>
-</li>
-<li>Error correction with hamming distance<ol>
-<li>Maximizing hamming distance along the symbols<br>  Sample code book:<br>  <img  
+</ol></li>
+<li>Hamming distance
+<ol type="1">
+<li>Comparing two binary data， hamming distance is the amount of
+different bits.</li>
+</ol></li>
+<li>Error correction with hamming distance
+<ol type="1">
+<li>Maximizing hamming distance along the symbols Sample code book: <img 
+
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://i.imgur.com/qvBxx5o.png"
-                     
-                ><ul>
-<li>Ex: received 010100<br> Hammig distance:    <img  
+                      
+                >
+<ul>
+<li>Ex: received 010100 Hammig distance: <img 
+
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://i.imgur.com/43W6zqv.png"
-                     
-                ><br>  According to the chart, we will correct 010100 to 011100(D)</li>
-</ul>
-</li>
-</ol>
-</li>
-<li>Generating (7, 4)Hamming code<br>  <img  
+                      
+                > According to the chart, we will
+correct 010100 to 011100(D)</li>
+</ul></li>
+</ol></li>
+<li>Generating (7, 4)Hamming code <img 
+
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://i.imgur.com/3ugdiSq.png"
-                     
+                      
                 ></li>
 </ul>
 
@@ -687,7 +754,7 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>Contents</strong></div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Data-Storage-II"><span class="nav-text">Data Storage(II)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Fraction-in-binary"><span class="nav-text">Fraction in binary</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Float-point-notation-and-decoding"><span class="nav-text">Float-point notation and decoding</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Truncation-error"><span class="nav-text">Truncation error</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Normalized-form"><span class="nav-text">Normalized form</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Loss-of-digits"><span class="nav-text">Loss of digits</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Data-compression"><span class="nav-text">Data compression</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Images-audios-and-videos"><span class="nav-text">Images, audios and videos</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Communication-errors"><span class="nav-text">Communication errors</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Application-of-error-detections-x2F-corrections"><span class="nav-text">Application of error detections &#x2F; corrections</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#data-storageii"><span class="nav-text">Data Storage(II)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#fraction-in-binary"><span class="nav-text">Fraction in binary</span></a></li></ol></li></ol>
     </div>
 </div>
             </div>

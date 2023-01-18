@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    <meta name="description" content="Hexo Theme Redefine">
+    <meta name="author" content="Shih Jiun Lin">
+    <link rel="canonical" href="http://example.com/2023/01/18/Chaper%207%20Pointers/" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
+    <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no">
+    <link rel="shortcut icon" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no">
+    
+    <title>
+        
+            Chaper 7 Pointers |
+        
+        Shih-Jiun-Lin&#39;s Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<link rel="stylesheet" href="/css/fonts.css">
+
+    
+    <link rel="preconnect" href="https://evan.beee.top" crossorigin>
+    <script id="hexo-configurations">
+    let REDEFINE = window.REDEFINE || {};
+    REDEFINE.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.xml"};
+    REDEFINE.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#005080","avatar":"https://scontent-hkg4-2.xx.fbcdn.net/v/t1.6435-9/70899392_1700286993440218_5774458773556953088_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=iBCVayjTOr8AX8TBEWz&_nc_ht=scontent-hkg4-2.xx&oh=00_AfAmQlO1Y3qBnfF5_L2XihrdBGlMKeof-lZCAoQpK_vIQg&oe=63EE348C","favicon":"https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no","article_img_align":"center","right_side_width":"210px","content_max_width":"1000px","nav_color":{"left":"#3649f7","right":"#36daf7","transparency":35},"hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_image":{"light":"https://lh3.googleusercontent.com/ixSu1XqCZxzWrc_qPqo7BEIWTmPuPaf78ZuOz4WmoztYIMV1KPIgS2N_FGSWP64r2nhh55paCAlFaKB3jjJo4JopFLViLnluanyhBmmdGn4baC0ZY-9FWsaEM_f-tgRWv5pCehETi5wD6do-yaNYCMbqlRVmAD8_86UiWPJz8QqQfLN7O3csy1ezIH5NfnyPfgNMS9KhrblAZmUA5eIejicZePVvzHJZI5bRI11EAVhK1Gc2kFBxu53mMaH8i0pvCNX4wrdz31cUGVenRVRsHKpwfWIdydeIGNX83cyE9uuv-bFIjt2mEVBdmohIXGeP6_BNh96komgPEeMtklBKv1hI0gHGZE96fzml5AoIczlTXYZeF4-yaEA6OIcZZEES7J1GXXnnJrYtzqEU8vxOccLxaJSuygKKrZx46MNFbpBZN9pYpoMmqJKIo9khPYHQypvxNKCwCYl8ltaCij9EZsFI7dKjCGGWZybMaT8NQ-eGzoDsvBV2CiGZ6sgBX_VcEECH0zkeGRZNEFurMmxsHLNrFYFdVgdrVS9xeWLBFr4OpFsuxC4JQFzd2_Plrf6Wxl3YnHPnRhQphIR-NnmVJfsMdrW9nRHWDtPYGJOO8sUBHl-AiklFx7-LDQs3tDLqPEvrOw1bhgb4W0rPo6yJHKZ71GqIW9AnFXrLJs3g1iYMPl9y833MH95f8j9pkUo0k3oZPhzDyie_BEw0LDKA7WjPG7k_H_IQhsUe_Z1u1nL4aHZOfi3fFJ8WnWc6-JVxyoc79yiRhbHlYB-Dv0nqjOD_YFDqsquEMS4iCR1_bsXb8ekh-PlDM1AhnvTaGwH-HMmNINWaevr7AlkMZWvwzUjshhroTeJf0PKsqeEFj-uXMFYBRuI-NdlvBQC1eIuRaE6TrZSZguozSSQcmibfz6yjdplXr5_TrQrxUvvz_uJFQCzwMU0aGe3_Nleeazu8TdvRSlZEwII6njrl7mM=w1343-h1008-no?authuser=0# background image of the first screen, use relative path or external link (if your website is in subdirectory, use external link)","dark":"https://lh3.googleusercontent.com/B01xYBVbZkUR86-vZfLiECMp3GD-iAYwKGbbbehgps_4DWvPLHpyUjtmuURqqHMf_W2sCFLJKchmCynDrtjAIkn6rV_mtutdzLdp2ENu5-G6jqfSNzRzSoebjclyS8IO6LVZ1xkTHDtcRuLgZjCEEyIftY-H0HeJaBwHqTPQDgO-vkskuAxN1viOQRV58BxWMQG881LbGYUsNH6Lsj9t-woZUfyLV2abmvKXIVGlDP4mbq5E1kFrBcXoWpCWXH5_VvB5lK1dbS322NUQIYIoijVwOn10F5haC-bhZMILVfEZ0Bft6qNkVInO7JnZSba1_Kc2g2DUV0HfZ8iLLRFA0h2s6wwh0UowqkAukNnRO4li8b0gPwp52unE3mcU_uwJkfaudpGRE3g5k9DrBeCKSppIgBjxfZ8wkMlYPHXw4Oorha8ta49epcNtesB3-QlQWEYmehzM_iIMmmmDHNqnpVFJvzzJ-U-GtNSXuPdWjhAmA8_mhi4E-w_S9Mcqefy3IMGXxeR0cZAK-69Oum9_sRCEVCE19P2YJzHt1TCnOENuinfT2-Rose4CVP3edMN9ScARfmpvRoYiV6rS3wxcBoQAqxDWH5tjzaKeL0rZPpnu63dVp4vxpGQdRQMU6DPuGk8EdIqZMIghoVaNGiF4LADJvAzDloXcXcApyLaqvptrssYd1dw-GvHe12O-_eHKTwYDmKoXqGJh45S2qqcaXywK6VXFd6I3VGrj812dx-onYqDvQzCFhbOgTdFT2Hlt3XiqRBsqZdVFzgjkbXqod-IYb1GsrCMvQNewvsi4yio3F8zrcGagyc9HFQ3uvQmxNPGJdjjU3atwLJFMDrZFmTHrLElfvxW30vLyhl7F-0rlvlrjgg5n3H6KzVMvyNwwxw_sLufWD4jNJLL_own4VGilHg3lc5jxLC4YzFBWDq1wg22VOSgWklbOgEGG_C2w1V80DE0Pk7oJEK8tspk=w1691-h951-no?authuser=0"},"title_color":{"light":"#fff","dark":"#d1d1b6"},"description":"一個喜歡搞小發明的大學生!"},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_block":{"copy":true,"style":"mac"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"0.5.2","friend_links":{"columns":2}};
+    REDEFINE.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+    
+    
+<link rel="stylesheet" href="/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/css/brands.min.css">
+
+    
+<link rel="stylesheet" href="/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/css/regular.min.css">
+
+    
+    
+    
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+    
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Shih-Jiun-Lin&#39;s Blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        主頁面
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/archives"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-archive"></i>
+                                        
+                                        照時間分類
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/tags"  >
+                                    
+                                        
+                                            <i class="fa-solid fa-tags"></i>
+                                        
+                                        照標籤分類
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/categories"  >
+                                    
+                                        
+                                            <i class="fa-solid fa-star"></i>
+                                        
+                                        照種類分類
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown" 
+                                    href="#" onClick="return false;">
+                                    
+                                        
+                                            <i class="fa-regular fa-user"></i>
+                                        
+                                        關於我&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                    
+                                        <li>
+                                        <a href="/about">ME
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://www.instagram.com/l__junjun__l/?hl=zh-tw">INSTAGRAM
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://github.com/Shih-Jiun-Lin">GITHUB
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://www.ncue.edu.tw/">SCHOOL
+                                        </a>
+                                        </li>
+                                    
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                主頁面
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/archives"  >
+                             
+                                
+                                    <i class="fa-regular fa-archive"></i>
+                                
+                                照時間分類
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/tags"  >
+                             
+                                
+                                    <i class="fa-solid fa-tags"></i>
+                                
+                                照標籤分類
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/categories"  >
+                             
+                                
+                                    <i class="fa-solid fa-star"></i>
+                                
+                                照種類分類
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="has-dropdown" 
+                        href="#" onClick="return false;">
+                            
+                                
+                                    <i class="fa-regular fa-user"></i>
+                                
+                                關於我&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                              
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" href="/about">ME</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://www.instagram.com/l__junjun__l/?hl=zh-tw">INSTAGRAM</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://github.com/Shih-Jiun-Lin">GITHUB</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://www.ncue.edu.tw/">SCHOOL</a>
+                            </li>
+                        
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+            <div class="article-title">
+                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">Chaper 7 Pointers</h1></span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="https://scontent-hkg4-2.xx.fbcdn.net/v/t1.6435-9/70899392_1700286993440218_5774458773556953088_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=iBCVayjTOr8AX8TBEWz&_nc_ht=scontent-hkg4-2.xx&oh=00_AfAmQlO1Y3qBnfF5_L2XihrdBGlMKeof-lZCAoQpK_vIQg&oe=63EE348C">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Shih Jiun Lin</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="pc">2023-01-18 12:34:50</span>
+        <span class="mobile">2023-01-18 12:34</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E5%A4%A7%E5%AD%B8%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98-%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/">大學課堂筆記-程式設計</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E5%A4%A7%E5%AD%B8%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98-%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/C/">C++</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E5%A4%A7%E5%AD%B8%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98-%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/C/%E5%BD%B0%E5%B8%AB%E5%A4%A7/">彰師大</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/C/">C++</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>1.3k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>8 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <h1 id="chaper-7-pointers">Chaper 7 Pointers</h1>
+<h2 id="what-is-pointers">What is Pointers?</h2>
+<ul>
+<li>Declaration: int <em>pointer_name;/char </em>pointer_name;</li>
+<li>Data being stored inside a pointer is the address(unsigned int: hex)
+of a data in the memory.</li>
+<li>Pointer shoud be initialized. A pointer with null or the value 0 is
+called null pointer.(0 is the only integer that can be assigned to a
+pointer variable) ex: <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/4izPqBi.jpg"
+                      
+                ></li>
+</ul>
+<h2 id="how-to-assign-the-address-of-a-data-to-pointers">How to assign
+the address of a data to pointers?</h2>
+<ul>
+<li>"*" and "&amp;" are inverses of one another. ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> *pointer;</span><br><span class="line">	<span class="type">int</span> a=<span class="number">10</span>;</span><br><span class="line">	pointer=&amp;a;</span><br><span class="line">	cout&lt;&lt;pointer&lt;&lt;<span class="string">&quot;\n&quot;</span>; <span class="comment">//cout the address of a.</span></span><br><span class="line">	cout&lt;&lt;*pointer&lt;&lt;<span class="string">&quot;\n&quot;</span>;cout&lt;&lt;the value of a.</span><br><span class="line">	cout&lt;&lt;*&amp;a; <span class="comment">//cout the value of a.</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> ##
+The relations between pointers and data</li>
+<li>alter a &lt;=&gt; alter the value of *pointer.</li>
+<li>The address won't be changed.</li>
+</ul>
+<p>ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> *pointer;</span><br><span class="line">	<span class="type">int</span> a=<span class="number">10</span>;</span><br><span class="line">	pointer=&amp;a;</span><br><span class="line">	cout&lt;&lt;pointer&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;*pointer&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;a&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	*pointer=<span class="number">100</span>;</span><br><span class="line">	cout&lt;&lt;pointer&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;*pointer&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;a&lt;&lt;<span class="string">&quot; \n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> ## PassByReference with Pointers ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">cube</span><span class="params">(<span class="type">int</span> *pointer)</span></span>&#123;</span><br><span class="line">	*pointer= *pointer * *pointer * *pointer;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> length;</span><br><span class="line">	<span class="keyword">while</span>(cin&gt;&gt;length)&#123;</span><br><span class="line">		<span class="built_in">cube</span>(&amp;length);</span><br><span class="line">		cout&lt;&lt;length&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+## Const and Pointers <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span>* pointer1=&amp;num; <span class="comment">//The number pointer1 points to is a const.</span></span><br><span class="line"><span class="type">int</span>* <span class="type">const</span> pointer2=&amp;num; <span class="comment">//pointer is a const.</span></span><br></pre></td></tr></table></figure></div> <img 
+
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/VwXzdCt.png"
+                      
+                > * For pointer1: <img 
+
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/WnGwjyZ.png"
+                      
+                > * For pointer2: <img 
+
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/AsWthKE.png"
+                      
+                ></p>
+<p>ex(For pointer1): <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> a=<span class="number">10</span>;</span><br><span class="line">	<span class="type">const</span> <span class="type">int</span>* pointer;</span><br><span class="line">	pointer=&amp;a;</span><br><span class="line">	cout&lt;&lt;*pointer&lt;&lt;<span class="string">&quot;\n&quot;</span>;	<span class="comment">//cout 10</span></span><br><span class="line">	a=<span class="number">100</span>;</span><br><span class="line">	cout&lt;&lt;*pointer&lt;&lt;<span class="string">&quot;\n&quot;</span>;	<span class="comment">//cout 100</span></span><br><span class="line">	<span class="comment">/*pointer=100;*/</span> <span class="comment">//not allowed</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></p>
+<p>ex(For pointer2): <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> a=<span class="number">10</span>, b=<span class="number">100</span>;</span><br><span class="line">	<span class="type">int</span>* <span class="type">const</span> pointer=&amp;a;</span><br><span class="line">	*pointer=<span class="number">1000</span>;</span><br><span class="line">	cout&lt;&lt;a&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	<span class="comment">/*pointer=&amp;b*/</span> <span class="comment">//not allowed</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> ## Pointers and Array * int array and
+pointers <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> a[<span class="number">5</span>]=&#123;<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;;</span><br><span class="line">	<span class="type">int</span> *pointer=a;	<span class="comment">//a is the address of a[0]</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++)&#123;</span><br><span class="line">		cout&lt;&lt;*(a+i)&lt;&lt;<span class="string">&quot; &quot;</span>; <span class="comment">//cout 0~4</span></span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;endl;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++)&#123;</span><br><span class="line">		*(a+i)=<span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++)&#123;</span><br><span class="line">		cout&lt;&lt;*(a+i)&lt;&lt;<span class="string">&quot; &quot;</span>; <span class="comment">//cout 0</span></span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;endl;</span><br><span class="line">	cout&lt;&lt;&amp;a[<span class="number">4</span>]-pointer;	<span class="comment">//4 the distance(elements) between a[4] and pointer(a[0]). = 2*sizeof(int)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> * char array and pointers <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="type">char</span> a[<span class="number">18</span>]=<span class="string">&quot;Helloworld&quot;</span>;</span><br><span class="line">	cout&lt;&lt;a&lt;&lt;<span class="string">&quot;\n&quot;</span>; <span class="comment">//it won&#x27;t cout the address of a[0]</span></span><br><span class="line">	cout&lt;&lt;a+<span class="number">5</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>; <span class="comment">//it will cout world</span></span><br><span class="line">	cout&lt;&lt;*(a+<span class="number">9</span>)&lt;&lt;<span class="string">&quot;\n&quot;</span>; <span class="comment">//equals to a[10];</span></span><br><span class="line">	cout&lt;&lt;(<span class="type">void</span>*)a&lt;&lt;<span class="string">&quot;\n&quot;</span>; <span class="comment">//it will cout the address of a[0](H)</span></span><br><span class="line">	cout&lt;&lt;(<span class="type">void</span>*)a+<span class="number">9</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>; <span class="comment">//it will cout the address of a[9](d)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> *
+c-string and pointers</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/6smBRIe.png"
+                      
+                ></p>
+<ul>
+<li>sizeof()
+<ul>
+<li>sizeof() with array or value will return the total size in
+bytes.</li>
+</ul></li>
+</ul>
+<p>Ex1(with array): <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> arr[<span class="number">5</span>]=&#123;<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;;</span><br><span class="line">    cout&lt;&lt;<span class="built_in">sizeof</span>(arr)&lt;&lt;<span class="string">&quot;\n&quot;</span>;  <span class="comment">//cout the total size of the array(bytes)</span></span><br><span class="line">    cout&lt;&lt;<span class="built_in">sizeof</span>(arr)/<span class="built_in">sizeof</span>(arr[<span class="number">0</span>]); <span class="comment">//cout the total amount of elements in arr.    </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></p>
+<p>Ex2(with value): <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">double</span> a=<span class="number">10.5</span>;</span><br><span class="line">    <span class="type">int</span> b=<span class="number">10</span>;</span><br><span class="line">    cout&lt;&lt;<span class="built_in">sizeof</span>(a+b); <span class="comment">//return 8 since the result of int and double addition is still double </span></span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure></div> Ex3(with c-string): <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">char</span> string[<span class="number">11</span>]=<span class="string">&quot;Helloworld&quot;</span>;</span><br><span class="line">    cout&lt;&lt;<span class="built_in">sizeof</span>(string);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> *
+void* =&gt; a pointer for any genre of data type. * Before using it, the
+type of pointer must be determined. <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> a=<span class="number">10</span>;</span><br><span class="line">    <span class="type">void</span>* pointer;</span><br><span class="line">    pointer=&amp;a;</span><br><span class="line">    cout&lt;&lt;pointer&lt;&lt;<span class="string">&quot;\n&quot;</span>; <span class="comment">//cout the address </span></span><br><span class="line">    cout&lt;&lt;*(<span class="type">int</span>*)pointer&lt;&lt;<span class="string">&quot;\n&quot;</span>; <span class="comment">//cout the number a correctly</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> * Use pointers to
+print a 2d array <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">print_array</span><span class="params">(<span class="type">int</span> *a, <span class="type">int</span> rows, <span class="type">int</span> columns)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;rows; i++)&#123;</span><br><span class="line">        a=a+i*columns;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;columns; j++)&#123;</span><br><span class="line">            cout&lt;&lt;*(a+j)&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> a[<span class="number">2</span>][<span class="number">2</span>]=&#123;&#123;<span class="number">0</span>, <span class="number">1</span>&#125;, &#123;<span class="number">2</span>, <span class="number">3</span>&#125;&#125;;</span><br><span class="line">    <span class="built_in">print_array</span>(&amp;a[<span class="number">0</span>][<span class="number">0</span>], <span class="number">2</span>, <span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> * Pointers for 2D array</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/c4qeaq4.png"
+                      
+                ></p>
+<ul>
+<li>Pointers for 3D array</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/Q9zlaWs.png"
+                      
+                ></p>
+<ul>
+<li>Arrays of Pointers
+<ul>
+<li>The array stores the address of the first character in each
+c-string.</li>
+</ul>
+Ex1: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">char</span> * <span class="type">const</span> suit[ <span class="number">4</span> ] =</span><br><span class="line">&#123; <span class="string">&quot;Hearts&quot;</span>, <span class="string">&quot;Diamonds&quot;</span>,</span><br><span class="line"><span class="string">&quot;Clubs&quot;</span>, <span class="string">&quot;Spades&quot;</span> &#125;;</span><br></pre></td></tr></table></figure></div> <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/V5lQGvy.png"
+                      
+                > Ex2:
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">char</span> *suit[<span class="number">2</span>]=&#123;<span class="string">&quot;Hello&quot;</span>, <span class="string">&quot;World&quot;</span>&#125;; <span class="comment">//stores the address of the first character in each string</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="built_in">sizeof</span>(suit)/<span class="number">8</span>; i++)&#123;</span><br><span class="line">        cout&lt;&lt;suit[i]&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure></div> ## Function's Pointer</li>
+<li>Pass the pointer of a function to another fucntion <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">swap</span><span class="params">(<span class="type">int</span> &amp;a, <span class="type">int</span> &amp;b)</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> temp=a;</span><br><span class="line">    a=b;</span><br><span class="line">    b=temp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">selection_sort</span><span class="params">(vector &lt;<span class="type">int</span>&gt; &amp;v, <span class="type">void</span> (*swap)(<span class="type">int</span> &amp;a, <span class="type">int</span> &amp;b))</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;v.<span class="built_in">size</span>()<span class="number">-1</span>; i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=i+<span class="number">1</span>; j&lt;v.<span class="built_in">size</span>(); j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(v[j]&lt;v[i])&#123;</span><br><span class="line">                <span class="built_in">swap</span>(v[j], v[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;v.<span class="built_in">size</span>(); i++)&#123;</span><br><span class="line">        cout&lt;&lt;v[i]&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    vector &lt;<span class="type">int</span>&gt; test=&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">7</span>, <span class="number">6</span>, <span class="number">10</span>&#125;;</span><br><span class="line">    <span class="built_in">selection_sort</span>(test, swap);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> ##
+Selection sort Reference(How it
+works):https://www.geeksforgeeks.org/selection-sort/</li>
+<li>Easy to program but inefficient. Ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">swap_double</span><span class="params">(<span class="type">int</span> &amp;a, <span class="type">int</span> &amp;b)</span></span>&#123;</span><br><span class="line">	<span class="type">double</span> temp=a;</span><br><span class="line">	a=b;</span><br><span class="line">	b=temp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">sort</span><span class="params">(vector&lt;<span class="type">int</span>&gt; &amp;vec)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;vec.<span class="built_in">size</span>()<span class="number">-1</span>; i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=i+<span class="number">1</span>; j&lt;vec.<span class="built_in">size</span>(); j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(vec[j]&lt;vec[i])&#123;</span><br><span class="line">                <span class="built_in">swap_double</span>(vec[j], vec[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; test=&#123;<span class="number">0</span>, <span class="number">7</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">10</span>&#125;;</span><br><span class="line">    <span class="built_in">sort</span>(test);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;test.<span class="built_in">size</span>(); i++)&#123;</span><br><span class="line">        cout&lt;&lt;test[i]&lt;&lt;<span class="string">&quot; &quot;</span>;    </span><br><span class="line">    &#125;</span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure></div></li>
+</ul>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：Chaper 7 Pointers</li>
+        <li>Post author：Shih Jiun Lin</li>
+        <li>Create time：2023-01-18 12:34:50</li>
+        <li>
+            Post link：https://shih-jiun-lin.github.io/2023/01/18/Chaper 7 Pointers/
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+                </div>
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/C/">#C++</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/01/18/STL(Standard%20Template%20Library)/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">STL(Standard Template Library)</span>
+                                    <span class="post-nav-item">Next posts</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>Contents</strong></div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#chaper-7-pointers"><span class="nav-text">Chaper 7 Pointers</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#what-is-pointers"><span class="nav-text">What is Pointers?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#how-to-assign-the-address-of-a-data-to-pointers"><span class="nav-text">How to assign
+the address of a data to pointers?</span></a></li></ol></li></ol>
+    </div>
+</div>
+            </div>
+        
+    </div>
+</div>
+
+
+                
+
+            </div>
+
+
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2023&nbsp;<i class="fa-solid fa-heart icon-animate"></i>&nbsp;<a href="/">Shih Jiun Lin. All Rights Reserved.</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalviews&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v0.5.2</a>
+        </div>
+        
+        
+        <script async data-pjax defer>
+            function odometer_init(){
+                    let el = document.getElementsByClassName('odometer');
+                    for (i = 0; i < el.length; i++) {
+                        od = new Odometer({
+                            el: el[i],
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    }
+            }
+            odometer_init();
+        </script>
+        <div id="start_time_div" style="display:none">
+            2023/1/17 23:59:59
+        </div>
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fa-solid fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fa-solid fa-left-right"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fa-solid fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fa-solid fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fa-solid fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+
+    
+<script src="/js/runtime.js"></script>
+
+    
+<script src="/js/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/css/odometer-theme-minimal.css">
+
+
+
+<div class="post-scripts pjax">
+    
+        
+<script src="/js/toc-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
+    
+</div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            REDEFINE.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            REDEFINE.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            REDEFINE.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

@@ -1,170 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Data Manipulation(I)</title>
-    <url>/2023/01/18/2023-01-17-Data%20Manipulation(I)/</url>
-    <content><![CDATA[<h1 id="data-manipulationi">Data Manipulation(I)</h1>
-<h2 id="the-communication-between-cpu-and-memory">The communication
-between CPU and memory</h2>
-<p>Register -&gt; CPU Cache</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/sEBH2IU.png"></p>
-<ul>
-<li>Adding values in memory
-<ol type="1">
-<li>Get value A from the memory and put it in a register.</li>
-<li>Get value B from the memory and put it in another register.</li>
-<li>Activate the additional circuit and put the final value into another
-register.</li>
-<li>Store the result the memory.</li>
-</ol></li>
-<li>Machine instruction
-<ol type="1">
-<li>Data transfer
-<ul>
-<li>load, store, I/O</li>
-</ul></li>
-<li>Arithmetic/logic
-<ul>
-<li>and, or, add, sub...</li>
-<li>shift, halt</li>
-</ul></li>
-<li>Control
-<ul>
-<li>jump, halt</li>
-</ul></li>
-<li>RISC -&gt; Reduced instruction set computing
-<ul>
-<li>Ex: PRC, SPRC</li>
-</ul></li>
-<li>CISC -&gt; Complex instruction set computing
-<ul>
-<li>Ex: x86，x64</li>
-</ul></li>
-</ol></li>
-</ul>
-<h2 id="example-of-machine-instruction">Example of machine
-instruction</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/UYGKbh0.png"></p>
-<ul>
-<li>3 -&gt; store</li>
-<li>5 -&gt; register No.5</li>
-<li>A7 -&gt; memory cell A7</li>
-<li>all in all -&gt; Store the content of register No.5 to memory cell
-A7.</li>
-</ul>
-<h2 id="the-machine-instruction-of-adding-two-values">The machine
-instruction of adding two values</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/Xa7EtHE.png"></p>
-<h2 id="program-execution">Program execution</h2>
-<ul>
-<li><p>Machine cycle <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/N1Jiuk9.png"></p></li>
-<li><p>Fetch <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/pJF8QS9.png"></p></li>
-<li><p>Clock -&gt; how many machine cycle a cpu is able to do in one
-second</p></li>
-</ul>
-<h2 id="arithmetic-and-logic-unitalu">Arithmetic and logic
-unit(ALU)</h2>
-<ul>
-<li>Arithmetic operations</li>
-<li>Logic/bit operations</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/pfBxlEH.png"></p>
-<h2 id="shiftrotation">Shift/Rotation</h2>
-<ul>
-<li>Logic shift
-<ul>
-<li>10100000 -&gt; 01010000(right)</li>
-<li>10100000 -&gt; 01000000(left)</li>
-<li>Both moving left and right add a 0</li>
-</ul></li>
-<li>Arithmetic shift
-<ul>
-<li><p>10100000 -&gt; 11010000(right, the number is divided by 2) Moving
-right，copy the leftest bit.</p></li>
-<li><p>10100000 -&gt; 11000000(left, the number is multiplied by 2)
-Moving left，add a 0 to the right.</p></li>
-</ul></li>
-<li>Rotation
-<ul>
-<li>10100000 -&gt; 01010000(right)</li>
-<li>10100000 -&gt; 01000001(left)</li>
-</ul></li>
-</ul>
-<h2 id="controllers-and-peripheral-devices">Controllers and peripheral
-devices</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/AZ4fwQH.png"></p>
-<ul>
-<li>Specialized -&gt; SATA...</li>
-<li>General -&gt; USB, HDMI...</li>
-</ul>
-<h2 id="memory-mapped-io">Memory-mapped I/O</h2>
-<ul>
-<li>The periphral devices are recognized as part of the memory. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/YFL6td3.png"></li>
-</ul>
-<h2 id="communication">Communication</h2>
-<ul>
-<li>DMA(direct memory access)
-<ul>
-<li>Authorized controllers can access data directly from main memory
-without notifying CPU</li>
-</ul></li>
-<li>Hand shaking
-<ul>
-<li>Two way communication</li>
-<li>Coordinating activities</li>
-</ul></li>
-<li>Parallel/Serial</li>
-<li>Transfer rate unit -&gt; bit per second</li>
-</ul>
-<h2 id="pipeliningaccelerating-the-process">Pipelining(accelerating the
-process)</h2>
-<p>ex -&gt; pre-fetching</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/gPsrUkp.png"></p>
-<ul>
-<li>Throughput -&gt; Total amount of work accomplished in a given amount
-of time</li>
-<li>Pre-fetching issus -&gt; conditional jump</li>
-</ul>
-<h2 id="paralleldistributed-computing">Parallel/distributed
-computing</h2>
-<ul>
-<li>Parallel
-<ul>
-<li>Multiprocessor</li>
-<li>MIMD，SISD，SIMD，MISD(M-&gt;Multiple，S-&gt;Single，I-&gt;Instruction,
-D-&gt;Dataset)</li>
-</ul></li>
-<li>Distributed
-<ul>
-<li>Linking computers via network</li>
-<li>Seperate processors and memory</li>
-</ul></li>
-<li>Issues
-<ul>
-<li>Data dependency</li>
-<li>Load balancing</li>
-<li>Synchronization</li>
-<li>Reliability</li>
-</ul></li>
-</ul>
-<h2 id="how-to-parallelize">How to parallelize?</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/xrTQCOL.png"></p>
-<h2 id="speed-up-and-scaling">Speed up and Scaling</h2>
-<ul>
-<li>Amdahl's law(阿姆達爾定律)</li>
-<li>Gain = <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -1.593ex;" xmlns="http://www.w3.org/2000/svg" width="8.624ex" height="3.55ex" role="img" focusable="false" viewBox="0 -864.9 3811.6 1569"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mfrac"><g data-mml-node="mn" transform="translate(1729,394) scale(0.707)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g><g data-mml-node="mrow" transform="translate(220,-460.1) scale(0.707)"><g data-mml-node="mfrac"><g data-mml-node="mi" transform="translate(326.1,394) scale(0.707)"><path data-c="1D443" d="M287 628Q287 635 230 637Q206 637 199 638T192 648Q192 649 194 659Q200 679 203 681T397 683Q587 682 600 680Q664 669 707 631T751 530Q751 453 685 389Q616 321 507 303Q500 302 402 301H307L277 182Q247 66 247 59Q247 55 248 54T255 50T272 48T305 46H336Q342 37 342 35Q342 19 335 5Q330 0 319 0Q316 0 282 1T182 2Q120 2 87 2T51 1Q33 1 33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM645 554Q645 567 643 575T634 597T609 619T560 635Q553 636 480 637Q463 637 445 637T416 636T404 636Q391 635 386 627Q384 621 367 550T332 412T314 344Q314 342 395 342H407H430Q542 342 590 392Q617 419 631 471T645 554Z"></path></g><g data-mml-node="mi" transform="translate(220,-345) scale(0.707)"><path data-c="1D440" d="M289 629Q289 635 232 637Q208 637 201 638T194 648Q194 649 196 659Q197 662 198 666T199 671T201 676T203 679T207 681T212 683T220 683T232 684Q238 684 262 684T307 683Q386 683 398 683T414 678Q415 674 451 396L487 117L510 154Q534 190 574 254T662 394Q837 673 839 675Q840 676 842 678T846 681L852 683H948Q965 683 988 683T1017 684Q1051 684 1051 673Q1051 668 1048 656T1045 643Q1041 637 1008 637Q968 636 957 634T939 623Q936 618 867 340T797 59Q797 55 798 54T805 50T822 48T855 46H886Q892 37 892 35Q892 19 885 5Q880 0 869 0Q864 0 828 1T736 2Q675 2 644 2T609 1Q592 1 592 11Q592 13 594 25Q598 41 602 43T625 46Q652 46 685 49Q699 52 704 61Q706 65 742 207T813 490T848 631L654 322Q458 10 453 5Q451 4 449 3Q444 0 433 0Q418 0 415 7Q413 11 374 317L335 624L267 354Q200 88 200 79Q206 46 272 46H282Q288 41 289 37T286 19Q282 3 278 1Q274 0 267 0Q265 0 255 0T221 1T157 2Q127 2 95 1T58 0Q43 0 39 2T35 11Q35 13 38 25T43 40Q45 46 65 46Q135 46 154 86Q158 92 223 354T289 629Z"></path></g><rect width="943.2" height="60" x="120" y="220"></rect></g><g data-mml-node="mo" transform="translate(1183.2,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mo" transform="translate(1961.2,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mn" transform="translate(2350.2,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g><g data-mml-node="mo" transform="translate(2850.2,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mi" transform="translate(3628.2,0)"><path data-c="1D443" d="M287 628Q287 635 230 637Q206 637 199 638T192 648Q192 649 194 659Q200 679 203 681T397 683Q587 682 600 680Q664 669 707 631T751 530Q751 453 685 389Q616 321 507 303Q500 302 402 301H307L277 182Q247 66 247 59Q247 55 248 54T255 50T272 48T305 46H336Q342 37 342 35Q342 19 335 5Q330 0 319 0Q316 0 282 1T182 2Q120 2 87 2T51 1Q33 1 33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM645 554Q645 567 643 575T634 597T609 619T560 635Q553 636 480 637Q463 637 445 637T416 636T404 636Q391 635 386 627Q384 621 367 550T332 412T314 344Q314 342 395 342H407H430Q542 342 590 392Q617 419 631 471T645 554Z"></path></g><g data-mml-node="mo" transform="translate(4379.2,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g><rect width="3571.6" height="60" x="120" y="220"></rect></g></g></g></svg></mjx-container></span> (P -&gt;
-proportion that is parallelizable, S -&gt; proportion that is serial
-only)</li>
-</ul>
-]]></content>
-      <categories>
-        <category>大學課堂筆記-計算機概論</category>
-      </categories>
-      <tags>
-        <tag>計算機概論</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Data Storage(I)</title>
     <url>/2023/01/18/2023-01-17-Data%20Storage(I)/</url>
     <content><![CDATA[<h1 id="data-storagei">Data Storage(I)</h1>
@@ -562,6 +398,170 @@ will correct 010100 to 011100(D)</li>
       </tags>
   </entry>
   <entry>
+    <title>Data Manipulation(I)</title>
+    <url>/2023/01/18/2023-01-17-Data%20Manipulation(I)/</url>
+    <content><![CDATA[<h1 id="data-manipulationi">Data Manipulation(I)</h1>
+<h2 id="the-communication-between-cpu-and-memory">The communication
+between CPU and memory</h2>
+<p>Register -&gt; CPU Cache</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/sEBH2IU.png"></p>
+<ul>
+<li>Adding values in memory
+<ol type="1">
+<li>Get value A from the memory and put it in a register.</li>
+<li>Get value B from the memory and put it in another register.</li>
+<li>Activate the additional circuit and put the final value into another
+register.</li>
+<li>Store the result the memory.</li>
+</ol></li>
+<li>Machine instruction
+<ol type="1">
+<li>Data transfer
+<ul>
+<li>load, store, I/O</li>
+</ul></li>
+<li>Arithmetic/logic
+<ul>
+<li>and, or, add, sub...</li>
+<li>shift, halt</li>
+</ul></li>
+<li>Control
+<ul>
+<li>jump, halt</li>
+</ul></li>
+<li>RISC -&gt; Reduced instruction set computing
+<ul>
+<li>Ex: PRC, SPRC</li>
+</ul></li>
+<li>CISC -&gt; Complex instruction set computing
+<ul>
+<li>Ex: x86，x64</li>
+</ul></li>
+</ol></li>
+</ul>
+<h2 id="example-of-machine-instruction">Example of machine
+instruction</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/UYGKbh0.png"></p>
+<ul>
+<li>3 -&gt; store</li>
+<li>5 -&gt; register No.5</li>
+<li>A7 -&gt; memory cell A7</li>
+<li>all in all -&gt; Store the content of register No.5 to memory cell
+A7.</li>
+</ul>
+<h2 id="the-machine-instruction-of-adding-two-values">The machine
+instruction of adding two values</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/Xa7EtHE.png"></p>
+<h2 id="program-execution">Program execution</h2>
+<ul>
+<li><p>Machine cycle <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/N1Jiuk9.png"></p></li>
+<li><p>Fetch <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/pJF8QS9.png"></p></li>
+<li><p>Clock -&gt; how many machine cycle a cpu is able to do in one
+second</p></li>
+</ul>
+<h2 id="arithmetic-and-logic-unitalu">Arithmetic and logic
+unit(ALU)</h2>
+<ul>
+<li>Arithmetic operations</li>
+<li>Logic/bit operations</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/pfBxlEH.png"></p>
+<h2 id="shiftrotation">Shift/Rotation</h2>
+<ul>
+<li>Logic shift
+<ul>
+<li>10100000 -&gt; 01010000(right)</li>
+<li>10100000 -&gt; 01000000(left)</li>
+<li>Both moving left and right add a 0</li>
+</ul></li>
+<li>Arithmetic shift
+<ul>
+<li><p>10100000 -&gt; 11010000(right, the number is divided by 2) Moving
+right，copy the leftest bit.</p></li>
+<li><p>10100000 -&gt; 11000000(left, the number is multiplied by 2)
+Moving left，add a 0 to the right.</p></li>
+</ul></li>
+<li>Rotation
+<ul>
+<li>10100000 -&gt; 01010000(right)</li>
+<li>10100000 -&gt; 01000001(left)</li>
+</ul></li>
+</ul>
+<h2 id="controllers-and-peripheral-devices">Controllers and peripheral
+devices</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/AZ4fwQH.png"></p>
+<ul>
+<li>Specialized -&gt; SATA...</li>
+<li>General -&gt; USB, HDMI...</li>
+</ul>
+<h2 id="memory-mapped-io">Memory-mapped I/O</h2>
+<ul>
+<li>The periphral devices are recognized as part of the memory. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/YFL6td3.png"></li>
+</ul>
+<h2 id="communication">Communication</h2>
+<ul>
+<li>DMA(direct memory access)
+<ul>
+<li>Authorized controllers can access data directly from main memory
+without notifying CPU</li>
+</ul></li>
+<li>Hand shaking
+<ul>
+<li>Two way communication</li>
+<li>Coordinating activities</li>
+</ul></li>
+<li>Parallel/Serial</li>
+<li>Transfer rate unit -&gt; bit per second</li>
+</ul>
+<h2 id="pipeliningaccelerating-the-process">Pipelining(accelerating the
+process)</h2>
+<p>ex -&gt; pre-fetching</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/gPsrUkp.png"></p>
+<ul>
+<li>Throughput -&gt; Total amount of work accomplished in a given amount
+of time</li>
+<li>Pre-fetching issus -&gt; conditional jump</li>
+</ul>
+<h2 id="paralleldistributed-computing">Parallel/distributed
+computing</h2>
+<ul>
+<li>Parallel
+<ul>
+<li>Multiprocessor</li>
+<li>MIMD，SISD，SIMD，MISD(M-&gt;Multiple，S-&gt;Single，I-&gt;Instruction,
+D-&gt;Dataset)</li>
+</ul></li>
+<li>Distributed
+<ul>
+<li>Linking computers via network</li>
+<li>Seperate processors and memory</li>
+</ul></li>
+<li>Issues
+<ul>
+<li>Data dependency</li>
+<li>Load balancing</li>
+<li>Synchronization</li>
+<li>Reliability</li>
+</ul></li>
+</ul>
+<h2 id="how-to-parallelize">How to parallelize?</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/xrTQCOL.png"></p>
+<h2 id="speed-up-and-scaling">Speed up and Scaling</h2>
+<ul>
+<li>Amdahl's law(阿姆達爾定律)</li>
+<li>Gain = <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -1.593ex;" xmlns="http://www.w3.org/2000/svg" width="8.624ex" height="3.55ex" role="img" focusable="false" viewBox="0 -864.9 3811.6 1569"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mfrac"><g data-mml-node="mn" transform="translate(1729,394) scale(0.707)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g><g data-mml-node="mrow" transform="translate(220,-460.1) scale(0.707)"><g data-mml-node="mfrac"><g data-mml-node="mi" transform="translate(326.1,394) scale(0.707)"><path data-c="1D443" d="M287 628Q287 635 230 637Q206 637 199 638T192 648Q192 649 194 659Q200 679 203 681T397 683Q587 682 600 680Q664 669 707 631T751 530Q751 453 685 389Q616 321 507 303Q500 302 402 301H307L277 182Q247 66 247 59Q247 55 248 54T255 50T272 48T305 46H336Q342 37 342 35Q342 19 335 5Q330 0 319 0Q316 0 282 1T182 2Q120 2 87 2T51 1Q33 1 33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM645 554Q645 567 643 575T634 597T609 619T560 635Q553 636 480 637Q463 637 445 637T416 636T404 636Q391 635 386 627Q384 621 367 550T332 412T314 344Q314 342 395 342H407H430Q542 342 590 392Q617 419 631 471T645 554Z"></path></g><g data-mml-node="mi" transform="translate(220,-345) scale(0.707)"><path data-c="1D440" d="M289 629Q289 635 232 637Q208 637 201 638T194 648Q194 649 196 659Q197 662 198 666T199 671T201 676T203 679T207 681T212 683T220 683T232 684Q238 684 262 684T307 683Q386 683 398 683T414 678Q415 674 451 396L487 117L510 154Q534 190 574 254T662 394Q837 673 839 675Q840 676 842 678T846 681L852 683H948Q965 683 988 683T1017 684Q1051 684 1051 673Q1051 668 1048 656T1045 643Q1041 637 1008 637Q968 636 957 634T939 623Q936 618 867 340T797 59Q797 55 798 54T805 50T822 48T855 46H886Q892 37 892 35Q892 19 885 5Q880 0 869 0Q864 0 828 1T736 2Q675 2 644 2T609 1Q592 1 592 11Q592 13 594 25Q598 41 602 43T625 46Q652 46 685 49Q699 52 704 61Q706 65 742 207T813 490T848 631L654 322Q458 10 453 5Q451 4 449 3Q444 0 433 0Q418 0 415 7Q413 11 374 317L335 624L267 354Q200 88 200 79Q206 46 272 46H282Q288 41 289 37T286 19Q282 3 278 1Q274 0 267 0Q265 0 255 0T221 1T157 2Q127 2 95 1T58 0Q43 0 39 2T35 11Q35 13 38 25T43 40Q45 46 65 46Q135 46 154 86Q158 92 223 354T289 629Z"></path></g><rect width="943.2" height="60" x="120" y="220"></rect></g><g data-mml-node="mo" transform="translate(1183.2,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mo" transform="translate(1961.2,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mn" transform="translate(2350.2,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g><g data-mml-node="mo" transform="translate(2850.2,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mi" transform="translate(3628.2,0)"><path data-c="1D443" d="M287 628Q287 635 230 637Q206 637 199 638T192 648Q192 649 194 659Q200 679 203 681T397 683Q587 682 600 680Q664 669 707 631T751 530Q751 453 685 389Q616 321 507 303Q500 302 402 301H307L277 182Q247 66 247 59Q247 55 248 54T255 50T272 48T305 46H336Q342 37 342 35Q342 19 335 5Q330 0 319 0Q316 0 282 1T182 2Q120 2 87 2T51 1Q33 1 33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM645 554Q645 567 643 575T634 597T609 619T560 635Q553 636 480 637Q463 637 445 637T416 636T404 636Q391 635 386 627Q384 621 367 550T332 412T314 344Q314 342 395 342H407H430Q542 342 590 392Q617 419 631 471T645 554Z"></path></g><g data-mml-node="mo" transform="translate(4379.2,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g><rect width="3571.6" height="60" x="120" y="220"></rect></g></g></g></svg></mjx-container></span> (P -&gt;
+proportion that is parallelizable, S -&gt; proportion that is serial
+only)</li>
+</ul>
+]]></content>
+      <categories>
+        <category>大學課堂筆記-計算機概論</category>
+      </categories>
+      <tags>
+        <tag>計算機概論</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Networking and the Internet(I)</title>
     <url>/2023/01/18/2023-01-17-Networking%20and%20the%20internet(I)/</url>
     <content><![CDATA[<h1 id="networking-and-the-interneti">Networking and the
@@ -821,6 +821,141 @@ correctivity of a key. <img lazyload="" src="/images/loading.svg" data-src="http
       </tags>
   </entry>
   <entry>
+    <title>Chaper 7 Pointers</title>
+    <url>/2023/01/18/Chaper%207%20Pointers/</url>
+    <content><![CDATA[<h1 id="chaper-7-pointers">Chaper 7 Pointers</h1>
+<h2 id="what-is-pointers">What is Pointers?</h2>
+<ul>
+<li>Declaration: int <em>pointer_name;/char </em>pointer_name;</li>
+<li>Data being stored inside a pointer is the address(unsigned int: hex)
+of a data in the memory.</li>
+<li>Pointer shoud be initialized. A pointer with null or the value 0 is
+called null pointer.(0 is the only integer that can be assigned to a
+pointer variable) ex: <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/4izPqBi.jpg"></li>
+</ul>
+<h2 id="how-to-assign-the-address-of-a-data-to-pointers">How to assign
+the address of a data to pointers?</h2>
+<ul>
+<li>"*" and "&amp;" are inverses of one another. ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">int</span> *pointer;</span><br><span class="line">	<span class="type">int</span> a=<span class="number">10</span>;</span><br><span class="line">	pointer=&amp;a;</span><br><span class="line">	cout&lt;&lt;pointer&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//cout the address of a.</span></span><br><span class="line">	cout&lt;&lt;*pointer&lt;&lt;<span class="string">"\n"</span>;cout&lt;&lt;the value of a.</span><br><span class="line">	cout&lt;&lt;*&amp;a; <span class="comment">//cout the value of a.</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h2 id="the-relations-between-pointers-and-data">The relations between
+pointers and data</h2>
+<ul>
+<li>alter a &lt;=&gt; alter the value of *pointer.</li>
+<li>The address won't be changed.</li>
+</ul>
+<p>ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">int</span> *pointer;</span><br><span class="line">	<span class="type">int</span> a=<span class="number">10</span>;</span><br><span class="line">	pointer=&amp;a;</span><br><span class="line">	cout&lt;&lt;pointer&lt;&lt;<span class="string">" "</span>&lt;&lt;*pointer&lt;&lt;<span class="string">" "</span>&lt;&lt;a&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	*pointer=<span class="number">100</span>;</span><br><span class="line">	cout&lt;&lt;pointer&lt;&lt;<span class="string">" "</span>&lt;&lt;*pointer&lt;&lt;<span class="string">" "</span>&lt;&lt;a&lt;&lt;<span class="string">" \n"</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
+<h2 id="passbyreference-with-pointers">PassByReference with
+Pointers</h2>
+<p>ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">cube</span><span class="params">(<span class="type">int</span> *pointer)</span></span>{</span><br><span class="line">	*pointer= *pointer * *pointer * *pointer;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">int</span> length;</span><br><span class="line">	<span class="keyword">while</span>(cin&gt;&gt;length){</span><br><span class="line">		<span class="built_in">cube</span>(&amp;length);</span><br><span class="line">		cout&lt;&lt;length&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
+<h2 id="const-and-pointers">Const and Pointers</h2>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span>* pointer1=&amp;num; <span class="comment">//The number pointer1 points to is a const.</span></span><br><span class="line"><span class="type">int</span>* <span class="type">const</span> pointer2=&amp;num; <span class="comment">//pointer is a const.</span></span><br></pre></td></tr></table></figure></div>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/VwXzdCt.png"> * For pointer1: <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/WnGwjyZ.png"> * For pointer2: <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/AsWthKE.png"></p>
+<p>ex(For pointer1): <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">int</span> a=<span class="number">10</span>;</span><br><span class="line">	<span class="type">const</span> <span class="type">int</span>* pointer;</span><br><span class="line">	pointer=&amp;a;</span><br><span class="line">	cout&lt;&lt;*pointer&lt;&lt;<span class="string">"\n"</span>;	<span class="comment">//cout 10</span></span><br><span class="line">	a=<span class="number">100</span>;</span><br><span class="line">	cout&lt;&lt;*pointer&lt;&lt;<span class="string">"\n"</span>;	<span class="comment">//cout 100</span></span><br><span class="line">	<span class="comment">/*pointer=100;*/</span> <span class="comment">//not allowed</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
+<p>ex(For pointer2):</p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">int</span> a=<span class="number">10</span>, b=<span class="number">100</span>;</span><br><span class="line">	<span class="type">int</span>* <span class="type">const</span> pointer=&amp;a;</span><br><span class="line">	*pointer=<span class="number">1000</span>;</span><br><span class="line">	cout&lt;&lt;a&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	<span class="comment">/*pointer=&amp;b*/</span> <span class="comment">//not allowed</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<h2 id="pointers-and-array">Pointers and Array</h2>
+<ul>
+<li><p>int array and pointers <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">int</span> a[<span class="number">5</span>]={<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>};</span><br><span class="line">	<span class="type">int</span> *pointer=a;	<span class="comment">//a is the address of a[0]</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++){</span><br><span class="line">		cout&lt;&lt;*(a+i)&lt;&lt;<span class="string">" "</span>; <span class="comment">//cout 0~4</span></span><br><span class="line">	}</span><br><span class="line">	cout&lt;&lt;endl;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++){</span><br><span class="line">		*(a+i)=<span class="number">0</span>;</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++){</span><br><span class="line">		cout&lt;&lt;*(a+i)&lt;&lt;<span class="string">" "</span>; <span class="comment">//cout 0</span></span><br><span class="line">	}</span><br><span class="line">	cout&lt;&lt;endl;</span><br><span class="line">	cout&lt;&lt;&amp;a[<span class="number">4</span>]-pointer;	<span class="comment">//4 the distance(elements) between a[4] and pointer(a[0]). = 2*sizeof(int)</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p></li>
+<li><p>char array and pointers <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">char</span> a[<span class="number">18</span>]=<span class="string">"Helloworld"</span>;</span><br><span class="line">	cout&lt;&lt;a&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//it won't cout the address of a[0]</span></span><br><span class="line">	cout&lt;&lt;a+<span class="number">5</span>&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//it will cout world</span></span><br><span class="line">	cout&lt;&lt;*(a+<span class="number">9</span>)&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//equals to a[10];</span></span><br><span class="line">	cout&lt;&lt;(<span class="type">void</span>*)a&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//it will cout the address of a[0](H)</span></span><br><span class="line">	cout&lt;&lt;(<span class="type">void</span>*)a+<span class="number">9</span>&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//it will cout the address of a[9](d)</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p></li>
+<li><p>c-string and pointers</p></li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/6smBRIe.png"></p>
+<ul>
+<li>sizeof()
+<ul>
+<li>sizeof() with array or value will return the total size in
+bytes.</li>
+</ul></li>
+</ul>
+<p>Ex1(with array):</p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> arr[<span class="number">5</span>]={<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>};</span><br><span class="line">    cout&lt;&lt;<span class="built_in">sizeof</span>(arr)&lt;&lt;<span class="string">"\n"</span>;  <span class="comment">//cout the total size of the array(bytes)</span></span><br><span class="line">    cout&lt;&lt;<span class="built_in">sizeof</span>(arr)/<span class="built_in">sizeof</span>(arr[<span class="number">0</span>]); <span class="comment">//cout the total amount of elements in arr.    </span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<p>Ex2(with value):</p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">double</span> a=<span class="number">10.5</span>;</span><br><span class="line">    <span class="type">int</span> b=<span class="number">10</span>;</span><br><span class="line">    cout&lt;&lt;<span class="built_in">sizeof</span>(a+b); <span class="comment">//return 8 since the result of int and double addition is still double </span></span><br><span class="line">}    </span><br></pre></td></tr></table></figure></div>
+<p>Ex3(with c-string):</p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">char</span> string[<span class="number">11</span>]=<span class="string">"Helloworld"</span>;</span><br><span class="line">    cout&lt;&lt;<span class="built_in">sizeof</span>(string);</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>void* =&gt; a pointer for any genre of data type.
+<ul>
+<li>Before using it, the type of pointer must be determined.</li>
+</ul></li>
+</ul>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> a=<span class="number">10</span>;</span><br><span class="line">    <span class="type">void</span>* pointer;</span><br><span class="line">    pointer=&amp;a;</span><br><span class="line">    cout&lt;&lt;pointer&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//cout the address </span></span><br><span class="line">    cout&lt;&lt;*(<span class="type">int</span>*)pointer&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//cout the number a correctly</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>Use pointers to print a 2d array</li>
+</ul>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">print_array</span><span class="params">(<span class="type">int</span> *a, <span class="type">int</span> rows, <span class="type">int</span> columns)</span></span>{</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;rows; i++){</span><br><span class="line">        a=a+i*columns;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;columns; j++){</span><br><span class="line">            cout&lt;&lt;*(a+j)&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">        }</span><br><span class="line">        cout&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> a[<span class="number">2</span>][<span class="number">2</span>]={{<span class="number">0</span>, <span class="number">1</span>}, {<span class="number">2</span>, <span class="number">3</span>}};</span><br><span class="line">    <span class="built_in">print_array</span>(&amp;a[<span class="number">0</span>][<span class="number">0</span>], <span class="number">2</span>, <span class="number">2</span>);</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>Pointers for 2D array</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/c4qeaq4.png"></p>
+<ul>
+<li>Pointers for 3D array</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/Q9zlaWs.png"></p>
+<ul>
+<li><p>Arrays of Pointers</p>
+<ul>
+<li>The array stores the address of the first character in each
+c-string.</li>
+</ul>
+<p>Ex1:</p>
+<p><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">char</span> * <span class="type">const</span> suit[ <span class="number">4</span> ] =</span><br><span class="line">{ <span class="string">"Hearts"</span>, <span class="string">"Diamonds"</span>,</span><br><span class="line"><span class="string">"Clubs"</span>, <span class="string">"Spades"</span> };</span><br></pre></td></tr></table></figure></div></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/V5lQGvy.png"> Ex2:</p>
+<p><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">char</span> *suit[<span class="number">2</span>]={<span class="string">"Hello"</span>, <span class="string">"World"</span>}; <span class="comment">//stores the address of the first character in each string</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="built_in">sizeof</span>(suit)/<span class="number">8</span>; i++){</span><br><span class="line">        cout&lt;&lt;suit[i]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">    }</span><br><span class="line">}    </span><br></pre></td></tr></table></figure></div></p></li>
+</ul>
+<h2 id="functions-pointer">Function's Pointer</h2>
+<ul>
+<li>Pass the pointer of a function to another fucntion</li>
+</ul>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">swap</span><span class="params">(<span class="type">int</span> &amp;a, <span class="type">int</span> &amp;b)</span></span>{</span><br><span class="line">    <span class="type">int</span> temp=a;</span><br><span class="line">    a=b;</span><br><span class="line">    b=temp;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">selection_sort</span><span class="params">(vector &lt;<span class="type">int</span>&gt; &amp;v, <span class="type">void</span> (*swap)(<span class="type">int</span> &amp;a, <span class="type">int</span> &amp;b))</span></span>{</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;v.<span class="built_in">size</span>()<span class="number">-1</span>; i++){</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=i+<span class="number">1</span>; j&lt;v.<span class="built_in">size</span>(); j++){</span><br><span class="line">            <span class="keyword">if</span>(v[j]&lt;v[i]){</span><br><span class="line">                <span class="built_in">swap</span>(v[j], v[i]);</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;v.<span class="built_in">size</span>(); i++){</span><br><span class="line">        cout&lt;&lt;v[i]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    vector &lt;<span class="type">int</span>&gt; test={<span class="number">1</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">7</span>, <span class="number">6</span>, <span class="number">10</span>};</span><br><span class="line">    <span class="built_in">selection_sort</span>(test, swap);</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<h2 id="selection-sort">Selection sort</h2>
+<p>Reference(How it works):https://www.geeksforgeeks.org/selection-sort/
+* Easy to program but inefficient. Ex:</p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">swap_double</span><span class="params">(<span class="type">int</span> &amp;a, <span class="type">int</span> &amp;b)</span></span>{</span><br><span class="line">	<span class="type">double</span> temp=a;</span><br><span class="line">	a=b;</span><br><span class="line">	b=temp;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">sort</span><span class="params">(vector&lt;<span class="type">int</span>&gt; &amp;vec)</span></span>{</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;vec.<span class="built_in">size</span>()<span class="number">-1</span>; i++){</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=i+<span class="number">1</span>; j&lt;vec.<span class="built_in">size</span>(); j++){</span><br><span class="line">            <span class="keyword">if</span>(vec[j]&lt;vec[i]){</span><br><span class="line">                <span class="built_in">swap_double</span>(vec[j], vec[i]);</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; test={<span class="number">0</span>, <span class="number">7</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">10</span>};</span><br><span class="line">    <span class="built_in">sort</span>(test);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;test.<span class="built_in">size</span>(); i++){</span><br><span class="line">        cout&lt;&lt;test[i]&lt;&lt;<span class="string">" "</span>;    </span><br><span class="line">    }</span><br><span class="line">}  </span><br></pre></td></tr></table></figure></div>
+]]></content>
+      <categories>
+        <category>大學課堂筆記-程式設計</category>
+        <category>C++</category>
+        <category>彰師大</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Introduction to C++ Programing</title>
+    <url>/2023/01/18/Chaper%208%20Sequential-Access%20Files/</url>
+    <content><![CDATA[<h1 id="chaper-8-sequential-access-files">Chaper 8 Sequential-Access
+Files</h1>
+<h2 id="fstream">fstream</h2>
+<ul>
+<li>ofstream and ifstream is include in fstream
+<ul>
+<li>ofstream: creats and writes files</li>
+<li>ifstream: reads from files</li>
+</ul></li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/BXqxxcS.png"> Ex1(Input data to txt):
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    fstream file;</span><br><span class="line">    file.<span class="built_in">open</span>(<span class="string">"test.txt"</span>, ios::out);</span><br><span class="line">    string name, birthday;</span><br><span class="line">    <span class="keyword">if</span>(!file){</span><br><span class="line">        cerr&lt;&lt;<span class="string">"File could not be open."</span>&lt;&lt;endl; </span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);    <span class="comment">//exit with error</span></span><br><span class="line">    }</span><br><span class="line">    cout&lt;&lt;<span class="string">"Input the name and birthday(input end-of-file to end the program):"</span>;</span><br><span class="line">    <span class="keyword">while</span>(cin&gt;&gt;name&gt;&gt;birthday){</span><br><span class="line">        outClientFile&lt;&lt;name&lt;&lt;<span class="string">' '</span>&lt;&lt;birthday&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">        cout&lt;&lt;<span class="string">"Input the name and birthday(input end-of-file to end the program):"</span>;</span><br><span class="line">    }</span><br><span class="line">    outClientFile.<span class="built_in">close</span>();</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> Ex2(Read from txt): <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="function">fstream <span class="title">file</span><span class="params">(<span class="string">"test.txt"</span>, ios::in)</span></span>;</span><br><span class="line">    string name, birthday;</span><br><span class="line">    <span class="keyword">if</span>(!file){</span><br><span class="line">        cerr&lt;&lt;<span class="string">"The file cannot be opened."</span>;</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">while</span>(file&gt;&gt;name&gt;&gt;birthday){</span><br><span class="line">        cout&lt;&lt;name&lt;&lt;<span class="string">" "</span>&lt;&lt;birthday&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    }</span><br><span class="line">    outClientFile.<span class="built_in">close</span>();</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> * Reading from a
+specific line(seekg(), seekp())
+Reference:　http://c.biancheng.net/view/1541.html</p>
+<pre><code>* name.seekg(0); =&gt; reposition the pointer to location 0.
+* To read a sequential file again, we need to add name.clear() before the seekg.</code></pre>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/8Ourtup.png"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/QbXSudS.png"> * Telling you the
+current location(tellg(), tellp())</p>
+]]></content>
+      <categories>
+        <category>大學課堂筆記-程式設計</category>
+        <category>C++</category>
+        <category>彰師大</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Operating System(I)</title>
     <url>/2023/01/18/2023-01-17-Operating%20System(I)/</url>
     <content><![CDATA[<h1 id="operating-systemi">Operating System(I)</h1>
@@ -978,141 +1113,6 @@ the priority of each request.</li>
   </entry>
   <entry>
     <title>Introduction to C++ Programing</title>
-    <url>/2023/01/18/Chaper%208%20Sequential-Access%20Files/</url>
-    <content><![CDATA[<h1 id="chaper-8-sequential-access-files">Chaper 8 Sequential-Access
-Files</h1>
-<h2 id="fstream">fstream</h2>
-<ul>
-<li>ofstream and ifstream is include in fstream
-<ul>
-<li>ofstream: creats and writes files</li>
-<li>ifstream: reads from files</li>
-</ul></li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/BXqxxcS.png"> Ex1(Input data to txt):
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    fstream file;</span><br><span class="line">    file.<span class="built_in">open</span>(<span class="string">"test.txt"</span>, ios::out);</span><br><span class="line">    string name, birthday;</span><br><span class="line">    <span class="keyword">if</span>(!file){</span><br><span class="line">        cerr&lt;&lt;<span class="string">"File could not be open."</span>&lt;&lt;endl; </span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);    <span class="comment">//exit with error</span></span><br><span class="line">    }</span><br><span class="line">    cout&lt;&lt;<span class="string">"Input the name and birthday(input end-of-file to end the program):"</span>;</span><br><span class="line">    <span class="keyword">while</span>(cin&gt;&gt;name&gt;&gt;birthday){</span><br><span class="line">        outClientFile&lt;&lt;name&lt;&lt;<span class="string">' '</span>&lt;&lt;birthday&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">        cout&lt;&lt;<span class="string">"Input the name and birthday(input end-of-file to end the program):"</span>;</span><br><span class="line">    }</span><br><span class="line">    outClientFile.<span class="built_in">close</span>();</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> Ex2(Read from txt): <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="function">fstream <span class="title">file</span><span class="params">(<span class="string">"test.txt"</span>, ios::in)</span></span>;</span><br><span class="line">    string name, birthday;</span><br><span class="line">    <span class="keyword">if</span>(!file){</span><br><span class="line">        cerr&lt;&lt;<span class="string">"The file cannot be opened."</span>;</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">while</span>(file&gt;&gt;name&gt;&gt;birthday){</span><br><span class="line">        cout&lt;&lt;name&lt;&lt;<span class="string">" "</span>&lt;&lt;birthday&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    }</span><br><span class="line">    outClientFile.<span class="built_in">close</span>();</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> * Reading from a
-specific line(seekg(), seekp())
-Reference:　http://c.biancheng.net/view/1541.html</p>
-<pre><code>* name.seekg(0); =&gt; reposition the pointer to location 0.
-* To read a sequential file again, we need to add name.clear() before the seekg.</code></pre>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/8Ourtup.png"></p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/QbXSudS.png"> * Telling you the
-current location(tellg(), tellp())</p>
-]]></content>
-      <categories>
-        <category>大學課堂筆記-程式設計</category>
-        <category>C++</category>
-        <category>彰師大</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Chaper 7 Pointers</title>
-    <url>/2023/01/18/Chaper%207%20Pointers/</url>
-    <content><![CDATA[<h1 id="chaper-7-pointers">Chaper 7 Pointers</h1>
-<h2 id="what-is-pointers">What is Pointers?</h2>
-<ul>
-<li>Declaration: int <em>pointer_name;/char </em>pointer_name;</li>
-<li>Data being stored inside a pointer is the address(unsigned int: hex)
-of a data in the memory.</li>
-<li>Pointer shoud be initialized. A pointer with null or the value 0 is
-called null pointer.(0 is the only integer that can be assigned to a
-pointer variable) ex: <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/4izPqBi.jpg"></li>
-</ul>
-<h2 id="how-to-assign-the-address-of-a-data-to-pointers">How to assign
-the address of a data to pointers?</h2>
-<ul>
-<li>"*" and "&amp;" are inverses of one another. ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">int</span> *pointer;</span><br><span class="line">	<span class="type">int</span> a=<span class="number">10</span>;</span><br><span class="line">	pointer=&amp;a;</span><br><span class="line">	cout&lt;&lt;pointer&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//cout the address of a.</span></span><br><span class="line">	cout&lt;&lt;*pointer&lt;&lt;<span class="string">"\n"</span>;cout&lt;&lt;the value of a.</span><br><span class="line">	cout&lt;&lt;*&amp;a; <span class="comment">//cout the value of a.</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
-</ul>
-<h2 id="the-relations-between-pointers-and-data">The relations between
-pointers and data</h2>
-<ul>
-<li>alter a &lt;=&gt; alter the value of *pointer.</li>
-<li>The address won't be changed.</li>
-</ul>
-<p>ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">int</span> *pointer;</span><br><span class="line">	<span class="type">int</span> a=<span class="number">10</span>;</span><br><span class="line">	pointer=&amp;a;</span><br><span class="line">	cout&lt;&lt;pointer&lt;&lt;<span class="string">" "</span>&lt;&lt;*pointer&lt;&lt;<span class="string">" "</span>&lt;&lt;a&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	*pointer=<span class="number">100</span>;</span><br><span class="line">	cout&lt;&lt;pointer&lt;&lt;<span class="string">" "</span>&lt;&lt;*pointer&lt;&lt;<span class="string">" "</span>&lt;&lt;a&lt;&lt;<span class="string">" \n"</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
-<h2 id="passbyreference-with-pointers">PassByReference with
-Pointers</h2>
-<p>ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">cube</span><span class="params">(<span class="type">int</span> *pointer)</span></span>{</span><br><span class="line">	*pointer= *pointer * *pointer * *pointer;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">int</span> length;</span><br><span class="line">	<span class="keyword">while</span>(cin&gt;&gt;length){</span><br><span class="line">		<span class="built_in">cube</span>(&amp;length);</span><br><span class="line">		cout&lt;&lt;length&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
-<h2 id="const-and-pointers">Const and Pointers</h2>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span>* pointer1=&amp;num; <span class="comment">//The number pointer1 points to is a const.</span></span><br><span class="line"><span class="type">int</span>* <span class="type">const</span> pointer2=&amp;num; <span class="comment">//pointer is a const.</span></span><br></pre></td></tr></table></figure></div>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/VwXzdCt.png"> * For pointer1: <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/WnGwjyZ.png"> * For pointer2: <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/AsWthKE.png"></p>
-<p>ex(For pointer1): <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">int</span> a=<span class="number">10</span>;</span><br><span class="line">	<span class="type">const</span> <span class="type">int</span>* pointer;</span><br><span class="line">	pointer=&amp;a;</span><br><span class="line">	cout&lt;&lt;*pointer&lt;&lt;<span class="string">"\n"</span>;	<span class="comment">//cout 10</span></span><br><span class="line">	a=<span class="number">100</span>;</span><br><span class="line">	cout&lt;&lt;*pointer&lt;&lt;<span class="string">"\n"</span>;	<span class="comment">//cout 100</span></span><br><span class="line">	<span class="comment">/*pointer=100;*/</span> <span class="comment">//not allowed</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
-<p>ex(For pointer2):</p>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">int</span> a=<span class="number">10</span>, b=<span class="number">100</span>;</span><br><span class="line">	<span class="type">int</span>* <span class="type">const</span> pointer=&amp;a;</span><br><span class="line">	*pointer=<span class="number">1000</span>;</span><br><span class="line">	cout&lt;&lt;a&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	<span class="comment">/*pointer=&amp;b*/</span> <span class="comment">//not allowed</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-<h2 id="pointers-and-array">Pointers and Array</h2>
-<ul>
-<li><p>int array and pointers <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">int</span> a[<span class="number">5</span>]={<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>};</span><br><span class="line">	<span class="type">int</span> *pointer=a;	<span class="comment">//a is the address of a[0]</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++){</span><br><span class="line">		cout&lt;&lt;*(a+i)&lt;&lt;<span class="string">" "</span>; <span class="comment">//cout 0~4</span></span><br><span class="line">	}</span><br><span class="line">	cout&lt;&lt;endl;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++){</span><br><span class="line">		*(a+i)=<span class="number">0</span>;</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++){</span><br><span class="line">		cout&lt;&lt;*(a+i)&lt;&lt;<span class="string">" "</span>; <span class="comment">//cout 0</span></span><br><span class="line">	}</span><br><span class="line">	cout&lt;&lt;endl;</span><br><span class="line">	cout&lt;&lt;&amp;a[<span class="number">4</span>]-pointer;	<span class="comment">//4 the distance(elements) between a[4] and pointer(a[0]). = 2*sizeof(int)</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p></li>
-<li><p>char array and pointers <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">char</span> a[<span class="number">18</span>]=<span class="string">"Helloworld"</span>;</span><br><span class="line">	cout&lt;&lt;a&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//it won't cout the address of a[0]</span></span><br><span class="line">	cout&lt;&lt;a+<span class="number">5</span>&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//it will cout world</span></span><br><span class="line">	cout&lt;&lt;*(a+<span class="number">9</span>)&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//equals to a[10];</span></span><br><span class="line">	cout&lt;&lt;(<span class="type">void</span>*)a&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//it will cout the address of a[0](H)</span></span><br><span class="line">	cout&lt;&lt;(<span class="type">void</span>*)a+<span class="number">9</span>&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//it will cout the address of a[9](d)</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p></li>
-<li><p>c-string and pointers</p></li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/6smBRIe.png"></p>
-<ul>
-<li>sizeof()
-<ul>
-<li>sizeof() with array or value will return the total size in
-bytes.</li>
-</ul></li>
-</ul>
-<p>Ex1(with array):</p>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> arr[<span class="number">5</span>]={<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>};</span><br><span class="line">    cout&lt;&lt;<span class="built_in">sizeof</span>(arr)&lt;&lt;<span class="string">"\n"</span>;  <span class="comment">//cout the total size of the array(bytes)</span></span><br><span class="line">    cout&lt;&lt;<span class="built_in">sizeof</span>(arr)/<span class="built_in">sizeof</span>(arr[<span class="number">0</span>]); <span class="comment">//cout the total amount of elements in arr.    </span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-<p>Ex2(with value):</p>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">double</span> a=<span class="number">10.5</span>;</span><br><span class="line">    <span class="type">int</span> b=<span class="number">10</span>;</span><br><span class="line">    cout&lt;&lt;<span class="built_in">sizeof</span>(a+b); <span class="comment">//return 8 since the result of int and double addition is still double </span></span><br><span class="line">}    </span><br></pre></td></tr></table></figure></div>
-<p>Ex3(with c-string):</p>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">char</span> string[<span class="number">11</span>]=<span class="string">"Helloworld"</span>;</span><br><span class="line">    cout&lt;&lt;<span class="built_in">sizeof</span>(string);</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-<ul>
-<li>void* =&gt; a pointer for any genre of data type.
-<ul>
-<li>Before using it, the type of pointer must be determined.</li>
-</ul></li>
-</ul>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> a=<span class="number">10</span>;</span><br><span class="line">    <span class="type">void</span>* pointer;</span><br><span class="line">    pointer=&amp;a;</span><br><span class="line">    cout&lt;&lt;pointer&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//cout the address </span></span><br><span class="line">    cout&lt;&lt;*(<span class="type">int</span>*)pointer&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//cout the number a correctly</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-<ul>
-<li>Use pointers to print a 2d array</li>
-</ul>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">print_array</span><span class="params">(<span class="type">int</span> *a, <span class="type">int</span> rows, <span class="type">int</span> columns)</span></span>{</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;rows; i++){</span><br><span class="line">        a=a+i*columns;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;columns; j++){</span><br><span class="line">            cout&lt;&lt;*(a+j)&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">        }</span><br><span class="line">        cout&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> a[<span class="number">2</span>][<span class="number">2</span>]={{<span class="number">0</span>, <span class="number">1</span>}, {<span class="number">2</span>, <span class="number">3</span>}};</span><br><span class="line">    <span class="built_in">print_array</span>(&amp;a[<span class="number">0</span>][<span class="number">0</span>], <span class="number">2</span>, <span class="number">2</span>);</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-<ul>
-<li>Pointers for 2D array</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/c4qeaq4.png"></p>
-<ul>
-<li>Pointers for 3D array</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/Q9zlaWs.png"></p>
-<ul>
-<li><p>Arrays of Pointers</p>
-<ul>
-<li>The array stores the address of the first character in each
-c-string.</li>
-</ul>
-<p>Ex1:</p>
-<p><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">char</span> * <span class="type">const</span> suit[ <span class="number">4</span> ] =</span><br><span class="line">{ <span class="string">"Hearts"</span>, <span class="string">"Diamonds"</span>,</span><br><span class="line"><span class="string">"Clubs"</span>, <span class="string">"Spades"</span> };</span><br></pre></td></tr></table></figure></div></p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/V5lQGvy.png"> Ex2:</p>
-<p><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">char</span> *suit[<span class="number">2</span>]={<span class="string">"Hello"</span>, <span class="string">"World"</span>}; <span class="comment">//stores the address of the first character in each string</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="built_in">sizeof</span>(suit)/<span class="number">8</span>; i++){</span><br><span class="line">        cout&lt;&lt;suit[i]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">    }</span><br><span class="line">}    </span><br></pre></td></tr></table></figure></div></p></li>
-</ul>
-<h2 id="functions-pointer">Function's Pointer</h2>
-<ul>
-<li>Pass the pointer of a function to another fucntion</li>
-</ul>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">swap</span><span class="params">(<span class="type">int</span> &amp;a, <span class="type">int</span> &amp;b)</span></span>{</span><br><span class="line">    <span class="type">int</span> temp=a;</span><br><span class="line">    a=b;</span><br><span class="line">    b=temp;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">selection_sort</span><span class="params">(vector &lt;<span class="type">int</span>&gt; &amp;v, <span class="type">void</span> (*swap)(<span class="type">int</span> &amp;a, <span class="type">int</span> &amp;b))</span></span>{</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;v.<span class="built_in">size</span>()<span class="number">-1</span>; i++){</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=i+<span class="number">1</span>; j&lt;v.<span class="built_in">size</span>(); j++){</span><br><span class="line">            <span class="keyword">if</span>(v[j]&lt;v[i]){</span><br><span class="line">                <span class="built_in">swap</span>(v[j], v[i]);</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;v.<span class="built_in">size</span>(); i++){</span><br><span class="line">        cout&lt;&lt;v[i]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    vector &lt;<span class="type">int</span>&gt; test={<span class="number">1</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">7</span>, <span class="number">6</span>, <span class="number">10</span>};</span><br><span class="line">    <span class="built_in">selection_sort</span>(test, swap);</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-<h2 id="selection-sort">Selection sort</h2>
-<p>Reference(How it works):https://www.geeksforgeeks.org/selection-sort/
-* Easy to program but inefficient. Ex:</p>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">swap_double</span><span class="params">(<span class="type">int</span> &amp;a, <span class="type">int</span> &amp;b)</span></span>{</span><br><span class="line">	<span class="type">double</span> temp=a;</span><br><span class="line">	a=b;</span><br><span class="line">	b=temp;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">sort</span><span class="params">(vector&lt;<span class="type">int</span>&gt; &amp;vec)</span></span>{</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;vec.<span class="built_in">size</span>()<span class="number">-1</span>; i++){</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=i+<span class="number">1</span>; j&lt;vec.<span class="built_in">size</span>(); j++){</span><br><span class="line">            <span class="keyword">if</span>(vec[j]&lt;vec[i]){</span><br><span class="line">                <span class="built_in">swap_double</span>(vec[j], vec[i]);</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; test={<span class="number">0</span>, <span class="number">7</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">10</span>};</span><br><span class="line">    <span class="built_in">sort</span>(test);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;test.<span class="built_in">size</span>(); i++){</span><br><span class="line">        cout&lt;&lt;test[i]&lt;&lt;<span class="string">" "</span>;    </span><br><span class="line">    }</span><br><span class="line">}  </span><br></pre></td></tr></table></figure></div>
-]]></content>
-      <categories>
-        <category>大學課堂筆記-程式設計</category>
-        <category>C++</category>
-        <category>彰師大</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Introduction to C++ Programing</title>
     <url>/2023/01/18/Chapter%202,%20Introduction%20to%20C++%20Programing/</url>
     <content><![CDATA[<h1 id="chapter-2-introduction-to-c-programing">Chapter 2, Introduction
 to C++ Programing</h1>
@@ -1149,6 +1149,41 @@ Operators</h2>
 ]]></content>
       <categories>
         <category>大學課堂筆記-程式設計</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Control Statement-Part 2</title>
+    <url>/2023/01/18/Chapter%204,%20Control%20Statement_%20Part%202/</url>
+    <content><![CDATA[<h1 id="chapter-4-control-statement-part-2">Chapter 4, Control
+Statement: Part 2</h1>
+<h2 id="do...while">do...while</h2>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">do</span>{</span><br><span class="line"></span><br><span class="line">}<span class="keyword">while</span>;(condition)</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>do...while always check the continuation after the code inside the
+{} has been excecuted. Therefore, it will execute at least one time.
+<img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/OQEIHFE.png"> ## switch case
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span>(expression){</span><br><span class="line">    <span class="keyword">case</span> constant1:</span><br><span class="line">        <span class="comment">//execute while expression is constant1;</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> constant2:</span><br><span class="line">        <span class="comment">//execute while expression is constant2;</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'F'</span>:</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'f'</span>:</span><br><span class="line">        <span class="comment">//execute while expression is F or f;</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>+<span class="number">2</span>:</span><br><span class="line">        <span class="comment">//not allowed</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>+<span class="number">4</span>:</span><br><span class="line">        <span class="comment">//not allowed</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        ...</span><br><span class="line">        <span class="comment">//code to be executed if expression doesn't</span></span><br><span class="line">        <span class="comment">// match any constant</span></span><br><span class="line">        </span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
+<li>Perform many different actions based on the value of expression.
+<img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ygwibqG.png"></li>
+</ul>
+<h2 id="setw">setw()</h2>
+<p><em>　setw() =&gt; print spaces to make it tidy. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rY3G69w.png"> ## EOF </em> EOF =&gt; End of
+file by entering ctrl+z. <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line">cin&gt;&gt;sth;</span><br><span class="line"><span class="keyword">while</span>(cin.<span class="built_in">get</span>()!=EOF){</span><br><span class="line">    ...</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> ## cin.get() vs cin&gt;&gt; *
+cin.get() -&gt; only read one character. * cin -&gt; depends on
+&gt;&gt;. <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> grade, aC{<span class="number">0</span>}, bC{<span class="number">0</span>}, cC{<span class="number">0</span>};</span><br><span class="line">    <span class="keyword">while</span>((grade=std::cin.<span class="built_in">get</span>())!=EOF){</span><br><span class="line">        <span class="keyword">switch</span>(grade){</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'a'</span>:</span><br><span class="line">            aC++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'b'</span>:</span><br><span class="line">            bC++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'c'</span>:</span><br><span class="line">            cC++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'\n'</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'\t'</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="string">' '</span>:</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    std::cout&lt;&lt;aC&lt;&lt;<span class="string">' '</span>&lt;&lt;bC&lt;&lt;<span class="string">' '</span>&lt;&lt;cC;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> ## C++ Modified Data Types <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/tTgVBZW.png"> ## Continue vs Break * Continue
+-&gt; Only skip a specific process. * Break -&gt; Skip the whole
+process. ## Boolalpha <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line">std::cout&lt;&lt;<span class="literal">true</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">std::cout&lt;&lt;std::boolalpha;</span><br><span class="line">std::cout&lt;&lt;<span class="literal">true</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line"><span class="comment">//The result will be 1 and true.</span></span><br></pre></td></tr></table></figure></div> ## Operator's Precedence <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/MyvXHDH.png"> * The right side of the
+&amp;&amp; will only be considered if the left side is true. * The
+&amp;&amp; operator has a higher precedence than ||; * Any nonezero
+value is interpreted as ture. Which means if(a=5){...} will be true.</p>
+]]></content>
+      <categories>
+        <category>大學課堂筆記-程式設計</category>
+        <category>C++</category>
+        <category>彰師大</category>
       </categories>
       <tags>
         <tag>C++</tag>
@@ -1234,41 +1269,6 @@ int main(){
       </tags>
   </entry>
   <entry>
-    <title>Control Statement-Part 2</title>
-    <url>/2023/01/18/Chapter%204,%20Control%20Statement_%20Part%202/</url>
-    <content><![CDATA[<h1 id="chapter-4-control-statement-part-2">Chapter 4, Control
-Statement: Part 2</h1>
-<h2 id="do...while">do...while</h2>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">do</span>{</span><br><span class="line"></span><br><span class="line">}<span class="keyword">while</span>;(condition)</span><br></pre></td></tr></table></figure></div>
-<ul>
-<li>do...while always check the continuation after the code inside the
-{} has been excecuted. Therefore, it will execute at least one time.
-<img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/OQEIHFE.png"> ## switch case
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span>(expression){</span><br><span class="line">    <span class="keyword">case</span> constant1:</span><br><span class="line">        <span class="comment">//execute while expression is constant1;</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> constant2:</span><br><span class="line">        <span class="comment">//execute while expression is constant2;</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'F'</span>:</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'f'</span>:</span><br><span class="line">        <span class="comment">//execute while expression is F or f;</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>+<span class="number">2</span>:</span><br><span class="line">        <span class="comment">//not allowed</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>+<span class="number">4</span>:</span><br><span class="line">        <span class="comment">//not allowed</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        ...</span><br><span class="line">        <span class="comment">//code to be executed if expression doesn't</span></span><br><span class="line">        <span class="comment">// match any constant</span></span><br><span class="line">        </span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
-<li>Perform many different actions based on the value of expression.
-<img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ygwibqG.png"></li>
-</ul>
-<h2 id="setw">setw()</h2>
-<p><em>　setw() =&gt; print spaces to make it tidy. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rY3G69w.png"> ## EOF </em> EOF =&gt; End of
-file by entering ctrl+z. <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line">cin&gt;&gt;sth;</span><br><span class="line"><span class="keyword">while</span>(cin.<span class="built_in">get</span>()!=EOF){</span><br><span class="line">    ...</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> ## cin.get() vs cin&gt;&gt; *
-cin.get() -&gt; only read one character. * cin -&gt; depends on
-&gt;&gt;. <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> grade, aC{<span class="number">0</span>}, bC{<span class="number">0</span>}, cC{<span class="number">0</span>};</span><br><span class="line">    <span class="keyword">while</span>((grade=std::cin.<span class="built_in">get</span>())!=EOF){</span><br><span class="line">        <span class="keyword">switch</span>(grade){</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'a'</span>:</span><br><span class="line">            aC++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'b'</span>:</span><br><span class="line">            bC++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'c'</span>:</span><br><span class="line">            cC++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'\n'</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'\t'</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="string">' '</span>:</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    std::cout&lt;&lt;aC&lt;&lt;<span class="string">' '</span>&lt;&lt;bC&lt;&lt;<span class="string">' '</span>&lt;&lt;cC;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> ## C++ Modified Data Types <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/tTgVBZW.png"> ## Continue vs Break * Continue
--&gt; Only skip a specific process. * Break -&gt; Skip the whole
-process. ## Boolalpha <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line">std::cout&lt;&lt;<span class="literal">true</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">std::cout&lt;&lt;std::boolalpha;</span><br><span class="line">std::cout&lt;&lt;<span class="literal">true</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line"><span class="comment">//The result will be 1 and true.</span></span><br></pre></td></tr></table></figure></div> ## Operator's Precedence <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/MyvXHDH.png"> * The right side of the
-&amp;&amp; will only be considered if the left side is true. * The
-&amp;&amp; operator has a higher precedence than ||; * Any nonezero
-value is interpreted as ture. Which means if(a=5){...} will be true.</p>
-]]></content>
-      <categories>
-        <category>大學課堂筆記-程式設計</category>
-        <category>C++</category>
-        <category>彰師大</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Functions and Introduction to Recursion</title>
     <url>/2023/01/18/Chapter%205%20Functions%20and%20Introduction%20to%20Recursion/</url>
     <content><![CDATA[<h1 id="chapter-5-functions-and-introduction-to-recursion">Chapter 5
@@ -1335,15 +1335,6 @@ function. <div class="highlight-container" data-rel="C++"><figure class="iseeu h
       </categories>
       <tags>
         <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>自我介紹</title>
-    <url>/2023/01/17/%E8%87%AA%E6%88%91%E4%BB%8B%E7%B4%B9/</url>
-    <content><![CDATA[<h3 id="大家好我是itzlanjiao目前就讀彰化師範大學電子工程學系大一本網站的目的是為了對大學四年的課堂內容及個人手做小專題做些紀錄及分享歡迎你的到來">大家好，我是ItzLanJiao，目前就讀彰化師範大學電子工程學系大一，本網站的目的是為了對大學四年的課堂內容及個人手做小專題做些紀錄及分享，歡迎你的到來!</h3>
-]]></content>
-      <tags>
-        <tag>Introduction</tag>
       </tags>
   </entry>
   <entry>
@@ -1445,6 +1436,15 @@ size，資料所在位置可能會移動。如果變小就擦掉尾巴的資料�
       </categories>
       <tags>
         <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>自我介紹</title>
+    <url>/2023/01/17/%E8%87%AA%E6%88%91%E4%BB%8B%E7%B4%B9/</url>
+    <content><![CDATA[<h3 id="大家好我是itzlanjiao目前就讀彰化師範大學電子工程學系大一本網站的目的是為了對大學四年的課堂內容及個人手做小專題做些紀錄及分享歡迎你的到來">大家好，我是ItzLanJiao，目前就讀彰化師範大學電子工程學系大一，本網站的目的是為了對大學四年的課堂內容及個人手做小專題做些紀錄及分享，歡迎你的到來!</h3>
+]]></content>
+      <tags>
+        <tag>Introduction</tag>
       </tags>
   </entry>
 </search>

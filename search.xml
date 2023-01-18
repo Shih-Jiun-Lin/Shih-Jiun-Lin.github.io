@@ -3,7 +3,11 @@
   <entry>
     <title>Data Manipulation(I)</title>
     <url>/2023/01/18/2023-01-17-Data%20Manipulation(I)/</url>
-    <content><![CDATA[<h1 id="data-manipulationi">Data Manipulation(I)</h1>
+    <content><![CDATA[<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });
+</script>
+<h1 id="data-manipulationi">Data Manipulation(I)</h1>
 <h2 id="the-communication-between-cpu-and-memory">The communication
 between CPU and memory</h2>
 <p>Register -&gt; CPU Cache</p>

@@ -6,13 +6,13 @@
     <content><![CDATA[<h1 id="data-manipulationi">Data Manipulation(I)</h1>
 <h2 id="the-communication-between-cpu-and-memory">The communication
 between CPU and memory</h2>
+<p>Register -&gt; CPU Cache</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://i.imgur.com/sEBH2IU.png"
                       
                 ></p>
-<p>Register -&gt; CPU Cache</p>
 <ul>
 <li>Adding values in memory
 <ol type="1">
@@ -160,8 +160,8 @@ without notifying CPU</li>
 </ul>
 <h2 id="pipeliningaccelerating-the-process">Pipelining(accelerating the
 process)</h2>
-<p>ex -&gt; pre-fetching <img 
-
+<p>ex -&gt; pre-fetching</p>
+<p><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="https://i.imgur.com/gPsrUkp.png"

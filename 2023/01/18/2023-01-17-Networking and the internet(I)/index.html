@@ -515,7 +515,7 @@ mjx-container[display="true"] + br {
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>688 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>700 Words</span>
         </span>
     
     
@@ -540,195 +540,185 @@ mjx-container[display="true"] + br {
 Internet(I)</h1>
 <h2 id="network-classifications">Network Classifications</h2>
 <ul>
-<li><p>Scope</p>
+<li>Scope
 <ul>
 <li>LAN: Local area network.</li>
 <li>MAN: Metropolitan area network.</li>
 <li>WAN: Wide area network.</li>
 </ul></li>
-<li><p>Ownership</p>
+<li>Ownership
 <ul>
 <li>Closed</li>
 <li>Opened</li>
 </ul></li>
-<li><p>Topology (拓樸學)</p>
+<li>Topology (拓樸學)
 <ul>
 <li>Bus: <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/1QUPg2e.png"></li>
 <li>Ring: <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/bWnGTBf.png"></li>
-<li>Star: <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/EWTkIgx.png"> ##
-Protocols</li>
+<li>Star: <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/EWTkIgx.png"></li>
 </ul></li>
-<li><p>Token Ring</p>
+</ul>
+<h2 id="protocols">Protocols</h2>
+<ul>
+<li>Token Ring
 <ul>
 <li>Popular in ring topology.</li>
 <li>Token and messages are passed in one direction.</li>
 <li>Only the machine which gets the token can transmit its message.</li>
 </ul></li>
-<li><p>CSMA/CD (Carrier sense, mutiple access with collision
-detection)</p>
+<li>CSMA/CD (Carrier sense, mutiple access with collision detection)
 <ul>
 <li>Popular in bus topology.</li>
 <li>Broadcasting.</li>
 <li>When collision, both machines wait for a random time before trying
 again.</li>
 </ul></li>
-<li><p>CSMA/CA (Carrier sense, mutiple access with collision
-avoidence)</p>
+<li>CSMA/CA (Carrier sense, mutiple access with collision avoidence)
 <ul>
 <li>Popular in wireless Ethernet.</li>
 <li>Broadcasting.</li>
 <li>Detect if a channel is idle, if so, wait for a random time and then
-detect again. If the channel is still idle, then start sending. ##
-Wireless and Access Point(AP)</li>
+detect again. If the channel is still idle, then start sending.</li>
 </ul></li>
-<li><p>Wi-Fi(wireless fidelity)</p></li>
-<li><p>IEEE 802.11-Standard for wireless network(b, g, i, n, ac...) <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/MOBFzwQ.png"> ##
-Repeater，Bridge，Switch(Compatible Networks) Reference:
-https://notfalse.net/66/repeater-hub-bridge-switch</p></li>
-<li><p>The protocol between these devices have to be the same.</p></li>
-<li><p>Repeater(Amplifier)</p>
+</ul>
+<h2 id="wireless-and-access-pointap">Wireless and Access Point(AP)</h2>
 <ul>
-<li>Passing through messages.</li>
-<li>Connecting two compatible networks <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/0t1ZGPW.png"></li>
-</ul></li>
-<li><p>Bridge</p>
+<li>Wi-Fi(wireless fidelity)</li>
+<li>IEEE 802.11-Standard for wireless network(b, g, i, n, ac...) <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/MOBFzwQ.png"></li>
+</ul>
+<h2 id="repeaterbridgeswitchcompatible-networks">Repeater，Bridge，Switch(Compatible
+Networks)</h2>
+<p>Reference: https://notfalse.net/66/repeater-hub-bridge-switch * The
+protocol between these devices have to be the same. *
+Repeater(Amplifier) * Passing through messages. * Connecting two
+compatible networks <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/0t1ZGPW.png"> *
+Bridge * Only passing those messages addressed to the other side. *
+Connecting two compatible networks more efficiently. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/QEsDF9x.png"> * Switch(Multiple Bridge) * A
+bridge with multiple connections. * Connecting mutiple compatible
+networks efficiently. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/uwwGpYy.png"></p>
+<h2 id="routerincompatible-networks">Router(Incompatible Networks)</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rJmNTSf.png"> * Router * Building a
+network of networks.(The protocol can be different) * Most come with
+firewall management.</p>
+<h2 id="interprocess-communication">Interprocess Communication</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/6pWclWl.png"> * Server-Client * One
+server, several clients. * Clients initiate communications by sending
+requests. * P2P(Peer-to-Peer) * Two processes communicating as equals. *
+The most popular distribution mode nowadays.</p>
+<h2 id="distributed-systems">Distributed Systems</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ZmowcOK.png"> * Infrastructure can be
+provided by standardized toolkits. * Ex: Java Beans，.NET framework.</p>
+<h2 id="internet-architecture">Internet Architecture</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rB8IPMk.png"> * Domain * A network or
+an internet controlled by one single authority. * ICANN(Internmet
+corporation for assigned names and numbers) * Supervise the registration
+of doimains * Gateway * A router that connects a domain to the rest of
+the Internet.</p>
+<h2 id="internet-composition">Internet Composition</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/3reTfwk.png"> * Internet Service
+Provider(ISP) * Allow customer to connect their domain to the ISP's
+equiment or join the domain already established by the ISP.</p>
+<h2 id="ip-addresses">IP Addresses</h2>
 <ul>
-<li>Only passing those messages addressed to the other side.</li>
-<li>Connecting two compatible networks more efficiently. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/QEsDF9x.png"></li>
-</ul></li>
-<li><p>Switch(Multiple Bridge)</p>
-<ul>
-<li>A bridge with multiple connections.</li>
-<li>Connecting mutiple compatible networks efficiently. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/uwwGpYy.png"> ## Router(Incompatible
-Networks) <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rJmNTSf.png"></li>
-</ul></li>
-<li><p>Router</p>
-<ul>
-<li>Building a network of networks.(The protocol can be different)</li>
-<li>Most come with firewall management. ## Interprocess Communication
-<img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/6pWclWl.png"></li>
-</ul></li>
-<li><p>Server-Client</p>
-<ul>
-<li>One server, several clients.</li>
-<li>Clients initiate communications by sending requests.</li>
-</ul></li>
-<li><p>P2P(Peer-to-Peer)</p>
-<ul>
-<li>Two processes communicating as equals.</li>
-<li>The most popular distribution mode nowadays. ## Distributed Systems
-<img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ZmowcOK.png"></li>
-</ul></li>
-<li><p>Infrastructure can be provided by standardized toolkits.</p>
-<ul>
-<li>Ex: Java Beans，.NET framework. ## Internet Architecture <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rB8IPMk.png"></li>
-</ul></li>
-<li><p>Domain</p>
-<ul>
-<li>A network or an internet controlled by one single authority.</li>
-</ul></li>
-<li><p>ICANN(Internmet corporation for assigned names and numbers)</p>
-<ul>
-<li>Supervise the registration of doimains</li>
-</ul></li>
-<li><p>Gateway</p>
-<ul>
-<li>A router that connects a domain to the rest of the Internet. ##
-Internet Composition <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/3reTfwk.png"></li>
-</ul></li>
-<li><p>Internet Service Provider(ISP)</p>
-<ul>
-<li>Allow customer to connect their domain to the ISP's equiment or join
-the domain already established by the ISP. ## IP Addresses</li>
-</ul></li>
-<li><p>IP(internet protocol)address</p>
+<li>IP(internet protocol)address
 <ul>
 <li>IPv4 -&gt; 32bits(all are allocated already)</li>
-<li>IPv6 -&gt; 128bits ## Name Server vs Domain Server</li>
+<li>IPv6 -&gt; 128bits</li>
 </ul></li>
-<li><p>Name server:</p>
+</ul>
+<h2 id="name-server-vs-domain-server">Name Server vs Domain Server</h2>
+<ul>
+<li>Name server:
 <ul>
 <li>Name servers organize and route traffic across the internet to get
 you to the right server.</li>
 </ul></li>
-<li><p>Domain Name Server(DNS)</p>
+<li>Domain Name Server(DNS)
 <ul>
-<li>A server that provide you with server information. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rYtlfru.png"> ## Internet Application</li>
+<li>A server that provide you with server information. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rYtlfru.png"></li>
 </ul></li>
-<li><p>VoIP(Voice over Internet protocol)</p></li>
-<li><p>email(electronic mail)</p></li>
-<li><p>FTP(file transfer protocol)</p></li>
-<li><p>telnet and ssh(secure shell)</p></li>
-<li><p>P2P ## Browsers</p></li>
-<li><p>HTTP(Hyper text transfer protocol)</p></li>
-<li><p>URL(uniform resource locator)</p></li>
-<li><p>How a browser get access to a webpage(document): <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/hY3bIGo.png"> ## Client-side and
-Server-side</p></li>
-<li><p>Client-side(The program is executed on one's pc)</p>
+</ul>
+<h2 id="internet-application">Internet Application</h2>
+<ul>
+<li>VoIP(Voice over Internet protocol)</li>
+<li>email(electronic mail)</li>
+<li>FTP(file transfer protocol)</li>
+<li>telnet and ssh(secure shell)</li>
+<li>P2P</li>
+</ul>
+<h2 id="browsers">Browsers</h2>
+<ul>
+<li>HTTP(Hyper text transfer protocol)</li>
+<li>URL(uniform resource locator)</li>
+<li>How a browser get access to a webpage(document): <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/hY3bIGo.png"></li>
+</ul>
+<h2 id="client-side-and-server-side">Client-side and Server-side</h2>
+<ul>
+<li>Client-side(The program is executed on one's pc)
 <ul>
 <li>Java applets</li>
 <li>Javascript</li>
 <li>Flash</li>
 </ul></li>
-<li><p>Server-side(The program is executed on the server)</p>
+<li>Server-side(The program is executed on the server)
 <ul>
 <li>CGI</li>
 <li>Servlets</li>
 <li>PHP</li>
 </ul></li>
-<li><p>Online game use both techniques. ## Internet Protocol
-Reference:https://ithelp.ithome.com.tw/articles/10259569?sc=pt</p></li>
-<li><p>Layers</p>
-<ul>
-<li>OSI Model
-<ul>
-<li>Reference: https://en.wikipedia.org/wiki/OSI_model</li>
-</ul></li>
+<li>Online game use both techniques.</li>
 </ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/e5dfV9e.png"></p>
+<h2 id="internet-protocol">Internet Protocol</h2>
+<p>Reference:https://ithelp.ithome.com.tw/articles/10259569?sc=pt *
+Layers * OSI Model * Reference:
+https://en.wikipedia.org/wiki/OSI_model</p>
+<pre><code>![](https://i.imgur.com/e5dfV9e.png)
+
+* TCP/IP Model
+    * Application: constructs message into packets.
+    * Transport: chops message into packages.
+    * Network: handles routing through the Internet.
+    * Link handles actual transmission of packets.
+![](https://i.imgur.com/0gNoMlv.png)</code></pre>
 <ul>
-<li>TCP/IP Model
-<ul>
-<li>Application: constructs message into packets.</li>
-<li>Transport: chops message into packages.</li>
-<li>Network: handles routing through the Internet.</li>
-<li>Link handles actual transmission of packets.</li>
-</ul></li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/0gNoMlv.png"></p></li>
-<li><p>Port</p>
+<li>Port
 <ul>
 <li>Incoming messages are delivered to different applications by unique
-port numbers. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/54gXvXI.png"> ##
-TCP/IP</li>
+port numbers. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/54gXvXI.png"></li>
 </ul></li>
-<li><p>TCP and UDP(Transport Layer)</p>
+</ul>
+<h2 id="tcpip">TCP/IP</h2>
+<ul>
+<li>TCP and UDP(Transport Layer)
 <ul>
 <li>TCP(transmission control protocol):handshake berfore sending
 packets. =&gt; slow but reliable.</li>
 <li>UDP(user datagram protocol): directly sending packets. =&gt; fast
 but not reliable.</li>
 </ul></li>
-<li><p>IP(NEtwork Layer)</p>
+<li>IP(NEtwork Layer)
 <ul>
 <li>routing based on IP(IPv4, IPv6)</li>
 </ul></li>
-<li><p>TCP and IP are two protocols. TCP/IP is a collection of protocols
-more than just TCP and IP. ## Security</p></li>
-<li><p>Attacks</p>
+<li>TCP and IP are two protocols. TCP/IP is a collection of protocols
+more than just TCP and IP.</li>
+</ul>
+<h2 id="security">Security</h2>
+<ul>
+<li>Attacks
 <ul>
 <li>Malware</li>
 <li>Denial of Service(Dos)</li>
 <li>Spam</li>
 </ul></li>
-<li><p>Protections</p>
+<li>Protections
 <ul>
 <li>Firewall</li>
 <li>Spam filter</li>
 <li>Proxy</li>
 <li>Antivirus, antispyware</li>
 </ul></li>
-<li><p>Public/Private Keys System</p>
+<li>Public/Private Keys System
 <ul>
 <li>Reference: https://medium.com/<span class="citation" data-cites="RiverChan">@RiverChan</span>/%E5%9F%BA%E7%A4%8E%E5%AF%86%E7%A2%BC%E5%AD%B8-%E5%B0%8D%E7%A8%B1%E5%BC%8F%E8%88%87%E9%9D%9E%E5%B0%8D%E7%A8%B1%E5%BC%8F%E5%8A%A0%E5%AF%86%E6%8A%80%E8%A1%93-de25fd5fa537</li>
 <li>SSL(Secure Scoket Layer)
@@ -736,13 +726,15 @@ more than just TCP and IP. ## Security</p></li>
 <li>Application: sftp, https, ssh</li>
 </ul></li>
 <li>To prevent fishing, a certificate authority is needed, to ensure to
-correctivity of a key. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/fnACCIR.png"> ##
-RSA Algorithm Reference:
-https://ithelp.ithome.com.tw/articles/10250721</li>
+correctivity of a key. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/fnACCIR.png"></li>
 </ul></li>
-<li><p>Generation <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/5SMoi2J.png"></p></li>
-<li><p>Encryption <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/WTvEm7R.png"></p></li>
-<li><p>Decryption <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/6fnmG7A.png"></p></li>
+</ul>
+<h2 id="rsa-algorithm">RSA Algorithm</h2>
+<p>Reference: https://ithelp.ithome.com.tw/articles/10250721 *
+Generation <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/5SMoi2J.png"> * Encryption
+<img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/WTvEm7R.png"></p>
+<ul>
+<li>Decryption <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/6fnmG7A.png"></li>
 </ul>
 
             </div>
@@ -822,7 +814,8 @@ https://ithelp.ithome.com.tw/articles/10250721</li>
     <div class="post-toc">
         <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>Contents</strong></div>
         <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#networking-and-the-interneti"><span class="nav-text">Networking and the
-Internet(I)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#network-classifications"><span class="nav-text">Network Classifications</span></a></li></ol></li></ol>
+Internet(I)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#network-classifications"><span class="nav-text">Network Classifications</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#protocols"><span class="nav-text">Protocols</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wireless-and-access-pointap"><span class="nav-text">Wireless and Access Point(AP)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#repeaterbridgeswitchcompatible-networks"><span class="nav-text">Repeater，Bridge，Switch(Compatible
+Networks)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#routerincompatible-networks"><span class="nav-text">Router(Incompatible Networks)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#interprocess-communication"><span class="nav-text">Interprocess Communication</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#distributed-systems"><span class="nav-text">Distributed Systems</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#internet-architecture"><span class="nav-text">Internet Architecture</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#internet-composition"><span class="nav-text">Internet Composition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ip-addresses"><span class="nav-text">IP Addresses</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#name-server-vs-domain-server"><span class="nav-text">Name Server vs Domain Server</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#internet-application"><span class="nav-text">Internet Application</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#browsers"><span class="nav-text">Browsers</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#client-side-and-server-side"><span class="nav-text">Client-side and Server-side</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#internet-protocol"><span class="nav-text">Internet Protocol</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tcpip"><span class="nav-text">TCP&#x2F;IP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#security"><span class="nav-text">Security</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rsa-algorithm"><span class="nav-text">RSA Algorithm</span></a></li></ol></li></ol>
     </div>
 </div>
             </div>

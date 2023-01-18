@@ -492,10 +492,6 @@ mjx-container[display="true"] + br {
                         <a href="/categories/%E5%A4%A7%E5%AD%B8%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98-%E8%A8%88%E7%AE%97%E6%A9%9F%E6%A6%82%E8%AB%96/">大學課堂筆記-計算機概論</a>&nbsp;
                     </li>
                 
-                    <li>
-                        &gt; <a href="/categories/%E5%A4%A7%E5%AD%B8%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98-%E8%A8%88%E7%AE%97%E6%A9%9F%E6%A6%82%E8%AB%96/%E5%BD%B0%E5%B8%AB%E5%A4%A7/">彰師大</a>&nbsp;
-                    </li>
-                
             </ul>
         </span>
     
@@ -515,7 +511,7 @@ mjx-container[display="true"] + br {
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>422 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>412 Words</span>
         </span>
     
     
@@ -545,8 +541,8 @@ give the result back to you. <img lazyload="" src="/images/loading.svg" data-src
 <h2 id="interactive-processingearly-era">Interactive processing(early
 era)</h2>
 <ul>
-<li><p>OS with remote terminals <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/Kovmajm.png"></p></li>
-<li><p>Types of operating system</p>
+<li>OS with remote terminals <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/Kovmajm.png"></li>
+<li>Types of operating system Reference: <a class="link" target="_blank" rel="noopener" href="http://www.chwa.com.tw/TResource/VS/book1/ch3/3-2.htm">link <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>
 <ul>
 <li>Batch(批次)</li>
 <li>Interactive</li>
@@ -564,102 +560,119 @@ era)</h2>
 <li>Load balancing</li>
 <li>Scaling</li>
 </ul></li>
-<li>http://www.chwa.com.tw/TResource/VS/book1/ch3/3-2.htm</li>
 </ul></li>
-<li><p>Software classification <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/WyObhvz.png"></p></li>
-<li><p>Shells</p>
+<li>Software classification <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/WyObhvz.png"></li>
+<li>Shells
 <ul>
 <li>Communication with users
 <ul>
 <li>Text based</li>
-<li>GUI(Graphical user interface ) ## Kernel</li>
+<li>GUI(Graphical user interface )</li>
 </ul></li>
 </ul></li>
-<li><p>File manager</p>
+</ul>
+<h2 id="kernel">Kernel</h2>
+<ul>
+<li>File manager
 <ul>
 <li>Directory/folder path</li>
 </ul></li>
-<li><p>Device drivers</p></li>
-<li><p>Memory manager</p>
+<li>Device drivers</li>
+<li>Memory manager
 <ul>
 <li>Allocating main memory</li>
 <li>Paging, virtual memory<br>
 </li>
 </ul></li>
-<li><p>Schedular</p>
+<li>Schedular
 <ul>
 <li>The component which selects process to execute.</li>
 </ul></li>
-<li><p>Dispatcher</p>
+<li>Dispatcher
 <ul>
 <li>The component which gives control of CPU to execute the process
-selected by Schedular. ## Linux</li>
+selected by Schedular.</li>
 </ul></li>
-<li><p>Made by Linus Torvalds</p></li>
-<li><p>Freeware and open-source</p></li>
-<li><p>Many distribution (Ex: Ubuntu，Kali)</p></li>
-<li><p>Linux only means the kernel ## How is OS being loaded? <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/2CzC6fw.png"></p></li>
-<li><p>BIOS(Basic Input/Output Sytem)is usually stored on a EEPEROM
-chip(Electrically-Erasable Programable Read-Only Memory) ##
-Process</p></li>
-<li><p>The activity of executing a program</p></li>
-<li><p>Process state</p>
+</ul>
+<h2 id="linux">Linux</h2>
+<ul>
+<li>Made by Linus Torvalds</li>
+<li>Freeware and open-source</li>
+<li>Many distribution (Ex: Ubuntu，Kali)</li>
+<li>Linux only means the kernel</li>
+</ul>
+<h2 id="how-is-os-being-loaded">How is OS being loaded?</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/2CzC6fw.png"> * BIOS(Basic
+Input/Output Sytem)is usually stored on a EEPEROM
+chip(Electrically-Erasable Programable Read-Only Memory)</p>
+<h2 id="process">Process</h2>
+<ul>
+<li>The activity of executing a program</li>
+<li>Process state
 <ul>
 <li>Program counter</li>
 <li>General purpose registers</li>
 <li>Associated memory cells</li>
 </ul></li>
-<li><p>Process table</p>
+<li>Process table
 <ul>
 <li>Memory area assigned to the process</li>
 <li>Priority</li>
-<li>Ready/waiting(One process for each core) ## Process
-Administration</li>
+<li>Ready/waiting(One process for each core)</li>
 </ul></li>
-<li><p>Schedular</p>
+</ul>
+<h2 id="process-administration">Process Administration</h2>
+<ul>
+<li>Schedular
 <ul>
 <li>Use: Maintaining the process table</li>
 <li>Introducing new process</li>
 <li>Removing completed process</li>
 <li>Deciding whether a process is ready or waiting</li>
 </ul></li>
-<li><p>Dispatcher <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ae6Hv5z.png"></p>
+<li>Dispatcher <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ae6Hv5z.png">
 <ul>
 <li>Use: Getting the process to running state.</li>
 <li>Controling the allocation of time to the process in the process
 table.</li>
 <li>Process switch(interrupt) <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/vvtyj1e.png"> Multiprogramming between two
-processes. ## Semaphores</li>
+processes.</li>
 </ul></li>
-<li><p>Meaning of semaphore: A visual sinaling appratus with flags,
-lights...</p></li>
-<li><p>Test-and-set: Uninterruptible process, it will change the status
-of false to true and return it.</p></li>
-<li><p>Critical region(臨界區段): A region that is only accessible to a
-program.</p>
+</ul>
+<h2 id="semaphores">Semaphores</h2>
+<ul>
+<li>Meaning of semaphore: A visual sinaling appratus with flags,
+lights...</li>
+<li>Test-and-set: Uninterruptible process, it will change the status of
+false to true and return it.</li>
+<li>Critical region(臨界區段): A region that is only accessible to a
+program.
 <ul>
 <li>Mutual exclusion(互斥鎖): A process that prevents simultaneous
-access to a shared resource. ## Prerequisites for Deadlock</li>
+access to a shared resource.</li>
 </ul></li>
-<li><p>Deadlock may occur only if all three of the following
-conditions(necessary but insufficient) are satisfied</p>
+</ul>
+<h2 id="prerequisites-for-deadlock">Prerequisites for Deadlock</h2>
+<ul>
+<li>Deadlock may occur only if all three of the following
+conditions(necessary but insufficient) are satisfied
 <ol type="1">
 <li>Competition for non-shareable resources</li>
 <li>Resources are requested on a partial basis, receiving some resources
 and return later to request more.</li>
-<li>Once a resource has been allocated, it cannot be forcibly
-retrieved.</li>
+<li>Once a resource has been allocated, it cannot be forcibly retrieved.
+<img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/LWgDTY9.png"></li>
 </ol></li>
+<li>To prevent Deadlock from happening, we have to avoid the conditions
+mentioned above being satisfied.</li>
 </ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/LWgDTY9.png"> * To prevent Deadlock
-from happening, we have to avoid the conditions mentioned above being
-satisfied. ## The Consequence of Preventing Deadlock from Happening <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/HxCTDOU.png"></p>
-<ul>
-<li>Starvation: Process cannot get the resources needed for a long time
-because the resources keep being allocated to other processes.</li>
-<li>The solution to starvation -&gt; (Aging): Adding an aging factor to
-the priority of each request.</li>
-</ul>
+<h2 id="the-consequence-of-preventing-deadlock-from-happening">The
+Consequence of Preventing Deadlock from Happening</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/HxCTDOU.png"> * Starvation: Process
+cannot get the resources needed for a long time because the resources
+keep being allocated to other processes. * The solution to starvation
+-&gt; (Aging): Adding an aging factor to the priority of each
+request.</p>
 
             </div>
 
@@ -738,7 +751,8 @@ the priority of each request.</li>
     <div class="post-toc">
         <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>Contents</strong></div>
         <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#operating-systemi"><span class="nav-text">Operating System(I)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#batch-processingearly-era"><span class="nav-text">Batch processing(early era)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#interactive-processingearly-era"><span class="nav-text">Interactive processing(early
-era)</span></a></li></ol></li></ol>
+era)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#kernel"><span class="nav-text">Kernel</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#linux"><span class="nav-text">Linux</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#how-is-os-being-loaded"><span class="nav-text">How is OS being loaded?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#process"><span class="nav-text">Process</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#process-administration"><span class="nav-text">Process Administration</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#semaphores"><span class="nav-text">Semaphores</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#prerequisites-for-deadlock"><span class="nav-text">Prerequisites for Deadlock</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-consequence-of-preventing-deadlock-from-happening"><span class="nav-text">The
+Consequence of Preventing Deadlock from Happening</span></a></li></ol></li></ol>
     </div>
 </div>
             </div>

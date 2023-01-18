@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    <meta name="description" content="Hexo Theme Redefine">
+    <meta name="author" content="Shih Jiun Lin">
+    <link rel="canonical" href="http://example.com/2023/01/18/2023-01-17-Data%20Storage(II)/" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
+    <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no">
+    <link rel="shortcut icon" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no">
+    
+    <title>
+        
+            Data Storage(II) |
+        
+        Shih-Jiun-Lin&#39;s Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<link rel="stylesheet" href="/css/fonts.css">
+
+    
+    <link rel="preconnect" href="https://evan.beee.top" crossorigin>
+    <script id="hexo-configurations">
+    let REDEFINE = window.REDEFINE || {};
+    REDEFINE.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.xml"};
+    REDEFINE.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#005080","avatar":"https://scontent-hkg4-2.xx.fbcdn.net/v/t1.6435-9/70899392_1700286993440218_5774458773556953088_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=iBCVayjTOr8AX8TBEWz&_nc_ht=scontent-hkg4-2.xx&oh=00_AfAmQlO1Y3qBnfF5_L2XihrdBGlMKeof-lZCAoQpK_vIQg&oe=63EE348C","favicon":"https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no","article_img_align":"center","right_side_width":"210px","content_max_width":"1000px","nav_color":{"left":"#3649f7","right":"#36daf7","transparency":35},"hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_image":{"light":"https://lh3.googleusercontent.com/ixSu1XqCZxzWrc_qPqo7BEIWTmPuPaf78ZuOz4WmoztYIMV1KPIgS2N_FGSWP64r2nhh55paCAlFaKB3jjJo4JopFLViLnluanyhBmmdGn4baC0ZY-9FWsaEM_f-tgRWv5pCehETi5wD6do-yaNYCMbqlRVmAD8_86UiWPJz8QqQfLN7O3csy1ezIH5NfnyPfgNMS9KhrblAZmUA5eIejicZePVvzHJZI5bRI11EAVhK1Gc2kFBxu53mMaH8i0pvCNX4wrdz31cUGVenRVRsHKpwfWIdydeIGNX83cyE9uuv-bFIjt2mEVBdmohIXGeP6_BNh96komgPEeMtklBKv1hI0gHGZE96fzml5AoIczlTXYZeF4-yaEA6OIcZZEES7J1GXXnnJrYtzqEU8vxOccLxaJSuygKKrZx46MNFbpBZN9pYpoMmqJKIo9khPYHQypvxNKCwCYl8ltaCij9EZsFI7dKjCGGWZybMaT8NQ-eGzoDsvBV2CiGZ6sgBX_VcEECH0zkeGRZNEFurMmxsHLNrFYFdVgdrVS9xeWLBFr4OpFsuxC4JQFzd2_Plrf6Wxl3YnHPnRhQphIR-NnmVJfsMdrW9nRHWDtPYGJOO8sUBHl-AiklFx7-LDQs3tDLqPEvrOw1bhgb4W0rPo6yJHKZ71GqIW9AnFXrLJs3g1iYMPl9y833MH95f8j9pkUo0k3oZPhzDyie_BEw0LDKA7WjPG7k_H_IQhsUe_Z1u1nL4aHZOfi3fFJ8WnWc6-JVxyoc79yiRhbHlYB-Dv0nqjOD_YFDqsquEMS4iCR1_bsXb8ekh-PlDM1AhnvTaGwH-HMmNINWaevr7AlkMZWvwzUjshhroTeJf0PKsqeEFj-uXMFYBRuI-NdlvBQC1eIuRaE6TrZSZguozSSQcmibfz6yjdplXr5_TrQrxUvvz_uJFQCzwMU0aGe3_Nleeazu8TdvRSlZEwII6njrl7mM=w1343-h1008-no?authuser=0# background image of the first screen, use relative path or external link (if your website is in subdirectory, use external link)","dark":"https://lh3.googleusercontent.com/B01xYBVbZkUR86-vZfLiECMp3GD-iAYwKGbbbehgps_4DWvPLHpyUjtmuURqqHMf_W2sCFLJKchmCynDrtjAIkn6rV_mtutdzLdp2ENu5-G6jqfSNzRzSoebjclyS8IO6LVZ1xkTHDtcRuLgZjCEEyIftY-H0HeJaBwHqTPQDgO-vkskuAxN1viOQRV58BxWMQG881LbGYUsNH6Lsj9t-woZUfyLV2abmvKXIVGlDP4mbq5E1kFrBcXoWpCWXH5_VvB5lK1dbS322NUQIYIoijVwOn10F5haC-bhZMILVfEZ0Bft6qNkVInO7JnZSba1_Kc2g2DUV0HfZ8iLLRFA0h2s6wwh0UowqkAukNnRO4li8b0gPwp52unE3mcU_uwJkfaudpGRE3g5k9DrBeCKSppIgBjxfZ8wkMlYPHXw4Oorha8ta49epcNtesB3-QlQWEYmehzM_iIMmmmDHNqnpVFJvzzJ-U-GtNSXuPdWjhAmA8_mhi4E-w_S9Mcqefy3IMGXxeR0cZAK-69Oum9_sRCEVCE19P2YJzHt1TCnOENuinfT2-Rose4CVP3edMN9ScARfmpvRoYiV6rS3wxcBoQAqxDWH5tjzaKeL0rZPpnu63dVp4vxpGQdRQMU6DPuGk8EdIqZMIghoVaNGiF4LADJvAzDloXcXcApyLaqvptrssYd1dw-GvHe12O-_eHKTwYDmKoXqGJh45S2qqcaXywK6VXFd6I3VGrj812dx-onYqDvQzCFhbOgTdFT2Hlt3XiqRBsqZdVFzgjkbXqod-IYb1GsrCMvQNewvsi4yio3F8zrcGagyc9HFQ3uvQmxNPGJdjjU3atwLJFMDrZFmTHrLElfvxW30vLyhl7F-0rlvlrjgg5n3H6KzVMvyNwwxw_sLufWD4jNJLL_own4VGilHg3lc5jxLC4YzFBWDq1wg22VOSgWklbOgEGG_C2w1V80DE0Pk7oJEK8tspk=w1691-h951-no?authuser=0"},"title_color":{"light":"#fff","dark":"#d1d1b6"},"description":"一個喜歡搞小發明的大學生!"},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_block":{"copy":true,"style":"mac"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"0.5.2","friend_links":{"columns":2}};
+    REDEFINE.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+    
+    
+<link rel="stylesheet" href="/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/css/brands.min.css">
+
+    
+<link rel="stylesheet" href="/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/css/regular.min.css">
+
+    
+    
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+    
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Shih-Jiun-Lin&#39;s Blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        主頁面
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/archives"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-archive"></i>
+                                        
+                                        照時間分類
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/tags"  >
+                                    
+                                        
+                                            <i class="fa-solid fa-tags"></i>
+                                        
+                                        照標籤分類
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/categories"  >
+                                    
+                                        
+                                            <i class="fa-solid fa-star"></i>
+                                        
+                                        照種類分類
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown" 
+                                    href="#" onClick="return false;">
+                                    
+                                        
+                                            <i class="fa-regular fa-user"></i>
+                                        
+                                        關於我&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                    
+                                        <li>
+                                        <a href="/about">ME
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://www.instagram.com/l__junjun__l/?hl=zh-tw">INSTAGRAM
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://github.com/Shih-Jiun-Lin">GITHUB
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://www.ncue.edu.tw/">SCHOOL
+                                        </a>
+                                        </li>
+                                    
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                主頁面
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/archives"  >
+                             
+                                
+                                    <i class="fa-regular fa-archive"></i>
+                                
+                                照時間分類
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/tags"  >
+                             
+                                
+                                    <i class="fa-solid fa-tags"></i>
+                                
+                                照標籤分類
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/categories"  >
+                             
+                                
+                                    <i class="fa-solid fa-star"></i>
+                                
+                                照種類分類
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="has-dropdown" 
+                        href="#" onClick="return false;">
+                            
+                                
+                                    <i class="fa-regular fa-user"></i>
+                                
+                                關於我&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                              
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" href="/about">ME</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://www.instagram.com/l__junjun__l/?hl=zh-tw">INSTAGRAM</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://github.com/Shih-Jiun-Lin">GITHUB</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://www.ncue.edu.tw/">SCHOOL</a>
+                            </li>
+                        
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+            <div class="article-title">
+                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">Data Storage(II)</h1></span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="https://scontent-hkg4-2.xx.fbcdn.net/v/t1.6435-9/70899392_1700286993440218_5774458773556953088_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=iBCVayjTOr8AX8TBEWz&_nc_ht=scontent-hkg4-2.xx&oh=00_AfAmQlO1Y3qBnfF5_L2XihrdBGlMKeof-lZCAoQpK_vIQg&oe=63EE348C">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Shih Jiun Lin</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="pc">2023-01-18 01:29:47</span>
+        <span class="mobile">2023-01-18 01:29</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E5%A4%A7%E5%AD%B8%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98/">大學課堂筆記</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E8%A8%88%E7%AE%97%E6%A9%9F%E6%A6%82%E8%AB%96/">計算機概論</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>765 Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>4 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <h1 id="Data-Storage-II"><a href="#Data-Storage-II" class="headerlink" title="Data Storage(II)"></a>Data Storage(II)</h1><h2 id="Fraction-in-binary"><a href="#Fraction-in-binary" class="headerlink" title="Fraction in binary"></a>Fraction in binary</h2><ol>
+<li>The rules is the same <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/pqwL1v6.png"
+                     
+                ></li>
+</ol>
+<h2 id="Float-point-notation-and-decoding"><a href="#Float-point-notation-and-decoding" class="headerlink" title="Float-point notation and decoding"></a>Float-point notation and decoding</h2><ol>
+<li>8 bits representation<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/6YrHIlt.png"
+                     
+                ><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/BDVrmtA.png"
+                     
+                ><ul>
+<li>Ex (Use the table of binary): 10010101 -&gt; 1(001)(0101) -&gt; ($-2^{1}$)$\times$($\frac{1}{4}$+$\frac{1}{16}$)&#x3D;-$\frac{5}{8}$</li>
+</ul>
+</li>
+<li>On the widely used 64-bit computers，the exponent takes 11 bits，and the mantissa takes 52 bits</li>
+</ol>
+<h2 id="Truncation-error"><a href="#Truncation-error" class="headerlink" title="Truncation error"></a>Truncation error</h2><ol>
+<li>The precision is beyond the limitation of mantissa.<ul>
+<li>Ex (Use the table of binary): 2$\frac{5}{8}$ -&gt; 10.101(base two，fixed point) -&gt; .10101 $\times$  $2^{2}$ -&gt; 0(010)(1010) -&gt; 2$\frac{1}{2}$</li>
+</ul>
+</li>
+</ol>
+<h2 id="Normalized-form"><a href="#Normalized-form" class="headerlink" title="Normalized form"></a>Normalized form</h2><ol>
+<li><ul>
+<li>The first bit of mantissa is 1 </li>
+<li>0’s floating-point representation is all 0</li>
+</ul>
+</li>
+<li><p>Normalization:</p>
+<ul>
+<li>Ex (Use the table of binary): 00100011 -&gt; 0(010)(0011) -&gt; .0011 $\times$ $2^{2}$ -&gt; .1100 $\times$ $2^{0}$ -&gt; 0(000)(1100)</li>
+</ul>
+</li>
+<li><p>IEEE normalized form</p>
+<ul>
+<li>The left-most bit in mantissa is always 1 (Ex: .0101 -&gt; 1.0101)</li>
+<li>Standard normalized form is (s)(eee)(mmmm) -&gt; ($-1^{s}$) $\times$ 1.mmmm $\times$ $2^{(eee-4)}$<ul>
+<li>Ex(Use the table of binary): 01100011 -&gt; (0)(110)(0011) -&gt; $(-1)^{0}$ $\times$ 1.0011 $\times$ $2^{(6-4)}$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="Loss-of-digits"><a href="#Loss-of-digits" class="headerlink" title="Loss of digits"></a>Loss of digits</h2><p>Ex (Use the table of excess): </p>
+<ul>
+<li>4 + $\frac{1}{4}$ + $\frac{1}{4}$ &#x3D; (01111000 + 00111000) + 00111000 -&gt; make the exponent the same (01111000 + 01110000) + 01110000 &#x3D; 4 (the result is wrong)</li>
+<li>4 + $\frac{1}{4}$ + $\frac{1}{4}$ &#x3D; 01111000 + (00111000 + 00111000) &#x3D; 4$\frac{1}{2}$</li>
+</ul>
+<h2 id="Data-compression"><a href="#Data-compression" class="headerlink" title="Data compression"></a>Data compression</h2><ul>
+<li>Two types -&gt; Lossy and Lossless</li>
+<li>Lossless<ol>
+<li>Run-length encoding(RLE)<ul>
+<li>After the process of compressing ，wwwwwww is being recognized as 7w,</li>
+</ul>
+</li>
+<li>Frequency-dependent encoding -&gt; Huffman encoding</li>
+<li>Dictionary encoding -&gt; Adaptive dictionary encoding, LZW encoding<ul>
+<li>Defining the value by yourself</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>Lossy<ol>
+<li>Relative &#x2F; difference encoding</li>
+</ol>
+</li>
+<li>Huffman encoding<ul>
+<li>Ex: AAABBBAABCAAAABD<ul>
+<li>Traditional encoding -&gt; Code book: A -&gt; 00; B -&gt; 01; C -&gt; 10; D -&gt; 11, represent in 2 bits it will be 000000010101000001100000000111</li>
+<li>Huffman encoding -&gt; <ol>
+<li>Count the occurrences:  A(9); B(5); C(1); D(1)</li>
+<li>Build a huffman tree:<br>                        <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/nWxGAT7.png"
+                     
+                ></li>
+</ol>
+<p>  According to the tree, the code book is A -&gt; 0, B -&gt; 10, C -&gt; 110, D -&gt; 111. Through the huffman encoding，the string will be transfered into 0001010100010110</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>LZW encoding<ul>
+<li>Is a kind of dictionary encoding that does not need to store the dictionary</li>
+<li>The concept is to generate more values to the dictionary(Usually we use the ascii code to represent numbers and words, so no addition dictionary is needed)<ul>
+<li>Code book: x -&gt; 1, y -&gt; 2, space -&gt; 3    <ul>
+<li>Ex: xyx xyx xyx xyx<br>  -&gt; 1<br>  -&gt; 12<br>  -&gt; 121<br>  -&gt; 1213<br>  Then you append 1213 to the dictionary as 4<br>  -&gt; 12134<br>  -&gt;121343434</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Images-audios-and-videos"><a href="#Images-audios-and-videos" class="headerlink" title="Images, audios and videos"></a>Images, audios and videos</h2><ul>
+<li>Images: <ol>
+<li>GIF: 256 colors, dictionary encoding</li>
+<li>JPEG: Lossy &#x2F; lossless encoding</li>
+</ol>
+</li>
+<li>Audios: <ol>
+<li>MP3: Lossy encoding</li>
+</ol>
+</li>
+<li>Videos: <ol>
+<li>MPEG: Lossy encoding</li>
+</ol>
+</li>
+</ul>
+<h2 id="Communication-errors"><a href="#Communication-errors" class="headerlink" title="Communication errors"></a>Communication errors</h2><ul>
+<li>The reason of compressing data is to remove redundency</li>
+<li>To correct the communication error -&gt; we add redundancy </li>
+<li>Error detection -&gt; instead of correcting errors, it can only check if the errors occurs<ul>
+<li>Applications(detection): <ol>
+<li>ID numbers</li>
+<li>ISBN</li>
+<li>Parity code</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Error correcting -&gt; Can correct errors to some degree</li>
+</ul>
+<h2 id="Application-of-error-detections-x2F-corrections"><a href="#Application-of-error-detections-x2F-corrections" class="headerlink" title="Application of error detections &#x2F; corrections"></a>Application of error detections &#x2F; corrections</h2><ul>
+<li>Taiwan ID:<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/GrBxbtA.png"
+                     
+                ><ol>
+<li>Convert the first English letter into a number(xy):<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/MzCD1dk.png"
+                     
+                ></li>
+<li>$d_1$ &#x3D; x + 9y</li>
+<li>$d_2$ &#x3D; $\sum_{i &#x3D; 1}^8$ i $\cdot$ $a_i$ &#x3D; 1 $\cdot$ $a_1$ + 2 $\cdot$ $a_2$ … +8 $\cdot$ $a_8$</li>
+<li>Check code -&gt; $a_9$ &#x3D; 10 - (($d_1$ + $d_2$) mod 10)</li>
+</ol>
+</li>
+<li>ISBN-10<br>ISBN　template: 0-273-75139</li>
+</ul>
+<ol>
+<li>Compute S &#x3D; 0 $\cdot$ 10 + 2 $\cdot$ 9 +7 $\cdot$ 8 + 3 $\cdot$ 7 + 7 $\cdot$ 6 + 5 $\cdot$ 5 + 1 $\cdot$ 4 + 3 $\cdot$ 3 + 9 $\cdot$ 2 &#x3D; 193</li>
+<li>M &#x3D; S mod 11 &#x3D; 6 </li>
+<li>N &#x3D; 11 - M &#x3D;5<ul>
+<li>If N &#x3D; 10 the check code is X</li>
+<li>If N &#x3D; 11 the check code is 0</li>
+<li>Otherwise, the check code is the number N</li>
+</ul>
+</li>
+<li>The ISBN code  0-273-75139-5</li>
+</ol>
+<ul>
+<li>Parity Bits<ol>
+<li>Making the quantity of 1s odd<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/gaBDWYj.png"
+                     
+                ></li>
+<li>The technique is used in  communication and RAID</li>
+</ol>
+</li>
+<li>An error-correcting code(ECC)<ol>
+<li>(3, 1) repetition code (can correct 1-bit errors) -&gt; seperate the data into groups with 1 bit in each group, and add two bits to authenticate the data<br> <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/SOldZpS.png"
+                     
+                ></li>
+</ol>
+</li>
+<li>Hamming distance<ol>
+<li>Comparing two binary data， hamming distance is the amount of different bits.</li>
+</ol>
+</li>
+<li>Error correction with hamming distance<ol>
+<li>Maximizing hamming distance along the symbols<br>  Sample code book:<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/qvBxx5o.png"
+                     
+                ><ul>
+<li>Ex: received 010100<br> Hammig distance:    <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/43W6zqv.png"
+                     
+                ><br>  According to the chart, we will correct 010100 to 011100(D)</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>Generating (7, 4)Hamming code<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/3ugdiSq.png"
+                     
+                ></li>
+</ul>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：Data Storage(II)</li>
+        <li>Post author：Shih Jiun Lin</li>
+        <li>Create time：2023-01-18 01:29:47</li>
+        <li>
+            Post link：https://shih-jiun-lin.github.io/2023/01/18/2023-01-17-Data Storage(II)/
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+                </div>
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E8%A8%88%E7%AE%97%E6%A9%9F%E6%A6%82%E8%AB%96/">#計算機概論</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                            rel="prev"
+                            href="/2023/01/18/2023-01-17-Networking%20and%20the%20internet(I)/"
+                            >
+                                <span class="left arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </span>
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">Networking and the Internet(I)</span>
+                                    <span class="post-nav-item">Prev posts</span>
+                                </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/01/18/2023-01-17-Data%20Storage(I)/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">Data Storage(I)</span>
+                                    <span class="post-nav-item">Next posts</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>Contents</strong></div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Data-Storage-II"><span class="nav-text">Data Storage(II)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Fraction-in-binary"><span class="nav-text">Fraction in binary</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Float-point-notation-and-decoding"><span class="nav-text">Float-point notation and decoding</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Truncation-error"><span class="nav-text">Truncation error</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Normalized-form"><span class="nav-text">Normalized form</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Loss-of-digits"><span class="nav-text">Loss of digits</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Data-compression"><span class="nav-text">Data compression</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Images-audios-and-videos"><span class="nav-text">Images, audios and videos</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Communication-errors"><span class="nav-text">Communication errors</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Application-of-error-detections-x2F-corrections"><span class="nav-text">Application of error detections &#x2F; corrections</span></a></li></ol></li></ol>
+    </div>
+</div>
+            </div>
+        
+    </div>
+</div>
+
+
+                
+
+            </div>
+
+
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2023&nbsp;<i class="fa-solid fa-heart icon-animate"></i>&nbsp;<a href="/">Shih Jiun Lin. All Rights Reserved.</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalviews&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v0.5.2</a>
+        </div>
+        
+        
+        <script async data-pjax defer>
+            function odometer_init(){
+                    let el = document.getElementsByClassName('odometer');
+                    for (i = 0; i < el.length; i++) {
+                        od = new Odometer({
+                            el: el[i],
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    }
+            }
+            odometer_init();
+        </script>
+        <div id="start_time_div" style="display:none">
+            2023/1/17 23:59:59
+        </div>
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fa-solid fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fa-solid fa-left-right"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fa-solid fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fa-solid fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fa-solid fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+
+    
+<script src="/js/runtime.js"></script>
+
+    
+<script src="/js/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/css/odometer-theme-minimal.css">
+
+
+
+<div class="post-scripts pjax">
+    
+        
+<script src="/js/toc-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
+    
+</div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            REDEFINE.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            REDEFINE.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            REDEFINE.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

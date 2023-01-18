@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    <meta name="description" content="Hexo Theme Redefine">
+    <meta name="author" content="Shih Jiun Lin">
+    <link rel="canonical" href="http://example.com/2023/01/18/2023-01-17-Operating%20System(I)/" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
+    <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no">
+    <link rel="shortcut icon" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no">
+    
+    <title>
+        
+            Operating System(I) |
+        
+        Shih-Jiun-Lin&#39;s Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<link rel="stylesheet" href="/css/fonts.css">
+
+    
+    <link rel="preconnect" href="https://evan.beee.top" crossorigin>
+    <script id="hexo-configurations">
+    let REDEFINE = window.REDEFINE || {};
+    REDEFINE.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.xml"};
+    REDEFINE.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#005080","avatar":"https://scontent-hkg4-2.xx.fbcdn.net/v/t1.6435-9/70899392_1700286993440218_5774458773556953088_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=iBCVayjTOr8AX8TBEWz&_nc_ht=scontent-hkg4-2.xx&oh=00_AfAmQlO1Y3qBnfF5_L2XihrdBGlMKeof-lZCAoQpK_vIQg&oe=63EE348C","favicon":"https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no","article_img_align":"center","right_side_width":"210px","content_max_width":"1000px","nav_color":{"left":"#3649f7","right":"#36daf7","transparency":35},"hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_image":{"light":"https://lh3.googleusercontent.com/ixSu1XqCZxzWrc_qPqo7BEIWTmPuPaf78ZuOz4WmoztYIMV1KPIgS2N_FGSWP64r2nhh55paCAlFaKB3jjJo4JopFLViLnluanyhBmmdGn4baC0ZY-9FWsaEM_f-tgRWv5pCehETi5wD6do-yaNYCMbqlRVmAD8_86UiWPJz8QqQfLN7O3csy1ezIH5NfnyPfgNMS9KhrblAZmUA5eIejicZePVvzHJZI5bRI11EAVhK1Gc2kFBxu53mMaH8i0pvCNX4wrdz31cUGVenRVRsHKpwfWIdydeIGNX83cyE9uuv-bFIjt2mEVBdmohIXGeP6_BNh96komgPEeMtklBKv1hI0gHGZE96fzml5AoIczlTXYZeF4-yaEA6OIcZZEES7J1GXXnnJrYtzqEU8vxOccLxaJSuygKKrZx46MNFbpBZN9pYpoMmqJKIo9khPYHQypvxNKCwCYl8ltaCij9EZsFI7dKjCGGWZybMaT8NQ-eGzoDsvBV2CiGZ6sgBX_VcEECH0zkeGRZNEFurMmxsHLNrFYFdVgdrVS9xeWLBFr4OpFsuxC4JQFzd2_Plrf6Wxl3YnHPnRhQphIR-NnmVJfsMdrW9nRHWDtPYGJOO8sUBHl-AiklFx7-LDQs3tDLqPEvrOw1bhgb4W0rPo6yJHKZ71GqIW9AnFXrLJs3g1iYMPl9y833MH95f8j9pkUo0k3oZPhzDyie_BEw0LDKA7WjPG7k_H_IQhsUe_Z1u1nL4aHZOfi3fFJ8WnWc6-JVxyoc79yiRhbHlYB-Dv0nqjOD_YFDqsquEMS4iCR1_bsXb8ekh-PlDM1AhnvTaGwH-HMmNINWaevr7AlkMZWvwzUjshhroTeJf0PKsqeEFj-uXMFYBRuI-NdlvBQC1eIuRaE6TrZSZguozSSQcmibfz6yjdplXr5_TrQrxUvvz_uJFQCzwMU0aGe3_Nleeazu8TdvRSlZEwII6njrl7mM=w1343-h1008-no?authuser=0# background image of the first screen, use relative path or external link (if your website is in subdirectory, use external link)","dark":"https://lh3.googleusercontent.com/B01xYBVbZkUR86-vZfLiECMp3GD-iAYwKGbbbehgps_4DWvPLHpyUjtmuURqqHMf_W2sCFLJKchmCynDrtjAIkn6rV_mtutdzLdp2ENu5-G6jqfSNzRzSoebjclyS8IO6LVZ1xkTHDtcRuLgZjCEEyIftY-H0HeJaBwHqTPQDgO-vkskuAxN1viOQRV58BxWMQG881LbGYUsNH6Lsj9t-woZUfyLV2abmvKXIVGlDP4mbq5E1kFrBcXoWpCWXH5_VvB5lK1dbS322NUQIYIoijVwOn10F5haC-bhZMILVfEZ0Bft6qNkVInO7JnZSba1_Kc2g2DUV0HfZ8iLLRFA0h2s6wwh0UowqkAukNnRO4li8b0gPwp52unE3mcU_uwJkfaudpGRE3g5k9DrBeCKSppIgBjxfZ8wkMlYPHXw4Oorha8ta49epcNtesB3-QlQWEYmehzM_iIMmmmDHNqnpVFJvzzJ-U-GtNSXuPdWjhAmA8_mhi4E-w_S9Mcqefy3IMGXxeR0cZAK-69Oum9_sRCEVCE19P2YJzHt1TCnOENuinfT2-Rose4CVP3edMN9ScARfmpvRoYiV6rS3wxcBoQAqxDWH5tjzaKeL0rZPpnu63dVp4vxpGQdRQMU6DPuGk8EdIqZMIghoVaNGiF4LADJvAzDloXcXcApyLaqvptrssYd1dw-GvHe12O-_eHKTwYDmKoXqGJh45S2qqcaXywK6VXFd6I3VGrj812dx-onYqDvQzCFhbOgTdFT2Hlt3XiqRBsqZdVFzgjkbXqod-IYb1GsrCMvQNewvsi4yio3F8zrcGagyc9HFQ3uvQmxNPGJdjjU3atwLJFMDrZFmTHrLElfvxW30vLyhl7F-0rlvlrjgg5n3H6KzVMvyNwwxw_sLufWD4jNJLL_own4VGilHg3lc5jxLC4YzFBWDq1wg22VOSgWklbOgEGG_C2w1V80DE0Pk7oJEK8tspk=w1691-h951-no?authuser=0"},"title_color":{"light":"#fff","dark":"#d1d1b6"},"description":"一個喜歡搞小發明的大學生!"},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_block":{"copy":true,"style":"mac"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"0.5.2","friend_links":{"columns":2}};
+    REDEFINE.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+    
+    
+<link rel="stylesheet" href="/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/css/brands.min.css">
+
+    
+<link rel="stylesheet" href="/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/css/regular.min.css">
+
+    
+    
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+    
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Shih-Jiun-Lin&#39;s Blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        主頁面
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/archives"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-archive"></i>
+                                        
+                                        照時間分類
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/tags"  >
+                                    
+                                        
+                                            <i class="fa-solid fa-tags"></i>
+                                        
+                                        照標籤分類
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/categories"  >
+                                    
+                                        
+                                            <i class="fa-solid fa-star"></i>
+                                        
+                                        照種類分類
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown" 
+                                    href="#" onClick="return false;">
+                                    
+                                        
+                                            <i class="fa-regular fa-user"></i>
+                                        
+                                        關於我&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                    
+                                        <li>
+                                        <a href="/about">ME
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://www.instagram.com/l__junjun__l/?hl=zh-tw">INSTAGRAM
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://github.com/Shih-Jiun-Lin">GITHUB
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://www.ncue.edu.tw/">SCHOOL
+                                        </a>
+                                        </li>
+                                    
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                主頁面
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/archives"  >
+                             
+                                
+                                    <i class="fa-regular fa-archive"></i>
+                                
+                                照時間分類
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/tags"  >
+                             
+                                
+                                    <i class="fa-solid fa-tags"></i>
+                                
+                                照標籤分類
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/categories"  >
+                             
+                                
+                                    <i class="fa-solid fa-star"></i>
+                                
+                                照種類分類
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="has-dropdown" 
+                        href="#" onClick="return false;">
+                            
+                                
+                                    <i class="fa-regular fa-user"></i>
+                                
+                                關於我&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                              
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" href="/about">ME</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://www.instagram.com/l__junjun__l/?hl=zh-tw">INSTAGRAM</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://github.com/Shih-Jiun-Lin">GITHUB</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://www.ncue.edu.tw/">SCHOOL</a>
+                            </li>
+                        
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+            <div class="article-title">
+                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">Operating System(I)</h1></span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="https://scontent-hkg4-2.xx.fbcdn.net/v/t1.6435-9/70899392_1700286993440218_5774458773556953088_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=iBCVayjTOr8AX8TBEWz&_nc_ht=scontent-hkg4-2.xx&oh=00_AfAmQlO1Y3qBnfF5_L2XihrdBGlMKeof-lZCAoQpK_vIQg&oe=63EE348C">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Shih Jiun Lin</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="pc">2023-01-18 01:29:47</span>
+        <span class="mobile">2023-01-18 01:29</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E5%A4%A7%E5%AD%B8%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98/">大學課堂筆記</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E8%A8%88%E7%AE%97%E6%A9%9F%E6%A6%82%E8%AB%96/">計算機概論</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>425 Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>2 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <h1 id="Operating-System-I"><a href="#Operating-System-I" class="headerlink" title="Operating System(I)"></a>Operating System(I)</h1><h2 id="Batch-processing-early-era"><a href="#Batch-processing-early-era" class="headerlink" title="Batch processing(early era)"></a>Batch processing(early era)</h2><ul>
+<li>The process of computer operators entering data to the computers and give the result back to you.<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/mVRCkv6.png"
+                     
+                ></li>
+</ul>
+<h2 id="Interactive-processing-early-era"><a href="#Interactive-processing-early-era" class="headerlink" title="Interactive processing(early era)"></a>Interactive processing(early era)</h2><ul>
+<li>OS with remote terminals<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/Kovmajm.png"
+                     
+                ></li>
+<li>Types of operating system<ul>
+<li>Batch(批次)</li>
+<li>Interactive</li>
+<li>Real-time <ul>
+<li>Response time is critical.</li>
+</ul>
+</li>
+<li>Time-sharing and multitasking<ul>
+<li>Dividing time into intervals.</li>
+<li>Only one task is being performed at any given time.</li>
+</ul>
+</li>
+<li>Multiprocessor<ul>
+<li>Load balancing</li>
+<li>Scaling</li>
+</ul>
+</li>
+<li><a class="link"   target="_blank" rel="noopener" href="http://www.chwa.com.tw/TResource/VS/book1/ch3/3-2.htm" >http://www.chwa.com.tw/TResource/VS/book1/ch3/3-2.htm <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ul>
+</li>
+<li>Software classification<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/WyObhvz.png"
+                     
+                ></li>
+<li>Shells<ul>
+<li>Communication with users<ul>
+<li>Text based</li>
+<li>GUI(Graphical user interface )</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Kernel"><a href="#Kernel" class="headerlink" title="Kernel"></a>Kernel</h2><ul>
+<li>File manager<ul>
+<li>Directory&#x2F;folder path</li>
+</ul>
+</li>
+<li>Device drivers</li>
+<li>Memory manager<ul>
+<li>Allocating main memory</li>
+<li>Paging, virtual memory</li>
+</ul>
+</li>
+<li>Schedular<ul>
+<li>The component which selects process to execute.</li>
+</ul>
+</li>
+<li>Dispatcher<ul>
+<li>The component which gives control of CPU to execute the process selected by Schedular.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><ul>
+<li>Made by Linus Torvalds</li>
+<li>Freeware and open-source</li>
+<li>Many distribution (Ex: Ubuntu，Kali)</li>
+<li>Linux only means the kernel</li>
+</ul>
+<h2 id="How-is-OS-being-loaded"><a href="#How-is-OS-being-loaded" class="headerlink" title="How is OS being loaded?"></a>How is OS being loaded?</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/2CzC6fw.png"
+                     
+                ></p>
+<ul>
+<li>BIOS(Basic Input&#x2F;Output Sytem)is usually stored on a EEPEROM chip(Electrically-Erasable Programable Read-Only Memory)</li>
+</ul>
+<h2 id="Process"><a href="#Process" class="headerlink" title="Process"></a>Process</h2><ul>
+<li>The activity of executing a program</li>
+<li>Process state<ul>
+<li>Program counter</li>
+<li>General purpose registers</li>
+<li>Associated memory cells</li>
+</ul>
+</li>
+<li>Process table<ul>
+<li>Memory area assigned to the process</li>
+<li>Priority</li>
+<li>Ready&#x2F;waiting(One process for each core)</li>
+</ul>
+</li>
+</ul>
+<h2 id="Process-Administration"><a href="#Process-Administration" class="headerlink" title="Process Administration"></a>Process Administration</h2><ul>
+<li><p>Schedular</p>
+<ul>
+<li>Use: Maintaining the process table</li>
+<li>Introducing new process</li>
+<li>Removing completed process</li>
+<li>Deciding whether a process is ready or waiting</li>
+</ul>
+</li>
+<li><p>Dispatcher<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/ae6Hv5z.png"
+                     
+                ></p>
+<ul>
+<li>Use: Getting the process to running state.</li>
+<li>Controling the allocation of time to the process in the process table.</li>
+<li>Process switch(interrupt)<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/vvtyj1e.png"
+                     
+                ><br>  Multiprogramming between two processes.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Semaphores"><a href="#Semaphores" class="headerlink" title="Semaphores"></a>Semaphores</h2><ul>
+<li>Meaning of semaphore: A visual sinaling appratus with flags, lights…</li>
+<li>Test-and-set: Uninterruptible process, it will change the status of false to true and return it.</li>
+<li>Critical region(臨界區段): A region that is only accessible to a program.<ul>
+<li>Mutual exclusion(互斥鎖): A process that prevents simultaneous access to a shared resource.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Prerequisites-for-Deadlock"><a href="#Prerequisites-for-Deadlock" class="headerlink" title="Prerequisites for Deadlock"></a>Prerequisites for Deadlock</h2><ul>
+<li>Deadlock may occur only if all three of the following conditions(necessary but insufficient) are satisfied<ol>
+<li>Competition for non-shareable resources</li>
+<li>Resources are requested on a partial basis, receiving some resources and return later to request more.</li>
+<li>Once a resource has been allocated, it cannot be forcibly retrieved.</li>
+</ol>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/LWgDTY9.png"
+                     
+                ></p>
+<ul>
+<li>To prevent Deadlock from happening, we have to avoid the conditions mentioned above being satisfied.</li>
+</ul>
+<h2 id="The-Consequence-of-Preventing-Deadlock-from-Happening"><a href="#The-Consequence-of-Preventing-Deadlock-from-Happening" class="headerlink" title="The Consequence of Preventing Deadlock from Happening"></a>The Consequence of Preventing Deadlock from Happening</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/HxCTDOU.png"
+                     
+                ></p>
+<ul>
+<li>Starvation: Process cannot get the resources needed for a long time because the resources keep being allocated to other processes.</li>
+<li>The solution to starvation -&gt; (Aging): Adding an aging factor to the priority of each request.</li>
+</ul>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：Operating System(I)</li>
+        <li>Post author：Shih Jiun Lin</li>
+        <li>Create time：2023-01-18 01:29:47</li>
+        <li>
+            Post link：https://shih-jiun-lin.github.io/2023/01/18/2023-01-17-Operating System(I)/
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+                </div>
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E8%A8%88%E7%AE%97%E6%A9%9F%E6%A6%82%E8%AB%96/">#計算機概論</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                            rel="prev"
+                            href="/2023/01/18/Chapter%202,%20Introduction%20to%20C++%20Programing/"
+                            >
+                                <span class="left arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </span>
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">Introduction to C++ Programing</span>
+                                    <span class="post-nav-item">Prev posts</span>
+                                </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/01/18/2023-01-17-Networking%20and%20the%20internet(I)/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">Networking and the Internet(I)</span>
+                                    <span class="post-nav-item">Next posts</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>Contents</strong></div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Operating-System-I"><span class="nav-text">Operating System(I)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Batch-processing-early-era"><span class="nav-text">Batch processing(early era)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Interactive-processing-early-era"><span class="nav-text">Interactive processing(early era)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kernel"><span class="nav-text">Kernel</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux"><span class="nav-text">Linux</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-is-OS-being-loaded"><span class="nav-text">How is OS being loaded?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Process"><span class="nav-text">Process</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Process-Administration"><span class="nav-text">Process Administration</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Semaphores"><span class="nav-text">Semaphores</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Prerequisites-for-Deadlock"><span class="nav-text">Prerequisites for Deadlock</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Consequence-of-Preventing-Deadlock-from-Happening"><span class="nav-text">The Consequence of Preventing Deadlock from Happening</span></a></li></ol></li></ol>
+    </div>
+</div>
+            </div>
+        
+    </div>
+</div>
+
+
+                
+
+            </div>
+
+
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2023&nbsp;<i class="fa-solid fa-heart icon-animate"></i>&nbsp;<a href="/">Shih Jiun Lin. All Rights Reserved.</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalviews&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v0.5.2</a>
+        </div>
+        
+        
+        <script async data-pjax defer>
+            function odometer_init(){
+                    let el = document.getElementsByClassName('odometer');
+                    for (i = 0; i < el.length; i++) {
+                        od = new Odometer({
+                            el: el[i],
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    }
+            }
+            odometer_init();
+        </script>
+        <div id="start_time_div" style="display:none">
+            2023/1/17 23:59:59
+        </div>
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fa-solid fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fa-solid fa-left-right"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fa-solid fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fa-solid fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fa-solid fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+
+    
+<script src="/js/runtime.js"></script>
+
+    
+<script src="/js/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/css/odometer-theme-minimal.css">
+
+
+
+<div class="post-scripts pjax">
+    
+        
+<script src="/js/toc-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
+    
+</div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            REDEFINE.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            REDEFINE.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            REDEFINE.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

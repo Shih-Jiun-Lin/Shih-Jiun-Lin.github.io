@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    <meta name="description" content="Hexo Theme Redefine">
+    <meta name="author" content="Shih Jiun Lin">
+    <link rel="canonical" href="http://example.com/2023/01/18/2023-01-17-Data%20Storage(I)/" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
+    <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no">
+    <link rel="shortcut icon" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no">
+    
+    <title>
+        
+            Data Storage(I) |
+        
+        Shih-Jiun-Lin&#39;s Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<link rel="stylesheet" href="/css/fonts.css">
+
+    
+    <link rel="preconnect" href="https://evan.beee.top" crossorigin>
+    <script id="hexo-configurations">
+    let REDEFINE = window.REDEFINE || {};
+    REDEFINE.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.xml"};
+    REDEFINE.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#005080","avatar":"https://scontent-hkg4-2.xx.fbcdn.net/v/t1.6435-9/70899392_1700286993440218_5774458773556953088_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=iBCVayjTOr8AX8TBEWz&_nc_ht=scontent-hkg4-2.xx&oh=00_AfAmQlO1Y3qBnfF5_L2XihrdBGlMKeof-lZCAoQpK_vIQg&oe=63EE348C","favicon":"https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no","article_img_align":"center","right_side_width":"210px","content_max_width":"1000px","nav_color":{"left":"#3649f7","right":"#36daf7","transparency":35},"hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_image":{"light":"https://lh3.googleusercontent.com/ixSu1XqCZxzWrc_qPqo7BEIWTmPuPaf78ZuOz4WmoztYIMV1KPIgS2N_FGSWP64r2nhh55paCAlFaKB3jjJo4JopFLViLnluanyhBmmdGn4baC0ZY-9FWsaEM_f-tgRWv5pCehETi5wD6do-yaNYCMbqlRVmAD8_86UiWPJz8QqQfLN7O3csy1ezIH5NfnyPfgNMS9KhrblAZmUA5eIejicZePVvzHJZI5bRI11EAVhK1Gc2kFBxu53mMaH8i0pvCNX4wrdz31cUGVenRVRsHKpwfWIdydeIGNX83cyE9uuv-bFIjt2mEVBdmohIXGeP6_BNh96komgPEeMtklBKv1hI0gHGZE96fzml5AoIczlTXYZeF4-yaEA6OIcZZEES7J1GXXnnJrYtzqEU8vxOccLxaJSuygKKrZx46MNFbpBZN9pYpoMmqJKIo9khPYHQypvxNKCwCYl8ltaCij9EZsFI7dKjCGGWZybMaT8NQ-eGzoDsvBV2CiGZ6sgBX_VcEECH0zkeGRZNEFurMmxsHLNrFYFdVgdrVS9xeWLBFr4OpFsuxC4JQFzd2_Plrf6Wxl3YnHPnRhQphIR-NnmVJfsMdrW9nRHWDtPYGJOO8sUBHl-AiklFx7-LDQs3tDLqPEvrOw1bhgb4W0rPo6yJHKZ71GqIW9AnFXrLJs3g1iYMPl9y833MH95f8j9pkUo0k3oZPhzDyie_BEw0LDKA7WjPG7k_H_IQhsUe_Z1u1nL4aHZOfi3fFJ8WnWc6-JVxyoc79yiRhbHlYB-Dv0nqjOD_YFDqsquEMS4iCR1_bsXb8ekh-PlDM1AhnvTaGwH-HMmNINWaevr7AlkMZWvwzUjshhroTeJf0PKsqeEFj-uXMFYBRuI-NdlvBQC1eIuRaE6TrZSZguozSSQcmibfz6yjdplXr5_TrQrxUvvz_uJFQCzwMU0aGe3_Nleeazu8TdvRSlZEwII6njrl7mM=w1343-h1008-no?authuser=0# background image of the first screen, use relative path or external link (if your website is in subdirectory, use external link)","dark":"https://lh3.googleusercontent.com/B01xYBVbZkUR86-vZfLiECMp3GD-iAYwKGbbbehgps_4DWvPLHpyUjtmuURqqHMf_W2sCFLJKchmCynDrtjAIkn6rV_mtutdzLdp2ENu5-G6jqfSNzRzSoebjclyS8IO6LVZ1xkTHDtcRuLgZjCEEyIftY-H0HeJaBwHqTPQDgO-vkskuAxN1viOQRV58BxWMQG881LbGYUsNH6Lsj9t-woZUfyLV2abmvKXIVGlDP4mbq5E1kFrBcXoWpCWXH5_VvB5lK1dbS322NUQIYIoijVwOn10F5haC-bhZMILVfEZ0Bft6qNkVInO7JnZSba1_Kc2g2DUV0HfZ8iLLRFA0h2s6wwh0UowqkAukNnRO4li8b0gPwp52unE3mcU_uwJkfaudpGRE3g5k9DrBeCKSppIgBjxfZ8wkMlYPHXw4Oorha8ta49epcNtesB3-QlQWEYmehzM_iIMmmmDHNqnpVFJvzzJ-U-GtNSXuPdWjhAmA8_mhi4E-w_S9Mcqefy3IMGXxeR0cZAK-69Oum9_sRCEVCE19P2YJzHt1TCnOENuinfT2-Rose4CVP3edMN9ScARfmpvRoYiV6rS3wxcBoQAqxDWH5tjzaKeL0rZPpnu63dVp4vxpGQdRQMU6DPuGk8EdIqZMIghoVaNGiF4LADJvAzDloXcXcApyLaqvptrssYd1dw-GvHe12O-_eHKTwYDmKoXqGJh45S2qqcaXywK6VXFd6I3VGrj812dx-onYqDvQzCFhbOgTdFT2Hlt3XiqRBsqZdVFzgjkbXqod-IYb1GsrCMvQNewvsi4yio3F8zrcGagyc9HFQ3uvQmxNPGJdjjU3atwLJFMDrZFmTHrLElfvxW30vLyhl7F-0rlvlrjgg5n3H6KzVMvyNwwxw_sLufWD4jNJLL_own4VGilHg3lc5jxLC4YzFBWDq1wg22VOSgWklbOgEGG_C2w1V80DE0Pk7oJEK8tspk=w1691-h951-no?authuser=0"},"title_color":{"light":"#fff","dark":"#d1d1b6"},"description":"一個喜歡搞小發明的大學生!"},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_block":{"copy":true,"style":"mac"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"0.5.2","friend_links":{"columns":2}};
+    REDEFINE.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+    
+    
+<link rel="stylesheet" href="/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/css/brands.min.css">
+
+    
+<link rel="stylesheet" href="/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/css/regular.min.css">
+
+    
+    
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+    
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Shih-Jiun-Lin&#39;s Blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        主頁面
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/archives"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-archive"></i>
+                                        
+                                        照時間分類
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/tags"  >
+                                    
+                                        
+                                            <i class="fa-solid fa-tags"></i>
+                                        
+                                        照標籤分類
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/categories"  >
+                                    
+                                        
+                                            <i class="fa-solid fa-star"></i>
+                                        
+                                        照種類分類
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown" 
+                                    href="#" onClick="return false;">
+                                    
+                                        
+                                            <i class="fa-regular fa-user"></i>
+                                        
+                                        關於我&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                    
+                                        <li>
+                                        <a href="/about">ME
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://www.instagram.com/l__junjun__l/?hl=zh-tw">INSTAGRAM
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://github.com/Shih-Jiun-Lin">GITHUB
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://www.ncue.edu.tw/">SCHOOL
+                                        </a>
+                                        </li>
+                                    
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                主頁面
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/archives"  >
+                             
+                                
+                                    <i class="fa-regular fa-archive"></i>
+                                
+                                照時間分類
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/tags"  >
+                             
+                                
+                                    <i class="fa-solid fa-tags"></i>
+                                
+                                照標籤分類
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/categories"  >
+                             
+                                
+                                    <i class="fa-solid fa-star"></i>
+                                
+                                照種類分類
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="has-dropdown" 
+                        href="#" onClick="return false;">
+                            
+                                
+                                    <i class="fa-regular fa-user"></i>
+                                
+                                關於我&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                              
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" href="/about">ME</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://www.instagram.com/l__junjun__l/?hl=zh-tw">INSTAGRAM</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://github.com/Shih-Jiun-Lin">GITHUB</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://www.ncue.edu.tw/">SCHOOL</a>
+                            </li>
+                        
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+            <div class="article-title">
+                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">Data Storage(I)</h1></span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="https://scontent-hkg4-2.xx.fbcdn.net/v/t1.6435-9/70899392_1700286993440218_5774458773556953088_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=iBCVayjTOr8AX8TBEWz&_nc_ht=scontent-hkg4-2.xx&oh=00_AfAmQlO1Y3qBnfF5_L2XihrdBGlMKeof-lZCAoQpK_vIQg&oe=63EE348C">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Shih Jiun Lin</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="pc">2023-01-18 01:29:47</span>
+        <span class="mobile">2023-01-18 01:29</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E5%A4%A7%E5%AD%B8%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98/">大學課堂筆記</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E8%A8%88%E7%AE%97%E6%A9%9F%E6%A6%82%E8%AB%96/">計算機概論</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>485 Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>3 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <h1 id="Data-Storage-I"><a href="#Data-Storage-I" class="headerlink" title="Data Storage(I)"></a>Data Storage(I)</h1><h2 id="Binary-world"><a href="#Binary-world" class="headerlink" title="Binary world"></a>Binary world</h2><ol>
+<li>Simple, logical and unambiguous</li>
+<li>Boolen operation and gates<ul>
+<li>AND: <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/f40BHRy.png"
+                     
+                ></li>
+<li>OR: <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/iHu0uCp.png"
+                     
+                ></li>
+<li>Exclusive OR(XOR): <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/Kt4lWeG.png"
+                     
+                ></li>
+<li>NOT: <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/naddbwe.png"
+                     
+                ></li>
+</ul>
+</li>
+</ol>
+<h2 id="Flip-Flop-正反器"><a href="#Flip-Flop-正反器" class="headerlink" title="Flip-Flop(正反器)"></a>Flip-Flop(正反器)</h2><ol>
+<li>Purpose -&gt; To store 0&#x2F;1</li>
+<li>2 inputs</li>
+<li>One -&gt; set 0</li>
+<li>The other -&gt; set 1</li>
+<li>It will preserve 0&#x2F;1 if there is no inputs</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/CM0A35v.png"
+                     
+                ></li>
+</ol>
+<ul>
+<li>Simple SR Flip-Flop Circuit<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/UxaHn8a.png"
+                     
+                ></li>
+<li>Another Simple SR Flip-Flop Circuit<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/eHtGv2l.png"
+                     
+                ></li>
+</ul>
+<h2 id="Hexadecimal-Hex，十六進位"><a href="#Hexadecimal-Hex，十六進位" class="headerlink" title="Hexadecimal(Hex，十六進位)"></a>Hexadecimal(Hex，十六進位)</h2><ol>
+<li>Reason of using Hex -&gt;<ul>
+<li>Binary is too long for human to remember</li>
+<li>Binary to Hex is straightforward</li>
+</ul>
+</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/4SckAD3.png"
+                     
+                ></li>
+</ol>
+<h2 id="Main-memory-cell"><a href="#Main-memory-cell" class="headerlink" title="Main memory cell"></a>Main memory cell</h2><ol>
+<li>8 bits -&gt; 1 cell -&gt; 1 byte</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/0tHCICX.png"
+                     
+                ></li>
+</ol>
+<h2 id="Memory"><a href="#Memory" class="headerlink" title="Memory"></a>Memory</h2><ol>
+<li>One dimensional</li>
+<li>Random accessible</li>
+<li>Access the content via the address</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/848KpU9.png"
+                     
+                ></li>
+</ol>
+<h2 id="Memory-techniques"><a href="#Memory-techniques" class="headerlink" title="Memory techniques"></a>Memory techniques</h2><ol>
+<li>Random access memory (Ram): Memory in which individual cells can be easily accessed in any order<ul>
+<li>Type: Static Memory(SRAM), Dynamic Memory(DRAM), Synchronous DRAM(SDRAM)</li>
+<li>Double Date Rate(DDR)-&gt;Faster when reading data</li>
+<li>Dual&#x2F;Triple channel</li>
+</ul>
+</li>
+<li><ul>
+<li>Kilobyte: $2^{10}$ &#x3D; 1024 bytes $\simeq$ $10^{3}$ bytes</li>
+<li>Megabyte: $2^{20}$ &#x3D; 1038576 bytes $\simeq$ $10^{6}$ bytes</li>
+<li>Gigabyte: $2^{30}$ &#x3D; 1073741824 bytes $\simeq$ $10^{9}$ bytes</li>
+</ul>
+</li>
+</ol>
+<h2 id="Mass-Storage"><a href="#Mass-Storage" class="headerlink" title="Mass Storage"></a>Mass Storage</h2><ol>
+<li>Properties:<ul>
+<li>Larger capacity</li>
+<li>Less volatility</li>
+<li>Slower</li>
+<li>On-line or off-line</li>
+</ul>
+</li>
+<li>Types:<ul>
+<li>Magnetic systems(HDD，Floppy Disk)</li>
+<li>Optical systems(CD，DVD)</li>
+<li>Flash drives(SSD)</li>
+</ul>
+</li>
+<li>Magnetic storage:<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/FaS4kFn.png"
+                     
+                ></li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/Blqj4wl.png"
+                     
+                ></li>
+<li>Access time &#x3D; seek time(To reach the right track) + rotation delay(latency time，To reahc the right sector)</li>
+<li>Transfer rate(SATA)</li>
+</ul>
+</li>
+<li>Optical storage<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/4CxHApt.png"
+                     
+                ></li>
+</ul>
+</li>
+<li>Physical and logical records<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/dUAwIy8.png"
+                     
+                ></li>
+</ul>
+</li>
+<li>Buffer(緩衝區)<ul>
+<li>Purpose: To synchronize different read&#x2F;write mechanisms and rates</li>
+<li>An area used to temporarily store data</li>
+</ul>
+</li>
+</ol>
+<h2 id="Representing-text"><a href="#Representing-text" class="headerlink" title="Representing text"></a>Representing text</h2><ol>
+<li>ASCII: 7 bits (or 8 bits starts with 0)</li>
+<li>Unicode: 16 bits</li>
+<li>ISO: 32 bits</li>
+</ol>
+<h2 id="Representing-numbers"><a href="#Representing-numbers" class="headerlink" title="Representing numbers"></a>Representing numbers</h2><ol>
+<li>901 (decimal):<br> <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/gUkyMRy.png"
+                     
+                ></li>
+<li>11 (binary):<br> <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/yCSMAtg.png"
+                     
+                ></li>
+<li>From binary to decimal<br> <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/77twv7u.png"
+                     
+                ></li>
+<li>From decimal to binary<br> <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/CxpuQ3J.png"
+                     
+                ></li>
+</ol>
+<h2 id="Representing-img"><a href="#Representing-img" class="headerlink" title="Representing img"></a>Representing img</h2><ol>
+<li>Bit map techniques:<ul>
+<li>Pixel: the element of a picture</li>
+<li>Colors: RGB，HSV，etc.</li>
+</ul>
+</li>
+<li>Vector techniques:<ul>
+<li>Properties: Scalable</li>
+<li>Truetype，Postscript，SVG(scalable vector graphic)</li>
+</ul>
+</li>
+</ol>
+<h2 id="Representing-sound"><a href="#Representing-sound" class="headerlink" title="Representing sound"></a>Representing sound</h2><ol>
+<li>Sampling<ul>
+<li>Sample rate and bit resolution</li>
+<li>Bit rate(sampling rate $\times$ bit resolution)</li>
+</ul>
+</li>
+<li>MIDI(synthesis)<ul>
+<li>A protocol designed for recording and playing back music on digital synthesizers that is supported by many makes of personal computer sound cards</li>
+</ul>
+</li>
+</ol>
+<h2 id="Binary-system-revisited"><a href="#Binary-system-revisited" class="headerlink" title="Binary system revisited"></a>Binary system revisited</h2><ol>
+<li>Addition<ul>
+<li>0+0&#x3D;0</li>
+<li>1+0&#x3D;1，0+1&#x3D;1<a class="link"   target="_blank" rel="noopener" href="https://hackmd.io/A5aFWyc1TOKNUz-eVRrM2g#" >https://hackmd.io/A5aFWyc1TOKNUz-eVRrM2g# <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li>1+1&#x3D;10</li>
+</ul>
+</li>
+<li>Subtraction<ul>
+<li>Define negative numbers first(Two’s Complement Notation)</li>
+</ul>
+</li>
+</ol>
+<h2 id="Two’s-complement-notation-and-encoding"><a href="#Two’s-complement-notation-and-encoding" class="headerlink" title="Two’s complement notation and encoding"></a>Two’s complement notation and encoding</h2><ol>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/SisdfNh.png"
+                     
+                > </li>
+<li>Encoding(method 1): <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/yCIZs08.png"
+                     
+                ><br>After finishing the process，you can directly do the addition and get the right answer</li>
+<li>Encoding(method 2): Do it as usual binary way<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/qHhHYH7.png"
+                     
+                ></li>
+<li>Encoding(method 3): <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/35BXAa6.png"
+                     
+                ></li>
+</ol>
+<h2 id="Excess-notation"><a href="#Excess-notation" class="headerlink" title="Excess notation"></a>Excess notation</h2><ol>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/3cyVdYJ.png"
+                     
+                ></li>
+<li>Addition: After the calculation, u have to add 4 to get the right answer</li>
+</ol>
+<h2 id="Overflow"><a href="#Overflow" class="headerlink" title="Overflow"></a>Overflow</h2><p>Using the table from Two’s complement:</p>
+<ol>
+<li>Occurs when the result is out of range(not in table)</li>
+<li>Addition of two positive numbers -&gt; 2+3&#x3D;5 $\equiv$ -3(mod 8)</li>
+<li>Addition of two negative numbers -&gt; (-2)+(-3)&#x3D;-5 $\equiv$ -3(mod 8)</li>
+</ol>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：Data Storage(I)</li>
+        <li>Post author：Shih Jiun Lin</li>
+        <li>Create time：2023-01-18 01:29:47</li>
+        <li>
+            Post link：https://shih-jiun-lin.github.io/2023/01/18/2023-01-17-Data Storage(I)/
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+                </div>
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E8%A8%88%E7%AE%97%E6%A9%9F%E6%A6%82%E8%AB%96/">#計算機概論</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                            rel="prev"
+                            href="/2023/01/18/2023-01-17-Data%20Storage(II)/"
+                            >
+                                <span class="left arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </span>
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">Data Storage(II)</span>
+                                    <span class="post-nav-item">Prev posts</span>
+                                </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/01/18/2023-01-17-Data%20Manipulation(I)/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">Data Manipulation(I)</span>
+                                    <span class="post-nav-item">Next posts</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>Contents</strong></div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Data-Storage-I"><span class="nav-text">Data Storage(I)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Binary-world"><span class="nav-text">Binary world</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Flip-Flop-%E6%AD%A3%E5%8F%8D%E5%99%A8"><span class="nav-text">Flip-Flop(正反器)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexadecimal-Hex%EF%BC%8C%E5%8D%81%E5%85%AD%E9%80%B2%E4%BD%8D"><span class="nav-text">Hexadecimal(Hex，十六進位)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Main-memory-cell"><span class="nav-text">Main memory cell</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Memory"><span class="nav-text">Memory</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Memory-techniques"><span class="nav-text">Memory techniques</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mass-Storage"><span class="nav-text">Mass Storage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Representing-text"><span class="nav-text">Representing text</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Representing-numbers"><span class="nav-text">Representing numbers</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Representing-img"><span class="nav-text">Representing img</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Representing-sound"><span class="nav-text">Representing sound</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Binary-system-revisited"><span class="nav-text">Binary system revisited</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Two%E2%80%99s-complement-notation-and-encoding"><span class="nav-text">Two’s complement notation and encoding</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Excess-notation"><span class="nav-text">Excess notation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Overflow"><span class="nav-text">Overflow</span></a></li></ol></li></ol>
+    </div>
+</div>
+            </div>
+        
+    </div>
+</div>
+
+
+                
+
+            </div>
+
+
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2023&nbsp;<i class="fa-solid fa-heart icon-animate"></i>&nbsp;<a href="/">Shih Jiun Lin. All Rights Reserved.</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalviews&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v0.5.2</a>
+        </div>
+        
+        
+        <script async data-pjax defer>
+            function odometer_init(){
+                    let el = document.getElementsByClassName('odometer');
+                    for (i = 0; i < el.length; i++) {
+                        od = new Odometer({
+                            el: el[i],
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    }
+            }
+            odometer_init();
+        </script>
+        <div id="start_time_div" style="display:none">
+            2023/1/17 23:59:59
+        </div>
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fa-solid fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fa-solid fa-left-right"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fa-solid fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fa-solid fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fa-solid fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+
+    
+<script src="/js/runtime.js"></script>
+
+    
+<script src="/js/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/css/odometer-theme-minimal.css">
+
+
+
+<div class="post-scripts pjax">
+    
+        
+<script src="/js/toc-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
+    
+</div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            REDEFINE.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            REDEFINE.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            REDEFINE.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

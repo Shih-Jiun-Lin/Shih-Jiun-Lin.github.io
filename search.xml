@@ -1,0 +1,1494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Data Storage(I)</title>
+    <url>/2023/01/18/2023-01-17-Data%20Storage(I)/</url>
+    <content><![CDATA[<h1 id="Data-Storage-I"><a href="#Data-Storage-I" class="headerlink" title="Data Storage(I)"></a>Data Storage(I)</h1><h2 id="Binary-world"><a href="#Binary-world" class="headerlink" title="Binary world"></a>Binary world</h2><ol>
+<li>Simple, logical and unambiguous</li>
+<li>Boolen operation and gates<ul>
+<li>AND: <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/f40BHRy.png"
+                     
+                ></li>
+<li>OR: <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/iHu0uCp.png"
+                     
+                ></li>
+<li>Exclusive OR(XOR): <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/Kt4lWeG.png"
+                     
+                ></li>
+<li>NOT: <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/naddbwe.png"
+                     
+                ></li>
+</ul>
+</li>
+</ol>
+<h2 id="Flip-Flop-正反器"><a href="#Flip-Flop-正反器" class="headerlink" title="Flip-Flop(正反器)"></a>Flip-Flop(正反器)</h2><ol>
+<li>Purpose -&gt; To store 0&#x2F;1</li>
+<li>2 inputs</li>
+<li>One -&gt; set 0</li>
+<li>The other -&gt; set 1</li>
+<li>It will preserve 0&#x2F;1 if there is no inputs</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/CM0A35v.png"
+                     
+                ></li>
+</ol>
+<ul>
+<li>Simple SR Flip-Flop Circuit<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/UxaHn8a.png"
+                     
+                ></li>
+<li>Another Simple SR Flip-Flop Circuit<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/eHtGv2l.png"
+                     
+                ></li>
+</ul>
+<h2 id="Hexadecimal-Hex，十六進位"><a href="#Hexadecimal-Hex，十六進位" class="headerlink" title="Hexadecimal(Hex，十六進位)"></a>Hexadecimal(Hex，十六進位)</h2><ol>
+<li>Reason of using Hex -&gt;<ul>
+<li>Binary is too long for human to remember</li>
+<li>Binary to Hex is straightforward</li>
+</ul>
+</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/4SckAD3.png"
+                     
+                ></li>
+</ol>
+<h2 id="Main-memory-cell"><a href="#Main-memory-cell" class="headerlink" title="Main memory cell"></a>Main memory cell</h2><ol>
+<li>8 bits -&gt; 1 cell -&gt; 1 byte</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/0tHCICX.png"
+                     
+                ></li>
+</ol>
+<h2 id="Memory"><a href="#Memory" class="headerlink" title="Memory"></a>Memory</h2><ol>
+<li>One dimensional</li>
+<li>Random accessible</li>
+<li>Access the content via the address</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/848KpU9.png"
+                     
+                ></li>
+</ol>
+<h2 id="Memory-techniques"><a href="#Memory-techniques" class="headerlink" title="Memory techniques"></a>Memory techniques</h2><ol>
+<li>Random access memory (Ram): Memory in which individual cells can be easily accessed in any order<ul>
+<li>Type: Static Memory(SRAM), Dynamic Memory(DRAM), Synchronous DRAM(SDRAM)</li>
+<li>Double Date Rate(DDR)-&gt;Faster when reading data</li>
+<li>Dual&#x2F;Triple channel</li>
+</ul>
+</li>
+<li><ul>
+<li>Kilobyte: $2^{10}$ &#x3D; 1024 bytes $\simeq$ $10^{3}$ bytes</li>
+<li>Megabyte: $2^{20}$ &#x3D; 1038576 bytes $\simeq$ $10^{6}$ bytes</li>
+<li>Gigabyte: $2^{30}$ &#x3D; 1073741824 bytes $\simeq$ $10^{9}$ bytes</li>
+</ul>
+</li>
+</ol>
+<h2 id="Mass-Storage"><a href="#Mass-Storage" class="headerlink" title="Mass Storage"></a>Mass Storage</h2><ol>
+<li>Properties:<ul>
+<li>Larger capacity</li>
+<li>Less volatility</li>
+<li>Slower</li>
+<li>On-line or off-line</li>
+</ul>
+</li>
+<li>Types:<ul>
+<li>Magnetic systems(HDD，Floppy Disk)</li>
+<li>Optical systems(CD，DVD)</li>
+<li>Flash drives(SSD)</li>
+</ul>
+</li>
+<li>Magnetic storage:<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/FaS4kFn.png"
+                     
+                ></li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/Blqj4wl.png"
+                     
+                ></li>
+<li>Access time &#x3D; seek time(To reach the right track) + rotation delay(latency time，To reahc the right sector)</li>
+<li>Transfer rate(SATA)</li>
+</ul>
+</li>
+<li>Optical storage<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/4CxHApt.png"
+                     
+                ></li>
+</ul>
+</li>
+<li>Physical and logical records<ul>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/dUAwIy8.png"
+                     
+                ></li>
+</ul>
+</li>
+<li>Buffer(緩衝區)<ul>
+<li>Purpose: To synchronize different read&#x2F;write mechanisms and rates</li>
+<li>An area used to temporarily store data</li>
+</ul>
+</li>
+</ol>
+<h2 id="Representing-text"><a href="#Representing-text" class="headerlink" title="Representing text"></a>Representing text</h2><ol>
+<li>ASCII: 7 bits (or 8 bits starts with 0)</li>
+<li>Unicode: 16 bits</li>
+<li>ISO: 32 bits</li>
+</ol>
+<h2 id="Representing-numbers"><a href="#Representing-numbers" class="headerlink" title="Representing numbers"></a>Representing numbers</h2><ol>
+<li>901 (decimal):<br> <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/gUkyMRy.png"
+                     
+                ></li>
+<li>11 (binary):<br> <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/yCSMAtg.png"
+                     
+                ></li>
+<li>From binary to decimal<br> <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/77twv7u.png"
+                     
+                ></li>
+<li>From decimal to binary<br> <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/CxpuQ3J.png"
+                     
+                ></li>
+</ol>
+<h2 id="Representing-img"><a href="#Representing-img" class="headerlink" title="Representing img"></a>Representing img</h2><ol>
+<li>Bit map techniques:<ul>
+<li>Pixel: the element of a picture</li>
+<li>Colors: RGB，HSV，etc.</li>
+</ul>
+</li>
+<li>Vector techniques:<ul>
+<li>Properties: Scalable</li>
+<li>Truetype，Postscript，SVG(scalable vector graphic)</li>
+</ul>
+</li>
+</ol>
+<h2 id="Representing-sound"><a href="#Representing-sound" class="headerlink" title="Representing sound"></a>Representing sound</h2><ol>
+<li>Sampling<ul>
+<li>Sample rate and bit resolution</li>
+<li>Bit rate(sampling rate $\times$ bit resolution)</li>
+</ul>
+</li>
+<li>MIDI(synthesis)<ul>
+<li>A protocol designed for recording and playing back music on digital synthesizers that is supported by many makes of personal computer sound cards</li>
+</ul>
+</li>
+</ol>
+<h2 id="Binary-system-revisited"><a href="#Binary-system-revisited" class="headerlink" title="Binary system revisited"></a>Binary system revisited</h2><ol>
+<li>Addition<ul>
+<li>0+0&#x3D;0</li>
+<li>1+0&#x3D;1，0+1&#x3D;1<a class="link"   href="https://hackmd.io/A5aFWyc1TOKNUz-eVRrM2g#" >https://hackmd.io/A5aFWyc1TOKNUz-eVRrM2g# <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li>1+1&#x3D;10</li>
+</ul>
+</li>
+<li>Subtraction<ul>
+<li>Define negative numbers first(Two’s Complement Notation)</li>
+</ul>
+</li>
+</ol>
+<h2 id="Two’s-complement-notation-and-encoding"><a href="#Two’s-complement-notation-and-encoding" class="headerlink" title="Two’s complement notation and encoding"></a>Two’s complement notation and encoding</h2><ol>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/SisdfNh.png"
+                     
+                > </li>
+<li>Encoding(method 1): <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/yCIZs08.png"
+                     
+                ><br>After finishing the process，you can directly do the addition and get the right answer</li>
+<li>Encoding(method 2): Do it as usual binary way<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/qHhHYH7.png"
+                     
+                ></li>
+<li>Encoding(method 3): <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/35BXAa6.png"
+                     
+                ></li>
+</ol>
+<h2 id="Excess-notation"><a href="#Excess-notation" class="headerlink" title="Excess notation"></a>Excess notation</h2><ol>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/3cyVdYJ.png"
+                     
+                ></li>
+<li>Addition: After the calculation, u have to add 4 to get the right answer</li>
+</ol>
+<h2 id="Overflow"><a href="#Overflow" class="headerlink" title="Overflow"></a>Overflow</h2><p>Using the table from Two’s complement:</p>
+<ol>
+<li>Occurs when the result is out of range(not in table)</li>
+<li>Addition of two positive numbers -&gt; 2+3&#x3D;5 $\equiv$ -3(mod 8)</li>
+<li>Addition of two negative numbers -&gt; (-2)+(-3)&#x3D;-5 $\equiv$ -3(mod 8)</li>
+</ol>
+]]></content>
+      <categories>
+        <category>大學課堂筆記</category>
+      </categories>
+      <tags>
+        <tag>計算機概論</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Data Storage(II)</title>
+    <url>/2023/01/18/2023-01-17-Data%20Storage(II)/</url>
+    <content><![CDATA[<h1 id="Data-Storage-II"><a href="#Data-Storage-II" class="headerlink" title="Data Storage(II)"></a>Data Storage(II)</h1><h2 id="Fraction-in-binary"><a href="#Fraction-in-binary" class="headerlink" title="Fraction in binary"></a>Fraction in binary</h2><ol>
+<li>The rules is the same <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/pqwL1v6.png"
+                     
+                ></li>
+</ol>
+<h2 id="Float-point-notation-and-decoding"><a href="#Float-point-notation-and-decoding" class="headerlink" title="Float-point notation and decoding"></a>Float-point notation and decoding</h2><ol>
+<li>8 bits representation<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/6YrHIlt.png"
+                     
+                ><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/BDVrmtA.png"
+                     
+                ><ul>
+<li>Ex (Use the table of binary): 10010101 -&gt; 1(001)(0101) -&gt; ($-2^{1}$)$\times$($\frac{1}{4}$+$\frac{1}{16}$)&#x3D;-$\frac{5}{8}$</li>
+</ul>
+</li>
+<li>On the widely used 64-bit computers，the exponent takes 11 bits，and the mantissa takes 52 bits</li>
+</ol>
+<h2 id="Truncation-error"><a href="#Truncation-error" class="headerlink" title="Truncation error"></a>Truncation error</h2><ol>
+<li>The precision is beyond the limitation of mantissa.<ul>
+<li>Ex (Use the table of binary): 2$\frac{5}{8}$ -&gt; 10.101(base two，fixed point) -&gt; .10101 $\times$  $2^{2}$ -&gt; 0(010)(1010) -&gt; 2$\frac{1}{2}$</li>
+</ul>
+</li>
+</ol>
+<h2 id="Normalized-form"><a href="#Normalized-form" class="headerlink" title="Normalized form"></a>Normalized form</h2><ol>
+<li><ul>
+<li>The first bit of mantissa is 1 </li>
+<li>0’s floating-point representation is all 0</li>
+</ul>
+</li>
+<li><p>Normalization:</p>
+<ul>
+<li>Ex (Use the table of binary): 00100011 -&gt; 0(010)(0011) -&gt; .0011 $\times$ $2^{2}$ -&gt; .1100 $\times$ $2^{0}$ -&gt; 0(000)(1100)</li>
+</ul>
+</li>
+<li><p>IEEE normalized form</p>
+<ul>
+<li>The left-most bit in mantissa is always 1 (Ex: .0101 -&gt; 1.0101)</li>
+<li>Standard normalized form is (s)(eee)(mmmm) -&gt; ($-1^{s}$) $\times$ 1.mmmm $\times$ $2^{(eee-4)}$<ul>
+<li>Ex(Use the table of binary): 01100011 -&gt; (0)(110)(0011) -&gt; $(-1)^{0}$ $\times$ 1.0011 $\times$ $2^{(6-4)}$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="Loss-of-digits"><a href="#Loss-of-digits" class="headerlink" title="Loss of digits"></a>Loss of digits</h2><p>Ex (Use the table of excess): </p>
+<ul>
+<li>4 + $\frac{1}{4}$ + $\frac{1}{4}$ &#x3D; (01111000 + 00111000) + 00111000 -&gt; make the exponent the same (01111000 + 01110000) + 01110000 &#x3D; 4 (the result is wrong)</li>
+<li>4 + $\frac{1}{4}$ + $\frac{1}{4}$ &#x3D; 01111000 + (00111000 + 00111000) &#x3D; 4$\frac{1}{2}$</li>
+</ul>
+<h2 id="Data-compression"><a href="#Data-compression" class="headerlink" title="Data compression"></a>Data compression</h2><ul>
+<li>Two types -&gt; Lossy and Lossless</li>
+<li>Lossless<ol>
+<li>Run-length encoding(RLE)<ul>
+<li>After the process of compressing ，wwwwwww is being recognized as 7w,</li>
+</ul>
+</li>
+<li>Frequency-dependent encoding -&gt; Huffman encoding</li>
+<li>Dictionary encoding -&gt; Adaptive dictionary encoding, LZW encoding<ul>
+<li>Defining the value by yourself</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>Lossy<ol>
+<li>Relative &#x2F; difference encoding</li>
+</ol>
+</li>
+<li>Huffman encoding<ul>
+<li>Ex: AAABBBAABCAAAABD<ul>
+<li>Traditional encoding -&gt; Code book: A -&gt; 00; B -&gt; 01; C -&gt; 10; D -&gt; 11, represent in 2 bits it will be 000000010101000001100000000111</li>
+<li>Huffman encoding -&gt; <ol>
+<li>Count the occurrences:  A(9); B(5); C(1); D(1)</li>
+<li>Build a huffman tree:<br>                        <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/nWxGAT7.png"
+                     
+                ></li>
+</ol>
+<p>  According to the tree, the code book is A -&gt; 0, B -&gt; 10, C -&gt; 110, D -&gt; 111. Through the huffman encoding，the string will be transfered into 0001010100010110</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>LZW encoding<ul>
+<li>Is a kind of dictionary encoding that does not need to store the dictionary</li>
+<li>The concept is to generate more values to the dictionary(Usually we use the ascii code to represent numbers and words, so no addition dictionary is needed)<ul>
+<li>Code book: x -&gt; 1, y -&gt; 2, space -&gt; 3    <ul>
+<li>Ex: xyx xyx xyx xyx<br>  -&gt; 1<br>  -&gt; 12<br>  -&gt; 121<br>  -&gt; 1213<br>  Then you append 1213 to the dictionary as 4<br>  -&gt; 12134<br>  -&gt;121343434</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Images-audios-and-videos"><a href="#Images-audios-and-videos" class="headerlink" title="Images, audios and videos"></a>Images, audios and videos</h2><ul>
+<li>Images: <ol>
+<li>GIF: 256 colors, dictionary encoding</li>
+<li>JPEG: Lossy &#x2F; lossless encoding</li>
+</ol>
+</li>
+<li>Audios: <ol>
+<li>MP3: Lossy encoding</li>
+</ol>
+</li>
+<li>Videos: <ol>
+<li>MPEG: Lossy encoding</li>
+</ol>
+</li>
+</ul>
+<h2 id="Communication-errors"><a href="#Communication-errors" class="headerlink" title="Communication errors"></a>Communication errors</h2><ul>
+<li>The reason of compressing data is to remove redundency</li>
+<li>To correct the communication error -&gt; we add redundancy </li>
+<li>Error detection -&gt; instead of correcting errors, it can only check if the errors occurs<ul>
+<li>Applications(detection): <ol>
+<li>ID numbers</li>
+<li>ISBN</li>
+<li>Parity code</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Error correcting -&gt; Can correct errors to some degree</li>
+</ul>
+<h2 id="Application-of-error-detections-x2F-corrections"><a href="#Application-of-error-detections-x2F-corrections" class="headerlink" title="Application of error detections &#x2F; corrections"></a>Application of error detections &#x2F; corrections</h2><ul>
+<li>Taiwan ID:<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/GrBxbtA.png"
+                     
+                ><ol>
+<li>Convert the first English letter into a number(xy):<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/MzCD1dk.png"
+                     
+                ></li>
+<li>$d_1$ &#x3D; x + 9y</li>
+<li>$d_2$ &#x3D; $\sum_{i &#x3D; 1}^8$ i $\cdot$ $a_i$ &#x3D; 1 $\cdot$ $a_1$ + 2 $\cdot$ $a_2$ … +8 $\cdot$ $a_8$</li>
+<li>Check code -&gt; $a_9$ &#x3D; 10 - (($d_1$ + $d_2$) mod 10)</li>
+</ol>
+</li>
+<li>ISBN-10<br>ISBN　template: 0-273-75139</li>
+</ul>
+<ol>
+<li>Compute S &#x3D; 0 $\cdot$ 10 + 2 $\cdot$ 9 +7 $\cdot$ 8 + 3 $\cdot$ 7 + 7 $\cdot$ 6 + 5 $\cdot$ 5 + 1 $\cdot$ 4 + 3 $\cdot$ 3 + 9 $\cdot$ 2 &#x3D; 193</li>
+<li>M &#x3D; S mod 11 &#x3D; 6 </li>
+<li>N &#x3D; 11 - M &#x3D;5<ul>
+<li>If N &#x3D; 10 the check code is X</li>
+<li>If N &#x3D; 11 the check code is 0</li>
+<li>Otherwise, the check code is the number N</li>
+</ul>
+</li>
+<li>The ISBN code  0-273-75139-5</li>
+</ol>
+<ul>
+<li>Parity Bits<ol>
+<li>Making the quantity of 1s odd<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/gaBDWYj.png"
+                     
+                ></li>
+<li>The technique is used in  communication and RAID</li>
+</ol>
+</li>
+<li>An error-correcting code(ECC)<ol>
+<li>(3, 1) repetition code (can correct 1-bit errors) -&gt; seperate the data into groups with 1 bit in each group, and add two bits to authenticate the data<br> <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/SOldZpS.png"
+                     
+                ></li>
+</ol>
+</li>
+<li>Hamming distance<ol>
+<li>Comparing two binary data， hamming distance is the amount of different bits.</li>
+</ol>
+</li>
+<li>Error correction with hamming distance<ol>
+<li>Maximizing hamming distance along the symbols<br>  Sample code book:<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/qvBxx5o.png"
+                     
+                ><ul>
+<li>Ex: received 010100<br> Hammig distance:    <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/43W6zqv.png"
+                     
+                ><br>  According to the chart, we will correct 010100 to 011100(D)</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>Generating (7, 4)Hamming code<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/3ugdiSq.png"
+                     
+                ></li>
+</ul>
+]]></content>
+      <categories>
+        <category>大學課堂筆記</category>
+      </categories>
+      <tags>
+        <tag>計算機概論</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Data Manipulation(I)</title>
+    <url>/2023/01/18/2023-01-17-Data%20Manipulation(I)/</url>
+    <content><![CDATA[<h1 id="Data-Manipulation-I"><a href="#Data-Manipulation-I" class="headerlink" title="Data Manipulation(I)"></a>Data Manipulation(I)</h1><h2 id="The-communication-between-CPU-and-memory"><a href="#The-communication-between-CPU-and-memory" class="headerlink" title="The communication between CPU and memory"></a>The communication between CPU and memory</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/sEBH2IU.png"
+                     
+                ><br>Register -&gt; CPU Cache</p>
+<ul>
+<li>Adding values in memory<ol>
+<li>Get value A from the memory and put it in a register.</li>
+<li>Get value B from the memory and put it in another register.</li>
+<li>Activate the additional circuit and put the final value into another register.</li>
+<li>Store the result the memory.</li>
+</ol>
+</li>
+<li>Machine instruction<ol>
+<li>Data transfer<ul>
+<li>load, store, I&#x2F;O</li>
+</ul>
+</li>
+<li>Arithmetic&#x2F;logic<ul>
+<li>and, or, add, sub…</li>
+<li>shift, halt</li>
+</ul>
+</li>
+<li>Control<ul>
+<li>jump, halt</li>
+</ul>
+</li>
+<li>RISC -&gt; Reduced instruction set computing<ul>
+<li>Ex: PRC, SPRC</li>
+</ul>
+</li>
+<li>CISC -&gt; Complex instruction set computing<ul>
+<li>Ex: x86，x64</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="Example-of-machine-instruction"><a href="#Example-of-machine-instruction" class="headerlink" title="Example of machine instruction"></a>Example of machine instruction</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/UYGKbh0.png"
+                     
+                ></p>
+<ul>
+<li>3 -&gt; store</li>
+<li>5 -&gt; register No.5</li>
+<li>A7 -&gt; memory cell A7<br>-&gt; Store the content of register No.5 to memory cell A7.</li>
+</ul>
+<h2 id="The-machine-instruction-of-adding-two-values"><a href="#The-machine-instruction-of-adding-two-values" class="headerlink" title="The machine instruction of adding two values"></a>The machine instruction of adding two values</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/Xa7EtHE.png"
+                     
+                ></p>
+<h2 id="Program-execution"><a href="#Program-execution" class="headerlink" title="Program execution"></a>Program execution</h2><ul>
+<li><p>Machine cycle<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/N1Jiuk9.png"
+                     
+                ></p>
+</li>
+<li><p>Fetch<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/pJF8QS9.png"
+                     
+                ></p>
+</li>
+<li><p>Clock -&gt; how many machine cycle a cpu is able to do in one second</p>
+</li>
+</ul>
+<h2 id="Arithmetic-and-logic-unit-ALU"><a href="#Arithmetic-and-logic-unit-ALU" class="headerlink" title="Arithmetic and logic unit(ALU)"></a>Arithmetic and logic unit(ALU)</h2><ul>
+<li>Arithmetic operations</li>
+<li>Logic&#x2F;bit operations</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/pfBxlEH.png"
+                     
+                ></li>
+</ul>
+<h2 id="Shift-x2F-Rotation"><a href="#Shift-x2F-Rotation" class="headerlink" title="Shift&#x2F;Rotation"></a>Shift&#x2F;Rotation</h2><ul>
+<li>Logic shift<ul>
+<li>10100000 -&gt; 01010000(right)<br>10100000 -&gt; 01000000(left)<br>Both moving left and right add a 0</li>
+</ul>
+</li>
+<li>Arithmetic shift<ul>
+<li>10100000 -&gt; 11010000(right, the number is divided by 2)<br>Moving right，copy the leftest bit.<br>10100000 -&gt; 11000000(left, the number is multiplied by 2)<br>Moving left，add a 0 to the right.</li>
+</ul>
+</li>
+<li>Rotation <ul>
+<li>10100000 -&gt; 01010000(right)<br>10100000 -&gt; 01000001(left)</li>
+</ul>
+</li>
+</ul>
+<h2 id="Controllers-and-peripheral-devices"><a href="#Controllers-and-peripheral-devices" class="headerlink" title="Controllers and peripheral devices"></a>Controllers and peripheral devices</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/AZ4fwQH.png"
+                     
+                ></p>
+<ul>
+<li>Specialized -&gt; SATA…</li>
+<li>General -&gt; USB, HDMI…</li>
+</ul>
+<h2 id="Memory-mapped-I-x2F-O"><a href="#Memory-mapped-I-x2F-O" class="headerlink" title="Memory-mapped I&#x2F;O"></a>Memory-mapped I&#x2F;O</h2><ul>
+<li>The periphral devices are recognized as part of the memory.<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/YFL6td3.png"
+                     
+                ></li>
+</ul>
+<h2 id="Communication"><a href="#Communication" class="headerlink" title="Communication"></a>Communication</h2><ul>
+<li>DMA(direct memory access)<ul>
+<li>Authorized controllers can access data directly from main memory without notifying CPU</li>
+</ul>
+</li>
+<li>Hand shaking<ul>
+<li>Two way communication</li>
+<li>Coordinating activities</li>
+</ul>
+</li>
+<li>Parallel&#x2F;Serial</li>
+<li>Transfer rate unit -&gt; bit per second</li>
+</ul>
+<h2 id="Pipelining-accelerating-the-process"><a href="#Pipelining-accelerating-the-process" class="headerlink" title="Pipelining(accelerating the process)"></a>Pipelining(accelerating the process)</h2><p>ex -&gt; pre-fetching<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/gPsrUkp.png"
+                     
+                ></p>
+<ul>
+<li>Throughput -&gt; Total amount of work accomplished in a given amount of time</li>
+<li>Pre-fetching issus -&gt; conditional jump</li>
+</ul>
+<h2 id="Parallel-x2F-distributed-computing"><a href="#Parallel-x2F-distributed-computing" class="headerlink" title="Parallel&#x2F;distributed computing"></a>Parallel&#x2F;distributed computing</h2><ul>
+<li>Parallel<ul>
+<li>Multiprocessor</li>
+<li>MIMD，SISD，SIMD，MISD(M-&gt;Multiple，S-&gt;Single，I-&gt;Instruction, D-&gt;Dataset)</li>
+</ul>
+</li>
+<li>Distributed<ul>
+<li>Linking computers via network</li>
+<li>Seperate processors and memory</li>
+</ul>
+</li>
+<li>Issues<ul>
+<li>Data dependency</li>
+<li>Load balancing</li>
+<li>Synchronization</li>
+<li>Reliability</li>
+</ul>
+</li>
+</ul>
+<h2 id="How-to-parallelize"><a href="#How-to-parallelize" class="headerlink" title="How to parallelize?"></a>How to parallelize?</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/xrTQCOL.png"
+                     
+                ></p>
+<h2 id="Speed-up-and-Scaling"><a href="#Speed-up-and-Scaling" class="headerlink" title="Speed up and Scaling"></a>Speed up and Scaling</h2><ul>
+<li>Amdahl’s law(阿姆達爾定律)</li>
+<li>Gain &#x3D; $\frac{1}{\frac{P}{M}+(1-P)}$(P -&gt; proportion that is parallelizable, S -&gt; proportion that is serial only)</li>
+</ul>
+]]></content>
+      <categories>
+        <category>大學課堂筆記</category>
+      </categories>
+      <tags>
+        <tag>計算機概論</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Networking and the Internet(I)</title>
+    <url>/2023/01/18/2023-01-17-Networking%20and%20the%20internet(I)/</url>
+    <content><![CDATA[<h1 id="Networking-and-the-Internet-I"><a href="#Networking-and-the-Internet-I" class="headerlink" title="Networking and the Internet(I)"></a>Networking and the Internet(I)</h1><h2 id="Network-Classifications"><a href="#Network-Classifications" class="headerlink" title="Network Classifications"></a>Network Classifications</h2><ul>
+<li>Scope<ul>
+<li>LAN: Local area network.</li>
+<li>MAN: Metropolitan area network.</li>
+<li>WAN: Wide area network.</li>
+</ul>
+</li>
+<li>Ownership<ul>
+<li>Closed </li>
+<li>Opened</li>
+</ul>
+</li>
+<li>Topology (拓樸學)<ul>
+<li>Bus:<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/1QUPg2e.png"
+                     
+                ></li>
+<li>Ring:<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/bWnGTBf.png"
+                     
+                ></li>
+<li>Star:<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/EWTkIgx.png"
+                     
+                ></li>
+</ul>
+</li>
+</ul>
+<h2 id="Protocols"><a href="#Protocols" class="headerlink" title="Protocols"></a>Protocols</h2><ul>
+<li>Token Ring<ul>
+<li>Popular in ring topology.</li>
+<li>Token and messages are passed in one direction.</li>
+<li>Only the machine which gets the token can transmit its message.</li>
+</ul>
+</li>
+<li>CSMA&#x2F;CD (Carrier sense, mutiple access with collision detection)<ul>
+<li>Popular in bus topology.</li>
+<li>Broadcasting.</li>
+<li>When collision, both machines wait for a random time before trying again.</li>
+</ul>
+</li>
+<li>CSMA&#x2F;CA (Carrier sense, mutiple access with collision avoidence)<ul>
+<li>Popular in wireless Ethernet.</li>
+<li>Broadcasting.</li>
+<li>Detect if a channel is idle, if so, wait for a random time and then detect again. If the channel is still idle, then start sending.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Wireless-and-Access-Point-AP"><a href="#Wireless-and-Access-Point-AP" class="headerlink" title="Wireless and Access Point(AP)"></a>Wireless and Access Point(AP)</h2><ul>
+<li>Wi-Fi(wireless fidelity)</li>
+<li>IEEE 802.11-Standard for wireless network(b, g, i, n, ac…)<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/MOBFzwQ.png"
+                     
+                ></li>
+</ul>
+<h2 id="Repeater，Bridge，Switch-Compatible-Networks"><a href="#Repeater，Bridge，Switch-Compatible-Networks" class="headerlink" title="Repeater，Bridge，Switch(Compatible Networks)"></a>Repeater，Bridge，Switch(Compatible Networks)</h2><p>Reference: <a class="link"   href="https://notfalse.net/66/repeater-hub-bridge-switch" >https://notfalse.net/66/repeater-hub-bridge-switch <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<ul>
+<li>The protocol between these devices have to be the same.</li>
+<li>Repeater(Amplifier)<ul>
+<li>Passing through messages.</li>
+<li>Connecting two compatible networks<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/0t1ZGPW.png"
+                     
+                ></li>
+</ul>
+</li>
+<li>Bridge<ul>
+<li>Only passing those messages addressed to the other side.</li>
+<li>Connecting two compatible networks more efficiently.<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/QEsDF9x.png"
+                     
+                ></li>
+</ul>
+</li>
+<li>Switch(Multiple Bridge)<ul>
+<li>A bridge with multiple connections.</li>
+<li>Connecting mutiple compatible networks efficiently.<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/uwwGpYy.png"
+                     
+                ></li>
+</ul>
+</li>
+</ul>
+<h2 id="Router-Incompatible-Networks"><a href="#Router-Incompatible-Networks" class="headerlink" title="Router(Incompatible Networks)"></a>Router(Incompatible Networks)</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/rJmNTSf.png"
+                     
+                ></p>
+<ul>
+<li>Router<ul>
+<li>Building a network of networks.(The protocol can be different)</li>
+<li>Most come with firewall management.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Interprocess-Communication"><a href="#Interprocess-Communication" class="headerlink" title="Interprocess Communication"></a>Interprocess Communication</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/6pWclWl.png"
+                     
+                ></p>
+<ul>
+<li>Server-Client<ul>
+<li>One server, several clients.</li>
+<li>Clients initiate communications by sending requests.</li>
+</ul>
+</li>
+<li>P2P(Peer-to-Peer)<ul>
+<li>Two processes communicating as equals.</li>
+<li>The most popular distribution mode nowadays.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Distributed-Systems"><a href="#Distributed-Systems" class="headerlink" title="Distributed Systems"></a>Distributed Systems</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/ZmowcOK.png"
+                     
+                ></p>
+<ul>
+<li>Infrastructure can be provided by standardized toolkits.<ul>
+<li>Ex: Java Beans，.NET framework.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Internet-Architecture"><a href="#Internet-Architecture" class="headerlink" title="Internet Architecture"></a>Internet Architecture</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/rB8IPMk.png"
+                     
+                ></p>
+<ul>
+<li>Domain<ul>
+<li>A network or an internet controlled by one single authority.</li>
+</ul>
+</li>
+<li>ICANN(Internmet corporation for assigned names and numbers)<ul>
+<li>Supervise the registration of doimains</li>
+</ul>
+</li>
+<li>Gateway<ul>
+<li>A router that connects a domain to the rest of the Internet.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Internet-Composition"><a href="#Internet-Composition" class="headerlink" title="Internet Composition"></a>Internet Composition</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/3reTfwk.png"
+                     
+                ></p>
+<ul>
+<li>Internet Service Provider(ISP)<ul>
+<li>Allow customer to connect their domain to the ISP’s equiment or join the domain already established by the ISP.</li>
+</ul>
+</li>
+</ul>
+<h2 id="IP-Addresses"><a href="#IP-Addresses" class="headerlink" title="IP Addresses"></a>IP Addresses</h2><ul>
+<li>IP(internet protocol)address<ul>
+<li>IPv4 -&gt; 32bits(all are allocated already)</li>
+<li>IPv6 -&gt; 128bits</li>
+</ul>
+</li>
+</ul>
+<h2 id="Name-Server-vs-Domain-Server"><a href="#Name-Server-vs-Domain-Server" class="headerlink" title="Name Server vs Domain Server"></a>Name Server vs Domain Server</h2><ul>
+<li>Name server: <ul>
+<li>Name servers organize and route traffic across the internet to get you to the right server.</li>
+</ul>
+</li>
+<li>Domain Name Server(DNS)<ul>
+<li>A server that provide you with server information.<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/rYtlfru.png"
+                     
+                ></li>
+</ul>
+</li>
+</ul>
+<h2 id="Internet-Application"><a href="#Internet-Application" class="headerlink" title="Internet Application"></a>Internet Application</h2><ul>
+<li>VoIP(Voice over Internet protocol)</li>
+<li>email(electronic mail)</li>
+<li>FTP(file transfer protocol)</li>
+<li>telnet and ssh(secure shell)</li>
+<li>P2P</li>
+</ul>
+<h2 id="Browsers"><a href="#Browsers" class="headerlink" title="Browsers"></a>Browsers</h2><ul>
+<li>HTTP(Hyper text transfer protocol)</li>
+<li>URL(uniform resource locator)</li>
+<li>How a browser get access to a webpage(document):<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/hY3bIGo.png"
+                     
+                ></li>
+</ul>
+<h2 id="Client-side-and-Server-side"><a href="#Client-side-and-Server-side" class="headerlink" title="Client-side and Server-side"></a>Client-side and Server-side</h2><ul>
+<li>Client-side(The program is executed on one’s pc)<ul>
+<li>Java applets</li>
+<li>Javascript</li>
+<li>Flash</li>
+</ul>
+</li>
+<li>Server-side(The program is executed on the server)<ul>
+<li>CGI</li>
+<li>Servlets</li>
+<li>PHP</li>
+</ul>
+</li>
+<li>Online game use both techniques.</li>
+</ul>
+<h2 id="Internet-Protocol"><a href="#Internet-Protocol" class="headerlink" title="Internet Protocol"></a>Internet Protocol</h2><p>Reference:<a class="link"   href="https://ithelp.ithome.com.tw/articles/10259569?sc=pt" >https://ithelp.ithome.com.tw/articles/10259569?sc=pt <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<ul>
+<li><p>Layers</p>
+<ul>
+<li>OSI Model<ul>
+<li>Reference:   <a class="link"   href="https://en.wikipedia.org/wiki/OSI_model" >https://en.wikipedia.org/wiki/OSI_model <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ul>
+</li>
+</ul>
+<p>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/e5dfV9e.png"
+                     
+                ></p>
+<ul>
+<li>TCP&#x2F;IP Model<ul>
+<li>Application: constructs message into packets.</li>
+<li>Transport: chops message into packages.</li>
+<li>Network: handles routing through the Internet.</li>
+<li>Link handles actual transmission of packets.</li>
+</ul>
+</li>
+</ul>
+<p>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/0gNoMlv.png"
+                     
+                ></p>
+</li>
+<li><p>Port</p>
+<ul>
+<li>Incoming messages are delivered to different applications by unique port numbers.<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/54gXvXI.png"
+                     
+                ></li>
+</ul>
+</li>
+</ul>
+<h2 id="TCP-x2F-IP"><a href="#TCP-x2F-IP" class="headerlink" title="TCP&#x2F;IP"></a>TCP&#x2F;IP</h2><ul>
+<li>TCP and UDP(Transport Layer)<ul>
+<li>TCP(transmission control protocol):handshake berfore sending packets. &#x3D;&gt; slow but reliable.</li>
+<li>UDP(user datagram protocol): directly sending packets. &#x3D;&gt; fast but not reliable.</li>
+</ul>
+</li>
+<li>IP(NEtwork Layer)<ul>
+<li>routing based on IP(IPv4, IPv6)</li>
+</ul>
+</li>
+<li>TCP and IP are two protocols. TCP&#x2F;IP is a collection of protocols more than just TCP and IP.</li>
+</ul>
+<h2 id="Security"><a href="#Security" class="headerlink" title="Security"></a>Security</h2><ul>
+<li>Attacks<ul>
+<li>Malware</li>
+<li>Denial of Service(Dos)</li>
+<li>Spam</li>
+</ul>
+</li>
+<li>Protections<ul>
+<li>Firewall</li>
+<li>Spam filter</li>
+<li>Proxy</li>
+<li>Antivirus, antispyware</li>
+</ul>
+</li>
+<li>Public&#x2F;Private Keys System<ul>
+<li>Reference: <a class="link"   href="https://medium.com/@RiverChan/%E5%9F%BA%E7%A4%8E%E5%AF%86%E7%A2%BC%E5%AD%B8-%E5%B0%8D%E7%A8%B1%E5%BC%8F%E8%88%87%E9%9D%9E%E5%B0%8D%E7%A8%B1%E5%BC%8F%E5%8A%A0%E5%AF%86%E6%8A%80%E8%A1%93-de25fd5fa537" >https://medium.com/@RiverChan/%E5%9F%BA%E7%A4%8E%E5%AF%86%E7%A2%BC%E5%AD%B8-%E5%B0%8D%E7%A8%B1%E5%BC%8F%E8%88%87%E9%9D%9E%E5%B0%8D%E7%A8%B1%E5%BC%8F%E5%8A%A0%E5%AF%86%E6%8A%80%E8%A1%93-de25fd5fa537 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li>SSL(Secure Scoket Layer)<ul>
+<li>Application: sftp, https, ssh</li>
+</ul>
+</li>
+<li>To prevent fishing, a certificate authority is needed, to ensure to correctivity of a key.<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/fnACCIR.png"
+                     
+                ></li>
+</ul>
+</li>
+</ul>
+<h2 id="RSA-Algorithm"><a href="#RSA-Algorithm" class="headerlink" title="RSA Algorithm"></a>RSA Algorithm</h2><p>Reference: <a class="link"   href="https://ithelp.ithome.com.tw/articles/10250721" >https://ithelp.ithome.com.tw/articles/10250721 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<ul>
+<li><p>Generation<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/5SMoi2J.png"
+                     
+                ></p>
+</li>
+<li><p>Encryption<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/WTvEm7R.png"
+                     
+                ></p>
+</li>
+<li><p>Decryption<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/6fnmG7A.png"
+                     
+                ></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>大學課堂筆記</category>
+      </categories>
+      <tags>
+        <tag>計算機概論</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Operating System(I)</title>
+    <url>/2023/01/18/2023-01-17-Operating%20System(I)/</url>
+    <content><![CDATA[<h1 id="Operating-System-I"><a href="#Operating-System-I" class="headerlink" title="Operating System(I)"></a>Operating System(I)</h1><h2 id="Batch-processing-early-era"><a href="#Batch-processing-early-era" class="headerlink" title="Batch processing(early era)"></a>Batch processing(early era)</h2><ul>
+<li>The process of computer operators entering data to the computers and give the result back to you.<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/mVRCkv6.png"
+                     
+                ></li>
+</ul>
+<h2 id="Interactive-processing-early-era"><a href="#Interactive-processing-early-era" class="headerlink" title="Interactive processing(early era)"></a>Interactive processing(early era)</h2><ul>
+<li>OS with remote terminals<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/Kovmajm.png"
+                     
+                ></li>
+<li>Types of operating system<ul>
+<li>Batch(批次)</li>
+<li>Interactive</li>
+<li>Real-time <ul>
+<li>Response time is critical.</li>
+</ul>
+</li>
+<li>Time-sharing and multitasking<ul>
+<li>Dividing time into intervals.</li>
+<li>Only one task is being performed at any given time.</li>
+</ul>
+</li>
+<li>Multiprocessor<ul>
+<li>Load balancing</li>
+<li>Scaling</li>
+</ul>
+</li>
+<li><a class="link"   href="http://www.chwa.com.tw/TResource/VS/book1/ch3/3-2.htm" >http://www.chwa.com.tw/TResource/VS/book1/ch3/3-2.htm <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ul>
+</li>
+<li>Software classification<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/WyObhvz.png"
+                     
+                ></li>
+<li>Shells<ul>
+<li>Communication with users<ul>
+<li>Text based</li>
+<li>GUI(Graphical user interface )</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Kernel"><a href="#Kernel" class="headerlink" title="Kernel"></a>Kernel</h2><ul>
+<li>File manager<ul>
+<li>Directory&#x2F;folder path</li>
+</ul>
+</li>
+<li>Device drivers</li>
+<li>Memory manager<ul>
+<li>Allocating main memory</li>
+<li>Paging, virtual memory</li>
+</ul>
+</li>
+<li>Schedular<ul>
+<li>The component which selects process to execute.</li>
+</ul>
+</li>
+<li>Dispatcher<ul>
+<li>The component which gives control of CPU to execute the process selected by Schedular.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><ul>
+<li>Made by Linus Torvalds</li>
+<li>Freeware and open-source</li>
+<li>Many distribution (Ex: Ubuntu，Kali)</li>
+<li>Linux only means the kernel</li>
+</ul>
+<h2 id="How-is-OS-being-loaded"><a href="#How-is-OS-being-loaded" class="headerlink" title="How is OS being loaded?"></a>How is OS being loaded?</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/2CzC6fw.png"
+                     
+                ></p>
+<ul>
+<li>BIOS(Basic Input&#x2F;Output Sytem)is usually stored on a EEPEROM chip(Electrically-Erasable Programable Read-Only Memory)</li>
+</ul>
+<h2 id="Process"><a href="#Process" class="headerlink" title="Process"></a>Process</h2><ul>
+<li>The activity of executing a program</li>
+<li>Process state<ul>
+<li>Program counter</li>
+<li>General purpose registers</li>
+<li>Associated memory cells</li>
+</ul>
+</li>
+<li>Process table<ul>
+<li>Memory area assigned to the process</li>
+<li>Priority</li>
+<li>Ready&#x2F;waiting(One process for each core)</li>
+</ul>
+</li>
+</ul>
+<h2 id="Process-Administration"><a href="#Process-Administration" class="headerlink" title="Process Administration"></a>Process Administration</h2><ul>
+<li><p>Schedular</p>
+<ul>
+<li>Use: Maintaining the process table</li>
+<li>Introducing new process</li>
+<li>Removing completed process</li>
+<li>Deciding whether a process is ready or waiting</li>
+</ul>
+</li>
+<li><p>Dispatcher<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/ae6Hv5z.png"
+                     
+                ></p>
+<ul>
+<li>Use: Getting the process to running state.</li>
+<li>Controling the allocation of time to the process in the process table.</li>
+<li>Process switch(interrupt)<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/vvtyj1e.png"
+                     
+                ><br>  Multiprogramming between two processes.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Semaphores"><a href="#Semaphores" class="headerlink" title="Semaphores"></a>Semaphores</h2><ul>
+<li>Meaning of semaphore: A visual sinaling appratus with flags, lights…</li>
+<li>Test-and-set: Uninterruptible process, it will change the status of false to true and return it.</li>
+<li>Critical region(臨界區段): A region that is only accessible to a program.<ul>
+<li>Mutual exclusion(互斥鎖): A process that prevents simultaneous access to a shared resource.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Prerequisites-for-Deadlock"><a href="#Prerequisites-for-Deadlock" class="headerlink" title="Prerequisites for Deadlock"></a>Prerequisites for Deadlock</h2><ul>
+<li>Deadlock may occur only if all three of the following conditions(necessary but insufficient) are satisfied<ol>
+<li>Competition for non-shareable resources</li>
+<li>Resources are requested on a partial basis, receiving some resources and return later to request more.</li>
+<li>Once a resource has been allocated, it cannot be forcibly retrieved.</li>
+</ol>
+</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/LWgDTY9.png"
+                     
+                ></p>
+<ul>
+<li>To prevent Deadlock from happening, we have to avoid the conditions mentioned above being satisfied.</li>
+</ul>
+<h2 id="The-Consequence-of-Preventing-Deadlock-from-Happening"><a href="#The-Consequence-of-Preventing-Deadlock-from-Happening" class="headerlink" title="The Consequence of Preventing Deadlock from Happening"></a>The Consequence of Preventing Deadlock from Happening</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/HxCTDOU.png"
+                     
+                ></p>
+<ul>
+<li>Starvation: Process cannot get the resources needed for a long time because the resources keep being allocated to other processes.</li>
+<li>The solution to starvation -&gt; (Aging): Adding an aging factor to the priority of each request.</li>
+</ul>
+]]></content>
+      <categories>
+        <category>大學課堂筆記</category>
+      </categories>
+      <tags>
+        <tag>計算機概論</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Introduction to C++ Programing</title>
+    <url>/2023/01/18/Chapter%202,%20Introduction%20to%20C++%20Programing/</url>
+    <content><![CDATA[<h1 id="Chapter-2-Introduction-to-C-Programing"><a href="#Chapter-2-Introduction-to-C-Programing" class="headerlink" title="Chapter 2, Introduction to C++ Programing"></a>Chapter 2, Introduction to C++ Programing</h1><h2 id="The-Sturcture-of-Basic-C-Program"><a href="#The-Sturcture-of-Basic-C-Program" class="headerlink" title="The Sturcture of Basic C++ Program"></a>The Sturcture of Basic C++ Program</h2><ul>
+<li>The lines start with # are processed by the preprocessor.</li>
+<li>&lt;iostream&gt; is the input&#x2F;output stream header file.</li>
+<li>The int main() means that the main program will return an integar value.</li>
+<li>std::cout specifies that we are using namspace std.</li>
+</ul>
+<h2 id="The-Use-of-Escape-Sequence"><a href="#The-Use-of-Escape-Sequence" class="headerlink" title="The Use of Escape Sequence"></a>The Use of Escape Sequence</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/G8kcne8.png"
+                     
+                ></p>
+<h2 id="The-Declaration-of-Variables"><a href="#The-Declaration-of-Variables" class="headerlink" title="The Declaration of Variables"></a>The Declaration of Variables</h2><ul>
+<li>void -&gt; Function does not return a value.</li>
+<li>int -&gt; Declare integar variables.</li>
+<li>char -&gt; Declare character variables.<ul>
+<li>char can also be stored as integer.</li>
+</ul>
+</li>
+<li>float -&gt; Declare floating-point variables.</li>
+<li>double -&gt; Declare double-precision variables.</li>
+<li>bool -&gt; To hold a boolean value, true&#x2F;false.</li>
+</ul>
+<h2 id="Arithmetic-Operators"><a href="#Arithmetic-Operators" class="headerlink" title="Arithmetic Operators"></a>Arithmetic Operators</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/IhflKJP.png"
+                     
+                ></p>
+<ul>
+<li>The rules of operator precedence as generally same as those in algebra.</li>
+<li>Exponentiation -&gt; Import &lt;math.h&gt;</li>
+</ul>
+<h2 id="Equality-and-Relational-Operators"><a href="#Equality-and-Relational-Operators" class="headerlink" title="Equality and Relational Operators"></a>Equality and Relational Operators</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/rmHds4R.png"
+                     
+                ></p>
+]]></content>
+      <categories>
+        <category>大學課堂筆記</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Control Statement-Part 1</title>
+    <url>/2023/01/18/Chapter%203,%20Control%20Statement_%20Part%201/</url>
+    <content><![CDATA[<h1 id="Chapter-3-Control-Statement-Part-1"><a href="#Chapter-3-Control-Statement-Part-1" class="headerlink" title="Chapter 3, Control Statement: Part 1"></a>Chapter 3, Control Statement: Part 1</h1><h2 id="Control-Structure"><a href="#Control-Structure" class="headerlink" title="Control Structure"></a>Control Structure</h2><ul>
+<li>The sequence structure</li>
+<li>The selection strcture</li>
+<li>The repetition structure</li>
+</ul>
+<h2 id="Selection-Statements"><a href="#Selection-Statements" class="headerlink" title="Selection Statements"></a>Selection Statements</h2><ul>
+<li>To choose among courses of action.</li>
+<li>if: A single-selection statement</li>
+<li>if…else: A double-selection statement</li>
+<li>switch: A multiselection statement</li>
+</ul>
+<h3 id="Conditional-Operators"><a href="#Conditional-Operators" class="headerlink" title="Conditional Operators(?:)"></a>Conditional Operators(?:)</h3><ul>
+<li>Closely related to the if..else function.</li>
+<li>Ex:   <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> x&#123;<span class="number">0</span>&#125;, y&#123;<span class="number">1</span>&#125;;</span><br><span class="line">    result=x&lt;y?<span class="string">&quot;x&lt;y&quot;</span>:<span class="string">&quot;x&gt;y&quot;</span>;</span><br><span class="line">    std::cout&lt;&lt;result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+  Accodring to the code, it will cout  x$&lt;$y in the command prompt.</li>
+<li>Another way to declare integers: int x{0} equals to int x&#x3D;0</li>
+</ul>
+<h2 id="Repetition-Statements-Looping-Statements"><a href="#Repetition-Statements-Looping-Statements" class="headerlink" title="Repetition Statements(Looping Statements)"></a>Repetition Statements(Looping Statements)</h2><ul>
+<li>while: do the action zero or more times.</li>
+<li>do…while: do the action at least once.</li>
+<li>for: do the action zero or more times.</li>
+</ul>
+<h3 id="Counter-Controlled-Repetition"><a href="#Counter-Controlled-Repetition" class="headerlink" title="Counter Controlled Repetition"></a>Counter Controlled Repetition</h3><ul>
+<li>Counter variables are normally initialized to zero or one, depending on their use.</li>
+<li>Remember to initialize the counter varible, or it might contain some garbage variable.</li>
+</ul>
+<h2 id="How-to-change-the-tpye-of-a-object"><a href="#How-to-change-the-tpye-of-a-object" class="headerlink" title="How to change the tpye of a object"></a>How to change the tpye of a object</h2><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">static_cast</span>&lt;type&gt;(object);</span><br><span class="line">    (type)object;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h2 id="setprecision"><a href="#setprecision" class="headerlink" title="setprecision()"></a>setprecision()</h2><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#inlcude <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    std::cout&lt;&lt;std::<span class="built_in">setprecision</span>(<span class="number">2</span>)&lt;&lt;floatnum; <span class="comment">//start from the first num after fixed point</span></span><br><span class="line">    std::cout&lt;&lt;fixed::std::<span class="built_in">setprecision</span>(<span class="number">2</span>)&lt;&lt;floatnum; <span class="comment">//start from the first num before fixed point</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h2 id="Common-Keywords-in-C-and-C"><a href="#Common-Keywords-in-C-and-C" class="headerlink" title="Common Keywords in C++ and C"></a>Common Keywords in C++ and C</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/qm5wD9b.png"
+                     
+                ></p>
+<h2 id="Assignment-Operators"><a href="#Assignment-Operators" class="headerlink" title="Assignment Operators"></a>Assignment Operators</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/JHI93gS.png"
+                     
+                ></p>
+<h2 id="Preincrement-and-Postincrement"><a href="#Preincrement-and-Postincrement" class="headerlink" title="Preincrement and Postincrement"></a>Preincrement and Postincrement</h2><ul>
+<li>Preincrement &#x3D;&gt; Increment a by 1, then use the new value of a in the expression in which a resides.</li>
+<li>Postincrement &#x3D;&gt; Use the current value of a in the expression in which a resides, then increment a by 1.<br>Ex:</li>
+</ul>
+<pre><code class="c++=">#include &lt;iostream&gt;
+int main()&#123;
+    int a=1;
+    std::cout&lt;&lt;a&lt;&lt;&quot;\n&quot;;
+    std::cout&lt;&lt;a++&lt;&lt;&quot;\n&quot;; //do a=a+1 after cout
+    std::cout&lt;&lt;a&lt;&lt;&quot;\n&quot;;
+
+    int b=1;
+    std::cout&lt;&lt;b&lt;&lt;&quot;\n&quot;;
+    std::cout&lt;&lt;++b&lt;&lt;&quot;\n&quot;; //do b=b+1 before cout
+    std::cout&lt;&lt;b&lt;&lt;&quot;\n&quot;;
+&#125;
+</code></pre>
+]]></content>
+      <categories>
+        <category>大學課堂筆記</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Control Statement-Part 2</title>
+    <url>/2023/01/18/Chapter%204,%20Control%20Statement_%20Part%202/</url>
+    <content><![CDATA[<h1 id="Chapter-4-Control-Statement-Part-2"><a href="#Chapter-4-Control-Statement-Part-2" class="headerlink" title="Chapter 4, Control Statement: Part 2"></a>Chapter 4, Control Statement: Part 2</h1><h2 id="do…while"><a href="#do…while" class="headerlink" title="do…while"></a>do…while</h2><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;<span class="keyword">while</span>;(condition)</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>do…while always check the continuation after the code inside the {} has been excecuted. Therefore, it will execute at least one time.<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/OQEIHFE.png"
+                     
+                ></li>
+</ul>
+<h2 id="switch-case"><a href="#switch-case" class="headerlink" title="switch case"></a>switch case</h2><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span>(expression)&#123;</span><br><span class="line">    <span class="keyword">case</span> constant1:</span><br><span class="line">        <span class="comment">//execute while expression is constant1;</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> constant2:</span><br><span class="line">        <span class="comment">//execute while expression is constant2;</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;F&#x27;</span>:</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&#x27;f&#x27;</span>:</span><br><span class="line">        <span class="comment">//execute while expression is F or f;</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>+<span class="number">2</span>:</span><br><span class="line">        <span class="comment">//not allowed</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>+<span class="number">4</span>:</span><br><span class="line">        <span class="comment">//not allowed</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        ...</span><br><span class="line">        <span class="comment">//code to be executed if expression doesn&#x27;t</span></span><br><span class="line">        <span class="comment">// match any constant</span></span><br><span class="line">        </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>Perform many different actions based on the value of expression.<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/ygwibqG.png"
+                     
+                ></li>
+</ul>
+<h2 id="setw"><a href="#setw" class="headerlink" title="setw()"></a>setw()</h2><p>*　setw() &#x3D;&gt; print spaces to make it tidy.<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/rY3G69w.png"
+                     
+                ></p>
+<h2 id="EOF"><a href="#EOF" class="headerlink" title="EOF"></a>EOF</h2><ul>
+<li>EOF &#x3D;&gt; End of file by entering ctrl+z.<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line">cin&gt;&gt;sth;</span><br><span class="line"><span class="keyword">while</span>(cin.<span class="built_in">get</span>()!=EOF)&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h2 id="cin-get-vs-cin-gt-gt"><a href="#cin-get-vs-cin-gt-gt" class="headerlink" title="cin.get() vs cin&gt;&gt;"></a>cin.get() vs cin&gt;&gt;</h2><ul>
+<li>cin.get() -&gt; only read one character.</li>
+<li>cin -&gt; depends on &gt;&gt;.<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> grade, aC&#123;<span class="number">0</span>&#125;, bC&#123;<span class="number">0</span>&#125;, cC&#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="keyword">while</span>((grade=std::cin.<span class="built_in">get</span>())!=EOF)&#123;</span><br><span class="line">        <span class="keyword">switch</span>(grade)&#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;a&#x27;</span>:</span><br><span class="line">            aC++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;b&#x27;</span>:</span><br><span class="line">            bC++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;c&#x27;</span>:</span><br><span class="line">            cC++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;\n&#x27;</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;\t&#x27;</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27; &#x27;</span>:</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    std::cout&lt;&lt;aC&lt;&lt;<span class="string">&#x27; &#x27;</span>&lt;&lt;bC&lt;&lt;<span class="string">&#x27; &#x27;</span>&lt;&lt;cC;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h2 id="C-Modified-Data-Types"><a href="#C-Modified-Data-Types" class="headerlink" title="C++ Modified Data Types"></a>C++ Modified Data Types</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/tTgVBZW.png"
+                     
+                ></p>
+<h2 id="Continue-vs-Break"><a href="#Continue-vs-Break" class="headerlink" title="Continue vs Break"></a>Continue vs Break</h2><ul>
+<li>Continue -&gt; Only skip a specific process.</li>
+<li>Break -&gt; Skip the whole process.</li>
+</ul>
+<h2 id="Boolalpha"><a href="#Boolalpha" class="headerlink" title="Boolalpha"></a>Boolalpha</h2><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line">std::cout&lt;&lt;<span class="literal">true</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">std::cout&lt;&lt;std::boolalpha;</span><br><span class="line">std::cout&lt;&lt;<span class="literal">true</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line"><span class="comment">//The result will be 1 and true.</span></span><br></pre></td></tr></table></figure></div>
+<h2 id="Operator’s-Precedence"><a href="#Operator’s-Precedence" class="headerlink" title="Operator’s Precedence"></a>Operator’s Precedence</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/MyvXHDH.png"
+                     
+                ></p>
+<ul>
+<li>The right side of the &amp;&amp; will only be considered if the left side is true.</li>
+<li>The &amp;&amp; operator has a higher precedence than ||;</li>
+<li>Any nonezero value is interpreted as ture. Which means if(a&#x3D;5){…} will be true.</li>
+</ul>
+]]></content>
+      <categories>
+        <category>大學課堂筆記</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Functions and Introduction to Recursion</title>
+    <url>/2023/01/18/Chapter%205%20Functions%20and%20Introduction%20to%20Recursion/</url>
+    <content><![CDATA[<h1 id="Chapter-5-Functions-and-Introduction-to-Recursion"><a href="#Chapter-5-Functions-and-Introduction-to-Recursion" class="headerlink" title="Chapter 5 Functions and Introduction to Recursion"></a>Chapter 5 Functions and Introduction to Recursion</h1><h2 id="Cmath"><a href="#Cmath" class="headerlink" title="Cmath"></a>Cmath</h2> <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br></pre></td></tr></table></figure></div>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/wRjFGr7.png"
+                     
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/QFZhdi3.png"
+                     
+                ></p>
+<h2 id="Defining-Our-Own-Fucntion"><a href="#Defining-Our-Own-Fucntion" class="headerlink" title="Defining Our Own Fucntion"></a>Defining Our Own Fucntion</h2><ul>
+<li>Exapmple(square function)<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">square</span><span class="params">(<span class="type">int</span>)</span></span>; <span class="comment">//function prototype declaration</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ...sth</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">square</span><span class="params">(<span class="type">int</span> y)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> y*y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
+<li>We can define a function with default value.</li>
+<li>Default value must be the rightmost in a function’s parameter list.</li>
+</ul>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">square</span><span class="params">(<span class="type">int</span> y=<span class="number">1</span>)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> y*y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">square</span>(); <span class="comment">//cout 1</span></span><br><span class="line">    <span class="built_in">square</span>(<span class="number">2</span>); <span class="comment">//cout 4</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h2 id="void"><a href="#void" class="headerlink" title="void"></a>void</h2><ul>
+<li>Used when defining a function that doesn’t return a value.<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">square</span><span class="params">(<span class="type">int</span> x)</span></span>&#123;</span><br><span class="line">    std::cout&lt;&lt;x*x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h2 id="Standard-Library-Header-Files"><a href="#Standard-Library-Header-Files" class="headerlink" title="Standard Library Header Files"></a>Standard Library Header Files</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/QO6ThdF.png"
+                     
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/JFYKrW9.png"
+                     
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/JBLkhgH.png"
+                     
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/ROPhZnW.png"
+                     
+                ></p>
+<h2 id="Random-Number"><a href="#Random-Number" class="headerlink" title="Random Number"></a>Random Number</h2><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="built_in">rand</span>()</span><br></pre></td></tr></table></figure></div>
+<h2 id="Time-Function"><a href="#Time-Function" class="headerlink" title="Time Function"></a>Time Function</h2><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ctime&gt;</span></span></span><br><span class="line">...</span><br><span class="line"><span class="built_in">time</span>();/How many seconds has passed since <span class="number">1970.1</span><span class="number">.1</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span></span><br></pre></td></tr></table></figure></div>
+<h2 id="Why-is-rand-not-that-random"><a href="#Why-is-rand-not-that-random" class="headerlink" title="Why is rand() not that random?"></a>Why is rand() not that random?</h2><ul>
+<li>You have to set random seed. <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line">...</span><br><span class="line"><span class="type">unsigned</span> <span class="type">int</span> seed&#123;<span class="number">0</span>&#125;;</span><br><span class="line">cin&gt;&gt;seed; <span class="comment">//input a random number.</span></span><br><span class="line"><span class="built_in">srand</span>(seed);</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ctime&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line">...</span><br><span class="line"><span class="built_in">srand</span>(<span class="built_in">time</span>());</span><br><span class="line">...</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h2 id="Enumerate"><a href="#Enumerate" class="headerlink" title="Enumerate"></a>Enumerate</h2><ul>
+<li>If i set win&#x3D;1, lost will be 2, continue will be 3.</li>
+<li>win{1} is not allowed, only win&#x3D;1 will work.<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//example</span></span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">Game_Status</span>&#123;WIN, LOST, CONTINUE&#125;; </span><br><span class="line"><span class="comment">//win=0, lost=1, continue=2.</span></span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h2 id="static-using-with-local-variables"><a href="#static-using-with-local-variables" class="headerlink" title="static using with local variables"></a>static using with local variables</h2><ul>
+<li>You can see it as a way to make local variable to become a global variable.</li>
+<li>It will only be initialized one time!<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//example</span></span><br><span class="line"><span class="type">static</span> <span class="type">int</span> x=<span class="number">1</span>;</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//Example code</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">static_num</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">static</span> <span class="type">int</span> x=<span class="number">1</span>;</span><br><span class="line">    cout&lt;&lt;x&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    x++;</span><br><span class="line">    cout&lt;&lt;x&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">static_num</span>();</span><br><span class="line">    <span class="built_in">static_num</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h2 id="static-using-with-global-variables"><a href="#static-using-with-global-variables" class="headerlink" title="static using with global variables"></a>static using with global variables</h2><ul>
+<li>The variable used with static is only accessible for the specific file.</li>
+</ul>
+<h2 id="extern"><a href="#extern" class="headerlink" title="extern"></a>extern</h2><ul>
+<li>Get a variable from another file.<br>Ex:<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//file_1</span></span><br><span class="line"><span class="type">int</span> a=<span class="number">1</span>;</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//file_2</span></span><br><span class="line"><span class="keyword">extern</span> a;</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h2 id="inline"><a href="#inline" class="headerlink" title="inline"></a>inline</h2><ul>
+<li>The cost of defining a function is too big，inline will decrease the cost.</li>
+<li>The concept of inline is expansion</li>
+<li>inline can only be used when doing simple calculation.<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="title">cube</span><span class="params">(<span class="type">int</span> x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x*x*x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> x=<span class="number">0</span>;</span><br><span class="line">    cin&gt;&gt;x;</span><br><span class="line">    cout&lt;&lt;<span class="built_in">cube</span>(x); <span class="comment">//cube(x)=x*x*x</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h2 id="Pass-by-reference"><a href="#Pass-by-reference" class="headerlink" title="Pass by reference."></a>Pass by reference.</h2><ul>
+<li>It will affect the original value of a variable.</li>
+<li>Adding a ‘&amp;’ in front of a variable, with ‘&amp;’ the function will directly put the variable (num) into the function.</li>
+<li>It won’t use extra ram space to store a number. (int a&#x3D;1; int b&#x3D;a; will use extra ram space)</li>
+<li>The concept is like domain. <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">function</span><span class="params">(<span class="type">int</span> &amp;number)</span></span>&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//example</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">cube</span><span class="params">(<span class="type">int</span> &amp;x)</span></span>&#123;</span><br><span class="line">    x=x*x*x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> num=<span class="number">0</span>;</span><br><span class="line">    cin&gt;&gt;num;</span><br><span class="line">    <span class="built_in">cube</span>(num);</span><br><span class="line">    cout&lt;&lt;num;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h2 id="Acces-to-a-global-variable"><a href="#Acces-to-a-global-variable" class="headerlink" title="Acces to a global variable"></a>Acces to a global variable</h2><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="type">int</span> x=<span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> x=<span class="number">5</span>;</span><br><span class="line">    std::cout&lt;&lt;::x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h2 id="Function-overloading"><a href="#Function-overloading" class="headerlink" title="Function overloading"></a>Function overloading</h2><ul>
+<li>C++ enables several functions of the same name to be defined, as long as they have different signatures.</li>
+<li>The compiler will automatically choose the proper function to execute. Depending on the data type or the amount of the parameter list  <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">square</span><span class="params">(<span class="type">int</span> x)</span></span>&#123;</span><br><span class="line">    std::cout&lt;&lt;x*x&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">square</span><span class="params">(<span class="type">double</span> x)</span></span>&#123;</span><br><span class="line">    std::cout&lt;&lt;x*x&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">square</span>(<span class="number">1</span>); <span class="comment">//cout 1</span></span><br><span class="line">    <span class="built_in">square</span>(<span class="number">1.1</span>); <span class="comment">//cout 1.21</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h2 id="Making-and-using-your-own-library"><a href="#Making-and-using-your-own-library" class="headerlink" title="Making and using your own library"></a>Making and using your own library</h2><ul>
+<li>Example: Finding max of three numbers.</li>
+<li>.h template</li>
+<li>template &lt;class T&gt; means that every type of data can use this function.</li>
+<li>The way to decalre a template function is the same as normal function.<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="function">T <span class="title">maximum</span><span class="params">(T value1, T Value2, T Value3)</span></span>&#123;</span><br><span class="line">    T maximumValue =value1;</span><br><span class="line">    <span class="keyword">if</span>(Value2&gt;maximumValue)&#123;</span><br><span class="line">        maximumValue=Value2;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(Value3&gt;maximumValue)&#123;</span><br><span class="line">        maximumValue=Value3;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> maximumValue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
+<li>main program<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;maximum.h&quot;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> x, y, z;</span><br><span class="line">    <span class="keyword">while</span>(std::cin&gt;&gt;x&gt;&gt;y&gt;&gt;z)&#123;</span><br><span class="line">        std::cout&lt;&lt;<span class="string">&quot;Max= &quot;</span>&lt;&lt;<span class="built_in">maximum</span>(x, y, z);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h2 id="Recursion"><a href="#Recursion" class="headerlink" title="Recursion"></a>Recursion</h2><ul>
+<li>A function calling oneself.</li>
+<li>Example of factorial of a nonnegative function with recursion.<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">unsigned</span> <span class="type">long</span> <span class="title">factorial</span><span class="params">(<span class="type">unsigned</span> <span class="type">long</span> num)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(num&lt;=<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> num*<span class="built_in">factorial</span>(num<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
+<li>Example of Fibonacci Series<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">unsigned</span> <span class="type">long</span> <span class="title">fib</span><span class="params">(usigned <span class="type">long</span> num)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(num==<span class="number">1</span>||num==<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">fib</span>(num<span class="number">-1</span>)+<span class="built_in">fib</span>(num<span class="number">-2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+]]></content>
+      <categories>
+        <category>大學課堂筆記</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>自我介紹</title>
+    <url>/2023/01/17/%E8%87%AA%E6%88%91%E4%BB%8B%E7%B4%B9/</url>
+    <content><![CDATA[<h3 id="大家好，我是ItzLanJiao，目前就讀彰化師範大學電子工程學系大一，本網站的目的是為了對大學四年的課堂內容及個人手做小專題做些紀錄及分享，歡迎你的到來"><a href="#大家好，我是ItzLanJiao，目前就讀彰化師範大學電子工程學系大一，本網站的目的是為了對大學四年的課堂內容及個人手做小專題做些紀錄及分享，歡迎你的到來" class="headerlink" title="大家好，我是ItzLanJiao，目前就讀彰化師範大學電子工程學系大一，本網站的目的是為了對大學四年的課堂內容及個人手做小專題做些紀錄及分享，歡迎你的到來!"></a>大家好，我是ItzLanJiao，目前就讀彰化師範大學電子工程學系大一，本網站的目的是為了對大學四年的課堂內容及個人手做小專題做些紀錄及分享，歡迎你的到來!</h3>]]></content>
+      <tags>
+        <tag>Introduction</tag>
+      </tags>
+  </entry>
+</search>

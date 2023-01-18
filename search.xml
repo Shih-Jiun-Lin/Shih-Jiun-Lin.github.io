@@ -562,162 +562,6 @@ will correct 010100 to 011100(D)</li>
       </tags>
   </entry>
   <entry>
-    <title>Operating System(I)</title>
-    <url>/2023/01/18/2023-01-17-Operating%20System(I)/</url>
-    <content><![CDATA[<h1 id="operating-systemi">Operating System(I)</h1>
-<h2 id="batch-processingearly-era">Batch processing(early era)</h2>
-<ul>
-<li>The process of computer operators entering data to the computers and
-give the result back to you. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/mVRCkv6.png"></li>
-</ul>
-<h2 id="interactive-processingearly-era">Interactive processing(early
-era)</h2>
-<ul>
-<li>OS with remote terminals <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/Kovmajm.png"></li>
-<li>Types of operating system Reference: <a class="link" href="http://www.chwa.com.tw/TResource/VS/book1/ch3/3-2.htm">link <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>
-<ul>
-<li>Batch(批次)</li>
-<li>Interactive</li>
-<li>Real-time
-<ul>
-<li>Response time is critical.</li>
-</ul></li>
-<li>Time-sharing and multitasking
-<ul>
-<li>Dividing time into intervals.</li>
-<li>Only one task is being performed at any given time.</li>
-</ul></li>
-<li>Multiprocessor
-<ul>
-<li>Load balancing</li>
-<li>Scaling</li>
-</ul></li>
-</ul></li>
-<li>Software classification <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/WyObhvz.png"></li>
-<li>Shells
-<ul>
-<li>Communication with users
-<ul>
-<li>Text based</li>
-<li>GUI(Graphical user interface )</li>
-</ul></li>
-</ul></li>
-</ul>
-<h2 id="kernel">Kernel</h2>
-<ul>
-<li>File manager
-<ul>
-<li>Directory/folder path</li>
-</ul></li>
-<li>Device drivers</li>
-<li>Memory manager
-<ul>
-<li>Allocating main memory</li>
-<li>Paging, virtual memory<br>
-</li>
-</ul></li>
-<li>Schedular
-<ul>
-<li>The component which selects process to execute.</li>
-</ul></li>
-<li>Dispatcher
-<ul>
-<li>The component which gives control of CPU to execute the process
-selected by Schedular.</li>
-</ul></li>
-</ul>
-<h2 id="linux">Linux</h2>
-<ul>
-<li>Made by Linus Torvalds</li>
-<li>Freeware and open-source</li>
-<li>Many distribution (Ex: Ubuntu，Kali)</li>
-<li>Linux only means the kernel</li>
-</ul>
-<h2 id="how-is-os-being-loaded">How is OS being loaded?</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/2CzC6fw.png"></p>
-<ul>
-<li>BIOS(Basic Input/Output Sytem)is usually stored on a EEPEROM
-chip(Electrically-Erasable Programable Read-Only Memory)</li>
-</ul>
-<h2 id="process">Process</h2>
-<ul>
-<li>The activity of executing a program</li>
-<li>Process state
-<ul>
-<li>Program counter</li>
-<li>General purpose registers</li>
-<li>Associated memory cells</li>
-</ul></li>
-<li>Process table
-<ul>
-<li>Memory area assigned to the process</li>
-<li>Priority</li>
-<li>Ready/waiting(One process for each core)</li>
-</ul></li>
-</ul>
-<h2 id="process-administration">Process Administration</h2>
-<ul>
-<li>Schedular
-<ul>
-<li>Use: Maintaining the process table</li>
-<li>Introducing new process</li>
-<li>Removing completed process</li>
-<li>Deciding whether a process is ready or waiting</li>
-</ul></li>
-<li>Dispatcher <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ae6Hv5z.png">
-<ul>
-<li>Use: Getting the process to running state.</li>
-<li>Controling the allocation of time to the process in the process
-table.</li>
-<li>Process switch(interrupt) <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/vvtyj1e.png"> Multiprogramming between two
-processes.</li>
-</ul></li>
-</ul>
-<h2 id="semaphores">Semaphores</h2>
-<ul>
-<li>Meaning of semaphore: A visual sinaling appratus with flags,
-lights...</li>
-<li>Test-and-set: Uninterruptible process, it will change the status of
-false to true and return it.</li>
-<li>Critical region(臨界區段): A region that is only accessible to a
-program.
-<ul>
-<li>Mutual exclusion(互斥鎖): A process that prevents simultaneous
-access to a shared resource.</li>
-</ul></li>
-</ul>
-<h2 id="prerequisites-for-deadlock">Prerequisites for Deadlock</h2>
-<ul>
-<li>Deadlock may occur only if all three of the following
-conditions(necessary but insufficient) are satisfied
-<ol type="1">
-<li>Competition for non-shareable resources</li>
-<li>Resources are requested on a partial basis, receiving some resources
-and return later to request more.</li>
-<li>Once a resource has been allocated, it cannot be forcibly retrieved.
-<img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/LWgDTY9.png"></li>
-</ol></li>
-<li>To prevent Deadlock from happening, we have to avoid the conditions
-mentioned above being satisfied.</li>
-</ul>
-<h2 id="the-consequence-of-preventing-deadlock-from-happening">The
-Consequence of Preventing Deadlock from Happening</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/HxCTDOU.png"></p>
-<ul>
-<li>Starvation: Process cannot get the resources needed for a long time
-because the resources keep being allocated to other processes.</li>
-<li>The solution to starvation -&gt; (Aging): Adding an aging factor to
-the priority of each request.</li>
-</ul>
-]]></content>
-      <categories>
-        <category>大學課堂筆記-計算機概論</category>
-      </categories>
-      <tags>
-        <tag>計算機概論</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Networking and the Internet(I)</title>
     <url>/2023/01/18/2023-01-17-Networking%20and%20the%20internet(I)/</url>
     <content><![CDATA[<h1 id="networking-and-the-interneti">Networking and the
@@ -977,6 +821,162 @@ correctivity of a key. <img lazyload="" src="/images/loading.svg" data-src="http
       </tags>
   </entry>
   <entry>
+    <title>Operating System(I)</title>
+    <url>/2023/01/18/2023-01-17-Operating%20System(I)/</url>
+    <content><![CDATA[<h1 id="operating-systemi">Operating System(I)</h1>
+<h2 id="batch-processingearly-era">Batch processing(early era)</h2>
+<ul>
+<li>The process of computer operators entering data to the computers and
+give the result back to you. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/mVRCkv6.png"></li>
+</ul>
+<h2 id="interactive-processingearly-era">Interactive processing(early
+era)</h2>
+<ul>
+<li>OS with remote terminals <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/Kovmajm.png"></li>
+<li>Types of operating system Reference: <a class="link" href="http://www.chwa.com.tw/TResource/VS/book1/ch3/3-2.htm">link <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>
+<ul>
+<li>Batch(批次)</li>
+<li>Interactive</li>
+<li>Real-time
+<ul>
+<li>Response time is critical.</li>
+</ul></li>
+<li>Time-sharing and multitasking
+<ul>
+<li>Dividing time into intervals.</li>
+<li>Only one task is being performed at any given time.</li>
+</ul></li>
+<li>Multiprocessor
+<ul>
+<li>Load balancing</li>
+<li>Scaling</li>
+</ul></li>
+</ul></li>
+<li>Software classification <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/WyObhvz.png"></li>
+<li>Shells
+<ul>
+<li>Communication with users
+<ul>
+<li>Text based</li>
+<li>GUI(Graphical user interface )</li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="kernel">Kernel</h2>
+<ul>
+<li>File manager
+<ul>
+<li>Directory/folder path</li>
+</ul></li>
+<li>Device drivers</li>
+<li>Memory manager
+<ul>
+<li>Allocating main memory</li>
+<li>Paging, virtual memory<br>
+</li>
+</ul></li>
+<li>Schedular
+<ul>
+<li>The component which selects process to execute.</li>
+</ul></li>
+<li>Dispatcher
+<ul>
+<li>The component which gives control of CPU to execute the process
+selected by Schedular.</li>
+</ul></li>
+</ul>
+<h2 id="linux">Linux</h2>
+<ul>
+<li>Made by Linus Torvalds</li>
+<li>Freeware and open-source</li>
+<li>Many distribution (Ex: Ubuntu，Kali)</li>
+<li>Linux only means the kernel</li>
+</ul>
+<h2 id="how-is-os-being-loaded">How is OS being loaded?</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/2CzC6fw.png"></p>
+<ul>
+<li>BIOS(Basic Input/Output Sytem)is usually stored on a EEPEROM
+chip(Electrically-Erasable Programable Read-Only Memory)</li>
+</ul>
+<h2 id="process">Process</h2>
+<ul>
+<li>The activity of executing a program</li>
+<li>Process state
+<ul>
+<li>Program counter</li>
+<li>General purpose registers</li>
+<li>Associated memory cells</li>
+</ul></li>
+<li>Process table
+<ul>
+<li>Memory area assigned to the process</li>
+<li>Priority</li>
+<li>Ready/waiting(One process for each core)</li>
+</ul></li>
+</ul>
+<h2 id="process-administration">Process Administration</h2>
+<ul>
+<li>Schedular
+<ul>
+<li>Use: Maintaining the process table</li>
+<li>Introducing new process</li>
+<li>Removing completed process</li>
+<li>Deciding whether a process is ready or waiting</li>
+</ul></li>
+<li>Dispatcher <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ae6Hv5z.png">
+<ul>
+<li>Use: Getting the process to running state.</li>
+<li>Controling the allocation of time to the process in the process
+table.</li>
+<li>Process switch(interrupt) <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/vvtyj1e.png"> Multiprogramming between two
+processes.</li>
+</ul></li>
+</ul>
+<h2 id="semaphores">Semaphores</h2>
+<ul>
+<li>Meaning of semaphore: A visual sinaling appratus with flags,
+lights...</li>
+<li>Test-and-set: Uninterruptible process, it will change the status of
+false to true and return it.</li>
+<li>Critical region(臨界區段): A region that is only accessible to a
+program.
+<ul>
+<li>Mutual exclusion(互斥鎖): A process that prevents simultaneous
+access to a shared resource.</li>
+</ul></li>
+</ul>
+<h2 id="prerequisites-for-deadlock">Prerequisites for Deadlock</h2>
+<ul>
+<li>Deadlock may occur only if all three of the following
+conditions(necessary but insufficient) are satisfied
+<ol type="1">
+<li>Competition for non-shareable resources</li>
+<li>Resources are requested on a partial basis, receiving some resources
+and return later to request more.</li>
+<li>Once a resource has been allocated, it cannot be forcibly retrieved.
+<img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/LWgDTY9.png"></li>
+</ol></li>
+<li>To prevent Deadlock from happening, we have to avoid the conditions
+mentioned above being satisfied.</li>
+</ul>
+<h2 id="the-consequence-of-preventing-deadlock-from-happening">The
+Consequence of Preventing Deadlock from Happening</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/HxCTDOU.png"></p>
+<ul>
+<li>Starvation: Process cannot get the resources needed for a long time
+because the resources keep being allocated to other processes.</li>
+<li>The solution to starvation -&gt; (Aging): Adding an aging factor to
+the priority of each request.</li>
+</ul>
+]]></content>
+      <categories>
+        <category>大學課堂筆記-計算機概論</category>
+      </categories>
+      <tags>
+        <tag>計算機概論</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Pointers</title>
     <url>/2023/01/18/Chaper%207%20Pointers/</url>
     <content><![CDATA[<h1 id="chaper-7-pointers">Chaper 7 Pointers</h1>
@@ -1068,7 +1068,7 @@ c-string.</li>
 </ul>
 <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">swap</span><span class="params">(<span class="type">int</span> &amp;a, <span class="type">int</span> &amp;b)</span></span>{</span><br><span class="line">    <span class="type">int</span> temp=a;</span><br><span class="line">    a=b;</span><br><span class="line">    b=temp;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">selection_sort</span><span class="params">(vector &lt;<span class="type">int</span>&gt; &amp;v, <span class="type">void</span> (*swap)(<span class="type">int</span> &amp;a, <span class="type">int</span> &amp;b))</span></span>{</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;v.<span class="built_in">size</span>()<span class="number">-1</span>; i++){</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=i+<span class="number">1</span>; j&lt;v.<span class="built_in">size</span>(); j++){</span><br><span class="line">            <span class="keyword">if</span>(v[j]&lt;v[i]){</span><br><span class="line">                <span class="built_in">swap</span>(v[j], v[i]);</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;v.<span class="built_in">size</span>(); i++){</span><br><span class="line">        cout&lt;&lt;v[i]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    vector &lt;<span class="type">int</span>&gt; test={<span class="number">1</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">7</span>, <span class="number">6</span>, <span class="number">10</span>};</span><br><span class="line">    <span class="built_in">selection_sort</span>(test, swap);</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
 <h2 id="selection-sort">Selection sort</h2>
-<p>Reference(How it works)<a class="link" href="https://www.geeksforgeeks.org/selection-sort/">link <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>Reference(How it works):<a class="link" href="https://www.geeksforgeeks.org/selection-sort/">link <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <ul>
 <li>Easy to program but inefficient. Ex:</li>
 </ul>
@@ -1245,6 +1245,73 @@ algebra.</p></li>
 <h2 id="equality-and-relational-operators">Equality and Relational
 Operators</h2>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rmHds4R.png"></p>
+]]></content>
+      <categories>
+        <category>大學課堂筆記-程式設計</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Control Statement-Part 1</title>
+    <url>/2023/01/18/Chapter%203,%20Control%20Statement_%20Part%201/</url>
+    <content><![CDATA[<h1 id="chapter-3-control-statement-part-1">Chapter 3, Control
+Statement: Part 1</h1>
+<h2 id="control-structure">Control Structure</h2>
+<ul>
+<li>The sequence structure</li>
+<li>The selection strcture</li>
+<li>The repetition structure</li>
+</ul>
+<h2 id="selection-statements">Selection Statements</h2>
+<ul>
+<li>To choose among courses of action.</li>
+<li>if: A single-selection statement</li>
+<li>if...else: A double-selection statement</li>
+<li>switch: A multiselection statement</li>
+</ul>
+<h3 id="conditional-operators">Conditional Operators(?:)</h3>
+<ul>
+<li>Closely related to the if..else function.</li>
+</ul>
+<p>Ex: <div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> x{<span class="number">0</span>}, y{<span class="number">1</span>};</span><br><span class="line">    result=x&lt;y?<span class="string">"x&lt;y"</span>:<span class="string">"x&gt;y"</span>;</span><br><span class="line">    std::cout&lt;&lt;result;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> Accodring to the code, it will cout x<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.09ex;" xmlns="http://www.w3.org/2000/svg" width="1.76ex" height="1.312ex" role="img" focusable="false" viewBox="0 -540 778 580"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="3C" d="M694 -11T694 -19T688 -33T678 -40Q671 -40 524 29T234 166L90 235Q83 240 83 250Q83 261 91 266Q664 540 678 540Q681 540 687 534T694 519T687 505Q686 504 417 376L151 250L417 124Q686 -4 687 -5Q694 -11 694 -19Z"></path></g></g></g></svg></mjx-container></span>y in the command prompt.</p>
+<ul>
+<li>Another way to declare integers: int x{0} equals to int x=0</li>
+</ul>
+<h2 id="repetition-statementslooping-statements">Repetition
+Statements(Looping Statements)</h2>
+<ul>
+<li>while: do the action zero or more times.</li>
+<li>do...while: do the action at least once.</li>
+<li>for: do the action zero or more times.</li>
+</ul>
+<h3 id="counter-controlled-repetition">Counter Controlled
+Repetition</h3>
+<ul>
+<li>Counter variables are normally initialized to zero or one, depending
+on their use.</li>
+<li>Remember to initialize the counter varible, or it might contain some
+garbage variable.</li>
+</ul>
+<h2 id="how-to-change-the-tpye-of-a-object">How to change the tpye of a
+object</h2>
+<div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="built_in">static_cast</span>&lt;type&gt;(object);</span><br><span class="line">    (type)object;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<h2 id="setprecision">setprecision()</h2>
+<div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#inlcude <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    std::cout&lt;&lt;std::<span class="built_in">setprecision</span>(<span class="number">2</span>)&lt;&lt;floatnum; <span class="comment">//start from the first num after fixed point</span></span><br><span class="line">    std::cout&lt;&lt;fixed::std::<span class="built_in">setprecision</span>(<span class="number">2</span>)&lt;&lt;floatnum; <span class="comment">//start from the first num before fixed point</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<h2 id="common-keywords-in-c-and-c">Common Keywords in C++ and C</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/qm5wD9b.png"></p>
+<h2 id="assignment-operators">Assignment Operators</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/JHI93gS.png"></p>
+<h2 id="preincrement-and-postincrement">Preincrement and
+Postincrement</h2>
+<ul>
+<li>Preincrement =&gt; Increment a by 1, then use the new value of a in
+the expression in which a resides.</li>
+<li>Postincrement =&gt; Use the current value of a in the expression in
+which a resides, then increment a by 1.</li>
+</ul>
+<p>Ex: <div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> a=<span class="number">1</span>;</span><br><span class="line">    cout&lt;&lt;a&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    cout&lt;&lt;a++&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    <span class="comment">//do a=a+1 after cout</span></span><br><span class="line">    <span class="type">int</span> b=<span class="number">1</span>;</span><br><span class="line">    cout&lt;&lt;b&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    cout&lt;&lt;++b&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    <span class="comment">//do b=b+1 before cout</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
 ]]></content>
       <categories>
         <category>大學課堂筆記-程式設計</category>
@@ -1669,73 +1736,6 @@ size，資料所在位置可能會移動。如果變小就擦掉尾巴的資料�
 <p>Ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">int</span> *p;</span><br><span class="line">	p=<span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">	*p=<span class="number">100</span>;</span><br><span class="line">	cout&lt;&lt;*p;</span><br><span class="line">	<span class="keyword">delete</span> p; <span class="comment">//release the memory space</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
 <p>Ex2: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">int</span> *p=<span class="keyword">new</span> <span class="type">int</span> [<span class="number">5</span>];</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++){</span><br><span class="line">		*(p+i)=i;</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++){</span><br><span class="line">		cout&lt;&lt;*(p+i)&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">delete</span> []p; <span class="comment">//release memory space</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
 <h2 id="linked-list寒假學">Linked List(寒假學)</h2>
-]]></content>
-      <categories>
-        <category>大學課堂筆記-程式設計</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Control Statement-Part 1</title>
-    <url>/2023/01/18/Chapter%203,%20Control%20Statement_%20Part%201/</url>
-    <content><![CDATA[<h1 id="chapter-3-control-statement-part-1">Chapter 3, Control
-Statement: Part 1</h1>
-<h2 id="control-structure">Control Structure</h2>
-<ul>
-<li>The sequence structure</li>
-<li>The selection strcture</li>
-<li>The repetition structure</li>
-</ul>
-<h2 id="selection-statements">Selection Statements</h2>
-<ul>
-<li>To choose among courses of action.</li>
-<li>if: A single-selection statement</li>
-<li>if...else: A double-selection statement</li>
-<li>switch: A multiselection statement</li>
-</ul>
-<h3 id="conditional-operators">Conditional Operators(?:)</h3>
-<ul>
-<li>Closely related to the if..else function.</li>
-</ul>
-<p>Ex: <div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> x{<span class="number">0</span>}, y{<span class="number">1</span>};</span><br><span class="line">    result=x&lt;y?<span class="string">"x&lt;y"</span>:<span class="string">"x&gt;y"</span>;</span><br><span class="line">    std::cout&lt;&lt;result;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> Accodring to the code, it will cout x<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.09ex;" xmlns="http://www.w3.org/2000/svg" width="1.76ex" height="1.312ex" role="img" focusable="false" viewBox="0 -540 778 580"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="3C" d="M694 -11T694 -19T688 -33T678 -40Q671 -40 524 29T234 166L90 235Q83 240 83 250Q83 261 91 266Q664 540 678 540Q681 540 687 534T694 519T687 505Q686 504 417 376L151 250L417 124Q686 -4 687 -5Q694 -11 694 -19Z"></path></g></g></g></svg></mjx-container></span>y in the command prompt.</p>
-<ul>
-<li>Another way to declare integers: int x{0} equals to int x=0</li>
-</ul>
-<h2 id="repetition-statementslooping-statements">Repetition
-Statements(Looping Statements)</h2>
-<ul>
-<li>while: do the action zero or more times.</li>
-<li>do...while: do the action at least once.</li>
-<li>for: do the action zero or more times.</li>
-</ul>
-<h3 id="counter-controlled-repetition">Counter Controlled
-Repetition</h3>
-<ul>
-<li>Counter variables are normally initialized to zero or one, depending
-on their use.</li>
-<li>Remember to initialize the counter varible, or it might contain some
-garbage variable.</li>
-</ul>
-<h2 id="how-to-change-the-tpye-of-a-object">How to change the tpye of a
-object</h2>
-<div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="built_in">static_cast</span>&lt;type&gt;(object);</span><br><span class="line">    (type)object;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-<h2 id="setprecision">setprecision()</h2>
-<div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#inlcude <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    std::cout&lt;&lt;std::<span class="built_in">setprecision</span>(<span class="number">2</span>)&lt;&lt;floatnum; <span class="comment">//start from the first num after fixed point</span></span><br><span class="line">    std::cout&lt;&lt;fixed::std::<span class="built_in">setprecision</span>(<span class="number">2</span>)&lt;&lt;floatnum; <span class="comment">//start from the first num before fixed point</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-<h2 id="common-keywords-in-c-and-c">Common Keywords in C++ and C</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/qm5wD9b.png"></p>
-<h2 id="assignment-operators">Assignment Operators</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/JHI93gS.png"></p>
-<h2 id="preincrement-and-postincrement">Preincrement and
-Postincrement</h2>
-<ul>
-<li>Preincrement =&gt; Increment a by 1, then use the new value of a in
-the expression in which a resides.</li>
-<li>Postincrement =&gt; Use the current value of a in the expression in
-which a resides, then increment a by 1.</li>
-</ul>
-<p>Ex: <div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> a=<span class="number">1</span>;</span><br><span class="line">    cout&lt;&lt;a&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    cout&lt;&lt;a++&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    <span class="comment">//do a=a+1 after cout</span></span><br><span class="line">    <span class="type">int</span> b=<span class="number">1</span>;</span><br><span class="line">    cout&lt;&lt;b&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    cout&lt;&lt;++b&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    <span class="comment">//do b=b+1 before cout</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
 ]]></content>
       <categories>
         <category>大學課堂筆記-程式設計</category>

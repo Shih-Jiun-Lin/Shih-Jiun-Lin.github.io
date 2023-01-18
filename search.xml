@@ -3,11 +3,7 @@
   <entry>
     <title>Data Manipulation(I)</title>
     <url>/2023/01/18/2023-01-17-Data%20Manipulation(I)/</url>
-    <content><![CDATA[<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });
-</script>
-<h1 id="data-manipulationi">Data Manipulation(I)</h1>
+    <content><![CDATA[<h1 id="data-manipulationi">Data Manipulation(I)</h1>
 <h2 id="the-communication-between-cpu-and-memory">The communication
 between CPU and memory</h2>
 <p>Register -&gt; CPU Cache</p>
@@ -208,8 +204,10 @@ D-&gt;Dataset)</li>
 <h2 id="speed-up-and-scaling">Speed up and Scaling</h2>
 <ul>
 <li>Amdahl's law(阿姆達爾定律)</li>
-<li>Gain = $ $ (P -&gt; proportion that is parallelizable, S -&gt;
-proportion that is serial only)</li>
+<li>Gain = <span
+class="math inline">\(\frac{1}{\frac{P}{M}+(1-P)}\)</span> (P -&gt;
+proportion that is parallelizable, S -&gt; proportion that is serial
+only)</li>
 </ul>
 ]]></content>
       <categories>
@@ -821,6 +819,188 @@ correct 010100 to 011100(D)</li>
       </tags>
   </entry>
   <entry>
+    <title>Operating System(I)</title>
+    <url>/2023/01/18/2023-01-17-Operating%20System(I)/</url>
+    <content><![CDATA[<h1 id="operating-systemi">Operating System(I)</h1>
+<h2 id="batch-processingearly-era">Batch processing(early era)</h2>
+<ul>
+<li>The process of computer operators entering data to the computers and
+give the result back to you. <img 
+
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/mVRCkv6.png"
+                      
+                ></li>
+</ul>
+<h2 id="interactive-processingearly-era">Interactive processing(early
+era)</h2>
+<ul>
+<li><p>OS with remote terminals <img 
+
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/Kovmajm.png"
+                      
+                ></p></li>
+<li><p>Types of operating system</p>
+<ul>
+<li>Batch(批次)</li>
+<li>Interactive</li>
+<li>Real-time
+<ul>
+<li>Response time is critical.</li>
+</ul></li>
+<li>Time-sharing and multitasking
+<ul>
+<li>Dividing time into intervals.</li>
+<li>Only one task is being performed at any given time.</li>
+</ul></li>
+<li>Multiprocessor
+<ul>
+<li>Load balancing</li>
+<li>Scaling</li>
+</ul></li>
+<li>http://www.chwa.com.tw/TResource/VS/book1/ch3/3-2.htm</li>
+</ul></li>
+<li><p>Software classification <img 
+
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/WyObhvz.png"
+                      
+                ></p></li>
+<li><p>Shells</p>
+<ul>
+<li>Communication with users
+<ul>
+<li>Text based</li>
+<li>GUI(Graphical user interface ) ## Kernel</li>
+</ul></li>
+</ul></li>
+<li><p>File manager</p>
+<ul>
+<li>Directory/folder path</li>
+</ul></li>
+<li><p>Device drivers</p></li>
+<li><p>Memory manager</p>
+<ul>
+<li>Allocating main memory</li>
+<li>Paging, virtual memory<br />
+</li>
+</ul></li>
+<li><p>Schedular</p>
+<ul>
+<li>The component which selects process to execute.</li>
+</ul></li>
+<li><p>Dispatcher</p>
+<ul>
+<li>The component which gives control of CPU to execute the process
+selected by Schedular. ## Linux</li>
+</ul></li>
+<li><p>Made by Linus Torvalds</p></li>
+<li><p>Freeware and open-source</p></li>
+<li><p>Many distribution (Ex: Ubuntu，Kali)</p></li>
+<li><p>Linux only means the kernel ## How is OS being loaded? <img 
+
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/2CzC6fw.png"
+                      
+                ></p></li>
+<li><p>BIOS(Basic Input/Output Sytem)is usually stored on a EEPEROM
+chip(Electrically-Erasable Programable Read-Only Memory) ##
+Process</p></li>
+<li><p>The activity of executing a program</p></li>
+<li><p>Process state</p>
+<ul>
+<li>Program counter</li>
+<li>General purpose registers</li>
+<li>Associated memory cells</li>
+</ul></li>
+<li><p>Process table</p>
+<ul>
+<li>Memory area assigned to the process</li>
+<li>Priority</li>
+<li>Ready/waiting(One process for each core) ## Process
+Administration</li>
+</ul></li>
+<li><p>Schedular</p>
+<ul>
+<li>Use: Maintaining the process table</li>
+<li>Introducing new process</li>
+<li>Removing completed process</li>
+<li>Deciding whether a process is ready or waiting</li>
+</ul></li>
+<li><p>Dispatcher <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/ae6Hv5z.png"
+                      
+                ></p>
+<ul>
+<li>Use: Getting the process to running state.</li>
+<li>Controling the allocation of time to the process in the process
+table.</li>
+<li>Process switch(interrupt) <img 
+
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/vvtyj1e.png"
+                      
+                > Multiprogramming between two
+processes. ## Semaphores</li>
+</ul></li>
+<li><p>Meaning of semaphore: A visual sinaling appratus with flags,
+lights...</p></li>
+<li><p>Test-and-set: Uninterruptible process, it will change the status
+of false to true and return it.</p></li>
+<li><p>Critical region(臨界區段): A region that is only accessible to a
+program.</p>
+<ul>
+<li>Mutual exclusion(互斥鎖): A process that prevents simultaneous
+access to a shared resource. ## Prerequisites for Deadlock</li>
+</ul></li>
+<li><p>Deadlock may occur only if all three of the following
+conditions(necessary but insufficient) are satisfied</p>
+<ol type="1">
+<li>Competition for non-shareable resources</li>
+<li>Resources are requested on a partial basis, receiving some resources
+and return later to request more.</li>
+<li>Once a resource has been allocated, it cannot be forcibly
+retrieved.</li>
+</ol></li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/LWgDTY9.png"
+                      
+                > * To prevent Deadlock
+from happening, we have to avoid the conditions mentioned above being
+satisfied. ## The Consequence of Preventing Deadlock from Happening <img 
+
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/HxCTDOU.png"
+                      
+                ></p>
+<ul>
+<li>Starvation: Process cannot get the resources needed for a long time
+because the resources keep being allocated to other processes.</li>
+<li>The solution to starvation -&gt; (Aging): Adding an aging factor to
+the priority of each request.</li>
+</ul>
+]]></content>
+      <categories>
+        <category>大學課堂筆記-計算機概論</category>
+        <category>彰師大</category>
+      </categories>
+      <tags>
+        <tag>計算機概論</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Networking and the Internet(I)</title>
     <url>/2023/01/18/2023-01-17-Networking%20and%20the%20internet(I)/</url>
     <content><![CDATA[<h1 id="networking-and-the-interneti">Networking and the
@@ -1143,188 +1323,6 @@ https://ithelp.ithome.com.tw/articles/10250721</li>
                      data-src="https://i.imgur.com/6fnmG7A.png"
                       
                 ></p></li>
-</ul>
-]]></content>
-      <categories>
-        <category>大學課堂筆記-計算機概論</category>
-        <category>彰師大</category>
-      </categories>
-      <tags>
-        <tag>計算機概論</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Operating System(I)</title>
-    <url>/2023/01/18/2023-01-17-Operating%20System(I)/</url>
-    <content><![CDATA[<h1 id="operating-systemi">Operating System(I)</h1>
-<h2 id="batch-processingearly-era">Batch processing(early era)</h2>
-<ul>
-<li>The process of computer operators entering data to the computers and
-give the result back to you. <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/mVRCkv6.png"
-                      
-                ></li>
-</ul>
-<h2 id="interactive-processingearly-era">Interactive processing(early
-era)</h2>
-<ul>
-<li><p>OS with remote terminals <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/Kovmajm.png"
-                      
-                ></p></li>
-<li><p>Types of operating system</p>
-<ul>
-<li>Batch(批次)</li>
-<li>Interactive</li>
-<li>Real-time
-<ul>
-<li>Response time is critical.</li>
-</ul></li>
-<li>Time-sharing and multitasking
-<ul>
-<li>Dividing time into intervals.</li>
-<li>Only one task is being performed at any given time.</li>
-</ul></li>
-<li>Multiprocessor
-<ul>
-<li>Load balancing</li>
-<li>Scaling</li>
-</ul></li>
-<li>http://www.chwa.com.tw/TResource/VS/book1/ch3/3-2.htm</li>
-</ul></li>
-<li><p>Software classification <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/WyObhvz.png"
-                      
-                ></p></li>
-<li><p>Shells</p>
-<ul>
-<li>Communication with users
-<ul>
-<li>Text based</li>
-<li>GUI(Graphical user interface ) ## Kernel</li>
-</ul></li>
-</ul></li>
-<li><p>File manager</p>
-<ul>
-<li>Directory/folder path</li>
-</ul></li>
-<li><p>Device drivers</p></li>
-<li><p>Memory manager</p>
-<ul>
-<li>Allocating main memory</li>
-<li>Paging, virtual memory<br />
-</li>
-</ul></li>
-<li><p>Schedular</p>
-<ul>
-<li>The component which selects process to execute.</li>
-</ul></li>
-<li><p>Dispatcher</p>
-<ul>
-<li>The component which gives control of CPU to execute the process
-selected by Schedular. ## Linux</li>
-</ul></li>
-<li><p>Made by Linus Torvalds</p></li>
-<li><p>Freeware and open-source</p></li>
-<li><p>Many distribution (Ex: Ubuntu，Kali)</p></li>
-<li><p>Linux only means the kernel ## How is OS being loaded? <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/2CzC6fw.png"
-                      
-                ></p></li>
-<li><p>BIOS(Basic Input/Output Sytem)is usually stored on a EEPEROM
-chip(Electrically-Erasable Programable Read-Only Memory) ##
-Process</p></li>
-<li><p>The activity of executing a program</p></li>
-<li><p>Process state</p>
-<ul>
-<li>Program counter</li>
-<li>General purpose registers</li>
-<li>Associated memory cells</li>
-</ul></li>
-<li><p>Process table</p>
-<ul>
-<li>Memory area assigned to the process</li>
-<li>Priority</li>
-<li>Ready/waiting(One process for each core) ## Process
-Administration</li>
-</ul></li>
-<li><p>Schedular</p>
-<ul>
-<li>Use: Maintaining the process table</li>
-<li>Introducing new process</li>
-<li>Removing completed process</li>
-<li>Deciding whether a process is ready or waiting</li>
-</ul></li>
-<li><p>Dispatcher <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/ae6Hv5z.png"
-                      
-                ></p>
-<ul>
-<li>Use: Getting the process to running state.</li>
-<li>Controling the allocation of time to the process in the process
-table.</li>
-<li>Process switch(interrupt) <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/vvtyj1e.png"
-                      
-                > Multiprogramming between two
-processes. ## Semaphores</li>
-</ul></li>
-<li><p>Meaning of semaphore: A visual sinaling appratus with flags,
-lights...</p></li>
-<li><p>Test-and-set: Uninterruptible process, it will change the status
-of false to true and return it.</p></li>
-<li><p>Critical region(臨界區段): A region that is only accessible to a
-program.</p>
-<ul>
-<li>Mutual exclusion(互斥鎖): A process that prevents simultaneous
-access to a shared resource. ## Prerequisites for Deadlock</li>
-</ul></li>
-<li><p>Deadlock may occur only if all three of the following
-conditions(necessary but insufficient) are satisfied</p>
-<ol type="1">
-<li>Competition for non-shareable resources</li>
-<li>Resources are requested on a partial basis, receiving some resources
-and return later to request more.</li>
-<li>Once a resource has been allocated, it cannot be forcibly
-retrieved.</li>
-</ol></li>
-</ul>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/LWgDTY9.png"
-                      
-                > * To prevent Deadlock
-from happening, we have to avoid the conditions mentioned above being
-satisfied. ## The Consequence of Preventing Deadlock from Happening <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/HxCTDOU.png"
-                      
-                ></p>
-<ul>
-<li>Starvation: Process cannot get the resources needed for a long time
-because the resources keep being allocated to other processes.</li>
-<li>The solution to starvation -&gt; (Aging): Adding an aging factor to
-the priority of each request.</li>
 </ul>
 ]]></content>
       <categories>
@@ -1715,6 +1713,100 @@ value is interpreted as ture. Which means if(a=5){...} will be true.</p>
       </tags>
   </entry>
   <entry>
+    <title>STL(Standard Template Library)</title>
+    <url>/2023/01/18/STL(Standard%20Template%20Library)/</url>
+    <content><![CDATA[<h1 id="stlstandard-template-library">STL(Standard Template
+Library)</h1>
+<h2 id="vector">Vector</h2>
+<ul>
+<li>用法基本跟array一樣，可以把它想成動態陣列。</li>
+<li>宣告時可以不用確定大小</li>
+<li>宣告一向量時，所有範圍內的值會被初始成0。</li>
+<li>可以使用'=='比較兩向量時</li>
+<li>使用'='時，會將一向量的值賦予到另一向量。</li>
+<li>vector<int> v2(v1);=&gt;複製v1到v2。</li>
+<li>集合尾端增刪元素很快 : O(1)</li>
+<li>集合中間增刪元素比較費時 : O(n)</li>
+<li>erase(a, b); =&gt; 刪除 <span
+class="math inline">\([a,b)\)</span>.</li>
+<li>begin()=&gt;第一個元素</li>
+<li>end()=&gt;最後一個元素的下一個(沒有值)</li>
+<li>erase(v.begin(), v.end()) =&gt; erase every elements.</li>
+<li>pop_back()只會將vector的大小做修改，但值還是會存在原本的位置。</li>
+<li>vector[100]=vector<span class="math inline">\(.\)</span>at(100);
+<ul>
+<li>使用"[]"並不會在超過向量大小時顯示錯誤。</li>
+<li>使用".at()"會在超過向量大小時顯示錯誤。</li>
+</ul></li>
+</ul>
+<p>用法1(push_back and pop_back): <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; vec; <span class="comment">//declaration of vector</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>; i&lt;=<span class="number">3</span>; i++)&#123;</span><br><span class="line">		vec.<span class="built_in">push_back</span>(i);	<span class="comment">//push_back to put elements into vector</span></span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;vec.<span class="built_in">size</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;	</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++)&#123;</span><br><span class="line">		cout&lt;&lt;vec[i]&lt;&lt;<span class="string">&quot;\n&quot;</span>;	<span class="comment">//cout each element</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++)&#123;</span><br><span class="line">		vec.<span class="built_in">pop_back</span>();	<span class="comment">//pop_back to remove the last element from the vector</span></span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;vec.<span class="built_in">size</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> 用法二(insert and erase)
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; vec;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(i==<span class="number">1</span>) <span class="keyword">continue</span>;</span><br><span class="line">		<span class="keyword">else</span> vec.<span class="built_in">push_back</span>(i+<span class="number">1</span>); </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;vec.<span class="built_in">size</span>(); i++)&#123;</span><br><span class="line">		cout&lt;&lt;vec[i]&lt;&lt;<span class="string">&#x27; &#x27;</span>;				<span class="comment">//cout 1 3</span></span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	vec.<span class="built_in">insert</span>(vec.<span class="built_in">begin</span>()+<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;vec.<span class="built_in">size</span>(); i++)&#123;</span><br><span class="line">		cout&lt;&lt;vec[i]&lt;&lt;<span class="string">&#x27; &#x27;</span>;				<span class="comment">//cout 1 2 3</span></span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	vec.<span class="built_in">erase</span>(vec.<span class="built_in">begin</span>()+<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;vec.<span class="built_in">size</span>(); i++)&#123;</span><br><span class="line">		cout&lt;&lt;vec[i]&lt;&lt;<span class="string">&#x27; &#x27;</span>;				<span class="comment">//cout 1 3</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> 用法三(empty(), size(), resize(), capacity(), reserve())
+Reference:https://stackoverflow.com/questions/7397768/choice-between-vectorresize-and-vectorreserve
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; vec;</span><br><span class="line">	<span class="keyword">if</span>(vec.<span class="built_in">empty</span>())&#123;</span><br><span class="line">		cout&lt;&lt;boolalpha&lt;&lt;vec.<span class="built_in">empty</span>()&lt;&lt;<span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">		cout&lt;&lt;<span class="string">&quot;size of vector &quot;</span>&lt;&lt;vec.<span class="built_in">size</span>()&lt;&lt;<span class="string">&#x27;\n&#x27;</span>; </span><br><span class="line">	&#125;</span><br><span class="line">	vec.<span class="built_in">resize</span>(<span class="number">3</span>);		</span><br><span class="line">	cout&lt;&lt;vec.<span class="built_in">size</span>()&lt;&lt;<span class="string">&#x27;\n&#x27;</span>;		<span class="comment">//current size</span></span><br><span class="line">	cout&lt;&lt;vec.<span class="built_in">capacity</span>()&lt;&lt;<span class="string">&#x27;\n&#x27;</span>;		<span class="comment">//current maximum capacity</span></span><br><span class="line">	vec.<span class="built_in">reserve</span>(<span class="number">4</span>);		</span><br><span class="line">	cout&lt;&lt;vec.<span class="built_in">size</span>()&lt;&lt;<span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    cout&lt;&lt;vec.<span class="built_in">capacity</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> * capacity and size * 容量 (capacity) : 是這個 vector
+擁有的空間。 * 長度 (size) : 是實際儲存了元素的空間大小。capacity
+永遠不小於 size。 * reserve() vs resize() * reserve()
+的目的是擴大容量。做完時，vector 的長度不變，capacity
+只會長大不會縮小，資料所在位置可能會移動 (因為會重配空間)。因為 vector
+一開始是空的，立刻預留顯然比填了資料後才預留省了拷貝資料的時間。 *
+resize() 的目的是改變 vector 的長度。做完時，vector
+的長度會改變為指定的大小，capacity 則視需要調整，確保不小於
+size，資料所在位置可能會移動。如果變小就擦掉尾巴的資料，如果變大就補零。補零如果會超過容量，會做重配空間的動作。
+*
+白話文就是reserve()創造空間，但沒有隨機產生值，因此不能做訪問。resize()則是除了創造空間，也隨機產生值，故可直接訪問。
+* 二維vector *將眾多一維vector塞入二維vector。 <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; test_2D;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++)&#123;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; temp;</span><br><span class="line">        <span class="type">static</span> <span class="type">int</span> counter=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;<span class="number">3</span>; j++)&#123;</span><br><span class="line">            temp.<span class="built_in">push_back</span>(counter);</span><br><span class="line">            counter++;</span><br><span class="line">        &#125;</span><br><span class="line">        test_2D.<span class="built_in">push_back</span>(temp);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;test_2D.<span class="built_in">size</span>(); i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;test_2D[<span class="number">0</span>].<span class="built_in">size</span>(); j++)&#123;</span><br><span class="line">            cout&lt;&lt;test_2D[i][j]&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> Result:
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/8mMfbp6.png"
+                      
+                ></p>
+<h2 id="queue">Queue</h2>
+<ul>
+<li>僅能取得(操作)頭與尾的element.</li>
+<li>具有fifo(first in first out)的特性.</li>
+<li>用法1(push(), pop(), front(), back(), size(), empty()) <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	queue&lt;<span class="type">int</span>&gt; q;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++)&#123;</span><br><span class="line">		q.<span class="built_in">push</span>(i+<span class="number">1</span>);	<span class="comment">//adding elements</span></span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;Size: &quot;</span>&lt;&lt;q.<span class="built_in">size</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;First element: &quot;</span>&lt;&lt;q.<span class="built_in">front</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;Last element: &quot;</span>&lt;&lt;q.<span class="built_in">back</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++)&#123;</span><br><span class="line">		q.<span class="built_in">pop</span>();		<span class="comment">//remove the first element</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(q.<span class="built_in">empty</span>())&#123;</span><br><span class="line">		cout&lt;&lt;boolalpha&lt;&lt;q.<span class="built_in">empty</span>(); <span class="comment">//return 1 if q is empty</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+## Stack</li>
+<li>僅能取得(操作)最上層的element.</li>
+<li>具有lifo(last in first out)的特性.</li>
+</ul>
+<p>用法1(psuh(), pop(), top(), size(), empty()) <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	stack&lt;<span class="type">int</span>&gt; s;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++)&#123;</span><br><span class="line">		s.<span class="built_in">push</span>(i+<span class="number">1</span>);    <span class="comment">//not reference</span></span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;Size: &quot;</span>&lt;&lt;s.<span class="built_in">size</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;The top stack: &quot;</span>&lt;&lt;s.<span class="built_in">top</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>; <span class="comment">//reference</span></span><br><span class="line">	s.<span class="built_in">pop</span>();	<span class="comment">//removing the first stack</span></span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;Size:&quot;</span>&lt;&lt;s.<span class="built_in">size</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; s.<span class="built_in">size</span>()!=<span class="number">0</span>; i++)&#123;</span><br><span class="line">		s.<span class="built_in">pop</span>();</span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;size: &quot;</span>&lt;&lt;s.<span class="built_in">size</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	<span class="keyword">if</span>(s.<span class="built_in">empty</span>())&#123;</span><br><span class="line">		cout&lt;&lt;<span class="string">&quot;empty&quot;</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> ## Set *
+就是集合。 * 可用於快速查找elements 是否存在。 *
+每個elements皆是唯一的，不可重複。 * 每個elements皆不能做修改。 *
+具有順序性。 * 操作簡單。 * elements 太多會拖慢速度。 <img 
+
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/1mdMgul.png"
+                      
+                ></p>
+<p>用法1(insert(), count(), erase(), clear(), empty()) <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;set&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    set&lt;<span class="type">int</span>&gt; s;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">10</span>;i&lt;=<span class="number">50</span>; i+=<span class="number">10</span>)&#123;</span><br><span class="line">        s.<span class="built_in">insert</span>(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(s.<span class="built_in">count</span>(<span class="number">10</span>))&#123;</span><br><span class="line">        cout&lt;&lt;boolalpha&lt;&lt;<span class="literal">true</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    s.<span class="built_in">erase</span>(<span class="number">10</span>);</span><br><span class="line">    <span class="keyword">if</span>(s.<span class="built_in">count</span>(<span class="number">10</span>))&#123;</span><br><span class="line">        cout&lt;&lt;boolalpha&lt;&lt;<span class="literal">true</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        cout&lt;&lt;boolalpha&lt;&lt;<span class="literal">false</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>; </span><br><span class="line">    &#125;</span><br><span class="line">    s.<span class="built_in">clear</span>();</span><br><span class="line">    <span class="keyword">if</span>(s.<span class="built_in">empty</span>())&#123;</span><br><span class="line">        cout&lt;&lt;<span class="string">&quot;empty&quot;</span>&lt;&lt;<span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></p>
+<h2 id="map">Map</h2>
+<ul>
+<li>有排序關聯式容器。</li>
+<li>map中的元素會根據對應的鍵值(key)做排序。</li>
+<li>鍵值具有唯一性。</li>
+<li>高效率，使用簡單。 <img 
+
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/anN3pMV.png"
+                      
+                ></li>
+</ul>
+<p>用法1(insert(), erase(), clear(), empty()) <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">//initialization</span></span><br><span class="line">    map&lt;string, <span class="type">int</span>&gt; m =&#123;</span><br><span class="line">        &#123;<span class="string">&quot;One&quot;</span>, <span class="number">1</span>&#125;,</span><br><span class="line">        &#123;<span class="string">&quot;Two&quot;</span>, <span class="number">2</span>&#125;,</span><br><span class="line">        &#123;<span class="string">&quot;Three&quot;</span>, <span class="number">3</span>&#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    m.<span class="built_in">insert</span>(<span class="built_in">pair</span>&lt;string, <span class="type">int</span>&gt;(<span class="string">&quot;Four&quot;</span>, <span class="number">4</span>));</span><br><span class="line">    m[<span class="string">&quot;Five&quot;</span>]=<span class="number">5</span>;</span><br><span class="line">    cout&lt;&lt;m[<span class="string">&quot;Five&quot;</span>]&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    m.<span class="built_in">erase</span>(<span class="string">&quot;Five&quot;</span>);</span><br><span class="line">    cout&lt;&lt;m.<span class="built_in">size</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    m.<span class="built_in">clear</span>();</span><br><span class="line">    <span class="keyword">if</span>(m.<span class="built_in">empty</span>())&#123;</span><br><span class="line">        cout&lt;&lt;<span class="string">&quot;empty&quot;</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> ## Algorithm
+* 常用演算法。</p>
+<p>用法1(sort(), reverse()) <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; v;</span><br><span class="line">    <span class="type">int</span> input;</span><br><span class="line">    <span class="keyword">while</span>(cin&gt;&gt;input&amp;&amp;input!=<span class="number">-1</span>)&#123;</span><br><span class="line">        v.<span class="built_in">push_back</span>(input);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">sort</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>());</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;v.<span class="built_in">size</span>(); i++)&#123;</span><br><span class="line">        cout&lt;&lt;v[i]&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    <span class="built_in">reverse</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>());</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;v.<span class="built_in">size</span>(); i++)&#123;</span><br><span class="line">        cout&lt;&lt;v[i]&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></p>
+]]></content>
+      <categories>
+        <category>大學課堂筆記-程式設計</category>
+        <category>C++</category>
+        <category>彰師大</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Functions and Introduction to Recursion</title>
     <url>/2023/01/18/Chapter%205%20Functions%20and%20Introduction%20to%20Recursion/</url>
     <content><![CDATA[<h1 id="chapter-5-functions-and-introduction-to-recursion">Chapter 5
@@ -1808,100 +1900,6 @@ function. <div class="highlight-container" data-rel="C++"><figure class="iseeu h
 <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">unsigned</span> <span class="type">long</span> <span class="title">factorial</span><span class="params">(<span class="type">unsigned</span> <span class="type">long</span> num)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(num&lt;=<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> num*<span class="built_in">factorial</span>(num<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
 <li>Example of Fibonacci Series <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">unsigned</span> <span class="type">long</span> <span class="title">fib</span><span class="params">(usigned <span class="type">long</span> num)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(num==<span class="number">1</span>||num==<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">fib</span>(num<span class="number">-1</span>)+<span class="built_in">fib</span>(num<span class="number">-2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
 </ul>
-]]></content>
-      <categories>
-        <category>大學課堂筆記-程式設計</category>
-        <category>C++</category>
-        <category>彰師大</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>STL(Standard Template Library)</title>
-    <url>/2023/01/18/STL(Standard%20Template%20Library)/</url>
-    <content><![CDATA[<h1 id="stlstandard-template-library">STL(Standard Template
-Library)</h1>
-<h2 id="vector">Vector</h2>
-<ul>
-<li>用法基本跟array一樣，可以把它想成動態陣列。</li>
-<li>宣告時可以不用確定大小</li>
-<li>宣告一向量時，所有範圍內的值會被初始成0。</li>
-<li>可以使用'=='比較兩向量時</li>
-<li>使用'='時，會將一向量的值賦予到另一向量。</li>
-<li>vector<int> v2(v1);=&gt;複製v1到v2。</li>
-<li>集合尾端增刪元素很快 : O(1)</li>
-<li>集合中間增刪元素比較費時 : O(n)</li>
-<li>erase(a, b); =&gt; 刪除 <span
-class="math inline">\([a,b)\)</span>.</li>
-<li>begin()=&gt;第一個元素</li>
-<li>end()=&gt;最後一個元素的下一個(沒有值)</li>
-<li>erase(v.begin(), v.end()) =&gt; erase every elements.</li>
-<li>pop_back()只會將vector的大小做修改，但值還是會存在原本的位置。</li>
-<li>vector[100]=vector<span class="math inline">\(.\)</span>at(100);
-<ul>
-<li>使用"[]"並不會在超過向量大小時顯示錯誤。</li>
-<li>使用".at()"會在超過向量大小時顯示錯誤。</li>
-</ul></li>
-</ul>
-<p>用法1(push_back and pop_back): <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; vec; <span class="comment">//declaration of vector</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>; i&lt;=<span class="number">3</span>; i++)&#123;</span><br><span class="line">		vec.<span class="built_in">push_back</span>(i);	<span class="comment">//push_back to put elements into vector</span></span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;vec.<span class="built_in">size</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;	</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++)&#123;</span><br><span class="line">		cout&lt;&lt;vec[i]&lt;&lt;<span class="string">&quot;\n&quot;</span>;	<span class="comment">//cout each element</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++)&#123;</span><br><span class="line">		vec.<span class="built_in">pop_back</span>();	<span class="comment">//pop_back to remove the last element from the vector</span></span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;vec.<span class="built_in">size</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> 用法二(insert and erase)
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; vec;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(i==<span class="number">1</span>) <span class="keyword">continue</span>;</span><br><span class="line">		<span class="keyword">else</span> vec.<span class="built_in">push_back</span>(i+<span class="number">1</span>); </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;vec.<span class="built_in">size</span>(); i++)&#123;</span><br><span class="line">		cout&lt;&lt;vec[i]&lt;&lt;<span class="string">&#x27; &#x27;</span>;				<span class="comment">//cout 1 3</span></span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	vec.<span class="built_in">insert</span>(vec.<span class="built_in">begin</span>()+<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;vec.<span class="built_in">size</span>(); i++)&#123;</span><br><span class="line">		cout&lt;&lt;vec[i]&lt;&lt;<span class="string">&#x27; &#x27;</span>;				<span class="comment">//cout 1 2 3</span></span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	vec.<span class="built_in">erase</span>(vec.<span class="built_in">begin</span>()+<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;vec.<span class="built_in">size</span>(); i++)&#123;</span><br><span class="line">		cout&lt;&lt;vec[i]&lt;&lt;<span class="string">&#x27; &#x27;</span>;				<span class="comment">//cout 1 3</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> 用法三(empty(), size(), resize(), capacity(), reserve())
-Reference:https://stackoverflow.com/questions/7397768/choice-between-vectorresize-and-vectorreserve
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; vec;</span><br><span class="line">	<span class="keyword">if</span>(vec.<span class="built_in">empty</span>())&#123;</span><br><span class="line">		cout&lt;&lt;boolalpha&lt;&lt;vec.<span class="built_in">empty</span>()&lt;&lt;<span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">		cout&lt;&lt;<span class="string">&quot;size of vector &quot;</span>&lt;&lt;vec.<span class="built_in">size</span>()&lt;&lt;<span class="string">&#x27;\n&#x27;</span>; </span><br><span class="line">	&#125;</span><br><span class="line">	vec.<span class="built_in">resize</span>(<span class="number">3</span>);		</span><br><span class="line">	cout&lt;&lt;vec.<span class="built_in">size</span>()&lt;&lt;<span class="string">&#x27;\n&#x27;</span>;		<span class="comment">//current size</span></span><br><span class="line">	cout&lt;&lt;vec.<span class="built_in">capacity</span>()&lt;&lt;<span class="string">&#x27;\n&#x27;</span>;		<span class="comment">//current maximum capacity</span></span><br><span class="line">	vec.<span class="built_in">reserve</span>(<span class="number">4</span>);		</span><br><span class="line">	cout&lt;&lt;vec.<span class="built_in">size</span>()&lt;&lt;<span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    cout&lt;&lt;vec.<span class="built_in">capacity</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> * capacity and size * 容量 (capacity) : 是這個 vector
-擁有的空間。 * 長度 (size) : 是實際儲存了元素的空間大小。capacity
-永遠不小於 size。 * reserve() vs resize() * reserve()
-的目的是擴大容量。做完時，vector 的長度不變，capacity
-只會長大不會縮小，資料所在位置可能會移動 (因為會重配空間)。因為 vector
-一開始是空的，立刻預留顯然比填了資料後才預留省了拷貝資料的時間。 *
-resize() 的目的是改變 vector 的長度。做完時，vector
-的長度會改變為指定的大小，capacity 則視需要調整，確保不小於
-size，資料所在位置可能會移動。如果變小就擦掉尾巴的資料，如果變大就補零。補零如果會超過容量，會做重配空間的動作。
-*
-白話文就是reserve()創造空間，但沒有隨機產生值，因此不能做訪問。resize()則是除了創造空間，也隨機產生值，故可直接訪問。
-* 二維vector *將眾多一維vector塞入二維vector。 <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; test_2D;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++)&#123;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; temp;</span><br><span class="line">        <span class="type">static</span> <span class="type">int</span> counter=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;<span class="number">3</span>; j++)&#123;</span><br><span class="line">            temp.<span class="built_in">push_back</span>(counter);</span><br><span class="line">            counter++;</span><br><span class="line">        &#125;</span><br><span class="line">        test_2D.<span class="built_in">push_back</span>(temp);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;test_2D.<span class="built_in">size</span>(); i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;test_2D[<span class="number">0</span>].<span class="built_in">size</span>(); j++)&#123;</span><br><span class="line">            cout&lt;&lt;test_2D[i][j]&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cout&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> Result:
-<img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/8mMfbp6.png"
-                      
-                ></p>
-<h2 id="queue">Queue</h2>
-<ul>
-<li>僅能取得(操作)頭與尾的element.</li>
-<li>具有fifo(first in first out)的特性.</li>
-<li>用法1(push(), pop(), front(), back(), size(), empty()) <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	queue&lt;<span class="type">int</span>&gt; q;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++)&#123;</span><br><span class="line">		q.<span class="built_in">push</span>(i+<span class="number">1</span>);	<span class="comment">//adding elements</span></span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;Size: &quot;</span>&lt;&lt;q.<span class="built_in">size</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;First element: &quot;</span>&lt;&lt;q.<span class="built_in">front</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;Last element: &quot;</span>&lt;&lt;q.<span class="built_in">back</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++)&#123;</span><br><span class="line">		q.<span class="built_in">pop</span>();		<span class="comment">//remove the first element</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(q.<span class="built_in">empty</span>())&#123;</span><br><span class="line">		cout&lt;&lt;boolalpha&lt;&lt;q.<span class="built_in">empty</span>(); <span class="comment">//return 1 if q is empty</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-## Stack</li>
-<li>僅能取得(操作)最上層的element.</li>
-<li>具有lifo(last in first out)的特性.</li>
-</ul>
-<p>用法1(psuh(), pop(), top(), size(), empty()) <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	stack&lt;<span class="type">int</span>&gt; s;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++)&#123;</span><br><span class="line">		s.<span class="built_in">push</span>(i+<span class="number">1</span>);    <span class="comment">//not reference</span></span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;Size: &quot;</span>&lt;&lt;s.<span class="built_in">size</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;The top stack: &quot;</span>&lt;&lt;s.<span class="built_in">top</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>; <span class="comment">//reference</span></span><br><span class="line">	s.<span class="built_in">pop</span>();	<span class="comment">//removing the first stack</span></span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;Size:&quot;</span>&lt;&lt;s.<span class="built_in">size</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; s.<span class="built_in">size</span>()!=<span class="number">0</span>; i++)&#123;</span><br><span class="line">		s.<span class="built_in">pop</span>();</span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;<span class="string">&quot;size: &quot;</span>&lt;&lt;s.<span class="built_in">size</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	<span class="keyword">if</span>(s.<span class="built_in">empty</span>())&#123;</span><br><span class="line">		cout&lt;&lt;<span class="string">&quot;empty&quot;</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> ## Set *
-就是集合。 * 可用於快速查找elements 是否存在。 *
-每個elements皆是唯一的，不可重複。 * 每個elements皆不能做修改。 *
-具有順序性。 * 操作簡單。 * elements 太多會拖慢速度。 <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/1mdMgul.png"
-                      
-                ></p>
-<p>用法1(insert(), count(), erase(), clear(), empty()) <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;set&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    set&lt;<span class="type">int</span>&gt; s;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">10</span>;i&lt;=<span class="number">50</span>; i+=<span class="number">10</span>)&#123;</span><br><span class="line">        s.<span class="built_in">insert</span>(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(s.<span class="built_in">count</span>(<span class="number">10</span>))&#123;</span><br><span class="line">        cout&lt;&lt;boolalpha&lt;&lt;<span class="literal">true</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    s.<span class="built_in">erase</span>(<span class="number">10</span>);</span><br><span class="line">    <span class="keyword">if</span>(s.<span class="built_in">count</span>(<span class="number">10</span>))&#123;</span><br><span class="line">        cout&lt;&lt;boolalpha&lt;&lt;<span class="literal">true</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        cout&lt;&lt;boolalpha&lt;&lt;<span class="literal">false</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>; </span><br><span class="line">    &#125;</span><br><span class="line">    s.<span class="built_in">clear</span>();</span><br><span class="line">    <span class="keyword">if</span>(s.<span class="built_in">empty</span>())&#123;</span><br><span class="line">        cout&lt;&lt;<span class="string">&quot;empty&quot;</span>&lt;&lt;<span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></p>
-<h2 id="map">Map</h2>
-<ul>
-<li>有排序關聯式容器。</li>
-<li>map中的元素會根據對應的鍵值(key)做排序。</li>
-<li>鍵值具有唯一性。</li>
-<li>高效率，使用簡單。 <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/anN3pMV.png"
-                      
-                ></li>
-</ul>
-<p>用法1(insert(), erase(), clear(), empty()) <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">//initialization</span></span><br><span class="line">    map&lt;string, <span class="type">int</span>&gt; m =&#123;</span><br><span class="line">        &#123;<span class="string">&quot;One&quot;</span>, <span class="number">1</span>&#125;,</span><br><span class="line">        &#123;<span class="string">&quot;Two&quot;</span>, <span class="number">2</span>&#125;,</span><br><span class="line">        &#123;<span class="string">&quot;Three&quot;</span>, <span class="number">3</span>&#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    m.<span class="built_in">insert</span>(<span class="built_in">pair</span>&lt;string, <span class="type">int</span>&gt;(<span class="string">&quot;Four&quot;</span>, <span class="number">4</span>));</span><br><span class="line">    m[<span class="string">&quot;Five&quot;</span>]=<span class="number">5</span>;</span><br><span class="line">    cout&lt;&lt;m[<span class="string">&quot;Five&quot;</span>]&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    m.<span class="built_in">erase</span>(<span class="string">&quot;Five&quot;</span>);</span><br><span class="line">    cout&lt;&lt;m.<span class="built_in">size</span>()&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    m.<span class="built_in">clear</span>();</span><br><span class="line">    <span class="keyword">if</span>(m.<span class="built_in">empty</span>())&#123;</span><br><span class="line">        cout&lt;&lt;<span class="string">&quot;empty&quot;</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> ## Algorithm
-* 常用演算法。</p>
-<p>用法1(sort(), reverse()) <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; v;</span><br><span class="line">    <span class="type">int</span> input;</span><br><span class="line">    <span class="keyword">while</span>(cin&gt;&gt;input&amp;&amp;input!=<span class="number">-1</span>)&#123;</span><br><span class="line">        v.<span class="built_in">push_back</span>(input);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">sort</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>());</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;v.<span class="built_in">size</span>(); i++)&#123;</span><br><span class="line">        cout&lt;&lt;v[i]&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    <span class="built_in">reverse</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>());</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;v.<span class="built_in">size</span>(); i++)&#123;</span><br><span class="line">        cout&lt;&lt;v[i]&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></p>
 ]]></content>
       <categories>
         <category>大學課堂筆記-程式設計</category>

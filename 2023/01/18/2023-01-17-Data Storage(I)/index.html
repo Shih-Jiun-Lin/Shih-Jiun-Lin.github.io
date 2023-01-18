@@ -49,8 +49,122 @@
     
     
 <!-- hexo injector head_end start -->
-<link rel="stylesheet" href="/custom_css_source.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 
 <body>
@@ -67,7 +181,26 @@
 
 
 <main class="page-container">
+    
+        
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2.7.8/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
+    
     
 
     <div class="page-main-content">
@@ -378,7 +511,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>468 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>450 Words</span>
         </span>
     
     
@@ -405,31 +538,10 @@
 <li>Simple, logical and unambiguous</li>
 <li>Boolen operation and gates
 <ul>
-<li>AND: <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/f40BHRy.png"
-                      
-                ></li>
-<li>OR: <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/iHu0uCp.png"
-                      
-                ></li>
-<li>Exclusive OR(XOR): <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/Kt4lWeG.png"
-                      
-                ></li>
-<li>NOT: <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/naddbwe.png"
-                      
-                ></li>
+<li>AND: <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/f40BHRy.png"></li>
+<li>OR: <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/iHu0uCp.png"></li>
+<li>Exclusive OR(XOR): <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/Kt4lWeG.png"></li>
+<li>NOT: <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/naddbwe.png"></li>
 </ul></li>
 </ol>
 <h2 id="flip-flop正反器">Flip-Flop(正反器)</h2>
@@ -439,29 +551,12 @@
 <li>One -&gt; set 0</li>
 <li>The other -&gt; set 1</li>
 <li>It will preserve 0/1 if there is no inputs</li>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/CM0A35v.png"
-                      
-                ><br />
+<li><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/CM0A35v.png"><br>
 </li>
 </ol>
 <ul>
-<li>Simple SR Flip-Flop Circuit <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/UxaHn8a.png"
-                      
-                ></li>
-<li>Another Simple SR Flip-Flop Circuit <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/eHtGv2l.png"
-                      
-                ></li>
+<li>Simple SR Flip-Flop Circuit <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/UxaHn8a.png"></li>
+<li>Another Simple SR Flip-Flop Circuit <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/eHtGv2l.png"></li>
 </ul>
 <h2 id="hexadecimalhex十六進位">Hexadecimal(Hex，十六進位)</h2>
 <ol type="1">
@@ -470,34 +565,19 @@
 <li>Binary is too long for human to remember</li>
 <li>Binary to Hex is straightforward</li>
 </ul></li>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/4SckAD3.png"
-                      
-                ></li>
+<li><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/4SckAD3.png"></li>
 </ol>
 <h2 id="main-memory-cell">Main memory cell</h2>
 <ol type="1">
 <li>8 bits -&gt; 1 cell -&gt; 1 byte</li>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/0tHCICX.png"
-                      
-                ></li>
+<li><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/0tHCICX.png"></li>
 </ol>
 <h2 id="memory">Memory</h2>
 <ol type="1">
 <li>One dimensional</li>
 <li>Random accessible</li>
 <li>Access the content via the address</li>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/848KpU9.png"
-                      
-                ></li>
+<li><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/848KpU9.png"></li>
 </ol>
 <h2 id="memory-techniques">Memory techniques</h2>
 <ol type="1">
@@ -510,15 +590,12 @@ DRAM(SDRAM)</li>
 <li>Dual/Triple channel</li>
 </ul></li>
 <li><ul>
-<li>Kilobyte: <span class="math inline">\(2^{10}\)</span> = 1024 bytes
-<span class="math inline">\(\simeq\)</span> <span
-class="math inline">\(10^{3}\)</span> bytes</li>
-<li>Megabyte: <span class="math inline">\(2^{20}\)</span> = 1038576
-bytes <span class="math inline">\(\simeq\)</span> <span
-class="math inline">\(10^{6}\)</span> bytes</li>
-<li>Gigabyte: <span class="math inline">\(2^{30}\)</span> = 1073741824
-bytes <span class="math inline">\(\simeq\)</span> <span
-class="math inline">\(10^{9}\)</span> bytes</li>
+<li>Kilobyte: <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.919ex" height="1.887ex" role="img" focusable="false" viewBox="0 -833.9 1290.1 833.9"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="TeXAtom" transform="translate(533,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"></path></g></g></g></g></g></svg></mjx-container></span> = 1024 bytes
+<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0.081ex;" xmlns="http://www.w3.org/2000/svg" width="1.76ex" height="0.968ex" role="img" focusable="false" viewBox="0 -464 778 428"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2243" d="M55 283Q55 356 103 409T217 463Q262 463 297 447T395 382Q431 355 446 344T493 320T554 307H558Q613 307 652 344T694 433Q694 464 708 464T722 432Q722 356 673 304T564 251H554Q510 251 465 275T387 329T310 382T223 407H219Q164 407 122 367Q91 333 85 295T76 253T69 250Q55 250 55 283ZM56 56Q56 71 72 76H706Q722 70 722 56Q722 44 707 36H70Q56 43 56 56Z"></path></g></g></g></svg></mjx-container></span> <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.05ex;" xmlns="http://www.w3.org/2000/svg" width="3.25ex" height="2.003ex" role="img" focusable="false" viewBox="0 -863.3 1436.6 885.3"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"></path></g><g data-mml-node="TeXAtom" transform="translate(1033,393.1) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mn"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path></g></g></g></g></g></svg></mjx-container></span> bytes</li>
+<li>Megabyte: <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.919ex" height="1.887ex" role="img" focusable="false" viewBox="0 -833.9 1290.1 833.9"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="TeXAtom" transform="translate(533,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"></path></g></g></g></g></g></svg></mjx-container></span> = 1038576
+bytes <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0.081ex;" xmlns="http://www.w3.org/2000/svg" width="1.76ex" height="0.968ex" role="img" focusable="false" viewBox="0 -464 778 428"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2243" d="M55 283Q55 356 103 409T217 463Q262 463 297 447T395 382Q431 355 446 344T493 320T554 307H558Q613 307 652 344T694 433Q694 464 708 464T722 432Q722 356 673 304T564 251H554Q510 251 465 275T387 329T310 382T223 407H219Q164 407 122 367Q91 333 85 295T76 253T69 250Q55 250 55 283ZM56 56Q56 71 72 76H706Q722 70 722 56Q722 44 707 36H70Q56 43 56 56Z"></path></g></g></g></svg></mjx-container></span> <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.05ex;" xmlns="http://www.w3.org/2000/svg" width="3.25ex" height="2.005ex" role="img" focusable="false" viewBox="0 -864 1436.6 886"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"></path></g><g data-mml-node="TeXAtom" transform="translate(1033,393.1) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mn"><path data-c="36" d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z"></path></g></g></g></g></g></svg></mjx-container></span> bytes</li>
+<li>Gigabyte: <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.919ex" height="1.887ex" role="img" focusable="false" viewBox="0 -833.9 1290.1 833.9"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="TeXAtom" transform="translate(533,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mn"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"></path></g></g></g></g></g></svg></mjx-container></span> = 1073741824
+bytes <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0.081ex;" xmlns="http://www.w3.org/2000/svg" width="1.76ex" height="0.968ex" role="img" focusable="false" viewBox="0 -464 778 428"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2243" d="M55 283Q55 356 103 409T217 463Q262 463 297 447T395 382Q431 355 446 344T493 320T554 307H558Q613 307 652 344T694 433Q694 464 708 464T722 432Q722 356 673 304T564 251H554Q510 251 465 275T387 329T310 382T223 407H219Q164 407 122 367Q91 333 85 295T76 253T69 250Q55 250 55 283ZM56 56Q56 71 72 76H706Q722 70 722 56Q722 44 707 36H70Q56 43 56 56Z"></path></g></g></g></svg></mjx-container></span> <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.05ex;" xmlns="http://www.w3.org/2000/svg" width="3.25ex" height="2.005ex" role="img" focusable="false" viewBox="0 -864 1436.6 886"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"></path></g><g data-mml-node="TeXAtom" transform="translate(1033,393.1) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mn"><path data-c="39" d="M352 287Q304 211 232 211Q154 211 104 270T44 396Q42 412 42 436V444Q42 537 111 606Q171 666 243 666Q245 666 249 666T257 665H261Q273 665 286 663T323 651T370 619T413 560Q456 472 456 334Q456 194 396 97Q361 41 312 10T208 -22Q147 -22 108 7T68 93T121 149Q143 149 158 135T173 96Q173 78 164 65T148 49T135 44L131 43Q131 41 138 37T164 27T206 22H212Q272 22 313 86Q352 142 352 280V287ZM244 248Q292 248 321 297T351 430Q351 508 343 542Q341 552 337 562T323 588T293 615T246 625Q208 625 181 598Q160 576 154 546T147 441Q147 358 152 329T172 282Q197 248 244 248Z"></path></g></g></g></g></g></svg></mjx-container></span> bytes</li>
 </ul></li>
 </ol>
 <h2 id="mass-storage">Mass Storage</h2>
@@ -538,39 +615,19 @@ class="math inline">\(10^{9}\)</span> bytes</li>
 </ul></li>
 <li>Magnetic storage:
 <ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/FaS4kFn.png"
-                      
-                ></li>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/Blqj4wl.png"
-                      
-                ></li>
+<li><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/FaS4kFn.png"></li>
+<li><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/Blqj4wl.png"></li>
 <li>Access time = seek time(To reach the right track) + rotation
 delay(latency time，To reahc the right sector)</li>
 <li>Transfer rate(SATA)</li>
 </ul></li>
 <li>Optical storage
 <ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/4CxHApt.png"
-                      
-                ></li>
+<li><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/4CxHApt.png"></li>
 </ul></li>
 <li>Physical and logical records
 <ul>
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/dUAwIy8.png"
-                      
-                ></li>
+<li><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/dUAwIy8.png"></li>
 </ul></li>
 <li>Buffer(緩衝區)
 <ul>
@@ -587,34 +644,10 @@ rates</li>
 </ol>
 <h2 id="representing-numbers">Representing numbers</h2>
 <ol type="1">
-<li><p>901 (decimal): <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/gUkyMRy.png"
-                      
-                ></p></li>
-<li><p>11 (binary): <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/yCSMAtg.png"
-                      
-                ></p></li>
-<li><p>From binary to decimal <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/77twv7u.png"
-                      
-                ></p></li>
-<li><p>From decimal to binary <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/CxpuQ3J.png"
-                      
-                ></p></li>
+<li><p>901 (decimal): <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/gUkyMRy.png"></p></li>
+<li><p>11 (binary): <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/yCSMAtg.png"></p></li>
+<li><p>From binary to decimal <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/77twv7u.png"></p></li>
+<li><p>From decimal to binary <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/CxpuQ3J.png"></p></li>
 </ol>
 <h2 id="representing-img">Representing img</h2>
 <ol type="1">
@@ -634,7 +667,7 @@ rates</li>
 <li>Sampling
 <ul>
 <li>Sample rate and bit resolution</li>
-<li>Bit rate(sampling rate <span class="math inline">\(\times\)</span>
+<li>Bit rate(sampling rate <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0.02ex;" xmlns="http://www.w3.org/2000/svg" width="1.76ex" height="1.09ex" role="img" focusable="false" viewBox="0 -491 778 482"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g></g></g></svg></mjx-container></span>
 bit resolution)</li>
 </ul></li>
 <li>MIDI(synthesis)
@@ -660,50 +693,21 @@ cards</li>
 <h2 id="twos-complement-notation-and-encoding">Two's complement notation
 and encoding</h2>
 <ol type="1">
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/SisdfNh.png"
-                      
-                ></li>
-<li>Encoding(method 1): <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/yCIZs08.png"
-                      
-                >
+<li><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/SisdfNh.png"></li>
+<li>Encoding(method 1): <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/yCIZs08.png">
 After finishing the process，you can directly do the addition and get
 the right answer</li>
-<li>Encoding(method 2): Do it as usual binary way<img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/qHhHYH7.png"
-                      
-                ></li>
-<li>Encoding(method 3): <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/35BXAa6.png"
-                      
-                ></li>
+<li>Encoding(method 2): Do it as usual binary way<img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/qHhHYH7.png"></li>
+<li>Encoding(method 3): <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/35BXAa6.png"></li>
 </ol>
 <h2 id="excess-notation">Excess notation</h2>
 <ol type="1">
-<li><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/3cyVdYJ.png"
-                      
-                ></li>
+<li><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/3cyVdYJ.png"></li>
 <li>Addition: After the calculation, u have to add 4 to get the right
 answer ## Overflow Using the table from Two's complement:</li>
 <li>Occurs when the result is out of range(not in table)</li>
-<li>Addition of two positive numbers -&gt; 2+3=5 <span
-class="math inline">\(\equiv\)</span> -3(mod 8)</li>
-<li>Addition of two negative numbers -&gt; (-2)+(-3)=-5 <span
-class="math inline">\(\equiv\)</span> -3(mod 8)</li>
+<li>Addition of two positive numbers -&gt; 2+3=5 <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0.081ex;" xmlns="http://www.w3.org/2000/svg" width="1.76ex" height="0.968ex" role="img" focusable="false" viewBox="0 -464 778 428"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2261" d="M56 444Q56 457 70 464H707Q722 456 722 444Q722 430 706 424H72Q56 429 56 444ZM56 237T56 250T70 270H707Q722 262 722 250T707 230H70Q56 237 56 250ZM56 56Q56 71 72 76H706Q722 70 722 56Q722 44 707 36H70Q56 43 56 56Z"></path></g></g></g></svg></mjx-container></span> -3(mod 8)</li>
+<li>Addition of two negative numbers -&gt; (-2)+(-3)=-5 <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0.081ex;" xmlns="http://www.w3.org/2000/svg" width="1.76ex" height="0.968ex" role="img" focusable="false" viewBox="0 -464 778 428"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2261" d="M56 444Q56 457 70 464H707Q722 456 722 444Q722 430 706 424H72Q56 429 56 444ZM56 237T56 250T70 270H707Q722 262 722 250T707 230H70Q56 237 56 250ZM56 56Q56 71 72 76H706Q722 70 722 56Q722 44 707 36H70Q56 43 56 56Z"></path></g></g></g></svg></mjx-container></span> -3(mod 8)</li>
 </ol>
 
             </div>

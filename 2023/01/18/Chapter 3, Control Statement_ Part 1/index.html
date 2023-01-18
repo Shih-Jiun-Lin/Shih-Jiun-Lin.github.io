@@ -49,8 +49,122 @@
     
     
 <!-- hexo injector head_end start -->
-<link rel="stylesheet" href="/custom_css_source.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 
 <body>
@@ -67,7 +181,26 @@
 
 
 <main class="page-container">
+    
+        
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2.7.8/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
+    
     
 
     <div class="page-main-content">
@@ -386,7 +519,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>384 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>354 Words</span>
         </span>
     
     
@@ -420,8 +553,7 @@ Statement: Part 1</h1>
 <li>switch: A multiselection statement ### Conditional
 Operators(?:)</li>
 <li>Closely related to the if..else function.</li>
-<li>Ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> x&#123;<span class="number">0</span>&#125;, y&#123;<span class="number">1</span>&#125;;</span><br><span class="line">    result=x&lt;y?<span class="string">&quot;x&lt;y&quot;</span>:<span class="string">&quot;x&gt;y&quot;</span>;</span><br><span class="line">    std::cout&lt;&lt;result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> Accodring to the code, it will cout x<span
-class="math inline">\(&lt;\)</span>y in the command prompt.</li>
+<li>Ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> x{<span class="number">0</span>}, y{<span class="number">1</span>};</span><br><span class="line">    result=x&lt;y?<span class="string">"x&lt;y"</span>:<span class="string">"x&gt;y"</span>;</span><br><span class="line">    std::cout&lt;&lt;result;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> Accodring to the code, it will cout x<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.09ex;" xmlns="http://www.w3.org/2000/svg" width="1.76ex" height="1.312ex" role="img" focusable="false" viewBox="0 -540 778 580"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="3C" d="M694 -11T694 -19T688 -33T678 -40Q671 -40 524 29T234 166L90 235Q83 240 83 250Q83 261 91 266Q664 540 678 540Q681 540 687 534T694 519T687 505Q686 504 417 376L151 250L417 124Q686 -4 687 -5Q694 -11 694 -19Z"></path></g></g></g></svg></mjx-container></span>y in the command prompt.</li>
 <li>Another way to declare integers: int x{0} equals to int x=0 ##
 Repetition Statements(Looping Statements)</li>
 <li>while: do the action zero or more times.</li>
@@ -431,20 +563,8 @@ Repetition</li>
 <li>Counter variables are normally initialized to zero or one, depending
 on their use.</li>
 <li>Remember to initialize the counter varible, or it might contain some
-garbage variable. ## How to change the tpye of a object <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">static_cast</span>&lt;type&gt;(object);</span><br><span class="line">    (type)object;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> ##
-setprecision() <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#inlcude <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    std::cout&lt;&lt;std::<span class="built_in">setprecision</span>(<span class="number">2</span>)&lt;&lt;floatnum; <span class="comment">//start from the first num after fixed point</span></span><br><span class="line">    std::cout&lt;&lt;fixed::std::<span class="built_in">setprecision</span>(<span class="number">2</span>)&lt;&lt;floatnum; <span class="comment">//start from the first num before fixed point</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> ## Common Keywords in C++ and C <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/qm5wD9b.png"
-                      
-                > ## Assignment Operators <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/JHI93gS.png"
-                      
-                > ## Preincrement and
+garbage variable. ## How to change the tpye of a object <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="built_in">static_cast</span>&lt;type&gt;(object);</span><br><span class="line">    (type)object;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> ##
+setprecision() <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#inlcude <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    std::cout&lt;&lt;std::<span class="built_in">setprecision</span>(<span class="number">2</span>)&lt;&lt;floatnum; <span class="comment">//start from the first num after fixed point</span></span><br><span class="line">    std::cout&lt;&lt;fixed::std::<span class="built_in">setprecision</span>(<span class="number">2</span>)&lt;&lt;floatnum; <span class="comment">//start from the first num before fixed point</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> ## Common Keywords in C++ and C <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/qm5wD9b.png"> ## Assignment Operators <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/JHI93gS.png"> ## Preincrement and
 Postincrement</li>
 <li>Preincrement =&gt; Increment a by 1, then use the new value of a in
 the expression in which a resides.</li>
@@ -452,17 +572,17 @@ the expression in which a resides.</li>
 which a resides, then increment a by 1. Ex:</li>
 </ul>
 <pre class="c++="><code>#include &lt;iostream&gt;
-int main()&#123;
+int main(){
     int a=1;
-    std::cout&lt;&lt;a&lt;&lt;&quot;\n&quot;;
-    std::cout&lt;&lt;a++&lt;&lt;&quot;\n&quot;; //do a=a+1 after cout
-    std::cout&lt;&lt;a&lt;&lt;&quot;\n&quot;;
+    std::cout&lt;&lt;a&lt;&lt;"\n";
+    std::cout&lt;&lt;a++&lt;&lt;"\n"; //do a=a+1 after cout
+    std::cout&lt;&lt;a&lt;&lt;"\n";
 
     int b=1;
-    std::cout&lt;&lt;b&lt;&lt;&quot;\n&quot;;
-    std::cout&lt;&lt;++b&lt;&lt;&quot;\n&quot;; //do b=b+1 before cout
-    std::cout&lt;&lt;b&lt;&lt;&quot;\n&quot;;
-&#125;</code></pre>
+    std::cout&lt;&lt;b&lt;&lt;"\n";
+    std::cout&lt;&lt;++b&lt;&lt;"\n"; //do b=b+1 before cout
+    std::cout&lt;&lt;b&lt;&lt;"\n";
+}</code></pre>
 
             </div>
 

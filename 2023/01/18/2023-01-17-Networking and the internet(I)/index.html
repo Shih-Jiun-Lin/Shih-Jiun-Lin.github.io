@@ -49,8 +49,122 @@
     
     
 <!-- hexo injector head_end start -->
-<link rel="stylesheet" href="/custom_css_source.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 
 <body>
@@ -67,7 +181,26 @@
 
 
 <main class="page-container">
+    
+        
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2.7.8/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
+    
     
 
     <div class="page-main-content">
@@ -420,24 +553,9 @@ Internet(I)</h1>
 </ul></li>
 <li><p>Topology (拓樸學)</p>
 <ul>
-<li>Bus: <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/1QUPg2e.png"
-                      
-                ></li>
-<li>Ring: <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/bWnGTBf.png"
-                      
-                ></li>
-<li>Star: <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/EWTkIgx.png"
-                      
-                > ##
+<li>Bus: <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/1QUPg2e.png"></li>
+<li>Ring: <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/bWnGTBf.png"></li>
+<li>Star: <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/EWTkIgx.png"> ##
 Protocols</li>
 </ul></li>
 <li><p>Token Ring</p>
@@ -464,65 +582,31 @@ detect again. If the channel is still idle, then start sending. ##
 Wireless and Access Point(AP)</li>
 </ul></li>
 <li><p>Wi-Fi(wireless fidelity)</p></li>
-<li><p>IEEE 802.11-Standard for wireless network(b, g, i, n, ac...) <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/MOBFzwQ.png"
-                      
-                > ##
+<li><p>IEEE 802.11-Standard for wireless network(b, g, i, n, ac...) <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/MOBFzwQ.png"> ##
 Repeater，Bridge，Switch(Compatible Networks) Reference:
 https://notfalse.net/66/repeater-hub-bridge-switch</p></li>
 <li><p>The protocol between these devices have to be the same.</p></li>
 <li><p>Repeater(Amplifier)</p>
 <ul>
 <li>Passing through messages.</li>
-<li>Connecting two compatible networks <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/0t1ZGPW.png"
-                      
-                ></li>
+<li>Connecting two compatible networks <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/0t1ZGPW.png"></li>
 </ul></li>
 <li><p>Bridge</p>
 <ul>
 <li>Only passing those messages addressed to the other side.</li>
-<li>Connecting two compatible networks more efficiently. <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/QEsDF9x.png"
-                      
-                ></li>
+<li>Connecting two compatible networks more efficiently. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/QEsDF9x.png"></li>
 </ul></li>
 <li><p>Switch(Multiple Bridge)</p>
 <ul>
 <li>A bridge with multiple connections.</li>
-<li>Connecting mutiple compatible networks efficiently. <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/uwwGpYy.png"
-                      
-                > ## Router(Incompatible
-Networks) <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/rJmNTSf.png"
-                      
-                ></li>
+<li>Connecting mutiple compatible networks efficiently. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/uwwGpYy.png"> ## Router(Incompatible
+Networks) <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rJmNTSf.png"></li>
 </ul></li>
 <li><p>Router</p>
 <ul>
 <li>Building a network of networks.(The protocol can be different)</li>
 <li>Most come with firewall management. ## Interprocess Communication
-<img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/6pWclWl.png"
-                      
-                ></li>
+<img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/6pWclWl.png"></li>
 </ul></li>
 <li><p>Server-Client</p>
 <ul>
@@ -533,22 +617,11 @@ Networks) <img
 <ul>
 <li>Two processes communicating as equals.</li>
 <li>The most popular distribution mode nowadays. ## Distributed Systems
-<img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/ZmowcOK.png"
-                      
-                ></li>
+<img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ZmowcOK.png"></li>
 </ul></li>
 <li><p>Infrastructure can be provided by standardized toolkits.</p>
 <ul>
-<li>Ex: Java Beans，.NET framework. ## Internet Architecture <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/rB8IPMk.png"
-                      
-                ></li>
+<li>Ex: Java Beans，.NET framework. ## Internet Architecture <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rB8IPMk.png"></li>
 </ul></li>
 <li><p>Domain</p>
 <ul>
@@ -561,12 +634,7 @@ Networks) <img
 <li><p>Gateway</p>
 <ul>
 <li>A router that connects a domain to the rest of the Internet. ##
-Internet Composition <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/3reTfwk.png"
-                      
-                ></li>
+Internet Composition <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/3reTfwk.png"></li>
 </ul></li>
 <li><p>Internet Service Provider(ISP)</p>
 <ul>
@@ -585,13 +653,7 @@ you to the right server.</li>
 </ul></li>
 <li><p>Domain Name Server(DNS)</p>
 <ul>
-<li>A server that provide you with server information. <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/rYtlfru.png"
-                      
-                > ## Internet Application</li>
+<li>A server that provide you with server information. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rYtlfru.png"> ## Internet Application</li>
 </ul></li>
 <li><p>VoIP(Voice over Internet protocol)</p></li>
 <li><p>email(electronic mail)</p></li>
@@ -600,13 +662,7 @@ you to the right server.</li>
 <li><p>P2P ## Browsers</p></li>
 <li><p>HTTP(Hyper text transfer protocol)</p></li>
 <li><p>URL(uniform resource locator)</p></li>
-<li><p>How a browser get access to a webpage(document): <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/hY3bIGo.png"
-                      
-                > ## Client-side and
+<li><p>How a browser get access to a webpage(document): <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/hY3bIGo.png"> ## Client-side and
 Server-side</p></li>
 <li><p>Client-side(The program is executed on one's pc)</p>
 <ul>
@@ -629,12 +685,7 @@ Reference:https://ithelp.ithome.com.tw/articles/10259569?sc=pt</p></li>
 <li>Reference: https://en.wikipedia.org/wiki/OSI_model</li>
 </ul></li>
 </ul>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/e5dfV9e.png"
-                      
-                ></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/e5dfV9e.png"></p>
 <ul>
 <li>TCP/IP Model
 <ul>
@@ -644,21 +695,11 @@ Reference:https://ithelp.ithome.com.tw/articles/10259569?sc=pt</p></li>
 <li>Link handles actual transmission of packets.</li>
 </ul></li>
 </ul>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/0gNoMlv.png"
-                      
-                ></p></li>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/0gNoMlv.png"></p></li>
 <li><p>Port</p>
 <ul>
 <li>Incoming messages are delivered to different applications by unique
-port numbers. <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/54gXvXI.png"
-                      
-                > ##
+port numbers. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/54gXvXI.png"> ##
 TCP/IP</li>
 </ul></li>
 <li><p>TCP and UDP(Transport Layer)</p>
@@ -689,40 +730,19 @@ more than just TCP and IP. ## Security</p></li>
 </ul></li>
 <li><p>Public/Private Keys System</p>
 <ul>
-<li>Reference: https://medium.com/<span class="citation"
-data-cites="RiverChan">@RiverChan</span>/%E5%9F%BA%E7%A4%8E%E5%AF%86%E7%A2%BC%E5%AD%B8-%E5%B0%8D%E7%A8%B1%E5%BC%8F%E8%88%87%E9%9D%9E%E5%B0%8D%E7%A8%B1%E5%BC%8F%E5%8A%A0%E5%AF%86%E6%8A%80%E8%A1%93-de25fd5fa537</li>
+<li>Reference: https://medium.com/<span class="citation" data-cites="RiverChan">@RiverChan</span>/%E5%9F%BA%E7%A4%8E%E5%AF%86%E7%A2%BC%E5%AD%B8-%E5%B0%8D%E7%A8%B1%E5%BC%8F%E8%88%87%E9%9D%9E%E5%B0%8D%E7%A8%B1%E5%BC%8F%E5%8A%A0%E5%AF%86%E6%8A%80%E8%A1%93-de25fd5fa537</li>
 <li>SSL(Secure Scoket Layer)
 <ul>
 <li>Application: sftp, https, ssh</li>
 </ul></li>
 <li>To prevent fishing, a certificate authority is needed, to ensure to
-correctivity of a key. <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/fnACCIR.png"
-                      
-                > ##
+correctivity of a key. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/fnACCIR.png"> ##
 RSA Algorithm Reference:
 https://ithelp.ithome.com.tw/articles/10250721</li>
 </ul></li>
-<li><p>Generation <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/5SMoi2J.png"
-                      
-                ></p></li>
-<li><p>Encryption <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/WTvEm7R.png"
-                      
-                ></p></li>
-<li><p>Decryption <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/6fnmG7A.png"
-                      
-                ></p></li>
+<li><p>Generation <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/5SMoi2J.png"></p></li>
+<li><p>Encryption <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/WTvEm7R.png"></p></li>
+<li><p>Decryption <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/6fnmG7A.png"></p></li>
 </ul>
 
             </div>

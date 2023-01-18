@@ -49,8 +49,122 @@
     
     
 <!-- hexo injector head_end start -->
-<link rel="stylesheet" href="/custom_css_source.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 
 <body>
@@ -67,7 +181,26 @@
 
 
 <main class="page-container">
+    
+        
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2.7.8/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
+    
     
 
     <div class="page-main-content">
@@ -386,7 +519,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>272 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>240 Words</span>
         </span>
     
     
@@ -417,29 +550,14 @@ Files</h1>
 <li>ifstream: reads from files</li>
 </ul></li>
 </ul>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/BXqxxcS.png"
-                      
-                > Ex1(Input data to txt):
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    fstream file;</span><br><span class="line">    file.<span class="built_in">open</span>(<span class="string">&quot;test.txt&quot;</span>, ios::out);</span><br><span class="line">    string name, birthday;</span><br><span class="line">    <span class="keyword">if</span>(!file)&#123;</span><br><span class="line">        cerr&lt;&lt;<span class="string">&quot;File could not be open.&quot;</span>&lt;&lt;endl; </span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);    <span class="comment">//exit with error</span></span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;<span class="string">&quot;Input the name and birthday(input end-of-file to end the program):&quot;</span>;</span><br><span class="line">    <span class="keyword">while</span>(cin&gt;&gt;name&gt;&gt;birthday)&#123;</span><br><span class="line">        outClientFile&lt;&lt;name&lt;&lt;<span class="string">&#x27; &#x27;</span>&lt;&lt;birthday&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">        cout&lt;&lt;<span class="string">&quot;Input the name and birthday(input end-of-file to end the program):&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    outClientFile.<span class="built_in">close</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> Ex2(Read from txt): <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="function">fstream <span class="title">file</span><span class="params">(<span class="string">&quot;test.txt&quot;</span>, ios::in)</span></span>;</span><br><span class="line">    string name, birthday;</span><br><span class="line">    <span class="keyword">if</span>(!file)&#123;</span><br><span class="line">        cerr&lt;&lt;<span class="string">&quot;The file cannot be opened.&quot;</span>;</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(file&gt;&gt;name&gt;&gt;birthday)&#123;</span><br><span class="line">        cout&lt;&lt;name&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;birthday&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    outClientFile.<span class="built_in">close</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> * Reading from a
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/BXqxxcS.png"> Ex1(Input data to txt):
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    fstream file;</span><br><span class="line">    file.<span class="built_in">open</span>(<span class="string">"test.txt"</span>, ios::out);</span><br><span class="line">    string name, birthday;</span><br><span class="line">    <span class="keyword">if</span>(!file){</span><br><span class="line">        cerr&lt;&lt;<span class="string">"File could not be open."</span>&lt;&lt;endl; </span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);    <span class="comment">//exit with error</span></span><br><span class="line">    }</span><br><span class="line">    cout&lt;&lt;<span class="string">"Input the name and birthday(input end-of-file to end the program):"</span>;</span><br><span class="line">    <span class="keyword">while</span>(cin&gt;&gt;name&gt;&gt;birthday){</span><br><span class="line">        outClientFile&lt;&lt;name&lt;&lt;<span class="string">' '</span>&lt;&lt;birthday&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">        cout&lt;&lt;<span class="string">"Input the name and birthday(input end-of-file to end the program):"</span>;</span><br><span class="line">    }</span><br><span class="line">    outClientFile.<span class="built_in">close</span>();</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> Ex2(Read from txt): <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="function">fstream <span class="title">file</span><span class="params">(<span class="string">"test.txt"</span>, ios::in)</span></span>;</span><br><span class="line">    string name, birthday;</span><br><span class="line">    <span class="keyword">if</span>(!file){</span><br><span class="line">        cerr&lt;&lt;<span class="string">"The file cannot be opened."</span>;</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">while</span>(file&gt;&gt;name&gt;&gt;birthday){</span><br><span class="line">        cout&lt;&lt;name&lt;&lt;<span class="string">" "</span>&lt;&lt;birthday&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    }</span><br><span class="line">    outClientFile.<span class="built_in">close</span>();</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> * Reading from a
 specific line(seekg(), seekp())
 Reference:　http://c.biancheng.net/view/1541.html</p>
 <pre><code>* name.seekg(0); =&gt; reposition the pointer to location 0.
 * To read a sequential file again, we need to add name.clear() before the seekg.</code></pre>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/8Ourtup.png"
-                      
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/QbXSudS.png"
-                      
-                > * Telling you the
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/8Ourtup.png"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/QbXSudS.png"> * Telling you the
 current location(tellg(), tellp())</p>
 
             </div>

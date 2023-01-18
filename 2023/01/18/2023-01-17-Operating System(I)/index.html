@@ -49,8 +49,122 @@
     
     
 <!-- hexo injector head_end start -->
-<link rel="stylesheet" href="/custom_css_source.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 
 <body>
@@ -67,7 +181,26 @@
 
 
 <main class="page-container">
+    
+        
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2.7.8/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
+    
     
 
     <div class="page-main-content">
@@ -407,24 +540,12 @@
 <h2 id="batch-processingearly-era">Batch processing(early era)</h2>
 <ul>
 <li>The process of computer operators entering data to the computers and
-give the result back to you. <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/mVRCkv6.png"
-                      
-                ></li>
+give the result back to you. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/mVRCkv6.png"></li>
 </ul>
 <h2 id="interactive-processingearly-era">Interactive processing(early
 era)</h2>
 <ul>
-<li><p>OS with remote terminals <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/Kovmajm.png"
-                      
-                ></p></li>
+<li><p>OS with remote terminals <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/Kovmajm.png"></p></li>
 <li><p>Types of operating system</p>
 <ul>
 <li>Batch(批次)</li>
@@ -445,13 +566,7 @@ era)</h2>
 </ul></li>
 <li>http://www.chwa.com.tw/TResource/VS/book1/ch3/3-2.htm</li>
 </ul></li>
-<li><p>Software classification <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/WyObhvz.png"
-                      
-                ></p></li>
+<li><p>Software classification <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/WyObhvz.png"></p></li>
 <li><p>Shells</p>
 <ul>
 <li>Communication with users
@@ -468,7 +583,7 @@ era)</h2>
 <li><p>Memory manager</p>
 <ul>
 <li>Allocating main memory</li>
-<li>Paging, virtual memory<br />
+<li>Paging, virtual memory<br>
 </li>
 </ul></li>
 <li><p>Schedular</p>
@@ -483,13 +598,7 @@ selected by Schedular. ## Linux</li>
 <li><p>Made by Linus Torvalds</p></li>
 <li><p>Freeware and open-source</p></li>
 <li><p>Many distribution (Ex: Ubuntu，Kali)</p></li>
-<li><p>Linux only means the kernel ## How is OS being loaded? <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/2CzC6fw.png"
-                      
-                ></p></li>
+<li><p>Linux only means the kernel ## How is OS being loaded? <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/2CzC6fw.png"></p></li>
 <li><p>BIOS(Basic Input/Output Sytem)is usually stored on a EEPEROM
 chip(Electrically-Erasable Programable Read-Only Memory) ##
 Process</p></li>
@@ -514,23 +623,12 @@ Administration</li>
 <li>Removing completed process</li>
 <li>Deciding whether a process is ready or waiting</li>
 </ul></li>
-<li><p>Dispatcher <img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/ae6Hv5z.png"
-                      
-                ></p>
+<li><p>Dispatcher <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ae6Hv5z.png"></p>
 <ul>
 <li>Use: Getting the process to running state.</li>
 <li>Controling the allocation of time to the process in the process
 table.</li>
-<li>Process switch(interrupt) <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/vvtyj1e.png"
-                      
-                > Multiprogramming between two
+<li>Process switch(interrupt) <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/vvtyj1e.png"> Multiprogramming between two
 processes. ## Semaphores</li>
 </ul></li>
 <li><p>Meaning of semaphore: A visual sinaling appratus with flags,
@@ -553,20 +651,9 @@ and return later to request more.</li>
 retrieved.</li>
 </ol></li>
 </ul>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/LWgDTY9.png"
-                      
-                > * To prevent Deadlock
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/LWgDTY9.png"> * To prevent Deadlock
 from happening, we have to avoid the conditions mentioned above being
-satisfied. ## The Consequence of Preventing Deadlock from Happening <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://i.imgur.com/HxCTDOU.png"
-                      
-                ></p>
+satisfied. ## The Consequence of Preventing Deadlock from Happening <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/HxCTDOU.png"></p>
 <ul>
 <li>Starvation: Process cannot get the resources needed for a long time
 because the resources keep being allocated to other processes.</li>

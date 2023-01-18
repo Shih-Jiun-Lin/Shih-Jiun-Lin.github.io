@@ -204,8 +204,8 @@ D-&gt;Dataset)</li>
 <h2 id="speed-up-and-scaling">Speed up and Scaling</h2>
 <ul>
 <li>Amdahl's law(阿姆達爾定律)</li>
-<li>Gain = $ {+(1-P)} $ (P -&gt; proportion that is parallelizable, S
--&gt; proportion that is serial only)</li>
+<li>Gain = $ $ (P -&gt; proportion that is parallelizable, S -&gt;
+proportion that is serial only)</li>
 </ul>
 ]]></content>
       <categories>

@@ -1327,63 +1327,6 @@ which a resides, then increment a by 1.</li>
       </tags>
   </entry>
   <entry>
-    <title>Control Statement-Part 2</title>
-    <url>/2023/01/17/Chapter%204,%20Control%20Statement_%20Part%202/</url>
-    <content><![CDATA[<h1 id="chapter-4-control-statement-part-2">Chapter 4, Control
-Statement: Part 2</h1>
-<h2 id="do...while">do...while</h2>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">do</span>{</span><br><span class="line"></span><br><span class="line">}<span class="keyword">while</span>;(condition)</span><br></pre></td></tr></table></figure></div>
-<ul>
-<li>do...while always check the continuation after the code inside the
-{} has been excecuted. Therefore, it will execute at least one time.
-<img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/OQEIHFE.png"></li>
-</ul>
-<h2 id="switch-case">switch case</h2>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span>(expression){</span><br><span class="line">    <span class="keyword">case</span> constant1:</span><br><span class="line">        <span class="comment">//execute while expression is constant1;</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> constant2:</span><br><span class="line">        <span class="comment">//execute while expression is constant2;</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'F'</span>:</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'f'</span>:</span><br><span class="line">        <span class="comment">//execute while expression is F or f;</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>+<span class="number">2</span>:</span><br><span class="line">        <span class="comment">//not allowed</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>+<span class="number">4</span>:</span><br><span class="line">        <span class="comment">//not allowed</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        ...</span><br><span class="line">        <span class="comment">//code to be executed if expression doesn't</span></span><br><span class="line">        <span class="comment">// match any constant</span></span><br><span class="line">        </span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-<ul>
-<li>Perform many different actions based on the value of expression.
-<img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ygwibqG.png"></li>
-</ul>
-<h2 id="setw">setw()</h2>
-<ul>
-<li>setw() =&gt; print spaces to make it tidy. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rY3G69w.png"></li>
-</ul>
-<h2 id="eof">EOF</h2>
-<ul>
-<li>EOF =&gt; End of file by entering ctrl+z. <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line">cin&gt;&gt;sth;</span><br><span class="line"><span class="keyword">while</span>(cin.<span class="built_in">get</span>()!=EOF){</span><br><span class="line">    ...</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
-</ul>
-<h2 id="cin.get-vs-cin">cin.get() vs cin&gt;&gt;</h2>
-<ul>
-<li>cin.get() -&gt; only read one character.</li>
-<li>cin -&gt; depends on &gt;&gt;. <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> grade, aC{<span class="number">0</span>}, bC{<span class="number">0</span>}, cC{<span class="number">0</span>};</span><br><span class="line">    <span class="keyword">while</span>((grade=std::cin.<span class="built_in">get</span>())!=EOF){</span><br><span class="line">        <span class="keyword">switch</span>(grade){</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'a'</span>:</span><br><span class="line">            aC++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'b'</span>:</span><br><span class="line">            bC++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'c'</span>:</span><br><span class="line">            cC++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'\n'</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'\t'</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="string">' '</span>:</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    std::cout&lt;&lt;aC&lt;&lt;<span class="string">' '</span>&lt;&lt;bC&lt;&lt;<span class="string">' '</span>&lt;&lt;cC;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
-</ul>
-<h2 id="c-modified-data-types">C++ Modified Data Types</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/tTgVBZW.png"></p>
-<h2 id="continue-vs-break">Continue vs Break</h2>
-<ul>
-<li>Continue -&gt; Only skip a specific process.</li>
-<li>Break -&gt; Skip the whole process.</li>
-</ul>
-<h2 id="boolalpha">Boolalpha</h2>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line">std::cout&lt;&lt;<span class="literal">true</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">std::cout&lt;&lt;std::boolalpha;</span><br><span class="line">std::cout&lt;&lt;<span class="literal">true</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line"><span class="comment">//The result will be 1 and true.</span></span><br></pre></td></tr></table></figure></div>
-<h2 id="operators-precedence">Operator's Precedence</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/MyvXHDH.png"></p>
-<ul>
-<li>The right side of the &amp;&amp; will only be considered if the left
-side is true.</li>
-<li>The &amp;&amp; operator has a higher precedence than ||.</li>
-<li>Any nonezero value is interpreted as ture. Which means if(a=5){...}
-will be true.</li>
-</ul>
-]]></content>
-      <categories>
-        <category>大學課堂筆記-程式設計</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Functions and Introduction to Recursion</title>
     <url>/2023/01/17/Chapter%205%20Functions%20and%20Introduction%20to%20Recursion/</url>
     <content><![CDATA[<h1 id="chapter-5-functions-and-introduction-to-recursion">Chapter 5
@@ -1483,6 +1426,63 @@ function. <div class="highlight-container" data-rel="C++"><figure class="iseeu h
 <li>Example of factorial of a nonnegative function with recursion.
 <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">unsigned</span> <span class="type">long</span> <span class="title">factorial</span><span class="params">(<span class="type">unsigned</span> <span class="type">long</span> num)</span></span>{</span><br><span class="line">    <span class="keyword">if</span>(num&lt;=<span class="number">1</span>){</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span>{</span><br><span class="line">        <span class="keyword">return</span> num*<span class="built_in">factorial</span>(num<span class="number">-1</span>);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
 <li>Example of Fibonacci Series <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">unsigned</span> <span class="type">long</span> <span class="title">fib</span><span class="params">(usigned <span class="type">long</span> num)</span></span>{</span><br><span class="line">    <span class="keyword">if</span>(num==<span class="number">1</span>||num==<span class="number">0</span>){</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span>{</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">fib</span>(num<span class="number">-1</span>)+<span class="built_in">fib</span>(num<span class="number">-2</span>);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+]]></content>
+      <categories>
+        <category>大學課堂筆記-程式設計</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Control Statement-Part 2</title>
+    <url>/2023/01/17/Chapter%204,%20Control%20Statement_%20Part%202/</url>
+    <content><![CDATA[<h1 id="chapter-4-control-statement-part-2">Chapter 4, Control
+Statement: Part 2</h1>
+<h2 id="do...while">do...while</h2>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">do</span>{</span><br><span class="line"></span><br><span class="line">}<span class="keyword">while</span>;(condition)</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>do...while always check the continuation after the code inside the
+{} has been excecuted. Therefore, it will execute at least one time.
+<img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/OQEIHFE.png"></li>
+</ul>
+<h2 id="switch-case">switch case</h2>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span>(expression){</span><br><span class="line">    <span class="keyword">case</span> constant1:</span><br><span class="line">        <span class="comment">//execute while expression is constant1;</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> constant2:</span><br><span class="line">        <span class="comment">//execute while expression is constant2;</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'F'</span>:</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'f'</span>:</span><br><span class="line">        <span class="comment">//execute while expression is F or f;</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>+<span class="number">2</span>:</span><br><span class="line">        <span class="comment">//not allowed</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>+<span class="number">4</span>:</span><br><span class="line">        <span class="comment">//not allowed</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        ...</span><br><span class="line">        <span class="comment">//code to be executed if expression doesn't</span></span><br><span class="line">        <span class="comment">// match any constant</span></span><br><span class="line">        </span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>Perform many different actions based on the value of expression.
+<img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ygwibqG.png"></li>
+</ul>
+<h2 id="setw">setw()</h2>
+<ul>
+<li>setw() =&gt; print spaces to make it tidy. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rY3G69w.png"></li>
+</ul>
+<h2 id="eof">EOF</h2>
+<ul>
+<li>EOF =&gt; End of file by entering ctrl+z. <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line">cin&gt;&gt;sth;</span><br><span class="line"><span class="keyword">while</span>(cin.<span class="built_in">get</span>()!=EOF){</span><br><span class="line">    ...</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h2 id="cin.get-vs-cin">cin.get() vs cin&gt;&gt;</h2>
+<ul>
+<li>cin.get() -&gt; only read one character.</li>
+<li>cin -&gt; depends on &gt;&gt;. <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> grade, aC{<span class="number">0</span>}, bC{<span class="number">0</span>}, cC{<span class="number">0</span>};</span><br><span class="line">    <span class="keyword">while</span>((grade=std::cin.<span class="built_in">get</span>())!=EOF){</span><br><span class="line">        <span class="keyword">switch</span>(grade){</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'a'</span>:</span><br><span class="line">            aC++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'b'</span>:</span><br><span class="line">            bC++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'c'</span>:</span><br><span class="line">            cC++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'\n'</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'\t'</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="string">' '</span>:</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    std::cout&lt;&lt;aC&lt;&lt;<span class="string">' '</span>&lt;&lt;bC&lt;&lt;<span class="string">' '</span>&lt;&lt;cC;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h2 id="c-modified-data-types">C++ Modified Data Types</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/tTgVBZW.png"></p>
+<h2 id="continue-vs-break">Continue vs Break</h2>
+<ul>
+<li>Continue -&gt; Only skip a specific process.</li>
+<li>Break -&gt; Skip the whole process.</li>
+</ul>
+<h2 id="boolalpha">Boolalpha</h2>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line">std::cout&lt;&lt;<span class="literal">true</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">std::cout&lt;&lt;std::boolalpha;</span><br><span class="line">std::cout&lt;&lt;<span class="literal">true</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line"><span class="comment">//The result will be 1 and true.</span></span><br></pre></td></tr></table></figure></div>
+<h2 id="operators-precedence">Operator's Precedence</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/MyvXHDH.png"></p>
+<ul>
+<li>The right side of the &amp;&amp; will only be considered if the left
+side is true.</li>
+<li>The &amp;&amp; operator has a higher precedence than ||.</li>
+<li>Any nonezero value is interpreted as ture. Which means if(a=5){...}
+will be true.</li>
 </ul>
 ]]></content>
       <categories>
@@ -1619,6 +1619,92 @@ part of the string bewteen <span class="math inline"><mjx-container class="MathJ
       </tags>
   </entry>
   <entry>
+    <title>Interactive Christmas Ornament</title>
+    <url>/2023/01/19/Interactive%20Christmas%20Ornament/</url>
+    <content><![CDATA[<p>簡報網址: <a class="link" href="https://www.canva.com/design/DAFWgMy5ioo/ayE-qH0-uqzdko61G2RWNA/view?utm_content=DAFWgMy5ioo&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=sharebutton">canva <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h1 id="interactive-christmas-ornament">Interactive Christmas
+Ornament</h1>
+<h2 id="功能及運作">功能及運作</h2>
+<ul>
+<li>當感應器沒感應到人時，於愛心及向前凝視的眼睛做隨機顯示。</li>
+<li>左側感應器偵測到人時，切換到看向左側的眼睛。</li>
+<li>右側感應器偵測到人時，切換到看向右側的眼睛。</li>
+<li>偵測距離:75公分。</li>
+</ul>
+<h2 id="材料準備">材料準備</h2>
+<ul>
+<li>Arduino 開發板 *1</li>
+<li>小塊麵包板 *1</li>
+<li>杜邦線(公對母、母對母) *n</li>
+<li>超聲波感應器(HC-SR04) *2</li>
+<li>配有 max7219 的 LEE 8<em>8 矩陣(Generic) </em>2</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/BixUQLd.png"></p>
+<h2 id="電路連接">電路連接</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/4sNAzyY.png"></p>
+<ul>
+<li>max7219 腳位連接
+<ul>
+<li>DIN(Data in): 10</li>
+<li>CLK(Clock): 11</li>
+<li>CS(Load): 12</li>
+</ul></li>
+<li>Ultrasonic Sensor(Right)
+<ul>
+<li>Trig: 2</li>
+<li>Echo: 1</li>
+</ul></li>
+<li>Ultrasonic Sensor(Left)
+<ul>
+<li>Trig: 4</li>
+<li>Echo: 3</li>
+</ul></li>
+</ul>
+<h2 id="程式編寫">程式編寫</h2>
+<ul>
+<li><p>需要先安裝LedControl函式庫 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ItXYyEa.png"></p></li>
+<li><p>LED矩陣自定義顯示:</p>
+<ul>
+<li>你可以透過這網站來自定義LED顯示內容: <a class="link" href="https://xantorohara.github.io/led-matrix-editor/">LED Matrix
+Editor <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li>教學影片:</li>
+</ul>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/qwOpcOtBPpw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></p></li>
+<li><p>程式碼: <a class="link" href="https://drive.google.com/drive/folders/1ONCjLl8s2UZTs6K40MRol_e-MdEnxy3h?usp=sharing">程式碼下載 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p></li>
+</ul>
+<div class="highlight-container" data-rel="Arduino"><figure class="iseeu highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">"LedControl.h"</span></span></span><br><span class="line">LedControl LEDmatrix=<span class="built_in">LedControl</span>(<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>,<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//顯示內容</span></span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> middle[] = {</span><br><span class="line">  <span class="number">0x007e425a5a427e00</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> left[] = {</span><br><span class="line">  <span class="number">0x007e424e4e427e00</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> right[] = {</span><br><span class="line">  <span class="number">0x007e427272427e00</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> heart[] = {</span><br><span class="line">  <span class="number">0x00183c7effffff66</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="comment">//顯示圖形</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">displayImage</span><span class="params">(<span class="type">uint64_t</span> image)</span> </span>{</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">8</span>; i++) {</span><br><span class="line">    <span class="type">byte</span> row = (image &gt;&gt; i * <span class="number">8</span>) &amp; <span class="number">0xFF</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">8</span>; j++) {</span><br><span class="line">      LEDmatrix.<span class="built_in">setLed</span>(<span class="number">0</span>, i, j, <span class="built_in">bitRead</span>(row, j));</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">//獲取距離</span></span><br><span class="line"><span class="function"><span class="type">float</span> <span class="title">getDistance</span><span class="params">(<span class="type">int</span> trig,<span class="type">int</span> echo)</span></span>{</span><br><span class="line">    <span class="built_in">pinMode</span>(trig,<span class="literal">OUTPUT</span>);</span><br><span class="line">    <span class="built_in">digitalWrite</span>(trig,<span class="literal">LOW</span>);</span><br><span class="line">    <span class="built_in">delayMicroseconds</span>(<span class="number">2</span>);</span><br><span class="line">    <span class="built_in">digitalWrite</span>(trig,<span class="literal">HIGH</span>);</span><br><span class="line">    <span class="built_in">delayMicroseconds</span>(<span class="number">10</span>);</span><br><span class="line">    <span class="built_in">digitalWrite</span>(trig,<span class="literal">LOW</span>);</span><br><span class="line">    <span class="built_in">pinMode</span>(echo, <span class="literal">INPUT</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">pulseIn</span>(echo,<span class="literal">HIGH</span>,<span class="number">30000</span>)/<span class="number">58.0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span> </span>{</span><br><span class="line">  LEDmatrix.<span class="built_in">clearDisplay</span>(<span class="number">0</span>);    </span><br><span class="line">  LEDmatrix.<span class="built_in">shutdown</span>(<span class="number">0</span>, <span class="literal">false</span>);  </span><br><span class="line">  LEDmatrix.<span class="built_in">setIntensity</span>(<span class="number">0</span>, <span class="number">10</span>); </span><br><span class="line">  <span class="built_in">randomSeed</span>(<span class="number">69</span>);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">loop</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="comment">//如果右側sensor於75公分處感應到物體，顯示看右方的圖形</span></span><br><span class="line">  <span class="keyword">if</span>(<span class="built_in">getDistance</span>(<span class="number">2</span>,<span class="number">1</span>) &lt; <span class="number">75</span>){</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(right[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  <span class="comment">//如果左側sensor於75公分處感應到物體，顯示看左方的圖形</span></span><br><span class="line">  <span class="keyword">if</span>(<span class="built_in">getDistance</span>(<span class="number">4</span>,<span class="number">3</span>) &lt; <span class="number">75</span>){</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(left[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  <span class="comment">//如果兩側sensor於75公分處未感應到物體，於愛心眼與凝視前方做隨機顯示</span></span><br><span class="line">  <span class="keyword">if</span>((<span class="built_in">getDistance</span>(<span class="number">2</span>,<span class="number">1</span>) &gt; <span class="number">75</span>) &amp;&amp; (<span class="built_in">getDistance</span>(<span class="number">4</span>,<span class="number">3</span>) &gt; <span class="number">75</span>)){</span><br><span class="line">    <span class="type">int</span> random_num=<span class="built_in">random</span>(<span class="number">1</span>, <span class="number">3</span>);</span><br><span class="line">    <span class="keyword">if</span>(random_num==<span class="number">1</span>){</span><br><span class="line">      <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(middle[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">      }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">if</span>(random_num==<span class="number">2</span>){</span><br><span class="line">      <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(heart[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">      }</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<h2 id="外觀設計">外觀設計</h2>
+<ul>
+<li>主要以塑膠瓦楞紙板透過保麗龍膠拼接而成。(建議使用熱熔膠，保麗龍膠穩固度不佳!)</li>
+<li>一個似房子形狀的五邊形柱體為主體。
+<ul>
+<li>頂部:
+<ul>
+<li>頂部: 透過束帶的幫助，我將其設計成翻蓋式，以便後續維修或組裝。 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/yGoVvDc.jpg"></li>
+</ul></li>
+<li>正面及背面
+<ul>
+<li><p>正面: 挖出兩個正方形及長方形來放置LED矩陣及Sensor。 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/v66Spc1.jpg"></p></li>
+<li><p>背面: 挖出一方形小孔來放置電源供應線。 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/bwzeTJR.jpg"></p></li>
+</ul></li>
+</ul></li>
+<li>裝飾
+<ul>
+<li>以聖誕帽作點綴。</li>
+</ul></li>
+</ul>
+<h2 id="功能展示">功能展示</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lgVJnPT9_88" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+]]></content>
+      <categories>
+        <category>個人專題</category>
+      </categories>
+      <tags>
+        <tag>Arduino</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>STL(Standard Template Library)</title>
     <url>/2023/01/17/STL(Standard%20Template%20Library)/</url>
     <content><![CDATA[<h1 id="stlstandard-template-library">STL(Standard Template
@@ -1719,6 +1805,85 @@ size，資料所在位置可能會移動。如果變小就擦掉尾巴的資料�
       </tags>
   </entry>
   <entry>
+    <title>WiFi Sync Clock</title>
+    <url>/2023/01/20/WiFi%20Sync%20Clock/</url>
+    <content><![CDATA[<h1 id="wifi-sync-clock">WiFi Sync Clock</h1>
+<h2 id="功能及運作">功能及運作</h2>
+<ul>
+<li>透過Esp32連結WiFi。</li>
+<li>從NTP Server接收資料(字串)。</li>
+<li>將接收到的字串做處理。</li>
+<li>在8*32的LED矩陣做顯示。</li>
+<li>並每過一分鐘時，顯示一次日期。</li>
+</ul>
+<h2 id="什麼是ntp-and-ntp-server">什麼是NTP and NTP Server?</h2>
+<ul>
+<li>NTP全名為NetWork Time
+Protocol，透過這個協議我們可以將伺服器實踐做同步。</li>
+<li>NTP
+Server，中文稱作時間伺服器，是一種專門用來提供時間資訊的伺服器，可以Request日期、時間...等相關資料。</li>
+</ul>
+<h2 id="材料準備">材料準備</h2>
+<ul>
+<li>ESP32 開發板 *1</li>
+<li>杜邦線(母對母) *n</li>
+<li>配有 max7219 的 LED 8<em>32 矩陣(FC-16) </em>2</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/vggUrQa.png"></p>
+<h2 id="電路連接">電路連接</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/pQOTZ3j.png"></p>
+<ul>
+<li>max7219 腳位連接
+<ul>
+<li>DIN(Data in): 23</li>
+<li>CLK(Clock): 18</li>
+<li>CS(Load): 5</li>
+</ul></li>
+</ul>
+<h2 id="程式編寫">程式編寫</h2>
+<ul>
+<li>需要先安裝以下函式庫
+<ul>
+<li>NTPClient <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/iL5L6az.png"></li>
+<li>MD_MAX72XX <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/5YhuYQ6.png"></li>
+<li>MD_Parola <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/POC7DuN.png"></li>
+</ul></li>
+<li>需要先設定連接的wifi
+<ul>
+<li>ssid，改成你要連接的WiFi名稱。</li>
+<li>password，改成你要連接的WiFi名稱。 <div class="highlight-container" data-rel="Arduino"><figure class="iseeu highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="comment">//wifi設定</span></span><br><span class="line"><span class="type">const</span> <span class="type">char</span>* ssid     = <span class="string">"WiFi_Name"</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">char</span>* password = <span class="string">"WiFi_Password"</span>;</span><br></pre></td></tr></table></figure></div></li>
+</ul></li>
+<li>程式碼: <a class="link" href="https://drive.google.com/drive/folders/1DLDUmlVkA0HhreNhVmnVolAiuY66qQiX?usp=sharing">程式碼下載 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ul>
+<div class="highlight-container" data-rel="Arduino"><figure class="iseeu highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;WiFi.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;NTPClient.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;WiFiUdp.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;MD_MAX72xx.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;MD_Parola.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;SPI.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> HARDWARE_TYPE MD_MAX72XX::FC16_HW </span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAX_DEVICES 4</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> CLK_PIN   18</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> DATA_PIN  23</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> CS_PIN    5</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//wifi設定</span></span><br><span class="line"><span class="type">const</span> <span class="type">char</span>* ssid     = <span class="string">"OmaeWaMou"</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">char</span>* password = <span class="string">"19690824"</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">WiFiUDP</span> ntpUDP;</span><br><span class="line"><span class="function">NTPClient <span class="title">timeClient</span><span class="params">(ntpUDP)</span></span>;</span><br><span class="line">MD_Parola Display = <span class="built_in">MD_Parola</span>(HARDWARE_TYPE, DATA_PIN, CLK_PIN, CS_PIN, MAX_DEVICES);</span><br><span class="line"></span><br><span class="line"><span class="type">String</span> main_info;</span><br><span class="line"><span class="type">String</span> hour;</span><br><span class="line"><span class="type">String</span> minute;</span><br><span class="line"><span class="type">String</span> year;</span><br><span class="line"><span class="type">String</span> month;</span><br><span class="line"><span class="type">String</span> day;</span><br><span class="line"><span class="type">String</span> sec;</span><br><span class="line"></span><br><span class="line"><span class="comment">//wifi 連接</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">wifiConnection</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="built_in">Serial</span>.<span class="built_in">print</span>(<span class="string">"正在嘗試連線至"</span>);</span><br><span class="line">    <span class="built_in">Serial</span>.<span class="built_in">println</span>(ssid);</span><br><span class="line">    <span class="built_in">WiFi</span>.<span class="built_in">begin</span>(ssid, password);</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">WiFi</span>.<span class="built_in">status</span>() != WL_CONNECTED) {</span><br><span class="line">        <span class="built_in">delay</span>(<span class="number">500</span>);</span><br><span class="line">        <span class="built_in">Serial</span>.<span class="built_in">print</span>(<span class="string">"."</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">Serial</span>.<span class="built_in">println</span>(<span class="string">"WiF已連接"</span>);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setTime</span><span class="params">()</span></span>{</span><br><span class="line">    main_info=timeClient.<span class="built_in">getFormattedDate</span>(); <span class="comment">//回傳的資料形態 ex:2023-01-19T23:59:59Z</span></span><br><span class="line">    <span class="type">int</span> find_T=main_info.<span class="built_in">indexOf</span>(<span class="string">'T'</span>); <span class="comment">//找出T的位置</span></span><br><span class="line">    <span class="comment">//做次串處理</span></span><br><span class="line">    hour=main_info.<span class="built_in">substring</span>(find_T+<span class="number">1</span>, find_T+<span class="number">3</span>); </span><br><span class="line">    minute=main_info.<span class="built_in">substring</span>(find_T+<span class="number">4</span>, find_T+<span class="number">6</span>); </span><br><span class="line">    sec=main_info.<span class="built_in">substring</span>(find_T+<span class="number">7</span>, find_T+<span class="number">9</span>);</span><br><span class="line">    year=main_info.<span class="built_in">substring</span>(find_T<span class="number">-10</span>, find_T<span class="number">-6</span>);</span><br><span class="line">    month=main_info.<span class="built_in">substring</span>(find_T<span class="number">-5</span>, find_T<span class="number">-3</span>);</span><br><span class="line">    day=main_info.<span class="built_in">substring</span>(find_T<span class="number">-2</span>, find_T);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">timeDisplay</span><span class="params">()</span></span>{</span><br><span class="line">    Display.<span class="built_in">setIntensity</span>(<span class="number">5</span>);</span><br><span class="line">    Display.<span class="built_in">setTextAlignment</span>(PA_CENTER);</span><br><span class="line">    <span class="comment">//顯示":"在閃的特效</span></span><br><span class="line">    Display.<span class="built_in">print</span>(hour+<span class="string">":"</span>+minute);</span><br><span class="line">    <span class="built_in">delay</span>(<span class="number">500</span>);</span><br><span class="line">    Display.<span class="built_in">print</span>(hour+<span class="string">" "</span>+minute);</span><br><span class="line">    <span class="built_in">delay</span>(<span class="number">500</span>);</span><br><span class="line">    <span class="comment">//當second==00時，代表一分鐘過去，即顯示日期</span></span><br><span class="line">    <span class="keyword">if</span>(sec==<span class="string">"00"</span>){</span><br><span class="line">      Display.<span class="built_in">print</span>(year);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">1000</span>);</span><br><span class="line">      Display.<span class="built_in">print</span>(month);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">1000</span>);</span><br><span class="line">      Display.<span class="built_in">print</span>(day);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">1000</span>);</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="built_in">Serial</span>.<span class="built_in">begin</span>(<span class="number">115200</span>);</span><br><span class="line">    <span class="built_in">delay</span>(<span class="number">10</span>);</span><br><span class="line">    <span class="built_in">wifiConnection</span>();</span><br><span class="line"></span><br><span class="line">    timeClient.<span class="built_in">begin</span>();</span><br><span class="line">    timeClient.<span class="built_in">setTimeOffset</span>(<span class="number">28800</span>); <span class="comment">//調整時區，台灣時區為GMT+8，故function內的值為28800s(8 hrs)。 </span></span><br><span class="line"></span><br><span class="line">    Display.<span class="built_in">begin</span>();</span><br><span class="line">    Display.<span class="built_in">setIntensity</span>(<span class="number">0</span>);</span><br><span class="line">    Display.<span class="built_in">displayClear</span>();</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">loop</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="comment">//當接收到ntp資料時，執行字串處理function和顯示function</span></span><br><span class="line">    <span class="keyword">while</span>(timeClient.<span class="built_in">update</span>()){</span><br><span class="line">      <span class="built_in">setTime</span>();</span><br><span class="line">      <span class="built_in">timeDisplay</span>();  </span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<h2 id="外觀設計">外觀設計</h2>
+<ul>
+<li>主要以塑膠瓦楞紙板透過熱熔膠拼接而成。</li>
+<li>一個上下未封蓋的三角柱體為主體。
+<ul>
+<li>正面:
+<ul>
+<li>挖出一個3.3*16公分的長形來放置LED矩陣。 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/RZVG7Dn.jpg"></li>
+</ul></li>
+<li>側面
+<ul>
+<li><p>右: 放置ESP32、相關線材及訊號接收線。 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/VbXznaq.jpg"></p></li>
+<li><p>左: 放置電源供應線。 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/WKabmOg.jpg"></p></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="功能展示">功能展示</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MJhMZ70HR20" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+]]></content>
+      <categories>
+        <category>個人專題</category>
+      </categories>
+      <tags>
+        <tag>Esp32</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>自我介紹</title>
     <url>/2023/01/17/%E8%87%AA%E6%88%91%E4%BB%8B%E7%B4%B9/</url>
     <content><![CDATA[<h3 id="大家好我是shih-jiun目前就讀彰化師範大學電子工程學系大一本網站的目的是為了對大學四年的課堂內容及個人手做小專題做些紀錄及分享歡迎你的到來">大家好，我是Shih
@@ -1750,91 +1915,6 @@ Jiun，目前就讀彰化師範大學電子工程學系大一，本網站的目�
       </categories>
       <tags>
         <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>互動式造型聖誕燈</title>
-    <url>/2023/01/19/%E4%BA%92%E5%8B%95%E5%BC%8F%E9%80%A0%E5%9E%8B%E8%81%96%E8%AA%95%E7%87%88/</url>
-    <content><![CDATA[<p>簡報網址: <a class="link" href="https://www.canva.com/design/DAFWgMy5ioo/ayE-qH0-uqzdko61G2RWNA/view?utm_content=DAFWgMy5ioo&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=sharebutton">canva <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h1 id="互動式造型聖誕燈">互動式造型聖誕燈</h1>
-<h2 id="功能介紹">功能介紹</h2>
-<ul>
-<li>當感應器沒感應到人時，於愛心及向前凝視的眼睛做隨機顯示。</li>
-<li>左側感應器偵測到人時，切換到看向左側的眼睛。</li>
-<li>右側感應器偵測到人時，切換到看向右側的眼睛。</li>
-<li>偵測距離:75公分。</li>
-</ul>
-<h2 id="材料準備">材料準備</h2>
-<ul>
-<li>Arduino 開發板 *1</li>
-<li>小塊麵包板 *1</li>
-<li>杜邦線(公對母、母對母) *n</li>
-<li>超聲波感應器(HC-SR04) *2</li>
-<li>配有 max7219 的 LEE 8<em>8 矩陣(Generic) </em>2</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/BixUQLd.png"></p>
-<h2 id="電路連接">電路連接</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/4sNAzyY.png"></p>
-<ul>
-<li>max7219 腳位連接
-<ul>
-<li>DIN(Data in): 10</li>
-<li>CLK(Clock): 11</li>
-<li>CS(Load): 12</li>
-</ul></li>
-<li>Ultrasonic Sensor(Right)
-<ul>
-<li>Trig: 2</li>
-<li>Echo: 1</li>
-</ul></li>
-<li>Ultrasonic Sensor(Left)
-<ul>
-<li>Trig: 4</li>
-<li>Echo: 3</li>
-</ul></li>
-</ul>
-<h2 id="程式編寫">程式編寫</h2>
-<ul>
-<li><p>需要先安裝LedControl函式庫 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ItXYyEa.png"></p></li>
-<li><p>LED矩陣自定義顯示:</p>
-<ul>
-<li>你可以透過這網站來自定義LED顯示內容: <a class="link" href="https://xantorohara.github.io/led-matrix-editor/">LED Matrix
-Editor <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li>教學影片:</li>
-</ul>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/qwOpcOtBPpw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></p></li>
-<li><p>程式碼: <a class="link" href="https://drive.google.com/drive/folders/1ONCjLl8s2UZTs6K40MRol_e-MdEnxy3h?usp=sharing">程式碼下載 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p></li>
-</ul>
-<div class="highlight-container" data-rel="Arduino"><figure class="iseeu highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">"LedControl.h"</span></span></span><br><span class="line">LedControl LEDmatrix=<span class="built_in">LedControl</span>(<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>,<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//顯示內容</span></span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> middle[] = {</span><br><span class="line">  <span class="number">0x007e425a5a427e00</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> left[] = {</span><br><span class="line">  <span class="number">0x007e424e4e427e00</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> right[] = {</span><br><span class="line">  <span class="number">0x007e427272427e00</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> heart[] = {</span><br><span class="line">  <span class="number">0x00183c7effffff66</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="comment">//顯示圖形</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">displayImage</span><span class="params">(<span class="type">uint64_t</span> image)</span> </span>{</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">8</span>; i++) {</span><br><span class="line">    <span class="type">byte</span> row = (image &gt;&gt; i * <span class="number">8</span>) &amp; <span class="number">0xFF</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">8</span>; j++) {</span><br><span class="line">      LEDmatrix.<span class="built_in">setLed</span>(<span class="number">0</span>, i, j, <span class="built_in">bitRead</span>(row, j));</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">//獲取距離</span></span><br><span class="line"><span class="function"><span class="type">float</span> <span class="title">getDistance</span><span class="params">(<span class="type">int</span> trig,<span class="type">int</span> echo)</span></span>{</span><br><span class="line">    <span class="built_in">pinMode</span>(trig,<span class="literal">OUTPUT</span>);</span><br><span class="line">    <span class="built_in">digitalWrite</span>(trig,<span class="literal">LOW</span>);</span><br><span class="line">    <span class="built_in">delayMicroseconds</span>(<span class="number">2</span>);</span><br><span class="line">    <span class="built_in">digitalWrite</span>(trig,<span class="literal">HIGH</span>);</span><br><span class="line">    <span class="built_in">delayMicroseconds</span>(<span class="number">10</span>);</span><br><span class="line">    <span class="built_in">digitalWrite</span>(trig,<span class="literal">LOW</span>);</span><br><span class="line">    <span class="built_in">pinMode</span>(echo, <span class="literal">INPUT</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">pulseIn</span>(echo,<span class="literal">HIGH</span>,<span class="number">30000</span>)/<span class="number">58.0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span> </span>{</span><br><span class="line">  LEDmatrix.<span class="built_in">clearDisplay</span>(<span class="number">0</span>);    </span><br><span class="line">  LEDmatrix.<span class="built_in">shutdown</span>(<span class="number">0</span>, <span class="literal">false</span>);  </span><br><span class="line">  LEDmatrix.<span class="built_in">setIntensity</span>(<span class="number">0</span>, <span class="number">10</span>); </span><br><span class="line">  <span class="built_in">randomSeed</span>(<span class="number">69</span>);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">loop</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="comment">//如果右側sensor於75公分處感應到物體，顯示看右方的圖形</span></span><br><span class="line">  <span class="keyword">if</span>(<span class="built_in">getDistance</span>(<span class="number">2</span>,<span class="number">1</span>) &lt; <span class="number">75</span>){</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(right[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  <span class="comment">//如果左側sensor於75公分處感應到物體，顯示看左方的圖形</span></span><br><span class="line">  <span class="keyword">if</span>(<span class="built_in">getDistance</span>(<span class="number">4</span>,<span class="number">3</span>) &lt; <span class="number">75</span>){</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(left[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  <span class="comment">//如果兩側sensor於75公分處未感應到物體，於愛心眼與凝視前方做隨機顯示</span></span><br><span class="line">  <span class="keyword">if</span>((<span class="built_in">getDistance</span>(<span class="number">2</span>,<span class="number">1</span>) &gt; <span class="number">75</span>) &amp;&amp; (<span class="built_in">getDistance</span>(<span class="number">4</span>,<span class="number">3</span>) &gt; <span class="number">75</span>)){</span><br><span class="line">    <span class="type">int</span> random_num=<span class="built_in">random</span>(<span class="number">1</span>, <span class="number">3</span>);</span><br><span class="line">    <span class="keyword">if</span>(random_num==<span class="number">1</span>){</span><br><span class="line">      <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(middle[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">      }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">if</span>(random_num==<span class="number">2</span>){</span><br><span class="line">      <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(heart[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">      }</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-<h2 id="外觀設計">外觀設計</h2>
-<ul>
-<li>主要以塑膠瓦楞紙板透過保麗龍膠拼接而成。(建議使用熱熔膠，保麗龍膠穩固度不佳!)</li>
-<li>一個似房子形狀的五邊形柱體為主體。
-<ul>
-<li>頂部:
-<ul>
-<li>頂部: 透過束帶的幫助，我將其設計成翻蓋式，以便後續維修或組裝。 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/yGoVvDc.jpg"></li>
-</ul></li>
-<li>正面及背面
-<ul>
-<li><p>正面: 挖出兩個正方形及長方形來放置LED矩陣及Sensor。 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/v66Spc1.jpg"></p></li>
-<li><p>背面: 挖出一方形小孔來放置電源供應線。 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/bwzeTJR.jpg"></p></li>
-</ul></li>
-</ul></li>
-<li>裝飾
-<ul>
-<li>以聖誕帽作點綴。</li>
-</ul></li>
-</ul>
-<h2 id="功能展示">功能展示</h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lgVJnPT9_88" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
-</iframe>
-]]></content>
-      <categories>
-        <category>個人專題</category>
-      </categories>
-      <tags>
-        <tag>Arduino</tag>
       </tags>
   </entry>
 </search>

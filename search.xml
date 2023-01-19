@@ -1116,8 +1116,7 @@ before the seekg. <img lazyload="" src="/images/loading.svg" data-src="https://i
   <entry>
     <title>Struct &amp; Class</title>
     <url>/2023/01/19/Chaper%209%20Struct,%20Class/</url>
-    <content><![CDATA[<p>Struct &amp; Class 課堂筆記!{: .message }</p>
-<h1 id="chaper-9-struct-class">Chaper 9 Struct, Class</h1>
+    <content><![CDATA[<h1 id="chaper-9-struct-class">Chaper 9 Struct, Class</h1>
 <h2 id="class">Class</h2>
 <p>Reference: <a class="link" href="http://ettsengnote.blogspot.com/2016/03/cclasses-and-objects-part-ii.html">link1 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>
 <a class="link" href="http://ettsengnote.blogspot.com/2016/03/cclasses-and-objects-part-ii.html">link2 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>

@@ -1752,4 +1752,89 @@ Jiun，目前就讀彰化師範大學電子工程學系大一，本網站的目�
         <tag>C++</tag>
       </tags>
   </entry>
+  <entry>
+    <title>互動式造型聖誕燈</title>
+    <url>/2023/01/19/%E4%BA%92%E5%8B%95%E5%BC%8F%E9%80%A0%E5%9E%8B%E8%81%96%E8%AA%95%E7%87%88/</url>
+    <content><![CDATA[<p>簡報網址: <a class="link" href="https://www.canva.com/design/DAFWgMy5ioo/ayE-qH0-uqzdko61G2RWNA/view?utm_content=DAFWgMy5ioo&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=sharebutton">canva <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h1 id="互動式造型聖誕燈">互動式造型聖誕燈</h1>
+<h2 id="功能介紹">功能介紹</h2>
+<ul>
+<li>當感應器沒感應到人時，於愛心及向前凝視的眼睛做隨機顯示。</li>
+<li>左側感應器偵測到人時，切換到看向左側的眼睛。</li>
+<li>右側感應器偵測到人時，切換到看向右側的眼睛。</li>
+<li>偵測距離:75公分。</li>
+</ul>
+<h2 id="材料準備">材料準備</h2>
+<ul>
+<li>Arduino 開發板 *1</li>
+<li>小塊麵包板 *1</li>
+<li>杜邦線(公對母、母對母) *n</li>
+<li>超聲波感應器(HC-SR04) *2</li>
+<li>配有 max7219 的 LEE 8<em>8 矩陣(Generic) </em>2</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/BixUQLd.png"></p>
+<h2 id="電路連接">電路連接</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/4sNAzyY.png"></p>
+<ul>
+<li>max7219 腳位連接
+<ul>
+<li>DIN(Data in): 10</li>
+<li>CLK(Clock): 11</li>
+<li>CS(Load): 12</li>
+</ul></li>
+<li>Ultrasonic Sensor(Right)
+<ul>
+<li>Trig: 2</li>
+<li>Echo: 1</li>
+</ul></li>
+<li>Ultrasonic Sensor(Left)
+<ul>
+<li>Trig: 4</li>
+<li>Echo: 3</li>
+</ul></li>
+</ul>
+<h2 id="程式編寫">程式編寫</h2>
+<ul>
+<li><p>需要先安裝LedControl函式庫 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ItXYyEa.png"></p></li>
+<li><p>LED矩陣自定義顯示:</p>
+<ul>
+<li>你可以透過這網站來自定義LED顯示內容: <a class="link" href="https://xantorohara.github.io/led-matrix-editor/">LED Matrix
+Editor <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li>教學影片:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qwOpcOtBPpw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></li>
+</ul></li>
+<li><p>程式碼: <a class="link" href="https://drive.google.com/drive/folders/1ONCjLl8s2UZTs6K40MRol_e-MdEnxy3h?usp=sharing">程式碼下載 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p></li>
+</ul>
+<div class="highlight-container" data-rel="Arduino"><figure class="iseeu highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">"LedControl.h"</span></span></span><br><span class="line">LedControl LEDmatrix=<span class="built_in">LedControl</span>(<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>,<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//顯示內容</span></span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> middle[] = {</span><br><span class="line">  <span class="number">0x007e425a5a427e00</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> left[] = {</span><br><span class="line">  <span class="number">0x007e424e4e427e00</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> right[] = {</span><br><span class="line">  <span class="number">0x007e427272427e00</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> heart[] = {</span><br><span class="line">  <span class="number">0x00183c7effffff66</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="comment">//顯示圖形</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">displayImage</span><span class="params">(<span class="type">uint64_t</span> image)</span> </span>{</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">8</span>; i++) {</span><br><span class="line">    <span class="type">byte</span> row = (image &gt;&gt; i * <span class="number">8</span>) &amp; <span class="number">0xFF</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">8</span>; j++) {</span><br><span class="line">      LEDmatrix.<span class="built_in">setLed</span>(<span class="number">0</span>, i, j, <span class="built_in">bitRead</span>(row, j));</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">//獲取距離</span></span><br><span class="line"><span class="function"><span class="type">float</span> <span class="title">getDistance</span><span class="params">(<span class="type">int</span> trig,<span class="type">int</span> echo)</span></span>{</span><br><span class="line">    <span class="built_in">pinMode</span>(trig,<span class="literal">OUTPUT</span>);</span><br><span class="line">    <span class="built_in">digitalWrite</span>(trig,<span class="literal">LOW</span>);</span><br><span class="line">    <span class="built_in">delayMicroseconds</span>(<span class="number">2</span>);</span><br><span class="line">    <span class="built_in">digitalWrite</span>(trig,<span class="literal">HIGH</span>);</span><br><span class="line">    <span class="built_in">delayMicroseconds</span>(<span class="number">10</span>);</span><br><span class="line">    <span class="built_in">digitalWrite</span>(trig,<span class="literal">LOW</span>);</span><br><span class="line">    <span class="built_in">pinMode</span>(echo, <span class="literal">INPUT</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">pulseIn</span>(echo,<span class="literal">HIGH</span>,<span class="number">30000</span>)/<span class="number">58.0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span> </span>{</span><br><span class="line">  LEDmatrix.<span class="built_in">clearDisplay</span>(<span class="number">0</span>);    </span><br><span class="line">  LEDmatrix.<span class="built_in">shutdown</span>(<span class="number">0</span>, <span class="literal">false</span>);  </span><br><span class="line">  LEDmatrix.<span class="built_in">setIntensity</span>(<span class="number">0</span>, <span class="number">10</span>); </span><br><span class="line">  <span class="built_in">randomSeed</span>(<span class="number">69</span>);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">loop</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="comment">//如果右側sensor於75公分處感應到物體，顯示看右方的圖形</span></span><br><span class="line">  <span class="keyword">if</span>(<span class="built_in">getDistance</span>(<span class="number">2</span>,<span class="number">1</span>) &lt; <span class="number">75</span>){</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(right[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  <span class="comment">//如果左側sensor於75公分處感應到物體，顯示看左方的圖形</span></span><br><span class="line">  <span class="keyword">if</span>(<span class="built_in">getDistance</span>(<span class="number">4</span>,<span class="number">3</span>) &lt; <span class="number">75</span>){</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(left[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  <span class="comment">//如果兩側sensor於75公分處未感應到物體，於愛心眼與凝視前方做隨機顯示</span></span><br><span class="line">  <span class="keyword">if</span>((<span class="built_in">getDistance</span>(<span class="number">2</span>,<span class="number">1</span>) &gt; <span class="number">75</span>) &amp;&amp; (<span class="built_in">getDistance</span>(<span class="number">4</span>,<span class="number">3</span>) &gt; <span class="number">75</span>)){</span><br><span class="line">    <span class="type">int</span> random_num=<span class="built_in">random</span>(<span class="number">1</span>, <span class="number">3</span>);</span><br><span class="line">    <span class="keyword">if</span>(random_num==<span class="number">1</span>){</span><br><span class="line">      <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(middle[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">      }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">if</span>(random_num==<span class="number">2</span>){</span><br><span class="line">      <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(heart[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">      }</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<h2 id="外觀設計">外觀設計</h2>
+<ul>
+<li>主要以塑膠瓦楞紙板透過保麗龍膠拼接而成。(建議使用熱熔膠，保麗龍膠穩固度不佳!)</li>
+<li>一個似房子形狀的五邊形柱體為主體。
+<ul>
+<li>頂部:
+<ul>
+<li>頂部: 透過束帶的幫助，我將其設計成翻蓋式，以便後續維修或組裝。 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/yGoVvDc.jpg"></li>
+</ul></li>
+<li>正面及背面
+<ul>
+<li><p>正面: 挖出兩個正方形及長方形來放置LED矩陣及Sensor。 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/v66Spc1.jpg"></p></li>
+<li><p>背面: 挖出一方形小孔來放置電源供應線。 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/bwzeTJR.jpg"></p></li>
+</ul></li>
+</ul></li>
+<li>裝飾
+<ul>
+<li>以聖誕帽作點綴。</li>
+</ul></li>
+</ul>
+<h2 id="功能展示">功能展示</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lgVJnPT9_88" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+]]></content>
+      <categories>
+        <category>個人專題</category>
+      </categories>
+      <tags>
+        <tag>Arduino</tag>
+      </tags>
+  </entry>
 </search>

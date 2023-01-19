@@ -165,267 +165,6 @@ only)</li>
       </tags>
   </entry>
   <entry>
-    <title>Networking and the Internet(I)</title>
-    <url>/2023/01/18/2023-01-17-Networking%20and%20the%20internet(I)/</url>
-    <content><![CDATA[<h1 id="networking-and-the-interneti">Networking and the
-Internet(I)</h1>
-<h2 id="network-classifications">Network Classifications</h2>
-<ul>
-<li>Scope
-<ul>
-<li>LAN: Local area network.</li>
-<li>MAN: Metropolitan area network.</li>
-<li>WAN: Wide area network.</li>
-</ul></li>
-<li>Ownership
-<ul>
-<li>Closed</li>
-<li>Opened</li>
-</ul></li>
-<li>Topology (拓樸學)
-<ul>
-<li>Bus: <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/1QUPg2e.png"></li>
-<li>Ring: <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/bWnGTBf.png"></li>
-<li>Star: <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/EWTkIgx.png"></li>
-</ul></li>
-</ul>
-<h2 id="protocols">Protocols</h2>
-<ul>
-<li>Token Ring
-<ul>
-<li>Popular in ring topology.</li>
-<li>Token and messages are passed in one direction.</li>
-<li>Only the machine which gets the token can transmit its message.</li>
-</ul></li>
-<li>CSMA/CD (Carrier sense, mutiple access with collision detection)
-<ul>
-<li>Popular in bus topology.</li>
-<li>Broadcasting.</li>
-<li>When collision, both machines wait for a random time before trying
-again.</li>
-</ul></li>
-<li>CSMA/CA (Carrier sense, mutiple access with collision avoidence)
-<ul>
-<li>Popular in wireless Ethernet.</li>
-<li>Broadcasting.</li>
-<li>Detect if a channel is idle, if so, wait for a random time and then
-detect again. If the channel is still idle, then start sending.</li>
-</ul></li>
-</ul>
-<h2 id="wireless-and-access-pointap">Wireless and Access Point(AP)</h2>
-<ul>
-<li>Wi-Fi(wireless fidelity)</li>
-<li>IEEE 802.11-Standard for wireless network(b, g, i, n, ac...) <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/MOBFzwQ.png"></li>
-</ul>
-<h2 id="repeaterbridgeswitchcompatible-networks">Repeater，Bridge，Switch(Compatible
-Networks)</h2>
-<p>Reference: <a class="link" href="https://notfalse.net/66/repeater-hub-bridge-switch">link <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<ul>
-<li>The protocol between these devices have to be the same.</li>
-<li>Repeater(Amplifier)
-<ul>
-<li>Passing through messages.</li>
-<li>Connecting two compatible networks <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/0t1ZGPW.png"></li>
-</ul></li>
-<li>Bridge
-<ul>
-<li>Only passing those messages addressed to the other side.</li>
-<li>Connecting two compatible networks more efficiently. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/QEsDF9x.png"></li>
-</ul></li>
-<li>Switch(Multiple Bridge)
-<ul>
-<li>A bridge with multiple connections.</li>
-<li>Connecting mutiple compatible networks efficiently. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/uwwGpYy.png"></li>
-</ul></li>
-</ul>
-<h2 id="routerincompatible-networks">Router(Incompatible Networks)</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rJmNTSf.png"></p>
-<ul>
-<li>Router
-<ul>
-<li>Building a network of networks.(The protocol can be different)</li>
-<li>Most come with firewall management.</li>
-</ul></li>
-</ul>
-<h2 id="interprocess-communication">Interprocess Communication</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/6pWclWl.png"></p>
-<ul>
-<li>Server-Client
-<ul>
-<li>One server, several clients.</li>
-<li>Clients initiate communications by sending requests.</li>
-</ul></li>
-<li>P2P(Peer-to-Peer)
-<ul>
-<li>Two processes communicating as equals.</li>
-<li>The most popular distribution mode nowadays.</li>
-</ul></li>
-</ul>
-<h2 id="distributed-systems">Distributed Systems</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ZmowcOK.png"></p>
-<ul>
-<li>Infrastructure can be provided by standardized toolkits.
-<ul>
-<li>Ex: Java Beans，.NET framework.</li>
-</ul></li>
-</ul>
-<h2 id="internet-architecture">Internet Architecture</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rB8IPMk.png"></p>
-<ul>
-<li>Domain
-<ul>
-<li>A network or an internet controlled by one single authority.</li>
-</ul></li>
-<li>ICANN(Internmet corporation for assigned names and numbers)
-<ul>
-<li>Supervise the registration of doimains</li>
-</ul></li>
-<li>Gateway
-<ul>
-<li>A router that connects a domain to the rest of the Internet.</li>
-</ul></li>
-</ul>
-<h2 id="internet-composition">Internet Composition</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/3reTfwk.png"></p>
-<ul>
-<li>Internet Service Provider(ISP)
-<ul>
-<li>Allow customer to connect their domain to the ISP's equiment or join
-the domain already established by the ISP.</li>
-</ul></li>
-</ul>
-<h2 id="ip-addresses">IP Addresses</h2>
-<ul>
-<li>IP(internet protocol)address
-<ul>
-<li>IPv4 -&gt; 32bits(all are allocated already)</li>
-<li>IPv6 -&gt; 128bits</li>
-</ul></li>
-</ul>
-<h2 id="name-server-vs-domain-server">Name Server vs Domain Server</h2>
-<ul>
-<li>Name server:
-<ul>
-<li>Name servers organize and route traffic across the internet to get
-you to the right server.</li>
-</ul></li>
-<li>Domain Name Server(DNS)
-<ul>
-<li>A server that provide you with server information. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rYtlfru.png"></li>
-</ul></li>
-</ul>
-<h2 id="internet-application">Internet Application</h2>
-<ul>
-<li>VoIP(Voice over Internet protocol)</li>
-<li>email(electronic mail)</li>
-<li>FTP(file transfer protocol)</li>
-<li>telnet and ssh(secure shell)</li>
-<li>P2P</li>
-</ul>
-<h2 id="browsers">Browsers</h2>
-<ul>
-<li>HTTP(Hyper text transfer protocol)</li>
-<li>URL(uniform resource locator)</li>
-<li>How a browser get access to a webpage(document): <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/hY3bIGo.png"></li>
-</ul>
-<h2 id="client-side-and-server-side">Client-side and Server-side</h2>
-<ul>
-<li>Client-side(The program is executed on one's pc)
-<ul>
-<li>Java applets</li>
-<li>Javascript</li>
-<li>Flash</li>
-</ul></li>
-<li>Server-side(The program is executed on the server)
-<ul>
-<li>CGI</li>
-<li>Servlets</li>
-<li>PHP</li>
-</ul></li>
-<li>Online game use both techniques.</li>
-</ul>
-<h2 id="internet-protocol">Internet Protocol</h2>
-<p>Reference: <a class="link" href="https://ithelp.ithome.com.tw/articles/10259569?sc=pt">link <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<ul>
-<li>Layers
-<ul>
-<li><p>OSI Model</p>
-<p>Reference: <a class="link" href="https://en.wikipedia.org/wiki/OSI_model">link <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p></li>
-</ul>
-<img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/e5dfV9e.png">
-<ul>
-<li>TCP/IP Model
-<ul>
-<li>Application: constructs message into packets.</li>
-<li>Transport: chops message into packages.</li>
-<li>Network: handles routing through the Internet.</li>
-<li>Link handles actual transmission of packets. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/0gNoMlv.png"></li>
-</ul></li>
-</ul></li>
-<li>Port
-<ul>
-<li>Incoming messages are delivered to different applications by unique
-port numbers. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/54gXvXI.png"></li>
-</ul></li>
-</ul>
-<h2 id="tcpip">TCP/IP</h2>
-<ul>
-<li>TCP and UDP(Transport Layer)
-<ul>
-<li>TCP(transmission control protocol):handshake berfore sending
-packets. =&gt; slow but reliable.</li>
-<li>UDP(user datagram protocol): directly sending packets. =&gt; fast
-but not reliable.</li>
-</ul></li>
-<li>IP(NEtwork Layer)
-<ul>
-<li>routing based on IP(IPv4, IPv6)</li>
-</ul></li>
-<li>TCP and IP are two protocols. TCP/IP is a collection of protocols
-more than just TCP and IP.</li>
-</ul>
-<h2 id="security">Security</h2>
-<ul>
-<li><p>Attacks</p>
-<ul>
-<li>Malware</li>
-<li>Denial of Service(Dos)</li>
-<li>Spam</li>
-</ul></li>
-<li><p>Protections</p>
-<ul>
-<li>Firewall</li>
-<li>Spam filter</li>
-<li>Proxy</li>
-<li>Antivirus, antispyware</li>
-</ul></li>
-<li><p>Public/Private Keys System</p>
-<p>Reference: <a class="link" href="https://medium.com/@RiverChan/%E5%9F%BA%E7%A4%8E%E5%AF%86%E7%A2%BC%E5%AD%B8-%E5%B0%8D%E7%A8%B1%E5%BC%8F%E8%88%87%E9%9D%9E%E5%B0%8D%E7%A8%B1%E5%BC%8F%E5%8A%A0%E5%AF%86%E6%8A%80%E8%A1%93-de25fd5fa537">link <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<ul>
-<li>SSL(Secure Scoket Layer)
-<ul>
-<li>Application: sftp, https, ssh</li>
-</ul></li>
-<li>To prevent fishing, a certificate authority is needed, to ensure to
-correctivity of a key. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/fnACCIR.png"></li>
-</ul></li>
-</ul>
-<h2 id="rsa-algorithm">RSA Algorithm</h2>
-<p>Reference: <a class="link" href="https://ithelp.ithome.com.tw/articles/10250721">link <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<ul>
-<li>Generation <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/5SMoi2J.png"></li>
-<li>Encryption <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/WTvEm7R.png"></li>
-<li>Decryption <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/6fnmG7A.png"></li>
-</ul>
-]]></content>
-      <categories>
-        <category>大學課堂筆記-計算機概論</category>
-      </categories>
-      <tags>
-        <tag>計算機概論</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Data Storage(I)</title>
     <url>/2023/01/18/2023-01-17-Data%20Storage(I)/</url>
     <content><![CDATA[<h1 id="data-storagei">Data Storage(I)</h1>
@@ -823,6 +562,267 @@ will correct 010100 to 011100(D)</li>
       </tags>
   </entry>
   <entry>
+    <title>Networking and the Internet(I)</title>
+    <url>/2023/01/18/2023-01-17-Networking%20and%20the%20internet(I)/</url>
+    <content><![CDATA[<h1 id="networking-and-the-interneti">Networking and the
+Internet(I)</h1>
+<h2 id="network-classifications">Network Classifications</h2>
+<ul>
+<li>Scope
+<ul>
+<li>LAN: Local area network.</li>
+<li>MAN: Metropolitan area network.</li>
+<li>WAN: Wide area network.</li>
+</ul></li>
+<li>Ownership
+<ul>
+<li>Closed</li>
+<li>Opened</li>
+</ul></li>
+<li>Topology (拓樸學)
+<ul>
+<li>Bus: <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/1QUPg2e.png"></li>
+<li>Ring: <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/bWnGTBf.png"></li>
+<li>Star: <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/EWTkIgx.png"></li>
+</ul></li>
+</ul>
+<h2 id="protocols">Protocols</h2>
+<ul>
+<li>Token Ring
+<ul>
+<li>Popular in ring topology.</li>
+<li>Token and messages are passed in one direction.</li>
+<li>Only the machine which gets the token can transmit its message.</li>
+</ul></li>
+<li>CSMA/CD (Carrier sense, mutiple access with collision detection)
+<ul>
+<li>Popular in bus topology.</li>
+<li>Broadcasting.</li>
+<li>When collision, both machines wait for a random time before trying
+again.</li>
+</ul></li>
+<li>CSMA/CA (Carrier sense, mutiple access with collision avoidence)
+<ul>
+<li>Popular in wireless Ethernet.</li>
+<li>Broadcasting.</li>
+<li>Detect if a channel is idle, if so, wait for a random time and then
+detect again. If the channel is still idle, then start sending.</li>
+</ul></li>
+</ul>
+<h2 id="wireless-and-access-pointap">Wireless and Access Point(AP)</h2>
+<ul>
+<li>Wi-Fi(wireless fidelity)</li>
+<li>IEEE 802.11-Standard for wireless network(b, g, i, n, ac...) <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/MOBFzwQ.png"></li>
+</ul>
+<h2 id="repeaterbridgeswitchcompatible-networks">Repeater，Bridge，Switch(Compatible
+Networks)</h2>
+<p>Reference: <a class="link" href="https://notfalse.net/66/repeater-hub-bridge-switch">link <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<ul>
+<li>The protocol between these devices have to be the same.</li>
+<li>Repeater(Amplifier)
+<ul>
+<li>Passing through messages.</li>
+<li>Connecting two compatible networks <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/0t1ZGPW.png"></li>
+</ul></li>
+<li>Bridge
+<ul>
+<li>Only passing those messages addressed to the other side.</li>
+<li>Connecting two compatible networks more efficiently. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/QEsDF9x.png"></li>
+</ul></li>
+<li>Switch(Multiple Bridge)
+<ul>
+<li>A bridge with multiple connections.</li>
+<li>Connecting mutiple compatible networks efficiently. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/uwwGpYy.png"></li>
+</ul></li>
+</ul>
+<h2 id="routerincompatible-networks">Router(Incompatible Networks)</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rJmNTSf.png"></p>
+<ul>
+<li>Router
+<ul>
+<li>Building a network of networks.(The protocol can be different)</li>
+<li>Most come with firewall management.</li>
+</ul></li>
+</ul>
+<h2 id="interprocess-communication">Interprocess Communication</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/6pWclWl.png"></p>
+<ul>
+<li>Server-Client
+<ul>
+<li>One server, several clients.</li>
+<li>Clients initiate communications by sending requests.</li>
+</ul></li>
+<li>P2P(Peer-to-Peer)
+<ul>
+<li>Two processes communicating as equals.</li>
+<li>The most popular distribution mode nowadays.</li>
+</ul></li>
+</ul>
+<h2 id="distributed-systems">Distributed Systems</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ZmowcOK.png"></p>
+<ul>
+<li>Infrastructure can be provided by standardized toolkits.
+<ul>
+<li>Ex: Java Beans，.NET framework.</li>
+</ul></li>
+</ul>
+<h2 id="internet-architecture">Internet Architecture</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rB8IPMk.png"></p>
+<ul>
+<li>Domain
+<ul>
+<li>A network or an internet controlled by one single authority.</li>
+</ul></li>
+<li>ICANN(Internmet corporation for assigned names and numbers)
+<ul>
+<li>Supervise the registration of doimains</li>
+</ul></li>
+<li>Gateway
+<ul>
+<li>A router that connects a domain to the rest of the Internet.</li>
+</ul></li>
+</ul>
+<h2 id="internet-composition">Internet Composition</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/3reTfwk.png"></p>
+<ul>
+<li>Internet Service Provider(ISP)
+<ul>
+<li>Allow customer to connect their domain to the ISP's equiment or join
+the domain already established by the ISP.</li>
+</ul></li>
+</ul>
+<h2 id="ip-addresses">IP Addresses</h2>
+<ul>
+<li>IP(internet protocol)address
+<ul>
+<li>IPv4 -&gt; 32bits(all are allocated already)</li>
+<li>IPv6 -&gt; 128bits</li>
+</ul></li>
+</ul>
+<h2 id="name-server-vs-domain-server">Name Server vs Domain Server</h2>
+<ul>
+<li>Name server:
+<ul>
+<li>Name servers organize and route traffic across the internet to get
+you to the right server.</li>
+</ul></li>
+<li>Domain Name Server(DNS)
+<ul>
+<li>A server that provide you with server information. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rYtlfru.png"></li>
+</ul></li>
+</ul>
+<h2 id="internet-application">Internet Application</h2>
+<ul>
+<li>VoIP(Voice over Internet protocol)</li>
+<li>email(electronic mail)</li>
+<li>FTP(file transfer protocol)</li>
+<li>telnet and ssh(secure shell)</li>
+<li>P2P</li>
+</ul>
+<h2 id="browsers">Browsers</h2>
+<ul>
+<li>HTTP(Hyper text transfer protocol)</li>
+<li>URL(uniform resource locator)</li>
+<li>How a browser get access to a webpage(document): <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/hY3bIGo.png"></li>
+</ul>
+<h2 id="client-side-and-server-side">Client-side and Server-side</h2>
+<ul>
+<li>Client-side(The program is executed on one's pc)
+<ul>
+<li>Java applets</li>
+<li>Javascript</li>
+<li>Flash</li>
+</ul></li>
+<li>Server-side(The program is executed on the server)
+<ul>
+<li>CGI</li>
+<li>Servlets</li>
+<li>PHP</li>
+</ul></li>
+<li>Online game use both techniques.</li>
+</ul>
+<h2 id="internet-protocol">Internet Protocol</h2>
+<p>Reference: <a class="link" href="https://ithelp.ithome.com.tw/articles/10259569?sc=pt">link <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<ul>
+<li>Layers
+<ul>
+<li><p>OSI Model</p>
+<p>Reference: <a class="link" href="https://en.wikipedia.org/wiki/OSI_model">link <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p></li>
+</ul>
+<img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/e5dfV9e.png">
+<ul>
+<li>TCP/IP Model
+<ul>
+<li>Application: constructs message into packets.</li>
+<li>Transport: chops message into packages.</li>
+<li>Network: handles routing through the Internet.</li>
+<li>Link handles actual transmission of packets. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/0gNoMlv.png"></li>
+</ul></li>
+</ul></li>
+<li>Port
+<ul>
+<li>Incoming messages are delivered to different applications by unique
+port numbers. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/54gXvXI.png"></li>
+</ul></li>
+</ul>
+<h2 id="tcpip">TCP/IP</h2>
+<ul>
+<li>TCP and UDP(Transport Layer)
+<ul>
+<li>TCP(transmission control protocol):handshake berfore sending
+packets. =&gt; slow but reliable.</li>
+<li>UDP(user datagram protocol): directly sending packets. =&gt; fast
+but not reliable.</li>
+</ul></li>
+<li>IP(NEtwork Layer)
+<ul>
+<li>routing based on IP(IPv4, IPv6)</li>
+</ul></li>
+<li>TCP and IP are two protocols. TCP/IP is a collection of protocols
+more than just TCP and IP.</li>
+</ul>
+<h2 id="security">Security</h2>
+<ul>
+<li><p>Attacks</p>
+<ul>
+<li>Malware</li>
+<li>Denial of Service(Dos)</li>
+<li>Spam</li>
+</ul></li>
+<li><p>Protections</p>
+<ul>
+<li>Firewall</li>
+<li>Spam filter</li>
+<li>Proxy</li>
+<li>Antivirus, antispyware</li>
+</ul></li>
+<li><p>Public/Private Keys System</p>
+<p>Reference: <a class="link" href="https://medium.com/@RiverChan/%E5%9F%BA%E7%A4%8E%E5%AF%86%E7%A2%BC%E5%AD%B8-%E5%B0%8D%E7%A8%B1%E5%BC%8F%E8%88%87%E9%9D%9E%E5%B0%8D%E7%A8%B1%E5%BC%8F%E5%8A%A0%E5%AF%86%E6%8A%80%E8%A1%93-de25fd5fa537">link <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<ul>
+<li>SSL(Secure Scoket Layer)
+<ul>
+<li>Application: sftp, https, ssh</li>
+</ul></li>
+<li>To prevent fishing, a certificate authority is needed, to ensure to
+correctivity of a key. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/fnACCIR.png"></li>
+</ul></li>
+</ul>
+<h2 id="rsa-algorithm">RSA Algorithm</h2>
+<p>Reference: <a class="link" href="https://ithelp.ithome.com.tw/articles/10250721">link <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<ul>
+<li>Generation <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/5SMoi2J.png"></li>
+<li>Encryption <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/WTvEm7R.png"></li>
+<li>Decryption <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/6fnmG7A.png"></li>
+</ul>
+]]></content>
+      <categories>
+        <category>大學課堂筆記-計算機概論</category>
+      </categories>
+      <tags>
+        <tag>計算機概論</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Operating System(I)</title>
     <url>/2023/01/18/2023-01-17-Operating%20System(I)/</url>
     <content><![CDATA[<h1 id="operating-systemi">Operating System(I)</h1>
@@ -1208,6 +1208,49 @@ class.</li>
 <li>Pointers for a Structure</li>
 </ul>
 <p>Ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Complex</span>{</span><br><span class="line">    <span class="type">double</span> real;</span><br><span class="line">    <span class="type">double</span> img;</span><br><span class="line">};</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    Complex a, b;</span><br><span class="line">    Complex *p, *q;</span><br><span class="line">    a.real=<span class="number">1</span>;</span><br><span class="line">    a.img=<span class="number">2</span>;</span><br><span class="line">    p=&amp;a;</span><br><span class="line">    cout&lt;&lt;p-&gt;img&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    cout&lt;&lt;p-&gt;real&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    cout&lt;&lt;(*p).img&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    cout&lt;&lt;(*p).real&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    q=&amp;b;</span><br><span class="line">    q-&gt;real=p-&gt;img+p-&gt;real;</span><br><span class="line">    cout&lt;&lt;q-&gt;real&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    cout&lt;&lt;b.real&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
+]]></content>
+      <categories>
+        <category>大學課堂筆記-程式設計</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Introduction to C++ Programing</title>
+    <url>/2023/01/17/Chapter%202,%20Introduction%20to%20C++%20Programing/</url>
+    <content><![CDATA[<h1 id="chapter-2-introduction-to-c-programing">Chapter 2, Introduction
+to C++ Programing</h1>
+<h2 id="the-sturcture-of-basic-c-program">The Sturcture of Basic C++
+Program</h2>
+<ul>
+<li>The lines start with # are processed by the preprocessor.</li>
+<li>&lt;iostream&gt; is the input/output stream header file.</li>
+<li>The int main() means that the main program will return an integar
+value.</li>
+<li>std::cout specifies that we are using namspace std.</li>
+</ul>
+<h2 id="the-use-of-escape-sequence">The Use of Escape Sequence</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/G8kcne8.png"></p>
+<h2 id="the-declaration-of-variables">The Declaration of Variables</h2>
+<ul>
+<li><p>void =&gt; Function does not return a value.</p></li>
+<li><p>int =&gt; Declare integar variables.</p></li>
+<li><p>char =&gt; Declare character variables.</p>
+<ul>
+<li>char can also be stored as integer.</li>
+</ul></li>
+<li><p>float =&gt; Declare floating-point variables.</p></li>
+<li><p>double =&gt; Declare double-precision variables.</p></li>
+<li><p>bool =&gt; To hold a boolean value, true/false. ## Arithmetic
+Operators <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/IhflKJP.png"></p></li>
+<li><p>The rules of operator precedence as generally same as those in
+algebra.</p></li>
+<li><p>Exponentiation -&gt; Import &lt;math.h&gt;</p></li>
+</ul>
+<h2 id="equality-and-relational-operators">Equality and Relational
+Operators</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rmHds4R.png"></p>
 ]]></content>
       <categories>
         <category>大學課堂筆記-程式設計</category>
@@ -1872,49 +1915,6 @@ Server，中文稱作時間伺服器，是一種專門用來提供時間資訊�
       </categories>
       <tags>
         <tag>Esp32</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Introduction to C++ Programing</title>
-    <url>/2023/01/17/Chapter%202,%20Introduction%20to%20C++%20Programing/</url>
-    <content><![CDATA[<h1 id="chapter-2-introduction-to-c-programing">Chapter 2, Introduction
-to C++ Programing</h1>
-<h2 id="the-sturcture-of-basic-c-program">The Sturcture of Basic C++
-Program</h2>
-<ul>
-<li>The lines start with # are processed by the preprocessor.</li>
-<li>&lt;iostream&gt; is the input/output stream header file.</li>
-<li>The int main() means that the main program will return an integar
-value.</li>
-<li>std::cout specifies that we are using namspace std.</li>
-</ul>
-<h2 id="the-use-of-escape-sequence">The Use of Escape Sequence</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/G8kcne8.png"></p>
-<h2 id="the-declaration-of-variables">The Declaration of Variables</h2>
-<ul>
-<li><p>void =&gt; Function does not return a value.</p></li>
-<li><p>int =&gt; Declare integar variables.</p></li>
-<li><p>char =&gt; Declare character variables.</p>
-<ul>
-<li>char can also be stored as integer.</li>
-</ul></li>
-<li><p>float =&gt; Declare floating-point variables.</p></li>
-<li><p>double =&gt; Declare double-precision variables.</p></li>
-<li><p>bool =&gt; To hold a boolean value, true/false. ## Arithmetic
-Operators <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/IhflKJP.png"></p></li>
-<li><p>The rules of operator precedence as generally same as those in
-algebra.</p></li>
-<li><p>Exponentiation -&gt; Import &lt;math.h&gt;</p></li>
-</ul>
-<h2 id="equality-and-relational-operators">Equality and Relational
-Operators</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rmHds4R.png"></p>
-]]></content>
-      <categories>
-        <category>大學課堂筆記-程式設計</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
       </tags>
   </entry>
 </search>

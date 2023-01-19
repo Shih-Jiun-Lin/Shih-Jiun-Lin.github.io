@@ -6,7 +6,7 @@
     <meta name="keywords" content="Hexo Theme Redefine">
     <meta name="description" content="Hexo Theme Redefine">
     <meta name="author" content="Shih Jiun Lin">
-    <link rel="canonical" href="http://example.com/2023/01/18/%E8%A3%9C%E5%85%85%E8%B3%87%E6%96%99/" />
+    <link rel="canonical" href="http://example.com/2023/01/17/Chapter%203,%20Control%20Statement_%20Part%201/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
     <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no" sizes="192x192">
     <link rel="apple-touch-icon" sizes="180x180" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no">
@@ -14,7 +14,7 @@
     
     <title>
         
-            補充資料 |
+            Control Statement-Part 1 |
         
         Shih-Jiun-Lin&#39;s Blog
     </title>
@@ -463,7 +463,7 @@ mjx-container[display="true"] + br {
     <div class="post-page-container">
         <div class="article-content-container">
             <div class="article-title">
-                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">補充資料</h1></span>
+                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">Control Statement-Part 1</h1></span>
             </div>
 
             
@@ -480,8 +480,8 @@ mjx-container[display="true"] + br {
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="pc">2023-01-18 12:34:50</span>
-        <span class="mobile">2023-01-18 12:34</span>
+        <span class="pc">2023-01-17 23:00:30</span>
+        <span class="mobile">2023-01-17 23:00</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -511,12 +511,12 @@ mjx-container[display="true"] + br {
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>285 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>338 Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>2 Mins</span>
         </span>
     
     
@@ -532,19 +532,62 @@ mjx-container[display="true"] + br {
             
 
             <div class="article-content markdown-body">
-                <h1 id="補充資料">補充資料</h1>
-<h2 id="literal-constant">Literal Constant</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/s7Ps4NN.png"></p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/QjOdk1K.png"></p>
-<p>Ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	cout&lt;&lt;<span class="number">75</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">0113</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">0x4b</span>&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//Decimal, Octal, Hexadecimal</span></span><br><span class="line">	cout&lt;&lt;<span class="number">75</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">75u</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">75l</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">75ul</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">75lu</span>&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//int, unsigned, unsigned long, usigned long</span></span><br><span class="line">	cout&lt;&lt;<span class="number">6.02e23</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">1.6e-19</span>&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//6.02*10^23</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
-<h2 id="bitwise-operators">Bitwise Operators</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/7AphOD4.png"></p>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bitset&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">int</span> x=<span class="number">0b00000001</span>;</span><br><span class="line">	<span class="type">int</span> y=<span class="number">0b00000000</span>;</span><br><span class="line">	cout&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(x&lt;&lt;<span class="number">1</span>)&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(x&gt;&gt;<span class="number">1</span>)&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//left / right shift for 1 bit </span></span><br><span class="line">	cout&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(~x)&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(x|y)&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(x&amp;y)&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(x^y)&lt;&lt;<span class="string">"\n"</span>; <span class="comment">// not, or, and, xor</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-<h2 id="dynamic-memory-allocation">Dynamic Memory allocation</h2>
-<p>Reference: http://ccy.dd.ncu.edu.tw/~chen/course/Cpp/ch5/6.htm <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/kxplKpS.png"></p>
-<p>Ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">int</span> *p;</span><br><span class="line">	p=<span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">	*p=<span class="number">100</span>;</span><br><span class="line">	cout&lt;&lt;*p;</span><br><span class="line">	<span class="keyword">delete</span> p; <span class="comment">//release the memory space</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
-<p>Ex2: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">int</span> *p=<span class="keyword">new</span> <span class="type">int</span> [<span class="number">5</span>];</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++){</span><br><span class="line">		*(p+i)=i;</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++){</span><br><span class="line">		cout&lt;&lt;*(p+i)&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">delete</span> []p; <span class="comment">//release memory space</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
-<h2 id="linked-list寒假學">Linked List(寒假學)</h2>
+                <h1 id="chapter-3-control-statement-part-1">Chapter 3, Control
+Statement: Part 1</h1>
+<h2 id="control-structure">Control Structure</h2>
+<ul>
+<li>The sequence structure</li>
+<li>The selection strcture</li>
+<li>The repetition structure</li>
+</ul>
+<h2 id="selection-statements">Selection Statements</h2>
+<ul>
+<li>To choose among courses of action.</li>
+<li>if: A single-selection statement</li>
+<li>if...else: A double-selection statement</li>
+<li>switch: A multiselection statement</li>
+</ul>
+<h3 id="conditional-operators">Conditional Operators(?:)</h3>
+<ul>
+<li>Closely related to the if..else function.</li>
+</ul>
+<p>Ex: <div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> x{<span class="number">0</span>}, y{<span class="number">1</span>};</span><br><span class="line">    result=x&lt;y?<span class="string">"x&lt;y"</span>:<span class="string">"x&gt;y"</span>;</span><br><span class="line">    std::cout&lt;&lt;result;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> Accodring to the code, it will cout x<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.09ex;" xmlns="http://www.w3.org/2000/svg" width="1.76ex" height="1.312ex" role="img" focusable="false" viewBox="0 -540 778 580"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="3C" d="M694 -11T694 -19T688 -33T678 -40Q671 -40 524 29T234 166L90 235Q83 240 83 250Q83 261 91 266Q664 540 678 540Q681 540 687 534T694 519T687 505Q686 504 417 376L151 250L417 124Q686 -4 687 -5Q694 -11 694 -19Z"></path></g></g></g></svg></mjx-container></span>y in the command prompt.</p>
+<ul>
+<li>Another way to declare integers: int x{0} equals to int x=0</li>
+</ul>
+<h2 id="repetition-statementslooping-statements">Repetition
+Statements(Looping Statements)</h2>
+<ul>
+<li>while: do the action zero or more times.</li>
+<li>do...while: do the action at least once.</li>
+<li>for: do the action zero or more times.</li>
+</ul>
+<h3 id="counter-controlled-repetition">Counter Controlled
+Repetition</h3>
+<ul>
+<li>Counter variables are normally initialized to zero or one, depending
+on their use.</li>
+<li>Remember to initialize the counter varible, or it might contain some
+garbage variable.</li>
+</ul>
+<h2 id="how-to-change-the-tpye-of-a-object">How to change the tpye of a
+object</h2>
+<div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="built_in">static_cast</span>&lt;type&gt;(object);</span><br><span class="line">    (type)object;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<h2 id="setprecision">setprecision()</h2>
+<div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#inlcude <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    std::cout&lt;&lt;std::<span class="built_in">setprecision</span>(<span class="number">2</span>)&lt;&lt;floatnum; <span class="comment">//start from the first num after fixed point</span></span><br><span class="line">    std::cout&lt;&lt;fixed::std::<span class="built_in">setprecision</span>(<span class="number">2</span>)&lt;&lt;floatnum; <span class="comment">//start from the first num before fixed point</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<h2 id="common-keywords-in-c-and-c">Common Keywords in C++ and C</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/qm5wD9b.png"></p>
+<h2 id="assignment-operators">Assignment Operators</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/JHI93gS.png"></p>
+<h2 id="preincrement-and-postincrement">Preincrement and
+Postincrement</h2>
+<ul>
+<li>Preincrement =&gt; Increment a by 1, then use the new value of a in
+the expression in which a resides.</li>
+<li>Postincrement =&gt; Use the current value of a in the expression in
+which a resides, then increment a by 1.</li>
+</ul>
+<p>Ex: <div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> a=<span class="number">1</span>;</span><br><span class="line">    cout&lt;&lt;a&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    cout&lt;&lt;a++&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    <span class="comment">//do a=a+1 after cout</span></span><br><span class="line">    <span class="type">int</span> b=<span class="number">1</span>;</span><br><span class="line">    cout&lt;&lt;b&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    cout&lt;&lt;++b&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    <span class="comment">//do b=b+1 before cout</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
 
             </div>
 
@@ -552,11 +595,11 @@ mjx-container[display="true"] + br {
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li>Post title：補充資料</li>
+        <li>Post title：Control Statement-Part 1</li>
         <li>Post author：Shih Jiun Lin</li>
-        <li>Create time：2023-01-18 12:34:50</li>
+        <li>Create time：2023-01-17 23:00:30</li>
         <li>
-            Post link：https://shih-jiun-lin.github.io/2023/01/18/補充資料/
+            Post link：https://shih-jiun-lin.github.io/2023/01/17/Chapter 3, Control Statement_ Part 1/
         </li>
         <li>
             Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
@@ -583,13 +626,13 @@ mjx-container[display="true"] + br {
                         <div class="article-prev">
                             <a class="prev"
                             rel="prev"
-                            href="/2023/01/18/STL(Standard%20Template%20Library)/"
+                            href="/2023/01/17/Chapter%204,%20Control%20Statement_%20Part%202/"
                             >
                                 <span class="left arrow-icon flex-center">
                                     <i class="fa-solid fa-chevron-left"></i>
                                 </span>
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">STL(Standard Template Library)</span>
+                                    <span class="post-nav-title-item">Control Statement-Part 2</span>
                                     <span class="post-nav-item">Prev posts</span>
                                 </span>
                             </a>
@@ -599,10 +642,10 @@ mjx-container[display="true"] + br {
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/01/18/Chaper%208%20Sequential-Access%20Files/"
+                            href="/2023/01/17/Chapter%202,%20Introduction%20to%20C++%20Programing/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">Sequential-Access Files</span>
+                                    <span class="post-nav-title-item">Introduction to C++ Programing</span>
                                     <span class="post-nav-item">Next posts</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -622,7 +665,12 @@ mjx-container[display="true"] + br {
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>Contents</strong></div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A3%9C%E5%85%85%E8%B3%87%E6%96%99"><span class="nav-text">補充資料</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#literal-constant"><span class="nav-text">Literal Constant</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bitwise-operators"><span class="nav-text">Bitwise Operators</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dynamic-memory-allocation"><span class="nav-text">Dynamic Memory allocation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#linked-list%E5%AF%92%E5%81%87%E5%AD%B8"><span class="nav-text">Linked List(寒假學)</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#chapter-3-control-statement-part-1"><span class="nav-text">Chapter 3, Control
+Statement: Part 1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#control-structure"><span class="nav-text">Control Structure</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#selection-statements"><span class="nav-text">Selection Statements</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#conditional-operators"><span class="nav-text">Conditional Operators(?:)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#repetition-statementslooping-statements"><span class="nav-text">Repetition
+Statements(Looping Statements)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#counter-controlled-repetition"><span class="nav-text">Counter Controlled
+Repetition</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#how-to-change-the-tpye-of-a-object"><span class="nav-text">How to change the tpye of a
+object</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#setprecision"><span class="nav-text">setprecision()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#common-keywords-in-c-and-c"><span class="nav-text">Common Keywords in C++ and C</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#assignment-operators"><span class="nav-text">Assignment Operators</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#preincrement-and-postincrement"><span class="nav-text">Preincrement and
+Postincrement</span></a></li></ol></li></ol>
     </div>
 </div>
             </div>

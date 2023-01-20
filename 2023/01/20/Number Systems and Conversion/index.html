@@ -6,7 +6,7 @@
     <meta name="keywords" content="Hexo Theme Redefine">
     <meta name="description" content="Hexo Theme Redefine">
     <meta name="author" content="Shih Jiun Lin">
-    <link rel="canonical" href="http://example.com/2023/01/19/Interactive%20Christmas%20Ornament/" />
+    <link rel="canonical" href="http://example.com/2023/01/20/Number%20Systems%20and%20Conversion/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
     <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no" sizes="192x192">
     <link rel="apple-touch-icon" sizes="180x180" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no">
@@ -14,7 +14,7 @@
     
     <title>
         
-            Interactive Christmas Ornament-個人專題 |
+            Number Systems and Conversion-數位邏輯設計筆記 |
         
         Shih-Jiun-Lin&#39;s Blog
     </title>
@@ -463,7 +463,7 @@ mjx-container[display="true"] + br {
     <div class="post-page-container">
         <div class="article-content-container">
             <div class="article-title">
-                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">Interactive Christmas Ornament-個人專題</h1></span>
+                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">Number Systems and Conversion-數位邏輯設計筆記</h1></span>
             </div>
 
             
@@ -480,8 +480,8 @@ mjx-container[display="true"] + br {
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="pc">2023-01-19 17:50:05</span>
-        <span class="mobile">2023-01-19 17:50</span>
+        <span class="pc">2023-01-20 20:30:00</span>
+        <span class="mobile">2023-01-20 20:30</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -489,7 +489,7 @@ mjx-container[display="true"] + br {
             <ul>
                 
                     <li>
-                        <a href="/categories/%E5%80%8B%E4%BA%BA%E5%B0%88%E9%A1%8C/">個人專題</a>&nbsp;
+                        <a href="/categories/%E5%80%8B%E4%BA%BA%E7%AD%86%E8%A8%98-%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF%E8%A8%AD%E8%A8%88/">個人筆記-數位邏輯設計</a>&nbsp;
                     </li>
                 
             </ul>
@@ -501,7 +501,7 @@ mjx-container[display="true"] + br {
             <ul>
                 
                     <li>
-                        <a href="/tags/Arduino/">Arduino</a>&nbsp;
+                        <a href="/tags/%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF%E8%A8%AD%E8%A8%88/">數位邏輯設計</a>&nbsp;
                     </li>
                 
             </ul>
@@ -511,12 +511,12 @@ mjx-container[display="true"] + br {
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>645 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>295 Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>2 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 Mins</span>
         </span>
     
     
@@ -532,81 +532,86 @@ mjx-container[display="true"] + br {
             
 
             <div class="article-content markdown-body">
-                <p>簡報網址: <a class="link" target="_blank" rel="noopener" href="https://www.canva.com/design/DAFWgMy5ioo/ayE-qH0-uqzdko61G2RWNA/view?utm_content=DAFWgMy5ioo&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=sharebutton">canva <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h1 id="interactive-christmas-ornament">Interactive Christmas
-Ornament</h1>
-<h2 id="功能及運作">功能及運作</h2>
+                <p>一定愛配王俊堯教授開放課程食用:<a class="link" target="_blank" rel="noopener" href="https://ocw.nthu.edu.tw/ocw/index.php?page=course&amp;cid=230">課程連結 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h1 id="number-systems-and-conversion">Number Systems and
+Conversion</h1>
+<h2 id="digital-systems-and-switching-circuits">Digital Systems and
+Switching Circuits</h2>
 <ul>
-<li>當感應器沒感應到人時，於愛心及向前凝視的眼睛做隨機顯示。</li>
-<li>左側感應器偵測到人時，切換到看向左側的眼睛。</li>
-<li>右側感應器偵測到人時，切換到看向右側的眼睛。</li>
-<li>偵測距離:75公分。</li>
-</ul>
-<h2 id="材料準備">材料準備</h2>
+<li>Digital vs Analog
 <ul>
-<li>Arduino 開發板 *1</li>
-<li>小塊麵包板 *1</li>
-<li>杜邦線(公對母、母對母) *n</li>
-<li>超聲波感應器(HC-SR04) *2</li>
-<li>配有 max7219 的 LEE 8<em>8 矩陣(Generic) </em>2</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/BixUQLd.png"></p>
-<h2 id="電路連接">電路連接</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/4sNAzyY.png"></p>
+<li>Digital: 不連續的訊號。
 <ul>
-<li>max7219 腳位連接
-<ul>
-<li>DIN(Data in): 10</li>
-<li>CLK(Clock): 11</li>
-<li>CS(Load): 12</li>
+<li>Pros:
+容易儲存及傳輸、進行偵錯及除錯、加密與解密、壓縮與解壓縮。</li>
+<li>Cons: 經過量化後的資料容易失真。</li>
 </ul></li>
-<li>Ultrasonic Sensor(Right)
+<li>Analog: 連續的訊號
 <ul>
-<li>Trig: 2</li>
-<li>Echo: 1</li>
+<li>Pros: 具有較精準的解析度，資訊密度更高。</li>
+<li>Cons: 極度容易受到雜訊干擾。</li>
 </ul></li>
-<li>Ultrasonic Sensor(Left)
-<ul>
-<li>Trig: 4</li>
-<li>Echo: 3</li>
+<li>一個類比訊號Sampling的量決定後續後續重新轉成類比訊號的還原度。</li>
 </ul></li>
 </ul>
-<h2 id="程式編寫">程式編寫</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/2u64tPO.png"></p>
 <ul>
-<li><p>需要先安裝LedControl函式庫 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ItXYyEa.png"></p></li>
-<li><p>LED矩陣自定義顯示:</p>
+<li>Switching Circuit
 <ul>
-<li>你可以透過這網站來自定義LED顯示內容: <a class="link" target="_blank" rel="noopener" href="https://xantorohara.github.io/led-matrix-editor/">LED Matrix
-Editor <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li>教學影片:</li>
-</ul>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/qwOpcOtBPpw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></p></li>
-<li><p>程式碼: <a class="link" target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1ONCjLl8s2UZTs6K40MRol_e-MdEnxy3h?usp=sharing">程式碼下載 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p></li>
-</ul>
-<div class="highlight-container" data-rel="Arduino"><figure class="iseeu highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">"LedControl.h"</span></span></span><br><span class="line">LedControl LEDmatrix=<span class="built_in">LedControl</span>(<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>,<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//顯示內容</span></span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> middle[] = {</span><br><span class="line">  <span class="number">0x007e425a5a427e00</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> left[] = {</span><br><span class="line">  <span class="number">0x007e424e4e427e00</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> right[] = {</span><br><span class="line">  <span class="number">0x007e427272427e00</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> heart[] = {</span><br><span class="line">  <span class="number">0x00183c7effffff66</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="comment">//顯示圖形</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">displayImage</span><span class="params">(<span class="type">uint64_t</span> image)</span> </span>{</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">8</span>; i++) {</span><br><span class="line">    <span class="type">byte</span> row = (image &gt;&gt; i * <span class="number">8</span>) &amp; <span class="number">0xFF</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">8</span>; j++) {</span><br><span class="line">      LEDmatrix.<span class="built_in">setLed</span>(<span class="number">0</span>, i, j, <span class="built_in">bitRead</span>(row, j));</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">//獲取距離</span></span><br><span class="line"><span class="function"><span class="type">float</span> <span class="title">getDistance</span><span class="params">(<span class="type">int</span> trig,<span class="type">int</span> echo)</span></span>{</span><br><span class="line">    <span class="built_in">pinMode</span>(trig,<span class="literal">OUTPUT</span>);</span><br><span class="line">    <span class="built_in">digitalWrite</span>(trig,<span class="literal">LOW</span>);</span><br><span class="line">    <span class="built_in">delayMicroseconds</span>(<span class="number">2</span>);</span><br><span class="line">    <span class="built_in">digitalWrite</span>(trig,<span class="literal">HIGH</span>);</span><br><span class="line">    <span class="built_in">delayMicroseconds</span>(<span class="number">10</span>);</span><br><span class="line">    <span class="built_in">digitalWrite</span>(trig,<span class="literal">LOW</span>);</span><br><span class="line">    <span class="built_in">pinMode</span>(echo, <span class="literal">INPUT</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">pulseIn</span>(echo,<span class="literal">HIGH</span>,<span class="number">30000</span>)/<span class="number">58.0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span> </span>{</span><br><span class="line">  LEDmatrix.<span class="built_in">clearDisplay</span>(<span class="number">0</span>);    </span><br><span class="line">  LEDmatrix.<span class="built_in">shutdown</span>(<span class="number">0</span>, <span class="literal">false</span>);  </span><br><span class="line">  LEDmatrix.<span class="built_in">setIntensity</span>(<span class="number">0</span>, <span class="number">10</span>); </span><br><span class="line">  <span class="built_in">randomSeed</span>(<span class="number">69</span>);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">loop</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="comment">//如果右側sensor於75公分處感應到物體，顯示看右方的圖形</span></span><br><span class="line">  <span class="keyword">if</span>(<span class="built_in">getDistance</span>(<span class="number">2</span>,<span class="number">1</span>) &lt; <span class="number">75</span>){</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(right[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  <span class="comment">//如果左側sensor於75公分處感應到物體，顯示看左方的圖形</span></span><br><span class="line">  <span class="keyword">if</span>(<span class="built_in">getDistance</span>(<span class="number">4</span>,<span class="number">3</span>) &lt; <span class="number">75</span>){</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(left[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  <span class="comment">//如果兩側sensor於75公分處未感應到物體，於愛心眼與凝視前方做隨機顯示</span></span><br><span class="line">  <span class="keyword">if</span>((<span class="built_in">getDistance</span>(<span class="number">2</span>,<span class="number">1</span>) &gt; <span class="number">75</span>) &amp;&amp; (<span class="built_in">getDistance</span>(<span class="number">4</span>,<span class="number">3</span>) &gt; <span class="number">75</span>)){</span><br><span class="line">    <span class="type">int</span> random_num=<span class="built_in">random</span>(<span class="number">1</span>, <span class="number">3</span>);</span><br><span class="line">    <span class="keyword">if</span>(random_num==<span class="number">1</span>){</span><br><span class="line">      <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(middle[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">      }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">if</span>(random_num==<span class="number">2</span>){</span><br><span class="line">      <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(heart[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">      }</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-<h2 id="外觀設計">外觀設計</h2>
+<li>Combination network
 <ul>
-<li>主要以塑膠瓦楞紙板透過保麗龍膠拼接而成。(建議使用熱熔膠，保麗龍膠穩固度不佳!)</li>
-<li>一個似房子形狀的五邊形柱體為主體。
-<ul>
-<li>頂部:
-<ul>
-<li>頂部: 透過束帶的幫助，我將其設計成翻蓋式，以便後續維修或組裝。 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/yGoVvDc.jpg"></li>
+<li><span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.375ex;" xmlns="http://www.w3.org/2000/svg" width="2.307ex" height="1.92ex" role="img" focusable="false" viewBox="0 -683 1019.6 848.6"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D449" d="M52 648Q52 670 65 683H76Q118 680 181 680Q299 680 320 683H330Q336 677 336 674T334 656Q329 641 325 637H304Q282 635 274 635Q245 630 242 620Q242 618 271 369T301 118L374 235Q447 352 520 471T595 594Q599 601 599 609Q599 633 555 637Q537 637 537 648Q537 649 539 661Q542 675 545 679T558 683Q560 683 570 683T604 682T668 681Q737 681 755 683H762Q769 676 769 672Q769 655 760 640Q757 637 743 637Q730 636 719 635T698 630T682 623T670 615T660 608T652 599T645 592L452 282Q272 -9 266 -16Q263 -18 259 -21L241 -22H234Q216 -22 216 -15Q213 -9 177 305Q139 623 138 626Q133 637 76 637H59Q52 642 52 648Z"></path></g><g data-mml-node="mn" transform="translate(616,-150) scale(0.707)"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></g></g></g></svg></mjx-container></span> =&gt; function of <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.339ex;" xmlns="http://www.w3.org/2000/svg" width="2.375ex" height="1.934ex" role="img" focusable="false" viewBox="0 -705 1049.6 855"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D446" d="M308 24Q367 24 416 76T466 197Q466 260 414 284Q308 311 278 321T236 341Q176 383 176 462Q176 523 208 573T273 648Q302 673 343 688T407 704H418H425Q521 704 564 640Q565 640 577 653T603 682T623 704Q624 704 627 704T632 705Q645 705 645 698T617 577T585 459T569 456Q549 456 549 465Q549 471 550 475Q550 478 551 494T553 520Q553 554 544 579T526 616T501 641Q465 662 419 662Q362 662 313 616T263 510Q263 480 278 458T319 427Q323 425 389 408T456 390Q490 379 522 342T554 242Q554 216 546 186Q541 164 528 137T492 78T426 18T332 -20Q320 -22 298 -22Q199 -22 144 33L134 44L106 13Q83 -14 78 -18T65 -22Q52 -22 52 -14Q52 -11 110 221Q112 227 130 227H143Q149 221 149 216Q149 214 148 207T144 186T142 153Q144 114 160 87T203 47T255 29T308 24Z"></path></g><g data-mml-node="mn" transform="translate(646,-150) scale(0.707)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g></g></svg></mjx-container></span>, <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.339ex;" xmlns="http://www.w3.org/2000/svg" width="2.375ex" height="1.934ex" role="img" focusable="false" viewBox="0 -705 1049.6 855"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D446" d="M308 24Q367 24 416 76T466 197Q466 260 414 284Q308 311 278 321T236 341Q176 383 176 462Q176 523 208 573T273 648Q302 673 343 688T407 704H418H425Q521 704 564 640Q565 640 577 653T603 682T623 704Q624 704 627 704T632 705Q645 705 645 698T617 577T585 459T569 456Q549 456 549 465Q549 471 550 475Q550 478 551 494T553 520Q553 554 544 579T526 616T501 641Q465 662 419 662Q362 662 313 616T263 510Q263 480 278 458T319 427Q323 425 389 408T456 390Q490 379 522 342T554 242Q554 216 546 186Q541 164 528 137T492 78T426 18T332 -20Q320 -22 298 -22Q199 -22 144 33L134 44L106 13Q83 -14 78 -18T65 -22Q52 -22 52 -14Q52 -11 110 221Q112 227 130 227H143Q149 221 149 216Q149 214 148 207T144 186T142 153Q144 114 160 87T203 47T255 29T308 24Z"></path></g><g data-mml-node="mn" transform="translate(646,-150) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g></g></g></svg></mjx-container></span> present values.</li>
 </ul></li>
-<li>正面及背面
+<li>Sequential network
 <ul>
-<li><p>正面: 挖出兩個正方形及長方形來放置LED矩陣及Sensor。 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/v66Spc1.jpg"></p></li>
-<li><p>背面: 挖出一方形小孔來放置電源供應線。 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/bwzeTJR.jpg"></p></li>
+<li><span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.375ex;" xmlns="http://www.w3.org/2000/svg" width="2.307ex" height="1.92ex" role="img" focusable="false" viewBox="0 -683 1019.6 848.6"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D449" d="M52 648Q52 670 65 683H76Q118 680 181 680Q299 680 320 683H330Q336 677 336 674T334 656Q329 641 325 637H304Q282 635 274 635Q245 630 242 620Q242 618 271 369T301 118L374 235Q447 352 520 471T595 594Q599 601 599 609Q599 633 555 637Q537 637 537 648Q537 649 539 661Q542 675 545 679T558 683Q560 683 570 683T604 682T668 681Q737 681 755 683H762Q769 676 769 672Q769 655 760 640Q757 637 743 637Q730 636 719 635T698 630T682 623T670 615T660 608T652 599T645 592L452 282Q272 -9 266 -16Q263 -18 259 -21L241 -22H234Q216 -22 216 -15Q213 -9 177 305Q139 623 138 626Q133 637 76 637H59Q52 642 52 648Z"></path></g><g data-mml-node="mn" transform="translate(616,-150) scale(0.707)"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></g></g></g></svg></mjx-container></span> =&gt; function of <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.339ex;" xmlns="http://www.w3.org/2000/svg" width="2.375ex" height="1.934ex" role="img" focusable="false" viewBox="0 -705 1049.6 855"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D446" d="M308 24Q367 24 416 76T466 197Q466 260 414 284Q308 311 278 321T236 341Q176 383 176 462Q176 523 208 573T273 648Q302 673 343 688T407 704H418H425Q521 704 564 640Q565 640 577 653T603 682T623 704Q624 704 627 704T632 705Q645 705 645 698T617 577T585 459T569 456Q549 456 549 465Q549 471 550 475Q550 478 551 494T553 520Q553 554 544 579T526 616T501 641Q465 662 419 662Q362 662 313 616T263 510Q263 480 278 458T319 427Q323 425 389 408T456 390Q490 379 522 342T554 242Q554 216 546 186Q541 164 528 137T492 78T426 18T332 -20Q320 -22 298 -22Q199 -22 144 33L134 44L106 13Q83 -14 78 -18T65 -22Q52 -22 52 -14Q52 -11 110 221Q112 227 130 227H143Q149 221 149 216Q149 214 148 207T144 186T142 153Q144 114 160 87T203 47T255 29T308 24Z"></path></g><g data-mml-node="mn" transform="translate(646,-150) scale(0.707)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g></g></svg></mjx-container></span>, <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.339ex;" xmlns="http://www.w3.org/2000/svg" width="2.375ex" height="1.934ex" role="img" focusable="false" viewBox="0 -705 1049.6 855"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D446" d="M308 24Q367 24 416 76T466 197Q466 260 414 284Q308 311 278 321T236 341Q176 383 176 462Q176 523 208 573T273 648Q302 673 343 688T407 704H418H425Q521 704 564 640Q565 640 577 653T603 682T623 704Q624 704 627 704T632 705Q645 705 645 698T617 577T585 459T569 456Q549 456 549 465Q549 471 550 475Q550 478 551 494T553 520Q553 554 544 579T526 616T501 641Q465 662 419 662Q362 662 313 616T263 510Q263 480 278 458T319 427Q323 425 389 408T456 390Q490 379 522 342T554 242Q554 216 546 186Q541 164 528 137T492 78T426 18T332 -20Q320 -22 298 -22Q199 -22 144 33L134 44L106 13Q83 -14 78 -18T65 -22Q52 -22 52 -14Q52 -11 110 221Q112 227 130 227H143Q149 221 149 216Q149 214 148 207T144 186T142 153Q144 114 160 87T203 47T255 29T308 24Z"></path></g><g data-mml-node="mn" transform="translate(646,-150) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g></g></g></svg></mjx-container></span> present/previosu values.</li>
 </ul></li>
-</ul></li>
-<li>裝飾
-<ul>
-<li>以聖誕帽作點綴。</li>
 </ul></li>
 </ul>
-<h2 id="功能展示">功能展示</h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lgVJnPT9_88" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
-</iframe>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/1TBivHR.png"></p>
+<h2 id="number-system-and-conversion">Number System and Conversion</h2>
+<ul>
+<li>Number System
+<ul>
+<li>Base (Radix) R : (0, 1, ····, R-1)
+<ul>
+<li>Base 2 : (0, 1) =&gt; Binary.</li>
+<li>Base 8 : (0, 1, ..., 7) =&gt; Octal.</li>
+<li>Base 10 : (0, 1, ..., 9) =&gt; Decimal.</li>
+<li>Base 16 : (0, 1, ...,9, A, B , ...,F) =&gt; Hexadecimal.</li>
+</ul></li>
+</ul></li>
+<li>Conversion
+<ul>
+<li><p>Any Radix to Decimal. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/FnXiejr.png"></p></li>
+<li><p>Decimal to Any Radix(Integer) =&gt;
+重複除以radix，直到無法再除。</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/d5Udym2.png"></p>
+<ul>
+<li>Ex:</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/4mq4MXh.png"></p></li>
+<li><p>Decimal to Any Radix(Non-integer) =&gt;
+重複乘以radix，直到為0，有可能是循環小數，部分誤差為合理的。</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/vy0uYRH.png"></p>
+<ul>
+<li>Ex:</li>
+</ul>
+<p>有終點:</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/Z9UOm4g.png"> 沒終點:</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/lGNIeVA.png"></p></li>
+<li><p>Fast Conversion</p>
+<ul>
+<li><p>Binary to Octal =&gt; 3 bits in a group.(<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="6.267ex" height="2.071ex" role="img" focusable="false" viewBox="0 -833.2 2770.1 915.2"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="mn" transform="translate(533,363) scale(0.707)"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path></g></g><g data-mml-node="mo" transform="translate(1214.3,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mn" transform="translate(2270.1,0)"><path data-c="38" d="M70 417T70 494T124 618T248 666Q319 666 374 624T429 515Q429 485 418 459T392 417T361 389T335 371T324 363L338 354Q352 344 366 334T382 323Q457 264 457 174Q457 95 399 37T249 -22Q159 -22 101 29T43 155Q43 263 172 335L154 348Q133 361 127 368Q70 417 70 494ZM286 386L292 390Q298 394 301 396T311 403T323 413T334 425T345 438T355 454T364 471T369 491T371 513Q371 556 342 586T275 624Q268 625 242 625Q201 625 165 599T128 534Q128 511 141 492T167 463T217 431Q224 426 228 424L286 386ZM250 21Q308 21 350 55T392 137Q392 154 387 169T375 194T353 216T330 234T301 253T274 270Q260 279 244 289T218 306L210 311Q204 311 181 294T133 239T107 157Q107 98 150 60T250 21Z"></path></g></g></g></svg></mjx-container></span>)</p>
+<p>Ex:</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/jh9RIyE.png"></p></li>
+<li><p>Binary to Hexadecimal =&gt; 4 bits in a group.(<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="7.398ex" height="2.09ex" role="img" focusable="false" viewBox="0 -841.7 3270.1 923.7"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="mn" transform="translate(533,363) scale(0.707)"><path data-c="34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z"></path></g></g><g data-mml-node="mo" transform="translate(1214.3,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mn" transform="translate(2270.1,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="36" d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z" transform="translate(500,0)"></path></g></g></g></svg></mjx-container></span>)</p>
+<p>Ex:</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ci7K8qF.png"></p></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="王俊堯數位邏輯1d講結束">2023/1/20 王俊堯數位邏輯1D講結束</h2>
 
             </div>
 
@@ -614,11 +619,11 @@ Editor <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li>Post title：Interactive Christmas Ornament-個人專題</li>
+        <li>Post title：Number Systems and Conversion-數位邏輯設計筆記</li>
         <li>Post author：Shih Jiun Lin</li>
-        <li>Create time：2023-01-19 17:50:05</li>
+        <li>Create time：2023-01-20 20:30:00</li>
         <li>
-            Post link：https://shih-jiun-lin.github.io/2023/01/19/Interactive Christmas Ornament/
+            Post link：https://shih-jiun-lin.github.io/2023/01/20/Number Systems and Conversion/
         </li>
         <li>
             Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
@@ -633,7 +638,7 @@ Editor <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
                 <ul class="post-tags-box">
                     
                         <li class="tag-item">
-                            <a href="/tags/Arduino/">#Arduino</a>&nbsp;
+                            <a href="/tags/%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF%E8%A8%AD%E8%A8%88/">#數位邏輯設計</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -642,29 +647,14 @@ Editor <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                            rel="prev"
-                            href="/2023/01/20/WiFi%20Sync%20Clock/"
-                            >
-                                <span class="left arrow-icon flex-center">
-                                    <i class="fa-solid fa-chevron-left"></i>
-                                </span>
-                                <span class="title flex-center">
-                                    <span class="post-nav-title-item">WiFi Sync Clock-個人專題</span>
-                                    <span class="post-nav-item">Prev posts</span>
-                                </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/01/18/2023-01-17-Operating%20System(I)/"
+                            href="/2023/01/20/WiFi%20Sync%20Clock/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">Operating System(I)-計算機概論筆記</span>
+                                    <span class="post-nav-title-item">WiFi Sync Clock-個人專題</span>
                                     <span class="post-nav-item">Next posts</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -684,8 +674,9 @@ Editor <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>Contents</strong></div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#interactive-christmas-ornament"><span class="nav-text">Interactive Christmas
-Ornament</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E5%8F%8A%E9%81%8B%E4%BD%9C"><span class="nav-text">功能及運作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9D%90%E6%96%99%E6%BA%96%E5%82%99"><span class="nav-text">材料準備</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%BB%E8%B7%AF%E9%80%A3%E6%8E%A5"><span class="nav-text">電路連接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A8%8B%E5%BC%8F%E7%B7%A8%E5%AF%AB"><span class="nav-text">程式編寫</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%96%E8%A7%80%E8%A8%AD%E8%A8%88"><span class="nav-text">外觀設計</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E5%B1%95%E7%A4%BA"><span class="nav-text">功能展示</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#number-systems-and-conversion"><span class="nav-text">Number Systems and
+Conversion</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#digital-systems-and-switching-circuits"><span class="nav-text">Digital Systems and
+Switching Circuits</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#number-system-and-conversion"><span class="nav-text">Number System and Conversion</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%8B%E4%BF%8A%E5%A0%AF%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF1d%E8%AC%9B%E7%B5%90%E6%9D%9F"><span class="nav-text">2023&#x2F;1&#x2F;20 王俊堯數位邏輯1D講結束</span></a></li></ol></li></ol>
     </div>
 </div>
             </div>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Data Manipulation(I)-計算機概論筆記</title>
+    <title>Data Manipulation-計算機概論筆記</title>
     <url>/2023/01/18/2023-01-17-Data%20Manipulation(I)/</url>
     <content><![CDATA[<p>一定愛配于天立教授開放課程食用:<a class="link" href="http://ocw.aca.ntu.edu.tw/ntu-ocw/ocw/cou/101S210">課程連結 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h1 id="data-manipulationi">Data Manipulation(I)</h1>
+<h1 id="data-manipulation">Data Manipulation</h1>
 <h2 id="the-communication-between-cpu-and-memory">The communication
 between CPU and memory</h2>
 <p>Register -&gt; CPU Cache</p>
@@ -168,7 +168,7 @@ only)</li>
       </tags>
   </entry>
   <entry>
-    <title>Data Manipulation(I)-計算機概論筆記</title>
+    <title>Data Storage(I)-計算機概論筆記</title>
     <url>/2023/01/18/2023-01-17-Data%20Storage(I)/</url>
     <content><![CDATA[<p>一定愛配于天立教授開放課程食用:<a class="link" href="http://ocw.aca.ntu.edu.tw/ntu-ocw/ocw/cou/101S210">課程連結 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <h1 id="data-storagei">Data Storage(I)</h1>
@@ -360,7 +360,7 @@ answer ## Overflow Using the table from Two's complement:</li>
       </tags>
   </entry>
   <entry>
-    <title>Data Manipulation(I)-計算機概論筆記</title>
+    <title>Data Storage(II)-計算機概論筆記</title>
     <url>/2023/01/18/2023-01-17-Data%20Storage(II)/</url>
     <content><![CDATA[<p>一定愛配于天立教授開放課程食用:<a class="link" href="http://ocw.aca.ntu.edu.tw/ntu-ocw/ocw/cou/101S210">課程連結 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <h1 id="data-storageii">Data Storage(II)</h1>
@@ -571,11 +571,10 @@ will correct 010100 to 011100(D)</li>
       </tags>
   </entry>
   <entry>
-    <title>Data Manipulation(I)-計算機概論筆記</title>
+    <title>Networking and the Internet-計算機概論筆記</title>
     <url>/2023/01/18/2023-01-17-Networking%20and%20the%20internet(I)/</url>
     <content><![CDATA[<p>一定愛配于天立教授開放課程食用:<a class="link" href="http://ocw.aca.ntu.edu.tw/ntu-ocw/ocw/cou/101S210">課程連結 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h1 id="networking-and-the-interneti">Networking and the
-Internet(I)</h1>
+<h1 id="networking-and-the-internet">Networking and the Internet</h1>
 <h2 id="network-classifications">Network Classifications</h2>
 <ul>
 <li>Scope
@@ -835,10 +834,10 @@ correctivity of a key. <img lazyload="" src="/images/loading.svg" data-src="http
       </tags>
   </entry>
   <entry>
-    <title>Data Manipulation(I)-計算機概論筆記</title>
+    <title>Operating System-計算機概論筆記</title>
     <url>/2023/01/18/2023-01-17-Operating%20System(I)/</url>
     <content><![CDATA[<p>一定愛配于天立教授開放課程食用:<a class="link" href="http://ocw.aca.ntu.edu.tw/ntu-ocw/ocw/cou/101S210">課程連結 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h1 id="operating-systemi">Operating System(I)</h1>
+<h1 id="operating-system">Operating System</h1>
 <h2 id="batch-processingearly-era">Batch processing(early era)</h2>
 <ul>
 <li>The process of computer operators entering data to the computers and
@@ -1204,7 +1203,7 @@ c-string.</li>
       </tags>
   </entry>
   <entry>
-    <title>Pointers-程式設計筆記</title>
+    <title>Sequential-Access Files-程式設計筆記</title>
     <url>/2023/01/17/Chaper%208%20Sequential-Access%20Files/</url>
     <content><![CDATA[<h1 id="chaper-8-sequential-access-files">Chaper 8 Sequential-Access
 Files</h1>
@@ -1239,9 +1238,9 @@ before the seekg. <img lazyload="" src="/images/loading.svg" data-src="https://i
       </tags>
   </entry>
   <entry>
-    <title>Pointers-程式設計筆記</title>
+    <title>Struct and Class-程式設計筆記</title>
     <url>/2023/01/17/Chaper%209%20Struct,%20Class/</url>
-    <content><![CDATA[<h1 id="chaper-9-struct-class">Chaper 9 Struct, Class</h1>
+    <content><![CDATA[<h1 id="chaper-9-struct-and-class">Chaper 9 Struct and Class</h1>
 <h2 id="class">Class</h2>
 <p>Reference: <a class="link" href="http://ettsengnote.blogspot.com/2016/03/cclasses-and-objects-part-ii.html">link1 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>
 <a class="link" href="http://ettsengnote.blogspot.com/2016/03/cclasses-and-objects-part-ii.html">link2 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
@@ -1343,7 +1342,7 @@ class.</li>
       </tags>
   </entry>
   <entry>
-    <title>Pointers-程式設計筆記</title>
+    <title>Introduction to C++ Programing-程式設計筆記</title>
     <url>/2023/01/17/Chapter%202,%20Introduction%20to%20C++%20Programing/</url>
     <content><![CDATA[<h1 id="chapter-2-introduction-to-c-programing">Chapter 2, Introduction
 to C++ Programing</h1>
@@ -1389,10 +1388,10 @@ Operators</h2>
       </tags>
   </entry>
   <entry>
-    <title>Pointers-程式設計筆記</title>
+    <title>Control Statement_1-程式設計筆記</title>
     <url>/2023/01/17/Chapter%203,%20Control%20Statement_%20Part%201/</url>
-    <content><![CDATA[<h1 id="chapter-3-control-statement-part-1">Chapter 3, Control
-Statement: Part 1</h1>
+    <content><![CDATA[<h1 id="chapter-3-control-statement_1">Chapter 3, Control
+Statement_1</h1>
 <h2 id="control-structure">Control Structure</h2>
 <ul>
 <li>The sequence structure</li>
@@ -1459,10 +1458,10 @@ which a resides, then increment a by 1.</li>
       </tags>
   </entry>
   <entry>
-    <title>Pointers-程式設計筆記</title>
+    <title>Control Statement_2-程式設計筆記</title>
     <url>/2023/01/17/Chapter%204,%20Control%20Statement_%20Part%202/</url>
-    <content><![CDATA[<h1 id="chapter-4-control-statement-part-2">Chapter 4, Control
-Statement: Part 2</h1>
+    <content><![CDATA[<h1 id="chapter-4-control-statement_2">Chapter 4, Control
+Statement_2</h1>
 <h2 id="do...while">do...while</h2>
 <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">do</span>{</span><br><span class="line"></span><br><span class="line">}<span class="keyword">while</span>;(condition)</span><br></pre></td></tr></table></figure></div>
 <ul>
@@ -1519,7 +1518,7 @@ will be true.</li>
       </tags>
   </entry>
   <entry>
-    <title>Pointers-程式設計筆記</title>
+    <title>Functions and Introduction to Recursion-程式設計筆記</title>
     <url>/2023/01/17/Chapter%205%20Functions%20and%20Introduction%20to%20Recursion/</url>
     <content><![CDATA[<h1 id="chapter-5-functions-and-introduction-to-recursion">Chapter 5
 Functions and Introduction to Recursion</h1>
@@ -1631,7 +1630,7 @@ function. <div class="highlight-container" data-rel="C++"><figure class="iseeu h
       </tags>
   </entry>
   <entry>
-    <title>Pointers-程式設計筆記</title>
+    <title>Arrays, Strings and Vectors-程式設計筆記</title>
     <url>/2023/01/17/Chapter%206%20Arrays,%20Strings%20and%20Vectors/</url>
     <content><![CDATA[<h1 id="chapter-6-arrays-strings-and-vectors">Chapter 6 Arrays, Strings
 and Vectors</h1>
@@ -1760,7 +1759,7 @@ part of the string bewteen <span class="math inline"><mjx-container class="MathJ
       </tags>
   </entry>
   <entry>
-    <title>WiFi Sync Clock-個人專題</title>
+    <title>Interactive Christmas Ornament-個人專題</title>
     <url>/2023/01/20/Interactive%20Christmas%20Ornament/</url>
     <content><![CDATA[<p>簡報網址: <a class="link" href="https://www.canva.com/design/DAFWgMy5ioo/ayE-qH0-uqzdko61G2RWNA/view?utm_content=DAFWgMy5ioo&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=sharebutton">canva <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <h1 id="interactive-christmas-ornament">Interactive Christmas
@@ -2042,7 +2041,7 @@ occurs。</li>
       </tags>
   </entry>
   <entry>
-    <title>Pointers-程式設計筆記</title>
+    <title>STL(Standard Template Library)-程式設計筆記</title>
     <url>/2023/01/17/STL(Standard%20Template%20Library)/</url>
     <content><![CDATA[<h1 id="stlstandard-template-library">STL(Standard Template
 Library)</h1>
@@ -2143,7 +2142,7 @@ size，資料所在位置可能會移動。如果變小就擦掉尾巴的資料�
       </tags>
   </entry>
   <entry>
-    <title>Pointers-程式設計筆記</title>
+    <title>Supplementary Materials-程式設計筆記</title>
     <url>/2023/01/17/Supplementary%20Materials/</url>
     <content><![CDATA[<h1 id="補充資料">補充資料</h1>
 <h2 id="literal-constant">Literal Constant</h2>

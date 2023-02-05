@@ -345,46 +345,187 @@
             <div class="main-content">
 
                 
-                    <div class="fade-in-down-animation">
-    <div class="page-template-container">
-        
-        
-        <div class="page-template-content markdown-body">
-            
-                <h1 id="關於我">關於我</h1>
-<p><img  style="float: right" width="200" height="200"  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://scontent.frmq2-1.fna.fbcdn.net/v/t1.6435-9/70899392_1700286993440218_5774458773556953088_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=iBCVayjTOr8AX882RLv&_nc_ht=scontent.frmq2-1.fna&oh=00_AfCxikTd5i7i-wx-3bu4GsLY_pq-0C9h0h_dOIbTkHY-vw&oe=63EFBE4C"
-                     
-                ></p>
-<ul>
-<li><p>目前就讀彰化師範大學電子工程學系，大一生。</p></li>
-<li><p>一個喜歡接觸各領域的maker。</p></li>
-<li><p>主要專精在微電腦控制器領域(Arduino，Esp32，Esp8266，Raspberry
-Pi...)。 <br></br></p></li>
-</ul>
-<h1 id="更多資訊">更多資訊</h1>
-<ul>
-<li>-畢業於國立宜蘭高級中學</li>
-<li>-畢業於私立慧燈高級中學國中部</li>
-<li>-畢業於宜蘭縣光復國小</li>
-</ul>
-<h1 id="與我聯繫">與我聯繫</h1>
-<p><a class="link"   href="mailto:Ryanlin0426@gmail.com" >Gmail <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p><a class="link" 
- target="_blank" rel="noopener" href="https://www.instagram.com/l__junjun__l/?hl=zh-tw" >Instagram <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p><a class="link"   target="_blank" rel="noopener" href="https://www.facebook.com/ryan.lin.98892/" >Facebook <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p><a class="link" 
- target="_blank" rel="noopener" href="https://discordapp.com/users/389053119549538309" >Discord <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+                    $friend-link-item-height = 82px
+$friend-link-item-height-tablet = 68px
+$friend-link-item-interval = 16px
+$friend-link-item-border-radius = 9px
 
-            
-        </div>
-        <div class="page-template-comments">
-            
-        </div>
-    </div>
-</div>
+.page-template-container {
+
+  redefine-container(false, 0, 0, 30px, 30px)
+
+  .page-template-content {
+    color var(--default-text-color)
+
+    h1, h2, h3, h4, h5, h6 {
+
+      &:first-child {
+        margin-top 0
+      }
+
+    }
+  }
+
+
+  
+  .friends-link-container {
+
+    .friends-link-list {
+      position relative
+      display: flex;
+      flex-wrap: wrap;
+
+
+      .friends-link-item {
+
+        if (hexo-config('friend_links.columns') == '3') {
+          width 32% !important
+          margin-left 1% !important
+
+
+          &:nth-child(odd) {
+            padding-right 0 !important
+          }
+
+          &:nth-child(even) {
+            padding-left 0 !important
+          }
+        }
+
+        box-sizing border-box
+        position relative
+        float left
+        width 50%
+        cursor pointer
+        height $friend-link-item-height
+        padding-bottom $friend-link-item-interval
+
+        
+
+        +redefine-tablet() {
+          height $friend-link-item-height-tablet
+        }
+
+        &:nth-child(odd) {
+            padding-right $friend-link-item-interval * 0.5
+          }
+
+        &:nth-child(even) {
+          padding-left $friend-link-item-interval * 0.5
+        }
+
+
+
+        .content {
+          position relative
+          width 100%
+          height 100%
+          box-shadow var(--redefine-box-shadow)
+          border-radius $friend-link-item-border-radius
+          padding-left $friend-link-item-height - $friend-link-item-interval
+          box-sizing border-box
+
+
+          +redefine-tablet() {
+            padding-left $friend-link-item-height-tablet - $friend-link-item-interval
+          }
+
+          &:hover {
+            box-shadow var(--redefine-box-shadow)
+
+            .info .name {
+              color var(--primary-color)
+            }
+          }
+
+          .radius {
+            border-top-left-radius $friend-link-item-border-radius
+            border-bottom-left-radius $friend-link-item-border-radius
+          }
+
+          .avatar {
+            position absolute
+            top 0
+            left 0
+            width $friend-link-item-height  - $friend-link-item-interval
+            height 100%
+            display flex
+            justify-content center
+            align-items center
+            font-size 2rem
+            background var(--second-background-color)
+            color var(--second-text-color)
+
+
+            +redefine-tablet() {
+              width $friend-link-item-height-tablet  - $friend-link-item-interval
+            }
+
+            img {
+              box-sizing border-box
+              position relative
+              width 100%
+              height 100%
+            }
+          }
+
+
+          .info {
+            position relative
+            width 100%
+            height 100%
+            box-sizing border-box
+            padding 10px
+            display flex
+            flex-direction column
+            align-items center
+            justify-items flex-start
+
+            +redefine-tablet() {
+              padding 6px
+            }
+
+            .name {
+              width 100%
+              height 60%
+              font-size 1.28rem
+              color var(--second-text-color)
+
+              +redefine-tablet() {
+                font-size 1.08rem
+              }
+            }
+
+            .description {
+              width 100%
+              height 40%
+              font-size 1rem
+              color var(--third-text-color)
+
+
+              +redefine-tablet() {
+                font-size 0.98rem
+              }
+            }
+
+            .ellipsis {
+              overflow hidden
+              text-overflow ellipsis
+              white-space nowrap
+            }
+
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+
+
+}
 
 
                 

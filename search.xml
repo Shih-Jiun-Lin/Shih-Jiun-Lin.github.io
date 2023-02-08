@@ -1929,6 +1929,52 @@ class.</li>
       </tags>
   </entry>
   <entry>
+    <title>Introduction to C++ Programing-程式設計筆記</title>
+    <url>/2023/01/17/Chapter%202,%20Introduction%20to%20C++%20Programing/</url>
+    <content><![CDATA[<h1 id="chapter-2-introduction-to-c-programing">Chapter 2, Introduction
+to C++ Programing</h1>
+<h2 id="the-sturcture-of-basic-c-program">The Sturcture of Basic C++
+Program</h2>
+<ul>
+<li>The lines start with # are processed by the preprocessor.</li>
+<li>&lt;iostream&gt; is the input/output stream header file.</li>
+<li>The int main() means that the main program will return an integar
+value.</li>
+<li>std::cout specifies that we are using namspace std.</li>
+</ul>
+<h2 id="the-use-of-escape-sequence">The Use of Escape Sequence</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/G8kcne8.png"></p>
+<h2 id="the-declaration-of-variables">The Declaration of Variables</h2>
+<ul>
+<li><p>void =&gt; Function does not return a value.</p></li>
+<li><p>int =&gt; Declare integar variables.</p></li>
+<li><p>char =&gt; Declare character variables.</p>
+<ul>
+<li>char can also be stored as integer.</li>
+</ul></li>
+<li><p>float =&gt; Declare floating-point variables.</p></li>
+<li><p>double =&gt; Declare double-precision variables.</p></li>
+<li><p>bool =&gt; To hold a boolean value, true/false. ## Arithmetic
+Operators <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/IhflKJP.png"></p></li>
+<li><p>The rules of operator precedence as generally same as those in
+algebra.</p></li>
+<li><p>Exponentiation -&gt; Import &lt;math.h&gt;</p></li>
+</ul>
+<h2 id="equality-and-relational-operators">Equality and Relational
+Operators</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rmHds4R.png"></p>
+]]></content>
+      <categories>
+        <category>個人筆記-程式設計</category>
+      </categories>
+      <tags>
+        <tag>個人筆記</tag>
+        <tag>C++</tag>
+        <tag>課堂筆記</tag>
+        <tag>彰化師範大學-張孟洲</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Control Statement_1-程式設計筆記</title>
     <url>/2023/01/17/Chapter%203,%20Control%20Statement_%20Part%201/</url>
     <content><![CDATA[<h1 id="chapter-3-control-statement_1">Chapter 3, Control
@@ -2059,52 +2105,6 @@ will be true.</li>
       </tags>
   </entry>
   <entry>
-    <title>Introduction to C++ Programing-程式設計筆記</title>
-    <url>/2023/01/17/Chapter%202,%20Introduction%20to%20C++%20Programing/</url>
-    <content><![CDATA[<h1 id="chapter-2-introduction-to-c-programing">Chapter 2, Introduction
-to C++ Programing</h1>
-<h2 id="the-sturcture-of-basic-c-program">The Sturcture of Basic C++
-Program</h2>
-<ul>
-<li>The lines start with # are processed by the preprocessor.</li>
-<li>&lt;iostream&gt; is the input/output stream header file.</li>
-<li>The int main() means that the main program will return an integar
-value.</li>
-<li>std::cout specifies that we are using namspace std.</li>
-</ul>
-<h2 id="the-use-of-escape-sequence">The Use of Escape Sequence</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/G8kcne8.png"></p>
-<h2 id="the-declaration-of-variables">The Declaration of Variables</h2>
-<ul>
-<li><p>void =&gt; Function does not return a value.</p></li>
-<li><p>int =&gt; Declare integar variables.</p></li>
-<li><p>char =&gt; Declare character variables.</p>
-<ul>
-<li>char can also be stored as integer.</li>
-</ul></li>
-<li><p>float =&gt; Declare floating-point variables.</p></li>
-<li><p>double =&gt; Declare double-precision variables.</p></li>
-<li><p>bool =&gt; To hold a boolean value, true/false. ## Arithmetic
-Operators <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/IhflKJP.png"></p></li>
-<li><p>The rules of operator precedence as generally same as those in
-algebra.</p></li>
-<li><p>Exponentiation -&gt; Import &lt;math.h&gt;</p></li>
-</ul>
-<h2 id="equality-and-relational-operators">Equality and Relational
-Operators</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rmHds4R.png"></p>
-]]></content>
-      <categories>
-        <category>個人筆記-程式設計</category>
-      </categories>
-      <tags>
-        <tag>個人筆記</tag>
-        <tag>C++</tag>
-        <tag>課堂筆記</tag>
-        <tag>彰化師範大學-張孟洲</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Functions and Introduction to Recursion-程式設計筆記</title>
     <url>/2023/01/17/Chapter%205%20Functions%20and%20Introduction%20to%20Recursion/</url>
     <content><![CDATA[<h1 id="chapter-5-functions-and-introduction-to-recursion">Chapter 5
@@ -2214,96 +2214,6 @@ function. <div class="highlight-container" data-rel="C++"><figure class="iseeu h
         <tag>C++</tag>
         <tag>課堂筆記</tag>
         <tag>彰化師範大學-張孟洲</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Interactive Christmas Ornament-個人專題</title>
-    <url>/2023/01/20/Interactive%20Christmas%20Ornament/</url>
-    <content><![CDATA[<p>簡報網址: <a class="link" href="https://www.canva.com/design/DAFWgMy5ioo/ayE-qH0-uqzdko61G2RWNA/view?utm_content=DAFWgMy5ioo&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=sharebutton">canva <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h1 id="interactive-christmas-ornament">Interactive Christmas
-Ornament</h1>
-<h2 id="功能及運作">功能及運作</h2>
-<ul>
-<li>當感應器沒感應到人時，於愛心及向前凝視的眼睛做隨機顯示。</li>
-<li>左側感應器偵測到人時，切換到看向左側的眼睛。</li>
-<li>右側感應器偵測到人時，切換到看向右側的眼睛。</li>
-<li>偵測距離:75公分。</li>
-</ul>
-<h2 id="材料準備">材料準備</h2>
-<ul>
-<li>Arduino 開發板 *1</li>
-<li>小塊麵包板 *1</li>
-<li>杜邦線(公對母、母對母) *n</li>
-<li>超聲波感應器(HC-SR04) *2</li>
-<li>配有 max7219 的 LEE 8<em>8 矩陣(Generic) </em>2</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/BixUQLd.png"></p>
-<h2 id="電路連接">電路連接</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/4sNAzyY.png"></p>
-<ul>
-<li>max7219 腳位連接
-<ul>
-<li>DIN(Data in): 10</li>
-<li>CLK(Clock): 11</li>
-<li>CS(Load): 12</li>
-</ul></li>
-<li>Ultrasonic Sensor(Right)
-<ul>
-<li>Trig: 2</li>
-<li>Echo: 1</li>
-</ul></li>
-<li>Ultrasonic Sensor(Left)
-<ul>
-<li>Trig: 4</li>
-<li>Echo: 3</li>
-</ul></li>
-</ul>
-<h2 id="程式編寫">程式編寫</h2>
-<ul>
-<li><p>需要先安裝LedControl函式庫 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ItXYyEa.png"></p></li>
-<li><p>LED矩陣自定義顯示:</p>
-<ul>
-<li>你可以透過這網站來自定義LED顯示內容: <a class="link" href="https://xantorohara.github.io/led-matrix-editor/">LED Matrix
-Editor <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li>教學影片:</li>
-</ul>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/qwOpcOtBPpw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></p></li>
-<li><p>程式碼: <a class="link" href="https://drive.google.com/drive/folders/1ONCjLl8s2UZTs6K40MRol_e-MdEnxy3h?usp=sharing">程式碼下載 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p></li>
-</ul>
-<div class="highlight-container" data-rel="Arduino"><figure class="iseeu highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">"LedControl.h"</span></span></span><br><span class="line">LedControl LEDmatrix=<span class="built_in">LedControl</span>(<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>,<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//顯示內容</span></span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> middle[] = {</span><br><span class="line">  <span class="number">0x007e425a5a427e00</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> left[] = {</span><br><span class="line">  <span class="number">0x007e424e4e427e00</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> right[] = {</span><br><span class="line">  <span class="number">0x007e427272427e00</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> heart[] = {</span><br><span class="line">  <span class="number">0x00183c7effffff66</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="comment">//顯示圖形</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">displayImage</span><span class="params">(<span class="type">uint64_t</span> image)</span> </span>{</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">8</span>; i++) {</span><br><span class="line">    <span class="type">byte</span> row = (image &gt;&gt; i * <span class="number">8</span>) &amp; <span class="number">0xFF</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">8</span>; j++) {</span><br><span class="line">      LEDmatrix.<span class="built_in">setLed</span>(<span class="number">0</span>, i, j, <span class="built_in">bitRead</span>(row, j));</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">//獲取距離</span></span><br><span class="line"><span class="function"><span class="type">float</span> <span class="title">getDistance</span><span class="params">(<span class="type">int</span> trig,<span class="type">int</span> echo)</span></span>{</span><br><span class="line">    <span class="built_in">pinMode</span>(trig,<span class="literal">OUTPUT</span>);</span><br><span class="line">    <span class="built_in">digitalWrite</span>(trig,<span class="literal">LOW</span>);</span><br><span class="line">    <span class="built_in">delayMicroseconds</span>(<span class="number">2</span>);</span><br><span class="line">    <span class="built_in">digitalWrite</span>(trig,<span class="literal">HIGH</span>);</span><br><span class="line">    <span class="built_in">delayMicroseconds</span>(<span class="number">10</span>);</span><br><span class="line">    <span class="built_in">digitalWrite</span>(trig,<span class="literal">LOW</span>);</span><br><span class="line">    <span class="built_in">pinMode</span>(echo, <span class="literal">INPUT</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">pulseIn</span>(echo,<span class="literal">HIGH</span>,<span class="number">30000</span>)/<span class="number">58.0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span> </span>{</span><br><span class="line">  LEDmatrix.<span class="built_in">clearDisplay</span>(<span class="number">0</span>);    </span><br><span class="line">  LEDmatrix.<span class="built_in">shutdown</span>(<span class="number">0</span>, <span class="literal">false</span>);  </span><br><span class="line">  LEDmatrix.<span class="built_in">setIntensity</span>(<span class="number">0</span>, <span class="number">10</span>); </span><br><span class="line">  <span class="built_in">randomSeed</span>(<span class="number">69</span>);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">loop</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="comment">//如果右側sensor於75公分處感應到物體，顯示看右方的圖形</span></span><br><span class="line">  <span class="keyword">if</span>(<span class="built_in">getDistance</span>(<span class="number">2</span>,<span class="number">1</span>) &lt; <span class="number">75</span>){</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(right[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  <span class="comment">//如果左側sensor於75公分處感應到物體，顯示看左方的圖形</span></span><br><span class="line">  <span class="keyword">if</span>(<span class="built_in">getDistance</span>(<span class="number">4</span>,<span class="number">3</span>) &lt; <span class="number">75</span>){</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(left[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  <span class="comment">//如果兩側sensor於75公分處未感應到物體，於愛心眼與凝視前方做隨機顯示</span></span><br><span class="line">  <span class="keyword">if</span>((<span class="built_in">getDistance</span>(<span class="number">2</span>,<span class="number">1</span>) &gt; <span class="number">75</span>) &amp;&amp; (<span class="built_in">getDistance</span>(<span class="number">4</span>,<span class="number">3</span>) &gt; <span class="number">75</span>)){</span><br><span class="line">    <span class="type">int</span> random_num=<span class="built_in">random</span>(<span class="number">1</span>, <span class="number">3</span>);</span><br><span class="line">    <span class="keyword">if</span>(random_num==<span class="number">1</span>){</span><br><span class="line">      <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(middle[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">      }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">if</span>(random_num==<span class="number">2</span>){</span><br><span class="line">      <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(heart[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">      }</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-<h2 id="外觀設計">外觀設計</h2>
-<ul>
-<li>主要以塑膠瓦楞紙板透過保麗龍膠拼接而成。(建議使用熱熔膠，保麗龍膠穩固度不佳!)</li>
-<li>一個似房子形狀的五邊形柱體為主體。
-<ul>
-<li>頂部:
-<ul>
-<li>頂部: 透過束帶的幫助，我將其設計成翻蓋式，以便後續維修或組裝。 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/yGoVvDc.jpg"></li>
-</ul></li>
-<li>正面及背面
-<ul>
-<li><p>正面: 挖出兩個正方形及長方形來放置LED矩陣及Sensor。 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/v66Spc1.jpg"></p></li>
-<li><p>背面: 挖出一方形小孔來放置電源供應線。 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/bwzeTJR.jpg"></p></li>
-</ul></li>
-</ul></li>
-<li>裝飾
-<ul>
-<li>以聖誕帽作點綴。</li>
-</ul></li>
-</ul>
-<h2 id="功能展示">功能展示</h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lgVJnPT9_88" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
-</iframe>
-]]></content>
-      <categories>
-        <category>個人專題</category>
-      </categories>
-      <tags>
-        <tag>Arduino</tag>
-        <tag>個人專題</tag>
-        <tag>物聯網</tag>
-        <tag>LED矩陣</tag>
-        <tag>超聲波感應器</tag>
       </tags>
   </entry>
   <entry>
@@ -2436,131 +2346,93 @@ part of the string bewteen <span class="math inline"><mjx-container class="MathJ
       </tags>
   </entry>
   <entry>
-    <title>STL(Standard Template Library)-程式設計筆記</title>
-    <url>/2023/01/17/STL(Standard%20Template%20Library)/</url>
-    <content><![CDATA[<h1 id="stlstandard-template-library">STL(Standard Template
-Library)</h1>
-<h2 id="vector">Vector</h2>
+    <title>Interactive Christmas Ornament-個人專題</title>
+    <url>/2023/01/20/Interactive%20Christmas%20Ornament/</url>
+    <content><![CDATA[<p>簡報網址: <a class="link" href="https://www.canva.com/design/DAFWgMy5ioo/ayE-qH0-uqzdko61G2RWNA/view?utm_content=DAFWgMy5ioo&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=sharebutton">canva <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h1 id="interactive-christmas-ornament">Interactive Christmas
+Ornament</h1>
+<h2 id="功能及運作">功能及運作</h2>
 <ul>
-<li>用法基本跟array一樣，可以把它想成動態陣列。</li>
-<li>宣告時可以不用確定大小</li>
-<li>宣告一向量時，所有範圍內的值會被初始成0。</li>
-<li>可以使用'=='比較兩向量時</li>
-<li>使用'='時，會將一向量的值賦予到另一向量。</li>
-<li>vector<int> v2(v1);=&gt;複製v1到v2。</int></li>
-<li>集合尾端增刪元素很快 : O(1)</li>
-<li>集合中間增刪元素比較費時 : O(n)</li>
-<li>erase(a, b); =&gt; 刪除 <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="4.683ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 2069.7 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="5B" d="M118 -250V750H255V710H158V-210H255V-250H118Z"></path></g><g data-mml-node="mi" transform="translate(278,0)"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g><g data-mml-node="mo" transform="translate(807,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mi" transform="translate(1251.7,0)"><path data-c="1D44F" d="M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z"></path></g><g data-mml-node="mo" transform="translate(1680.7,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container></span>.</li>
-<li>begin()=&gt;第一個元素</li>
-<li>end()=&gt;最後一個元素的下一個(沒有值)</li>
-<li>erase(v.begin(), v.end()) =&gt; erase every elements.</li>
-<li>pop_back()只會將vector的大小做修改，但值還是會存在原本的位置。</li>
-<li>vector[100]=vector<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="0.629ex" height="0.271ex" role="img" focusable="false" viewBox="0 -120 278 120"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2E" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"></path></g></g></g></svg></mjx-container></span>at(100);
+<li>當感應器沒感應到人時，於愛心及向前凝視的眼睛做隨機顯示。</li>
+<li>左側感應器偵測到人時，切換到看向左側的眼睛。</li>
+<li>右側感應器偵測到人時，切換到看向右側的眼睛。</li>
+<li>偵測距離:75公分。</li>
+</ul>
+<h2 id="材料準備">材料準備</h2>
 <ul>
-<li>使用"[]"並不會在超過向量大小時顯示錯誤。</li>
-<li>使用".at()"會在超過向量大小時顯示錯誤。</li>
+<li>Arduino 開發板 *1</li>
+<li>小塊麵包板 *1</li>
+<li>杜邦線(公對母、母對母) *n</li>
+<li>超聲波感應器(HC-SR04) *2</li>
+<li>配有 max7219 的 LEE 8<em>8 矩陣(Generic) </em>2</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/BixUQLd.png"></p>
+<h2 id="電路連接">電路連接</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/4sNAzyY.png"></p>
+<ul>
+<li>max7219 腳位連接
+<ul>
+<li>DIN(Data in): 10</li>
+<li>CLK(Clock): 11</li>
+<li>CS(Load): 12</li>
+</ul></li>
+<li>Ultrasonic Sensor(Right)
+<ul>
+<li>Trig: 2</li>
+<li>Echo: 1</li>
+</ul></li>
+<li>Ultrasonic Sensor(Left)
+<ul>
+<li>Trig: 4</li>
+<li>Echo: 3</li>
 </ul></li>
 </ul>
-<p>用法1(push_back and pop_back): <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; vec; <span class="comment">//declaration of vector</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>; i&lt;=<span class="number">3</span>; i++){</span><br><span class="line">		vec.<span class="built_in">push_back</span>(i);	<span class="comment">//push_back to put elements into vector</span></span><br><span class="line">	}</span><br><span class="line">	cout&lt;&lt;vec.<span class="built_in">size</span>()&lt;&lt;<span class="string">"\n"</span>;	</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++){</span><br><span class="line">		cout&lt;&lt;vec[i]&lt;&lt;<span class="string">"\n"</span>;	<span class="comment">//cout each element</span></span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++){</span><br><span class="line">		vec.<span class="built_in">pop_back</span>();	<span class="comment">//pop_back to remove the last element from the vector</span></span><br><span class="line">	}</span><br><span class="line">	cout&lt;&lt;vec.<span class="built_in">size</span>()&lt;&lt;<span class="string">"\n"</span>;	</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
-<p>用法二(insert and erase) <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; vec;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++){</span><br><span class="line">		<span class="keyword">if</span>(i==<span class="number">1</span>) <span class="keyword">continue</span>;</span><br><span class="line">		<span class="keyword">else</span> vec.<span class="built_in">push_back</span>(i+<span class="number">1</span>); </span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;vec.<span class="built_in">size</span>(); i++){</span><br><span class="line">		cout&lt;&lt;vec[i]&lt;&lt;<span class="string">' '</span>;				<span class="comment">//cout 1 3</span></span><br><span class="line">	}</span><br><span class="line">	cout&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	vec.<span class="built_in">insert</span>(vec.<span class="built_in">begin</span>()+<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;vec.<span class="built_in">size</span>(); i++){</span><br><span class="line">		cout&lt;&lt;vec[i]&lt;&lt;<span class="string">' '</span>;				<span class="comment">//cout 1 2 3</span></span><br><span class="line">	}</span><br><span class="line">	cout&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	vec.<span class="built_in">erase</span>(vec.<span class="built_in">begin</span>()+<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;vec.<span class="built_in">size</span>(); i++){</span><br><span class="line">		cout&lt;&lt;vec[i]&lt;&lt;<span class="string">' '</span>;				<span class="comment">//cout 1 3</span></span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
-<p>用法三(empty(), size(), resize(), capacity(), reserve()) Reference:<a class="link" href="https://stackoverflow.com/questions/7397768/choice-between-vectorresize-and-vectorreserve">link <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; vec;</span><br><span class="line">	<span class="keyword">if</span>(vec.<span class="built_in">empty</span>()){</span><br><span class="line">		cout&lt;&lt;boolalpha&lt;&lt;vec.<span class="built_in">empty</span>()&lt;&lt;<span class="string">'\n'</span>;</span><br><span class="line">		cout&lt;&lt;<span class="string">"size of vector "</span>&lt;&lt;vec.<span class="built_in">size</span>()&lt;&lt;<span class="string">'\n'</span>; </span><br><span class="line">	}</span><br><span class="line">	vec.<span class="built_in">resize</span>(<span class="number">3</span>);		</span><br><span class="line">	cout&lt;&lt;vec.<span class="built_in">size</span>()&lt;&lt;<span class="string">'\n'</span>;		<span class="comment">//current size</span></span><br><span class="line">	cout&lt;&lt;vec.<span class="built_in">capacity</span>()&lt;&lt;<span class="string">'\n'</span>;		<span class="comment">//current maximum capacity</span></span><br><span class="line">	vec.<span class="built_in">reserve</span>(<span class="number">4</span>);		</span><br><span class="line">	cout&lt;&lt;vec.<span class="built_in">size</span>()&lt;&lt;<span class="string">'\n'</span>;</span><br><span class="line">    cout&lt;&lt;vec.<span class="built_in">capacity</span>()&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<h2 id="程式編寫">程式編寫</h2>
 <ul>
-<li>capacity and size
+<li><p>需要先安裝LedControl函式庫 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ItXYyEa.png"></p></li>
+<li><p>LED矩陣自定義顯示:</p>
 <ul>
-<li>容量 (capacity) : 是這個 vector 擁有的空間。</li>
-<li>長度 (size) : 是實際儲存了元素的空間大小。capacity 永遠不小於
-size。</li>
+<li>你可以透過這網站來自定義LED顯示內容: <a class="link" href="https://xantorohara.github.io/led-matrix-editor/">LED Matrix
+Editor <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li>教學影片:</li>
+</ul>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/qwOpcOtBPpw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></p></li>
+<li><p>程式碼: <a class="link" href="https://drive.google.com/drive/folders/1ONCjLl8s2UZTs6K40MRol_e-MdEnxy3h?usp=sharing">程式碼下載 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p></li>
+</ul>
+<div class="highlight-container" data-rel="Arduino"><figure class="iseeu highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">"LedControl.h"</span></span></span><br><span class="line">LedControl LEDmatrix=<span class="built_in">LedControl</span>(<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>,<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//顯示內容</span></span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> middle[] = {</span><br><span class="line">  <span class="number">0x007e425a5a427e00</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> left[] = {</span><br><span class="line">  <span class="number">0x007e424e4e427e00</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> right[] = {</span><br><span class="line">  <span class="number">0x007e427272427e00</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> heart[] = {</span><br><span class="line">  <span class="number">0x00183c7effffff66</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="comment">//顯示圖形</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">displayImage</span><span class="params">(<span class="type">uint64_t</span> image)</span> </span>{</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">8</span>; i++) {</span><br><span class="line">    <span class="type">byte</span> row = (image &gt;&gt; i * <span class="number">8</span>) &amp; <span class="number">0xFF</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">8</span>; j++) {</span><br><span class="line">      LEDmatrix.<span class="built_in">setLed</span>(<span class="number">0</span>, i, j, <span class="built_in">bitRead</span>(row, j));</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">//獲取距離</span></span><br><span class="line"><span class="function"><span class="type">float</span> <span class="title">getDistance</span><span class="params">(<span class="type">int</span> trig,<span class="type">int</span> echo)</span></span>{</span><br><span class="line">    <span class="built_in">pinMode</span>(trig,<span class="literal">OUTPUT</span>);</span><br><span class="line">    <span class="built_in">digitalWrite</span>(trig,<span class="literal">LOW</span>);</span><br><span class="line">    <span class="built_in">delayMicroseconds</span>(<span class="number">2</span>);</span><br><span class="line">    <span class="built_in">digitalWrite</span>(trig,<span class="literal">HIGH</span>);</span><br><span class="line">    <span class="built_in">delayMicroseconds</span>(<span class="number">10</span>);</span><br><span class="line">    <span class="built_in">digitalWrite</span>(trig,<span class="literal">LOW</span>);</span><br><span class="line">    <span class="built_in">pinMode</span>(echo, <span class="literal">INPUT</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">pulseIn</span>(echo,<span class="literal">HIGH</span>,<span class="number">30000</span>)/<span class="number">58.0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span> </span>{</span><br><span class="line">  LEDmatrix.<span class="built_in">clearDisplay</span>(<span class="number">0</span>);    </span><br><span class="line">  LEDmatrix.<span class="built_in">shutdown</span>(<span class="number">0</span>, <span class="literal">false</span>);  </span><br><span class="line">  LEDmatrix.<span class="built_in">setIntensity</span>(<span class="number">0</span>, <span class="number">10</span>); </span><br><span class="line">  <span class="built_in">randomSeed</span>(<span class="number">69</span>);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">loop</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="comment">//如果右側sensor於75公分處感應到物體，顯示看右方的圖形</span></span><br><span class="line">  <span class="keyword">if</span>(<span class="built_in">getDistance</span>(<span class="number">2</span>,<span class="number">1</span>) &lt; <span class="number">75</span>){</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(right[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  <span class="comment">//如果左側sensor於75公分處感應到物體，顯示看左方的圖形</span></span><br><span class="line">  <span class="keyword">if</span>(<span class="built_in">getDistance</span>(<span class="number">4</span>,<span class="number">3</span>) &lt; <span class="number">75</span>){</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(left[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  <span class="comment">//如果兩側sensor於75公分處未感應到物體，於愛心眼與凝視前方做隨機顯示</span></span><br><span class="line">  <span class="keyword">if</span>((<span class="built_in">getDistance</span>(<span class="number">2</span>,<span class="number">1</span>) &gt; <span class="number">75</span>) &amp;&amp; (<span class="built_in">getDistance</span>(<span class="number">4</span>,<span class="number">3</span>) &gt; <span class="number">75</span>)){</span><br><span class="line">    <span class="type">int</span> random_num=<span class="built_in">random</span>(<span class="number">1</span>, <span class="number">3</span>);</span><br><span class="line">    <span class="keyword">if</span>(random_num==<span class="number">1</span>){</span><br><span class="line">      <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(middle[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">      }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">if</span>(random_num==<span class="number">2</span>){</span><br><span class="line">      <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(heart[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">      }</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<h2 id="外觀設計">外觀設計</h2>
+<ul>
+<li>主要以塑膠瓦楞紙板透過保麗龍膠拼接而成。(建議使用熱熔膠，保麗龍膠穩固度不佳!)</li>
+<li>一個似房子形狀的五邊形柱體為主體。
+<ul>
+<li>頂部:
+<ul>
+<li>頂部: 透過束帶的幫助，我將其設計成翻蓋式，以便後續維修或組裝。 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/yGoVvDc.jpg"></li>
 </ul></li>
-<li>reserve() vs resize()
+<li>正面及背面
 <ul>
-<li>reserve() 的目的是擴大容量。做完時，vector 的長度不變，capacity
-只會長大不會縮小，資料所在位置可能會移動 (因為會重配空間)。因為 vector
-一開始是空的，立刻預留顯然比填了資料後才預留省了拷貝資料的時間。</li>
-<li>resize() 的目的是改變 vector 的長度。做完時，vector
-的長度會改變為指定的大小，capacity 則視需要調整，確保不小於
-size，資料所在位置可能會移動。如果變小就擦掉尾巴的資料，如果變大就補零。補零如果會超過容量，會做重配空間的動作。</li>
-<li>白話文就是reserve()創造空間，但沒有隨機產生值，因此不能做訪問。resize()則是除了創造空間，也隨機產生值，故可直接訪問。</li>
+<li><p>正面: 挖出兩個正方形及長方形來放置LED矩陣及Sensor。 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/v66Spc1.jpg"></p></li>
+<li><p>背面: 挖出一方形小孔來放置電源供應線。 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/bwzeTJR.jpg"></p></li>
 </ul></li>
-<li>二維vector
+</ul></li>
+<li>裝飾
 <ul>
-<li>將眾多一維vector塞入二維vector。</li>
+<li>以聖誕帽作點綴。</li>
 </ul></li>
 </ul>
-<p>Ex:</p>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; test_2D;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++){</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; temp;</span><br><span class="line">        <span class="type">static</span> <span class="type">int</span> counter=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;<span class="number">3</span>; j++){</span><br><span class="line">            temp.<span class="built_in">push_back</span>(counter);</span><br><span class="line">            counter++;</span><br><span class="line">        }</span><br><span class="line">        test_2D.<span class="built_in">push_back</span>(temp);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;test_2D.<span class="built_in">size</span>(); i++){</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;test_2D[<span class="number">0</span>].<span class="built_in">size</span>(); j++){</span><br><span class="line">            cout&lt;&lt;test_2D[i][j]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">        }</span><br><span class="line">        cout&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-<p>Result: <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/8mMfbp6.png"></p>
-<h2 id="queue">Queue</h2>
-<ul>
-<li>僅能取得(操作)頭與尾的element.</li>
-<li>具有fifo(first in first out)的特性.</li>
-<li>用法1(push(), pop(), front(), back(), size(), empty())</li>
-</ul>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	queue&lt;<span class="type">int</span>&gt; q;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++){</span><br><span class="line">		q.<span class="built_in">push</span>(i+<span class="number">1</span>);	<span class="comment">//adding elements</span></span><br><span class="line">	}</span><br><span class="line">	cout&lt;&lt;<span class="string">"Size: "</span>&lt;&lt;q.<span class="built_in">size</span>()&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	cout&lt;&lt;<span class="string">"First element: "</span>&lt;&lt;q.<span class="built_in">front</span>()&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	cout&lt;&lt;<span class="string">"Last element: "</span>&lt;&lt;q.<span class="built_in">back</span>()&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++){</span><br><span class="line">		q.<span class="built_in">pop</span>();		<span class="comment">//remove the first element</span></span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">if</span>(q.<span class="built_in">empty</span>()){</span><br><span class="line">		cout&lt;&lt;boolalpha&lt;&lt;q.<span class="built_in">empty</span>(); <span class="comment">//return 1 if q is empty</span></span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-<h2 id="stack">Stack</h2>
-<ul>
-<li>僅能取得(操作)最上層的element.</li>
-<li>具有lifo(last in first out)的特性.</li>
-</ul>
-<p>用法1(psuh(), pop(), top(), size(), empty()) <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	stack&lt;<span class="type">int</span>&gt; s;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++){</span><br><span class="line">		s.<span class="built_in">push</span>(i+<span class="number">1</span>);    <span class="comment">//not reference</span></span><br><span class="line">	}</span><br><span class="line">	cout&lt;&lt;<span class="string">"Size: "</span>&lt;&lt;s.<span class="built_in">size</span>()&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	cout&lt;&lt;<span class="string">"The top stack: "</span>&lt;&lt;s.<span class="built_in">top</span>()&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//reference</span></span><br><span class="line">	s.<span class="built_in">pop</span>();	<span class="comment">//removing the first stack</span></span><br><span class="line">	cout&lt;&lt;<span class="string">"Size:"</span>&lt;&lt;s.<span class="built_in">size</span>()&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; s.<span class="built_in">size</span>()!=<span class="number">0</span>; i++){</span><br><span class="line">		s.<span class="built_in">pop</span>();</span><br><span class="line">	}</span><br><span class="line">	cout&lt;&lt;<span class="string">"size: "</span>&lt;&lt;s.<span class="built_in">size</span>()&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	<span class="keyword">if</span>(s.<span class="built_in">empty</span>()){</span><br><span class="line">		cout&lt;&lt;<span class="string">"empty"</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
-<h2 id="set">Set</h2>
-<ul>
-<li>就是集合。</li>
-<li>可用於快速查找elements 是否存在。</li>
-<li>每個elements皆是唯一的，不可重複。</li>
-<li>每個elements皆不能做修改。</li>
-<li>具有順序性。</li>
-<li>操作簡單。</li>
-<li>elements 太多會拖慢速度。 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/1mdMgul.png"></li>
-</ul>
-<p>用法1(insert(), count(), erase(), clear(), empty()) <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;set&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    set&lt;<span class="type">int</span>&gt; s;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">10</span>;i&lt;=<span class="number">50</span>; i+=<span class="number">10</span>){</span><br><span class="line">        s.<span class="built_in">insert</span>(i);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">if</span>(s.<span class="built_in">count</span>(<span class="number">10</span>)){</span><br><span class="line">        cout&lt;&lt;boolalpha&lt;&lt;<span class="literal">true</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    }</span><br><span class="line">    s.<span class="built_in">erase</span>(<span class="number">10</span>);</span><br><span class="line">    <span class="keyword">if</span>(s.<span class="built_in">count</span>(<span class="number">10</span>)){</span><br><span class="line">        cout&lt;&lt;boolalpha&lt;&lt;<span class="literal">true</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span>{</span><br><span class="line">        cout&lt;&lt;boolalpha&lt;&lt;<span class="literal">false</span>&lt;&lt;<span class="string">"\n"</span>; </span><br><span class="line">    }</span><br><span class="line">    s.<span class="built_in">clear</span>();</span><br><span class="line">    <span class="keyword">if</span>(s.<span class="built_in">empty</span>()){</span><br><span class="line">        cout&lt;&lt;<span class="string">"empty"</span>&lt;&lt;<span class="string">'\n'</span>;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
-<h2 id="map">Map</h2>
-<ul>
-<li>有排序關聯式容器。</li>
-<li>map中的元素會根據對應的鍵值(key)做排序。</li>
-<li>鍵值具有唯一性。</li>
-<li>高效率，使用簡單。 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/anN3pMV.png"></li>
-</ul>
-<p>用法1(insert(), erase(), clear(), empty()) <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="comment">//initialization</span></span><br><span class="line">    map&lt;string, <span class="type">int</span>&gt; m ={</span><br><span class="line">        {<span class="string">"One"</span>, <span class="number">1</span>},</span><br><span class="line">        {<span class="string">"Two"</span>, <span class="number">2</span>},</span><br><span class="line">        {<span class="string">"Three"</span>, <span class="number">3</span>}</span><br><span class="line">    };</span><br><span class="line">    m.<span class="built_in">insert</span>(<span class="built_in">pair</span>&lt;string, <span class="type">int</span>&gt;(<span class="string">"Four"</span>, <span class="number">4</span>));</span><br><span class="line">    m[<span class="string">"Five"</span>]=<span class="number">5</span>;</span><br><span class="line">    cout&lt;&lt;m[<span class="string">"Five"</span>]&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    m.<span class="built_in">erase</span>(<span class="string">"Five"</span>);</span><br><span class="line">    cout&lt;&lt;m.<span class="built_in">size</span>()&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    m.<span class="built_in">clear</span>();</span><br><span class="line">    <span class="keyword">if</span>(m.<span class="built_in">empty</span>()){</span><br><span class="line">        cout&lt;&lt;<span class="string">"empty"</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
-<h2 id="algorithm">Algorithm</h2>
-<ul>
-<li>常用演算法。</li>
-</ul>
-<p>用法1(sort(), reverse()) <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; v;</span><br><span class="line">    <span class="type">int</span> input;</span><br><span class="line">    <span class="keyword">while</span>(cin&gt;&gt;input&amp;&amp;input!=<span class="number">-1</span>){</span><br><span class="line">        v.<span class="built_in">push_back</span>(input);</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">sort</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>());</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;v.<span class="built_in">size</span>(); i++){</span><br><span class="line">        cout&lt;&lt;v[i]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">    }</span><br><span class="line">    cout&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    <span class="built_in">reverse</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>());</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;v.<span class="built_in">size</span>(); i++){</span><br><span class="line">        cout&lt;&lt;v[i]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
+<h2 id="功能展示">功能展示</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lgVJnPT9_88" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
 ]]></content>
       <categories>
-        <category>個人筆記-程式設計</category>
+        <category>個人專題</category>
       </categories>
       <tags>
-        <tag>個人筆記</tag>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Supplementary Materials-程式設計筆記</title>
-    <url>/2023/01/17/Supplementary%20Materials/</url>
-    <content><![CDATA[<h1 id="補充資料">補充資料</h1>
-<h2 id="literal-constant">Literal Constant</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/s7Ps4NN.png"></p>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/QjOdk1K.png"></p>
-<p>Ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	cout&lt;&lt;<span class="number">75</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">0113</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">0x4b</span>&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//Decimal, Octal, Hexadecimal</span></span><br><span class="line">	cout&lt;&lt;<span class="number">75</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">75u</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">75l</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">75ul</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">75lu</span>&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//int, unsigned, unsigned long, usigned long</span></span><br><span class="line">	cout&lt;&lt;<span class="number">6.02e23</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">1.6e-19</span>&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//6.02*10^23</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
-<h2 id="bitwise-operators">Bitwise Operators</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/7AphOD4.png"></p>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bitset&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">int</span> x=<span class="number">0b00000001</span>;</span><br><span class="line">	<span class="type">int</span> y=<span class="number">0b00000000</span>;</span><br><span class="line">	cout&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(x&lt;&lt;<span class="number">1</span>)&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(x&gt;&gt;<span class="number">1</span>)&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//left / right shift for 1 bit </span></span><br><span class="line">	cout&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(~x)&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(x|y)&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(x&amp;y)&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(x^y)&lt;&lt;<span class="string">"\n"</span>; <span class="comment">// not, or, and, xor</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-<h2 id="dynamic-memory-allocation">Dynamic Memory allocation</h2>
-<p>Reference: http://ccy.dd.ncu.edu.tw/~chen/course/Cpp/ch5/6.htm <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/kxplKpS.png"></p>
-<p>Ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">int</span> *p;</span><br><span class="line">	p=<span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">	*p=<span class="number">100</span>;</span><br><span class="line">	cout&lt;&lt;*p;</span><br><span class="line">	<span class="keyword">delete</span> p; <span class="comment">//release the memory space</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
-<p>Ex2: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">int</span> *p=<span class="keyword">new</span> <span class="type">int</span> [<span class="number">5</span>];</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++){</span><br><span class="line">		*(p+i)=i;</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++){</span><br><span class="line">		cout&lt;&lt;*(p+i)&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">delete</span> []p; <span class="comment">//release memory space</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
-<h2 id="linked-list寒假學">Linked List(寒假學)</h2>
-]]></content>
-      <categories>
-        <category>個人筆記-程式設計</category>
-      </categories>
-      <tags>
-        <tag>個人筆記</tag>
-        <tag>C++</tag>
-        <tag>課堂筆記</tag>
-        <tag>彰化師範大學-張孟洲</tag>
+        <tag>Arduino</tag>
+        <tag>個人專題</tag>
+        <tag>物聯網</tag>
+        <tag>LED矩陣</tag>
+        <tag>超聲波感應器</tag>
       </tags>
   </entry>
   <entry>
@@ -2742,6 +2614,134 @@ occurs。</li>
         <tag>個人筆記</tag>
         <tag>數位邏輯設計</tag>
         <tag>清華大學-王俊堯</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>STL(Standard Template Library)-程式設計筆記</title>
+    <url>/2023/01/17/STL(Standard%20Template%20Library)/</url>
+    <content><![CDATA[<h1 id="stlstandard-template-library">STL(Standard Template
+Library)</h1>
+<h2 id="vector">Vector</h2>
+<ul>
+<li>用法基本跟array一樣，可以把它想成動態陣列。</li>
+<li>宣告時可以不用確定大小</li>
+<li>宣告一向量時，所有範圍內的值會被初始成0。</li>
+<li>可以使用'=='比較兩向量時</li>
+<li>使用'='時，會將一向量的值賦予到另一向量。</li>
+<li>vector<int> v2(v1);=&gt;複製v1到v2。</int></li>
+<li>集合尾端增刪元素很快 : O(1)</li>
+<li>集合中間增刪元素比較費時 : O(n)</li>
+<li>erase(a, b); =&gt; 刪除 <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="4.683ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 2069.7 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="5B" d="M118 -250V750H255V710H158V-210H255V-250H118Z"></path></g><g data-mml-node="mi" transform="translate(278,0)"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g><g data-mml-node="mo" transform="translate(807,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mi" transform="translate(1251.7,0)"><path data-c="1D44F" d="M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z"></path></g><g data-mml-node="mo" transform="translate(1680.7,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container></span>.</li>
+<li>begin()=&gt;第一個元素</li>
+<li>end()=&gt;最後一個元素的下一個(沒有值)</li>
+<li>erase(v.begin(), v.end()) =&gt; erase every elements.</li>
+<li>pop_back()只會將vector的大小做修改，但值還是會存在原本的位置。</li>
+<li>vector[100]=vector<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="0.629ex" height="0.271ex" role="img" focusable="false" viewBox="0 -120 278 120"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2E" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"></path></g></g></g></svg></mjx-container></span>at(100);
+<ul>
+<li>使用"[]"並不會在超過向量大小時顯示錯誤。</li>
+<li>使用".at()"會在超過向量大小時顯示錯誤。</li>
+</ul></li>
+</ul>
+<p>用法1(push_back and pop_back): <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; vec; <span class="comment">//declaration of vector</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>; i&lt;=<span class="number">3</span>; i++){</span><br><span class="line">		vec.<span class="built_in">push_back</span>(i);	<span class="comment">//push_back to put elements into vector</span></span><br><span class="line">	}</span><br><span class="line">	cout&lt;&lt;vec.<span class="built_in">size</span>()&lt;&lt;<span class="string">"\n"</span>;	</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++){</span><br><span class="line">		cout&lt;&lt;vec[i]&lt;&lt;<span class="string">"\n"</span>;	<span class="comment">//cout each element</span></span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++){</span><br><span class="line">		vec.<span class="built_in">pop_back</span>();	<span class="comment">//pop_back to remove the last element from the vector</span></span><br><span class="line">	}</span><br><span class="line">	cout&lt;&lt;vec.<span class="built_in">size</span>()&lt;&lt;<span class="string">"\n"</span>;	</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
+<p>用法二(insert and erase) <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; vec;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++){</span><br><span class="line">		<span class="keyword">if</span>(i==<span class="number">1</span>) <span class="keyword">continue</span>;</span><br><span class="line">		<span class="keyword">else</span> vec.<span class="built_in">push_back</span>(i+<span class="number">1</span>); </span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;vec.<span class="built_in">size</span>(); i++){</span><br><span class="line">		cout&lt;&lt;vec[i]&lt;&lt;<span class="string">' '</span>;				<span class="comment">//cout 1 3</span></span><br><span class="line">	}</span><br><span class="line">	cout&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	vec.<span class="built_in">insert</span>(vec.<span class="built_in">begin</span>()+<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;vec.<span class="built_in">size</span>(); i++){</span><br><span class="line">		cout&lt;&lt;vec[i]&lt;&lt;<span class="string">' '</span>;				<span class="comment">//cout 1 2 3</span></span><br><span class="line">	}</span><br><span class="line">	cout&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	vec.<span class="built_in">erase</span>(vec.<span class="built_in">begin</span>()+<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;vec.<span class="built_in">size</span>(); i++){</span><br><span class="line">		cout&lt;&lt;vec[i]&lt;&lt;<span class="string">' '</span>;				<span class="comment">//cout 1 3</span></span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
+<p>用法三(empty(), size(), resize(), capacity(), reserve()) Reference:<a class="link" href="https://stackoverflow.com/questions/7397768/choice-between-vectorresize-and-vectorreserve">link <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; vec;</span><br><span class="line">	<span class="keyword">if</span>(vec.<span class="built_in">empty</span>()){</span><br><span class="line">		cout&lt;&lt;boolalpha&lt;&lt;vec.<span class="built_in">empty</span>()&lt;&lt;<span class="string">'\n'</span>;</span><br><span class="line">		cout&lt;&lt;<span class="string">"size of vector "</span>&lt;&lt;vec.<span class="built_in">size</span>()&lt;&lt;<span class="string">'\n'</span>; </span><br><span class="line">	}</span><br><span class="line">	vec.<span class="built_in">resize</span>(<span class="number">3</span>);		</span><br><span class="line">	cout&lt;&lt;vec.<span class="built_in">size</span>()&lt;&lt;<span class="string">'\n'</span>;		<span class="comment">//current size</span></span><br><span class="line">	cout&lt;&lt;vec.<span class="built_in">capacity</span>()&lt;&lt;<span class="string">'\n'</span>;		<span class="comment">//current maximum capacity</span></span><br><span class="line">	vec.<span class="built_in">reserve</span>(<span class="number">4</span>);		</span><br><span class="line">	cout&lt;&lt;vec.<span class="built_in">size</span>()&lt;&lt;<span class="string">'\n'</span>;</span><br><span class="line">    cout&lt;&lt;vec.<span class="built_in">capacity</span>()&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>capacity and size
+<ul>
+<li>容量 (capacity) : 是這個 vector 擁有的空間。</li>
+<li>長度 (size) : 是實際儲存了元素的空間大小。capacity 永遠不小於
+size。</li>
+</ul></li>
+<li>reserve() vs resize()
+<ul>
+<li>reserve() 的目的是擴大容量。做完時，vector 的長度不變，capacity
+只會長大不會縮小，資料所在位置可能會移動 (因為會重配空間)。因為 vector
+一開始是空的，立刻預留顯然比填了資料後才預留省了拷貝資料的時間。</li>
+<li>resize() 的目的是改變 vector 的長度。做完時，vector
+的長度會改變為指定的大小，capacity 則視需要調整，確保不小於
+size，資料所在位置可能會移動。如果變小就擦掉尾巴的資料，如果變大就補零。補零如果會超過容量，會做重配空間的動作。</li>
+<li>白話文就是reserve()創造空間，但沒有隨機產生值，因此不能做訪問。resize()則是除了創造空間，也隨機產生值，故可直接訪問。</li>
+</ul></li>
+<li>二維vector
+<ul>
+<li>將眾多一維vector塞入二維vector。</li>
+</ul></li>
+</ul>
+<p>Ex:</p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; test_2D;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++){</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; temp;</span><br><span class="line">        <span class="type">static</span> <span class="type">int</span> counter=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;<span class="number">3</span>; j++){</span><br><span class="line">            temp.<span class="built_in">push_back</span>(counter);</span><br><span class="line">            counter++;</span><br><span class="line">        }</span><br><span class="line">        test_2D.<span class="built_in">push_back</span>(temp);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;test_2D.<span class="built_in">size</span>(); i++){</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>; j&lt;test_2D[<span class="number">0</span>].<span class="built_in">size</span>(); j++){</span><br><span class="line">            cout&lt;&lt;test_2D[i][j]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">        }</span><br><span class="line">        cout&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<p>Result: <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/8mMfbp6.png"></p>
+<h2 id="queue">Queue</h2>
+<ul>
+<li>僅能取得(操作)頭與尾的element.</li>
+<li>具有fifo(first in first out)的特性.</li>
+<li>用法1(push(), pop(), front(), back(), size(), empty())</li>
+</ul>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	queue&lt;<span class="type">int</span>&gt; q;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++){</span><br><span class="line">		q.<span class="built_in">push</span>(i+<span class="number">1</span>);	<span class="comment">//adding elements</span></span><br><span class="line">	}</span><br><span class="line">	cout&lt;&lt;<span class="string">"Size: "</span>&lt;&lt;q.<span class="built_in">size</span>()&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	cout&lt;&lt;<span class="string">"First element: "</span>&lt;&lt;q.<span class="built_in">front</span>()&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	cout&lt;&lt;<span class="string">"Last element: "</span>&lt;&lt;q.<span class="built_in">back</span>()&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++){</span><br><span class="line">		q.<span class="built_in">pop</span>();		<span class="comment">//remove the first element</span></span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">if</span>(q.<span class="built_in">empty</span>()){</span><br><span class="line">		cout&lt;&lt;boolalpha&lt;&lt;q.<span class="built_in">empty</span>(); <span class="comment">//return 1 if q is empty</span></span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<h2 id="stack">Stack</h2>
+<ul>
+<li>僅能取得(操作)最上層的element.</li>
+<li>具有lifo(last in first out)的特性.</li>
+</ul>
+<p>用法1(psuh(), pop(), top(), size(), empty()) <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	stack&lt;<span class="type">int</span>&gt; s;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++){</span><br><span class="line">		s.<span class="built_in">push</span>(i+<span class="number">1</span>);    <span class="comment">//not reference</span></span><br><span class="line">	}</span><br><span class="line">	cout&lt;&lt;<span class="string">"Size: "</span>&lt;&lt;s.<span class="built_in">size</span>()&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	cout&lt;&lt;<span class="string">"The top stack: "</span>&lt;&lt;s.<span class="built_in">top</span>()&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//reference</span></span><br><span class="line">	s.<span class="built_in">pop</span>();	<span class="comment">//removing the first stack</span></span><br><span class="line">	cout&lt;&lt;<span class="string">"Size:"</span>&lt;&lt;s.<span class="built_in">size</span>()&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; s.<span class="built_in">size</span>()!=<span class="number">0</span>; i++){</span><br><span class="line">		s.<span class="built_in">pop</span>();</span><br><span class="line">	}</span><br><span class="line">	cout&lt;&lt;<span class="string">"size: "</span>&lt;&lt;s.<span class="built_in">size</span>()&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	<span class="keyword">if</span>(s.<span class="built_in">empty</span>()){</span><br><span class="line">		cout&lt;&lt;<span class="string">"empty"</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
+<h2 id="set">Set</h2>
+<ul>
+<li>就是集合。</li>
+<li>可用於快速查找elements 是否存在。</li>
+<li>每個elements皆是唯一的，不可重複。</li>
+<li>每個elements皆不能做修改。</li>
+<li>具有順序性。</li>
+<li>操作簡單。</li>
+<li>elements 太多會拖慢速度。 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/1mdMgul.png"></li>
+</ul>
+<p>用法1(insert(), count(), erase(), clear(), empty()) <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;set&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    set&lt;<span class="type">int</span>&gt; s;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">10</span>;i&lt;=<span class="number">50</span>; i+=<span class="number">10</span>){</span><br><span class="line">        s.<span class="built_in">insert</span>(i);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">if</span>(s.<span class="built_in">count</span>(<span class="number">10</span>)){</span><br><span class="line">        cout&lt;&lt;boolalpha&lt;&lt;<span class="literal">true</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    }</span><br><span class="line">    s.<span class="built_in">erase</span>(<span class="number">10</span>);</span><br><span class="line">    <span class="keyword">if</span>(s.<span class="built_in">count</span>(<span class="number">10</span>)){</span><br><span class="line">        cout&lt;&lt;boolalpha&lt;&lt;<span class="literal">true</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span>{</span><br><span class="line">        cout&lt;&lt;boolalpha&lt;&lt;<span class="literal">false</span>&lt;&lt;<span class="string">"\n"</span>; </span><br><span class="line">    }</span><br><span class="line">    s.<span class="built_in">clear</span>();</span><br><span class="line">    <span class="keyword">if</span>(s.<span class="built_in">empty</span>()){</span><br><span class="line">        cout&lt;&lt;<span class="string">"empty"</span>&lt;&lt;<span class="string">'\n'</span>;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
+<h2 id="map">Map</h2>
+<ul>
+<li>有排序關聯式容器。</li>
+<li>map中的元素會根據對應的鍵值(key)做排序。</li>
+<li>鍵值具有唯一性。</li>
+<li>高效率，使用簡單。 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/anN3pMV.png"></li>
+</ul>
+<p>用法1(insert(), erase(), clear(), empty()) <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="comment">//initialization</span></span><br><span class="line">    map&lt;string, <span class="type">int</span>&gt; m ={</span><br><span class="line">        {<span class="string">"One"</span>, <span class="number">1</span>},</span><br><span class="line">        {<span class="string">"Two"</span>, <span class="number">2</span>},</span><br><span class="line">        {<span class="string">"Three"</span>, <span class="number">3</span>}</span><br><span class="line">    };</span><br><span class="line">    m.<span class="built_in">insert</span>(<span class="built_in">pair</span>&lt;string, <span class="type">int</span>&gt;(<span class="string">"Four"</span>, <span class="number">4</span>));</span><br><span class="line">    m[<span class="string">"Five"</span>]=<span class="number">5</span>;</span><br><span class="line">    cout&lt;&lt;m[<span class="string">"Five"</span>]&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    m.<span class="built_in">erase</span>(<span class="string">"Five"</span>);</span><br><span class="line">    cout&lt;&lt;m.<span class="built_in">size</span>()&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    m.<span class="built_in">clear</span>();</span><br><span class="line">    <span class="keyword">if</span>(m.<span class="built_in">empty</span>()){</span><br><span class="line">        cout&lt;&lt;<span class="string">"empty"</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
+<h2 id="algorithm">Algorithm</h2>
+<ul>
+<li>常用演算法。</li>
+</ul>
+<p>用法1(sort(), reverse()) <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; v;</span><br><span class="line">    <span class="type">int</span> input;</span><br><span class="line">    <span class="keyword">while</span>(cin&gt;&gt;input&amp;&amp;input!=<span class="number">-1</span>){</span><br><span class="line">        v.<span class="built_in">push_back</span>(input);</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">sort</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>());</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;v.<span class="built_in">size</span>(); i++){</span><br><span class="line">        cout&lt;&lt;v[i]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">    }</span><br><span class="line">    cout&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    <span class="built_in">reverse</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>());</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;v.<span class="built_in">size</span>(); i++){</span><br><span class="line">        cout&lt;&lt;v[i]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
+]]></content>
+      <categories>
+        <category>個人筆記-程式設計</category>
+      </categories>
+      <tags>
+        <tag>個人筆記</tag>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Supplementary Materials-程式設計筆記</title>
+    <url>/2023/01/17/Supplementary%20Materials/</url>
+    <content><![CDATA[<h1 id="補充資料">補充資料</h1>
+<h2 id="literal-constant">Literal Constant</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/s7Ps4NN.png"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/QjOdk1K.png"></p>
+<p>Ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	cout&lt;&lt;<span class="number">75</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">0113</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">0x4b</span>&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//Decimal, Octal, Hexadecimal</span></span><br><span class="line">	cout&lt;&lt;<span class="number">75</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">75u</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">75l</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">75ul</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">75lu</span>&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//int, unsigned, unsigned long, usigned long</span></span><br><span class="line">	cout&lt;&lt;<span class="number">6.02e23</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="number">1.6e-19</span>&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//6.02*10^23</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
+<h2 id="bitwise-operators">Bitwise Operators</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/7AphOD4.png"></p>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bitset&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">int</span> x=<span class="number">0b00000001</span>;</span><br><span class="line">	<span class="type">int</span> y=<span class="number">0b00000000</span>;</span><br><span class="line">	cout&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(x&lt;&lt;<span class="number">1</span>)&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(x&gt;&gt;<span class="number">1</span>)&lt;&lt;<span class="string">"\n"</span>; <span class="comment">//left / right shift for 1 bit </span></span><br><span class="line">	cout&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(~x)&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(x|y)&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(x&amp;y)&lt;&lt;<span class="string">" "</span>&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="number">8</span>&gt;(x^y)&lt;&lt;<span class="string">"\n"</span>; <span class="comment">// not, or, and, xor</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<h2 id="dynamic-memory-allocation">Dynamic Memory allocation</h2>
+<p>Reference: http://ccy.dd.ncu.edu.tw/~chen/course/Cpp/ch5/6.htm <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/kxplKpS.png"></p>
+<p>Ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">int</span> *p;</span><br><span class="line">	p=<span class="keyword">new</span> <span class="type">int</span>;</span><br><span class="line">	*p=<span class="number">100</span>;</span><br><span class="line">	cout&lt;&lt;*p;</span><br><span class="line">	<span class="keyword">delete</span> p; <span class="comment">//release the memory space</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
+<p>Ex2: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">	<span class="type">int</span> *p=<span class="keyword">new</span> <span class="type">int</span> [<span class="number">5</span>];</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++){</span><br><span class="line">		*(p+i)=i;</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++){</span><br><span class="line">		cout&lt;&lt;*(p+i)&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">delete</span> []p; <span class="comment">//release memory space</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
+<h2 id="linked-list寒假學">Linked List(寒假學)</h2>
+]]></content>
+      <categories>
+        <category>個人筆記-程式設計</category>
+      </categories>
+      <tags>
+        <tag>個人筆記</tag>
+        <tag>C++</tag>
+        <tag>課堂筆記</tag>
+        <tag>彰化師範大學-張孟洲</tag>
       </tags>
   </entry>
   <entry>

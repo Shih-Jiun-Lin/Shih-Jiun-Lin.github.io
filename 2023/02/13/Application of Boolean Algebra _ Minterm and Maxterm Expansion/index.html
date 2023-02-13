@@ -6,7 +6,7 @@
     <meta name="keywords" content="Hexo Theme Redefine">
     <meta name="description" content="Hexo Theme Redefine">
     <meta name="author" content="Shih Jiun Lin">
-    <link rel="canonical" href="http://example.com/tags" />
+    <link rel="canonical" href="http://example.com/2023/02/13/Application%20of%20Boolean%20Algebra%20_%20Minterm%20and%20Maxterm%20Expansion/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
     <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no" sizes="192x192">
     <link rel="apple-touch-icon" sizes="180x180" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no">
@@ -14,7 +14,7 @@
     
     <title>
         
-            Tags |
+            Application of Boolean Algebra / Minterm and Maxterm Expansion-數位邏輯設計筆記 |
         
         Shih-Jiun-Lin&#39;s Blog
     </title>
@@ -52,7 +52,119 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 
 <body>
@@ -146,7 +258,7 @@
                         
                             <li class="menu-item">
                                 <!-- Menu -->
-                                <a class="active" 
+                                <a class="" 
                                     href="/tags"  >
                                     
                                         
@@ -270,7 +382,7 @@
             
                 
                     <li class="drawer-menu-item flex-center">
-                        <a class="active" 
+                        <a class="" 
                         href="/tags"  >
                              
                                 
@@ -347,18 +459,218 @@
             <div class="main-content">
 
                 
-                    
-    <div class="fade-in-down-animation">
-        <div class="tagcloud-container">
-            <div class="tagcloud-header">
-                <h1 style="margin: 15px 5px; margin-bottom: 30px;">Tags</h1>
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+            <div class="article-title">
+                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">Application of Boolean Algebra / Minterm and Maxterm Expansion-數位邏輯設計筆記</h1></span>
             </div>
-            <div class="tagcloud-content">
-                <a href="/tags/Arduino/" style="font-size: 1.1rem;">Arduino</a> <a href="/tags/C/" style="font-size: 1.5rem;">C++</a> <a href="/tags/Esp32/" style="font-size: 1rem;">Esp32</a> <a href="/tags/LED%E7%9F%A9%E9%99%A3/" style="font-size: 1.1rem;">LED矩陣</a> <a href="/tags/Welcome/" style="font-size: 1rem;">Welcome!</a> <a href="/tags/%E5%80%8B%E4%BA%BA%E5%B0%88%E9%A1%8C/" style="font-size: 1.1rem;">個人專題</a> <a href="/tags/%E5%80%8B%E4%BA%BA%E7%AD%86%E8%A8%98/" style="font-size: 1.6rem;">個人筆記</a> <a href="/tags/%E5%8F%B0%E5%8C%97%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%B8-%E9%99%B3%E6%99%8F%E7%AC%99/" style="font-size: 1.1rem;">台北科技大學-陳晏笙</a> <a href="/tags/%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%AD%B8-%E4%BA%8E%E5%A4%A9%E7%AB%8B/" style="font-size: 1.3rem;">台灣大學-于天立</a> <a href="/tags/%E5%BD%B0%E5%8C%96%E5%B8%AB%E7%AF%84%E5%A4%A7%E5%AD%B8-%E5%BC%B5%E5%AD%9F%E6%B4%B2/" style="font-size: 1.4rem;">彰化師範大學-張孟洲</a> <a href="/tags/%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF%E8%A8%AD%E8%A8%88/" style="font-size: 1.2rem;">數位邏輯設計</a> <a href="/tags/%E6%B8%85%E8%8F%AF%E5%A4%A7%E5%AD%B8-%E7%8E%8B%E4%BF%8A%E5%A0%AF/" style="font-size: 1.2rem;">清華大學-王俊堯</a> <a href="/tags/%E7%89%A9%E8%81%AF%E7%B6%B2/" style="font-size: 1.1rem;">物聯網</a> <a href="/tags/%E8%A8%88%E7%AE%97%E6%A9%9F%E6%A6%82%E8%AB%96/" style="font-size: 1.3rem;">計算機概論</a> <a href="/tags/%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98/" style="font-size: 1.4rem;">課堂筆記</a> <a href="/tags/%E8%B6%85%E8%81%B2%E6%B3%A2%E6%84%9F%E6%87%89%E5%99%A8/" style="font-size: 1rem;">超聲波感應器</a> <a href="/tags/%E9%9B%BB%E8%B7%AF%E5%AD%B8/" style="font-size: 1.1rem;">電路學</a>
-            </div>
-        </div>
-    </div>
 
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="https://scontent-hkg4-2.xx.fbcdn.net/v/t1.6435-9/70899392_1700286993440218_5774458773556953088_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=iBCVayjTOr8AX8TBEWz&_nc_ht=scontent-hkg4-2.xx&oh=00_AfAmQlO1Y3qBnfF5_L2XihrdBGlMKeof-lZCAoQpK_vIQg&oe=63EE348C">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Shih Jiun Lin</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="pc">2023-02-13 23:30:00</span>
+        <span class="mobile">2023-02-13 23:30</span>
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E5%80%8B%E4%BA%BA%E7%AD%86%E8%A8%98-%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF%E8%A8%AD%E8%A8%88/">個人筆記-數位邏輯設計</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E5%80%8B%E4%BA%BA%E7%AD%86%E8%A8%98/">個人筆記</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF%E8%A8%AD%E8%A8%88/">數位邏輯設計</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E6%B8%85%E8%8F%AF%E5%A4%A7%E5%AD%B8-%E7%8E%8B%E4%BF%8A%E5%A0%AF/">清華大學-王俊堯</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>115 Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <h1 id="application-of-boolean-algebra-minterm-and-maxterm-expansion">Application
+of Boolean Algebra / Minterm and Maxterm Expansion</h1>
+<h2 id="conversion-of-sentences-to-boolean-equations">Conversion of
+Sentences to Boolean Equations</h2>
+<h3 id="ex">Ex:</h3>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/eM4Zh6u.png"></p>
+<ul>
+<li><p><span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="15.681ex" height="1.903ex" role="img" focusable="false" viewBox="0 -759 6930.9 841"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D44D" d="M58 8Q58 23 64 35Q64 36 329 334T596 635L586 637Q575 637 512 637H500H476Q442 637 420 635T365 624T311 598T266 548T228 469Q227 466 226 463T224 458T223 453T222 450L221 448Q218 443 202 443Q185 443 182 453L214 561Q228 606 241 651Q249 679 253 681Q256 683 487 683H718Q723 678 723 675Q723 673 717 649Q189 54 188 52L185 49H274Q369 50 377 51Q452 60 500 100T579 247Q587 272 590 277T603 282H607Q628 282 628 271Q547 5 541 2Q538 0 300 0H124Q58 0 58 8Z"></path></g><g data-mml-node="mo" transform="translate(1000.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mi" transform="translate(2056.6,0)"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path></g><g data-mml-node="msup" transform="translate(2806.6,0)"><g data-mml-node="mi"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g><g data-mml-node="mo" transform="translate(792,363) scale(0.707)"><path data-c="2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path></g></g><g data-mml-node="mo" transform="translate(4065.2,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(5065.5,0)"><path data-c="1D436" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q484 659 454 652T382 628T299 572T226 479Q194 422 175 346T156 222Q156 108 232 58Q280 24 350 24Q441 24 512 92T606 240Q610 253 612 255T628 257Q648 257 648 248Q648 243 647 239Q618 132 523 55T319 -22Q206 -22 128 53T50 252Z"></path></g><g data-mml-node="msup" transform="translate(5825.5,0)"><g data-mml-node="mi"><path data-c="1D437" d="M287 628Q287 635 230 637Q207 637 200 638T193 647Q193 655 197 667T204 682Q206 683 403 683Q570 682 590 682T630 676Q702 659 752 597T803 431Q803 275 696 151T444 3L430 1L236 0H125H72Q48 0 41 2T33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM703 469Q703 507 692 537T666 584T629 613T590 629T555 636Q553 636 541 636T512 636T479 637H436Q392 637 386 627Q384 623 313 339T242 52Q242 48 253 48T330 47Q335 47 349 47T373 46Q499 46 581 128Q617 164 640 212T683 339T703 469Z"></path></g><g data-mml-node="mo" transform="translate(861,363) scale(0.707)"><path data-c="2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path></g></g></g></g></svg></mjx-container></span></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/k0803o2.png"></p></li>
+</ul>
+<h2 id="truth-table-based-logic-design">Truth Table-based Logic
+Design</h2>
+<h3 id="ex-1">Ex:</h3>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/gaBu3GO.png"></p>
+<ul>
+<li><p>By “1's” Function</p>
+<ol type="1">
+<li>AND every elements of the truth table that the result is "1".</li>
+<li>OR each cases.</li>
+<li>Simplfy it.</li>
+</ol>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/852t6Yb.png"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/fTe3MW4.png"></p></li>
+<li><p>By “0's” Function</p>
+<ol type="1">
+<li>OR every elements of the truth table that the result is "1".</li>
+<li>AND each cases.</li>
+<li>Simplfy it.</li>
+</ol>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/FtL91YC.png"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/fTe3MW4.png"></p></li>
+<li><p>By f'</p>
+<ul>
+<li><p>From “1's” Perspective</p>
+<ol type="1">
+<li>OR every elements of the truth table that the result is "1".</li>
+<li>AND each cases.</li>
+<li>Do Demorgan's Transformation.</li>
+<li>Simplfy it.</li>
+</ol></li>
+<li><p>From “0's” Perspective</p>
+<ol type="1">
+<li>AND every elements of the truth table that the result is "1".</li>
+<li>OR each cases.</li>
+<li>Do Demorgan's Transformation.</li>
+<li>Simplfy it.</li>
+</ol>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/l26Qntg.png"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/fTe3MW4.png"></p></li>
+</ul></li>
+</ul>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：Application of Boolean Algebra / Minterm and Maxterm Expansion-數位邏輯設計筆記</li>
+        <li>Post author：Shih Jiun Lin</li>
+        <li>Create time：2023-02-13 23:30:00</li>
+        <li>
+            Post link：https://shih-jiun-lin.github.io/2023/02/13/Application of Boolean Algebra _ Minterm and Maxterm Expansion/
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+                </div>
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E5%80%8B%E4%BA%BA%E7%AD%86%E8%A8%98/">#個人筆記</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF%E8%A8%AD%E8%A8%88/">#數位邏輯設計</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E6%B8%85%E8%8F%AF%E5%A4%A7%E5%AD%B8-%E7%8E%8B%E4%BF%8A%E5%A0%AF/">#清華大學-王俊堯</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/02/04/Advanced%20Techniques%20for%20Circuit%20Analysis/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">Advanced Techniques for Circuit Analysis-電路學筆記</span>
+                                    <span class="post-nav-item">Next posts</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>Contents</strong></div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#application-of-boolean-algebra-minterm-and-maxterm-expansion"><span class="nav-text">Application
+of Boolean Algebra &#x2F; Minterm and Maxterm Expansion</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#conversion-of-sentences-to-boolean-equations"><span class="nav-text">Conversion of
+Sentences to Boolean Equations</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ex"><span class="nav-text">Ex:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#truth-table-based-logic-design"><span class="nav-text">Truth Table-based Logic
+Design</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ex-1"><span class="nav-text">Ex:</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+            </div>
+        
+    </div>
+</div>
 
 
                 
@@ -422,6 +734,23 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-bottom-side-tools">
@@ -551,6 +880,14 @@
 
 
 <div class="post-scripts pjax">
+    
+        
+<script src="/js/toc-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
     
 </div>
 

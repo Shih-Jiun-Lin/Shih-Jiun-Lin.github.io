@@ -519,7 +519,7 @@ mjx-container[display="true"] + br {
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>362 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>446 Words</span>
         </span>
     
     
@@ -708,18 +708,86 @@ circuit".</li>
 </ul>
 <h2 id="binary-adders-and-subtractors">Binary Adders and
 Subtractors</h2>
-<h3 id="half-adder">Half Adder</h3>
+<h3 id="adder">Adder</h3>
+<ul>
+<li><p>Half Adder</p>
+<ul>
+<li>Without Carry-Out and Carry-In.</li>
+</ul></li>
+</ul>
 <p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/cpqJ5Ct.png"></p>
 <ul>
-<li>Without Carry-Out and Carry-In. ### Full Adder</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ebpGL0L.png"></p>
+<li><p>Full Adder</p>
 <ul>
 <li>With Carry-Out and Carry-In.</li>
+</ul></li>
 </ul>
-<h1 id="王俊堯教授數位邏輯設計_第4e講-1026-application-of-boolean-algebra-minterm-and-maxterm-expansion">2023/02/14
-10620王俊堯教授數位邏輯設計_第4E講 10:26 Application of Boolean Algebra
-Minterm and Maxterm Expansion</h1>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ebpGL0L.png"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/118ScCk.png"></p>
+<ul>
+<li>Parallel Adder(Ripple Carry Adder)
+<ul>
+<li>Consists of multiple full adders.</li>
+</ul></li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/GAy48LA.png"></p>
+<ul>
+<li>Binary Subtractions
+<ul>
+<li>Consists of multiple full adders.</li>
+<li>Long dealy(2n delay for n-bit adder)</li>
+<li></li>
+</ul></li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/Yg4m12Y.png"></p>
+<ul>
+<li>Multifunctional Parallel Adder</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/vV1vyBP.png"></p>
+<h3 id="subtractor">Subtractor</h3>
+<ul>
+<li>Half Subtractor</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/i0oux7c.png"></p>
+<ul>
+<li>Full Subtractor</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/H3ENxw4.png"></p>
+<ul>
+<li>Parallel Subtractor
+<ul>
+<li>Consist of multiple full subtractors.</li>
+</ul></li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/BEQ83TU.png"></p>
+<h2 id="speeding-up-integer-addition">Speeding Up Integer Addition</h2>
+<h3 id="carry-lookahead-addercla">Carry Lookahead Adder(CLA)</h3>
+<p>Reference:<a class="link" target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10160513?sc=rss.iron">link <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/F7bOgPr.png"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/a70vAOF.png"></p>
+<ul>
+<li>Knowing the carry-out before doing the mathemetic.</li>
+<li>Delay of 4-bit adder:
+<ul>
+<li>Ripple Carry Adder: <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="12.444ex" height="1.692ex" role="img" focusable="false" viewBox="0 -666 5500.4 748"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="mo" transform="translate(722.2,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mn" transform="translate(1722.4,0)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="mo" transform="translate(2444.7,0)"><path data-c="2217" d="M229 286Q216 420 216 436Q216 454 240 464Q241 464 245 464T251 465Q263 464 273 456T283 436Q283 419 277 356T270 286L328 328Q384 369 389 372T399 375Q412 375 423 365T435 338Q435 325 425 315Q420 312 357 282T289 250L355 219L425 184Q434 175 434 161Q434 146 425 136T401 125Q393 125 383 131T328 171L270 213Q283 79 283 63Q283 53 276 44T250 35Q231 35 224 44T216 63Q216 80 222 143T229 213L171 171Q115 130 110 127Q106 124 100 124Q87 124 76 134T64 161Q64 166 64 169T67 175T72 181T81 188T94 195T113 204T138 215T170 230T210 250L74 315Q65 324 65 338Q65 353 74 363T98 374Q106 374 116 368T171 328L229 286Z"></path></g><g data-mml-node="mn" transform="translate(3166.9,0)"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path></g><g data-mml-node="mo" transform="translate(3944.7,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mn" transform="translate(5000.4,0)"><path data-c="38" d="M70 417T70 494T124 618T248 666Q319 666 374 624T429 515Q429 485 418 459T392 417T361 389T335 371T324 363L338 354Q352 344 366 334T382 323Q457 264 457 174Q457 95 399 37T249 -22Q159 -22 101 29T43 155Q43 263 172 335L154 348Q133 361 127 368Q70 417 70 494ZM286 386L292 390Q298 394 301 396T311 403T323 413T334 425T345 438T355 454T364 471T369 491T371 513Q371 556 342 586T275 624Q268 625 242 625Q201 625 165 599T128 534Q128 511 141 492T167 463T217 431Q224 426 228 424L286 386ZM250 21Q308 21 350 55T392 137Q392 154 387 169T375 194T353 216T330 234T301 253T274 270Q260 279 244 289T218 306L210 311Q204 311 181 294T133 239T107 157Q107 98 150 60T250 21Z"></path></g></g></g></svg></mjx-container></span></li>
+<li>Carry Lookahead Adder: <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="5.028ex" height="1.692ex" role="img" focusable="false" viewBox="0 -666 2222.4 748"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="mo" transform="translate(722.2,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mn" transform="translate(1722.4,0)"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path></g></g></g></svg></mjx-container></span>=5
+### Carry Select Adder</li>
+</ul></li>
+</ul>
+<p>Reference:<a class="link" target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/102207162">link <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ZgrFeC7.png"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/aL6fXe9.png"></p>
+<ul>
+<li>Two additions are performed in parallel.
+<ul>
+<li>One assumes the carry-in is 1</li>
+<li>Another assumes it's 0.</li>
+</ul></li>
+<li>When the carry-in is finally known, the correct sum is selected.
+(has been precomputed)</li>
+</ul>
+<h2 id="binary-multiplication">Binary Multiplication</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/z1iahWL.png"></p>
 
             </div>
 
@@ -796,9 +864,7 @@ Sentences to Boolean Equations</span></a><ol class="nav-child"><li class="nav-it
 Design</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ex-1"><span class="nav-text">Ex:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#minterm-and-maxterm-expansions"><span class="nav-text">Minterm and Maxterm
 Expansions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#variables-vs-literals"><span class="nav-text">Variables vs Literals</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#minterms-vs-maxterms"><span class="nav-text">Minterms vs Maxterms</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#incompletely-specified-functions"><span class="nav-text">Incompletely Specified
 Functions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#binary-adders-and-subtractors"><span class="nav-text">Binary Adders and
-Subtractors</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#half-adder"><span class="nav-text">Half Adder</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8E%8B%E4%BF%8A%E5%A0%AF%E6%95%99%E6%8E%88%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF%E8%A8%AD%E8%A8%88_%E7%AC%AC4e%E8%AC%9B-1026-application-of-boolean-algebra-minterm-and-maxterm-expansion"><span class="nav-text">2023&#x2F;02&#x2F;14
-10620王俊堯教授數位邏輯設計_第4E講 10:26 Application of Boolean Algebra
-Minterm and Maxterm Expansion</span></a></li></ol>
+Subtractors</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#adder"><span class="nav-text">Adder</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#subtractor"><span class="nav-text">Subtractor</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#speeding-up-integer-addition"><span class="nav-text">Speeding Up Integer Addition</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#carry-lookahead-addercla"><span class="nav-text">Carry Lookahead Adder(CLA)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#binary-multiplication"><span class="nav-text">Binary Multiplication</span></a></li></ol></li></ol>
     </div>
 </div>
             </div>

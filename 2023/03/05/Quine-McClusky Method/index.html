@@ -6,7 +6,7 @@
     <meta name="keywords" content="Hexo Theme Redefine">
     <meta name="description" content="Hexo Theme Redefine">
     <meta name="author" content="Shih Jiun Lin">
-    <link rel="canonical" href="http://example.com/2023/01/17/Chapter%204,%20Control%20Statement_%20Part%202/" />
+    <link rel="canonical" href="http://example.com/2023/03/05/Quine-McClusky%20Method/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
     <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no" sizes="192x192">
     <link rel="apple-touch-icon" sizes="180x180" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no">
@@ -14,7 +14,7 @@
     
     <title>
         
-            Control Statement_2-程式設計筆記 |
+            Quine-McClusky Method-數位邏輯設計筆記 |
         
         Shih-Jiun-Lin&#39;s Blog
     </title>
@@ -463,7 +463,7 @@ mjx-container[display="true"] + br {
     <div class="post-page-container">
         <div class="article-content-container">
             <div class="article-title">
-                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">Control Statement_2-程式設計筆記</h1></span>
+                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">Quine-McClusky Method-數位邏輯設計筆記</h1></span>
             </div>
 
             
@@ -480,8 +480,8 @@ mjx-container[display="true"] + br {
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="pc">2023-01-17 23:00:50</span>
-        <span class="mobile">2023-01-17 23:00</span>
+        <span class="pc">2023-03-05 20:30:00</span>
+        <span class="mobile">2023-03-05 20:30</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -489,7 +489,7 @@ mjx-container[display="true"] + br {
             <ul>
                 
                     <li>
-                        <a href="/categories/%E5%80%8B%E4%BA%BA%E7%AD%86%E8%A8%98-%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/">個人筆記-程式設計</a>&nbsp;
+                        <a href="/categories/%E5%80%8B%E4%BA%BA%E7%AD%86%E8%A8%98-%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF%E8%A8%AD%E8%A8%88/">個人筆記-數位邏輯設計</a>&nbsp;
                     </li>
                 
             </ul>
@@ -505,15 +505,11 @@ mjx-container[display="true"] + br {
                     </li>
                 
                     <li>
-                        | <a href="/tags/C/">C++</a>&nbsp;
+                        | <a href="/tags/%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF%E8%A8%AD%E8%A8%88/">數位邏輯設計</a>&nbsp;
                     </li>
                 
                     <li>
-                        | <a href="/tags/%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98/">課堂筆記</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        | <a href="/tags/%E5%BD%B0%E5%8C%96%E5%B8%AB%E7%AF%84%E5%A4%A7%E5%AD%B8-%E5%BC%B5%E5%AD%9F%E6%B4%B2/">彰化師範大學-張孟洲</a>&nbsp;
+                        | <a href="/tags/%E6%B8%85%E8%8F%AF%E5%A4%A7%E5%AD%B8-%E7%8E%8B%E4%BF%8A%E5%A0%AF/">清華大學-王俊堯</a>&nbsp;
                     </li>
                 
             </ul>
@@ -523,7 +519,7 @@ mjx-container[display="true"] + br {
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>291 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>255 Words</span>
         </span>
     
     
@@ -544,51 +540,66 @@ mjx-container[display="true"] + br {
             
 
             <div class="article-content markdown-body">
-                <h1 id="chapter-4-control-statement_2">Chapter 4, Control
-Statement_2</h1>
-<h2 id="do...while">do...while</h2>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span>{</span><br><span class="line"></span><br><span class="line">}<span class="keyword">while</span>;(condition)</span><br></pre></td></tr></table></figure></div>
+                <p>一定愛配王俊堯教授開放課程食用:<a class="link" target="_blank" rel="noopener" href="https://ocw.nthu.edu.tw/ocw/index.php?page=course&amp;cid=230">課程連結 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h1 id="quine-mcclusky-method">Quine-McClusky Method</h1>
+<h2 id="overview">Overview</h2>
+<h3 id="what-is-quine-mcclusky-method">What is Quine-McClusky
+Method?</h3>
 <ul>
-<li>do...while always check the continuation after the code inside the
-{} has been excecuted. Therefore, it will execute at least one time.
-<img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/OQEIHFE.png"></li>
+<li>A systematic simplification procedure.</li>
+<li>You input a minterm expansion, you will get a minimum sum of
+product.</li>
 </ul>
-<h2 id="switch-case">switch case</h2>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(expression){</span><br><span class="line">    <span class="keyword">case</span> constant1:</span><br><span class="line">        <span class="comment">//execute while expression is constant1;</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> constant2:</span><br><span class="line">        <span class="comment">//execute while expression is constant2;</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'F'</span>:</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'f'</span>:</span><br><span class="line">        <span class="comment">//execute while expression is F or f;</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>+<span class="number">2</span>:</span><br><span class="line">        <span class="comment">//not allowed</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>+<span class="number">4</span>:</span><br><span class="line">        <span class="comment">//not allowed</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        ...</span><br><span class="line">        <span class="comment">//code to be executed if expression doesn't</span></span><br><span class="line">        <span class="comment">// match any constant</span></span><br><span class="line">        </span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<h3 id="steps-to-do-quine-mcclusky-method">Steps to Do Quine-McClusky
+Method</h3>
+<ol type="1">
+<li>Generate all prime implicants.
 <ul>
-<li>Perform many different actions based on the value of expression.
-<img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ygwibqG.png"></li>
-</ul>
-<h2 id="setw">setw()</h2>
+<li>Eliminate as many literals as possible from each term with <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="15.78ex" height="1.903ex" role="img" focusable="false" viewBox="0 -759 6974.6 841"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D44B" d="M42 0H40Q26 0 26 11Q26 15 29 27Q33 41 36 43T55 46Q141 49 190 98Q200 108 306 224T411 342Q302 620 297 625Q288 636 234 637H206Q200 643 200 645T202 664Q206 677 212 683H226Q260 681 347 681Q380 681 408 681T453 682T473 682Q490 682 490 671Q490 670 488 658Q484 643 481 640T465 637Q434 634 411 620L488 426L541 485Q646 598 646 610Q646 628 622 635Q617 635 609 637Q594 637 594 648Q594 650 596 664Q600 677 606 683H618Q619 683 643 683T697 681T738 680Q828 680 837 683H845Q852 676 852 672Q850 647 840 637H824Q790 636 763 628T722 611T698 593L687 584Q687 585 592 480L505 384Q505 383 536 304T601 142T638 56Q648 47 699 46Q734 46 734 37Q734 35 732 23Q728 7 725 4T711 1Q708 1 678 1T589 2Q528 2 496 2T461 1Q444 1 444 10Q444 11 446 25Q448 35 450 39T455 44T464 46T480 47T506 54Q523 62 523 64Q522 64 476 181L429 299Q241 95 236 84Q232 76 232 72Q232 53 261 47Q262 47 267 47T273 46Q276 46 277 46T280 45T283 42T284 35Q284 26 282 19Q279 6 276 4T261 1Q258 1 243 1T201 2T142 2Q64 2 42 0Z"></path></g><g data-mml-node="mi" transform="translate(852,0)"><path data-c="1D44C" d="M66 637Q54 637 49 637T39 638T32 641T30 647T33 664T42 682Q44 683 56 683Q104 680 165 680Q288 680 306 683H316Q322 677 322 674T320 656Q316 643 310 637H298Q242 637 242 624Q242 619 292 477T343 333L346 336Q350 340 358 349T379 373T411 410T454 461Q546 568 561 587T577 618Q577 634 545 637Q528 637 528 647Q528 649 530 661Q533 676 535 679T549 683Q551 683 578 682T657 680Q684 680 713 681T746 682Q763 682 763 673Q763 669 760 657T755 643Q753 637 734 637Q662 632 617 587Q608 578 477 424L348 273L322 169Q295 62 295 57Q295 46 363 46Q379 46 384 45T390 35Q390 33 388 23Q384 6 382 4T366 1Q361 1 324 1T232 2Q170 2 138 2T102 1Q84 1 84 9Q84 14 87 24Q88 27 89 30T90 35T91 39T93 42T96 44T101 45T107 45T116 46T129 46Q168 47 180 50T198 63Q201 68 227 171L252 274L129 623Q128 624 127 625T125 627T122 629T118 631T113 633T105 634T96 635T83 636T66 637Z"></path></g><g data-mml-node="mo" transform="translate(1837.2,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(2837.4,0)"><path data-c="1D44B" d="M42 0H40Q26 0 26 11Q26 15 29 27Q33 41 36 43T55 46Q141 49 190 98Q200 108 306 224T411 342Q302 620 297 625Q288 636 234 637H206Q200 643 200 645T202 664Q206 677 212 683H226Q260 681 347 681Q380 681 408 681T453 682T473 682Q490 682 490 671Q490 670 488 658Q484 643 481 640T465 637Q434 634 411 620L488 426L541 485Q646 598 646 610Q646 628 622 635Q617 635 609 637Q594 637 594 648Q594 650 596 664Q600 677 606 683H618Q619 683 643 683T697 681T738 680Q828 680 837 683H845Q852 676 852 672Q850 647 840 637H824Q790 636 763 628T722 611T698 593L687 584Q687 585 592 480L505 384Q505 383 536 304T601 142T638 56Q648 47 699 46Q734 46 734 37Q734 35 732 23Q728 7 725 4T711 1Q708 1 678 1T589 2Q528 2 496 2T461 1Q444 1 444 10Q444 11 446 25Q448 35 450 39T455 44T464 46T480 47T506 54Q523 62 523 64Q522 64 476 181L429 299Q241 95 236 84Q232 76 232 72Q232 53 261 47Q262 47 267 47T273 46Q276 46 277 46T280 45T283 42T284 35Q284 26 282 19Q279 6 276 4T261 1Q258 1 243 1T201 2T142 2Q64 2 42 0Z"></path></g><g data-mml-node="msup" transform="translate(3689.4,0)"><g data-mml-node="mi"><path data-c="1D44C" d="M66 637Q54 637 49 637T39 638T32 641T30 647T33 664T42 682Q44 683 56 683Q104 680 165 680Q288 680 306 683H316Q322 677 322 674T320 656Q316 643 310 637H298Q242 637 242 624Q242 619 292 477T343 333L346 336Q350 340 358 349T379 373T411 410T454 461Q546 568 561 587T577 618Q577 634 545 637Q528 637 528 647Q528 649 530 661Q533 676 535 679T549 683Q551 683 578 682T657 680Q684 680 713 681T746 682Q763 682 763 673Q763 669 760 657T755 643Q753 637 734 637Q662 632 617 587Q608 578 477 424L348 273L322 169Q295 62 295 57Q295 46 363 46Q379 46 384 45T390 35Q390 33 388 23Q384 6 382 4T366 1Q361 1 324 1T232 2Q170 2 138 2T102 1Q84 1 84 9Q84 14 87 24Q88 27 89 30T90 35T91 39T93 42T96 44T101 45T107 45T116 46T129 46Q168 47 180 50T198 63Q201 68 227 171L252 274L129 623Q128 624 127 625T125 627T122 629T118 631T113 633T105 634T96 635T83 636T66 637Z"></path></g><g data-mml-node="mo" transform="translate(855.1,363) scale(0.707)"><path data-c="2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path></g></g><g data-mml-node="mo" transform="translate(5066.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mi" transform="translate(6122.6,0)"><path data-c="1D44B" d="M42 0H40Q26 0 26 11Q26 15 29 27Q33 41 36 43T55 46Q141 49 190 98Q200 108 306 224T411 342Q302 620 297 625Q288 636 234 637H206Q200 643 200 645T202 664Q206 677 212 683H226Q260 681 347 681Q380 681 408 681T453 682T473 682Q490 682 490 671Q490 670 488 658Q484 643 481 640T465 637Q434 634 411 620L488 426L541 485Q646 598 646 610Q646 628 622 635Q617 635 609 637Q594 637 594 648Q594 650 596 664Q600 677 606 683H618Q619 683 643 683T697 681T738 680Q828 680 837 683H845Q852 676 852 672Q850 647 840 637H824Q790 636 763 628T722 611T698 593L687 584Q687 585 592 480L505 384Q505 383 536 304T601 142T638 56Q648 47 699 46Q734 46 734 37Q734 35 732 23Q728 7 725 4T711 1Q708 1 678 1T589 2Q528 2 496 2T461 1Q444 1 444 10Q444 11 446 25Q448 35 450 39T455 44T464 46T480 47T506 54Q523 62 523 64Q522 64 476 181L429 299Q241 95 236 84Q232 76 232 72Q232 53 261 47Q262 47 267 47T273 46Q276 46 277 46T280 45T283 42T284 35Q284 26 282 19Q279 6 276 4T261 1Q258 1 243 1T201 2T142 2Q64 2 42 0Z"></path></g></g></g></svg></mjx-container></span>.</li>
+</ul></li>
+<li>Find the minimum solution.
 <ul>
-<li>setw() =&gt; print spaces to make it tidy. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rY3G69w.png"></li>
-</ul>
-<h2 id="eof">EOF</h2>
+<li>Use a "prime implicant chart" to select a minimum set of prime
+implicants that contains a minimum number of literals.</li>
+</ul></li>
+</ol>
+<h2 id="determination-of-prime-implicants">Determination of Prime
+Implicants</h2>
+<h3 id="steps-to-determine-prime-implicants">Steps to Determine Prime
+Implicants</h3>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/7SpYDgS.png"></p>
+<ol type="1">
+<li>Represent each minterm with binary code.</li>
+<li>Find decimal number for each binary code.</li>
+<li>List all the binary numbers.
 <ul>
-<li>EOF =&gt; End of file by entering ctrl+z. <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cin&gt;&gt;sth;</span><br><span class="line"><span class="keyword">while</span>(cin.<span class="built_in">get</span>()!=EOF){</span><br><span class="line">    ...</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
-</ul>
-<h2 id="cin.get-vs-cin">cin.get() vs cin&gt;&gt;</h2>
+<li>Group them according to the number of 1's.
 <ul>
-<li>cin.get() -&gt; only read one character.</li>
-<li>cin -&gt; depends on &gt;&gt;. <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> grade, aC{<span class="number">0</span>}, bC{<span class="number">0</span>}, cC{<span class="number">0</span>};</span><br><span class="line">    <span class="keyword">while</span>((grade=std::cin.<span class="built_in">get</span>())!=EOF){</span><br><span class="line">        <span class="keyword">switch</span>(grade){</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'a'</span>:</span><br><span class="line">            aC++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'b'</span>:</span><br><span class="line">            bC++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'c'</span>:</span><br><span class="line">            cC++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'\n'</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'\t'</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="string">' '</span>:</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    std::cout&lt;&lt;aC&lt;&lt;<span class="string">' '</span>&lt;&lt;bC&lt;&lt;<span class="string">' '</span>&lt;&lt;cC;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
-</ul>
-<h2 id="c-modified-data-types">C++ Modified Data Types</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/tTgVBZW.png"></p>
-<h2 id="continue-vs-break">Continue vs Break</h2>
+<li>Ex: Group 5 =&gt; 5 1's.</li>
+</ul></li>
+<li>List all groups in a column in a ascending oder.</li>
+</ul></li>
+<li>Start to eliminate terms with adjacnt group by doing <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="15.78ex" height="1.903ex" role="img" focusable="false" viewBox="0 -759 6974.6 841"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D44B" d="M42 0H40Q26 0 26 11Q26 15 29 27Q33 41 36 43T55 46Q141 49 190 98Q200 108 306 224T411 342Q302 620 297 625Q288 636 234 637H206Q200 643 200 645T202 664Q206 677 212 683H226Q260 681 347 681Q380 681 408 681T453 682T473 682Q490 682 490 671Q490 670 488 658Q484 643 481 640T465 637Q434 634 411 620L488 426L541 485Q646 598 646 610Q646 628 622 635Q617 635 609 637Q594 637 594 648Q594 650 596 664Q600 677 606 683H618Q619 683 643 683T697 681T738 680Q828 680 837 683H845Q852 676 852 672Q850 647 840 637H824Q790 636 763 628T722 611T698 593L687 584Q687 585 592 480L505 384Q505 383 536 304T601 142T638 56Q648 47 699 46Q734 46 734 37Q734 35 732 23Q728 7 725 4T711 1Q708 1 678 1T589 2Q528 2 496 2T461 1Q444 1 444 10Q444 11 446 25Q448 35 450 39T455 44T464 46T480 47T506 54Q523 62 523 64Q522 64 476 181L429 299Q241 95 236 84Q232 76 232 72Q232 53 261 47Q262 47 267 47T273 46Q276 46 277 46T280 45T283 42T284 35Q284 26 282 19Q279 6 276 4T261 1Q258 1 243 1T201 2T142 2Q64 2 42 0Z"></path></g><g data-mml-node="mi" transform="translate(852,0)"><path data-c="1D44C" d="M66 637Q54 637 49 637T39 638T32 641T30 647T33 664T42 682Q44 683 56 683Q104 680 165 680Q288 680 306 683H316Q322 677 322 674T320 656Q316 643 310 637H298Q242 637 242 624Q242 619 292 477T343 333L346 336Q350 340 358 349T379 373T411 410T454 461Q546 568 561 587T577 618Q577 634 545 637Q528 637 528 647Q528 649 530 661Q533 676 535 679T549 683Q551 683 578 682T657 680Q684 680 713 681T746 682Q763 682 763 673Q763 669 760 657T755 643Q753 637 734 637Q662 632 617 587Q608 578 477 424L348 273L322 169Q295 62 295 57Q295 46 363 46Q379 46 384 45T390 35Q390 33 388 23Q384 6 382 4T366 1Q361 1 324 1T232 2Q170 2 138 2T102 1Q84 1 84 9Q84 14 87 24Q88 27 89 30T90 35T91 39T93 42T96 44T101 45T107 45T116 46T129 46Q168 47 180 50T198 63Q201 68 227 171L252 274L129 623Q128 624 127 625T125 627T122 629T118 631T113 633T105 634T96 635T83 636T66 637Z"></path></g><g data-mml-node="mo" transform="translate(1837.2,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(2837.4,0)"><path data-c="1D44B" d="M42 0H40Q26 0 26 11Q26 15 29 27Q33 41 36 43T55 46Q141 49 190 98Q200 108 306 224T411 342Q302 620 297 625Q288 636 234 637H206Q200 643 200 645T202 664Q206 677 212 683H226Q260 681 347 681Q380 681 408 681T453 682T473 682Q490 682 490 671Q490 670 488 658Q484 643 481 640T465 637Q434 634 411 620L488 426L541 485Q646 598 646 610Q646 628 622 635Q617 635 609 637Q594 637 594 648Q594 650 596 664Q600 677 606 683H618Q619 683 643 683T697 681T738 680Q828 680 837 683H845Q852 676 852 672Q850 647 840 637H824Q790 636 763 628T722 611T698 593L687 584Q687 585 592 480L505 384Q505 383 536 304T601 142T638 56Q648 47 699 46Q734 46 734 37Q734 35 732 23Q728 7 725 4T711 1Q708 1 678 1T589 2Q528 2 496 2T461 1Q444 1 444 10Q444 11 446 25Q448 35 450 39T455 44T464 46T480 47T506 54Q523 62 523 64Q522 64 476 181L429 299Q241 95 236 84Q232 76 232 72Q232 53 261 47Q262 47 267 47T273 46Q276 46 277 46T280 45T283 42T284 35Q284 26 282 19Q279 6 276 4T261 1Q258 1 243 1T201 2T142 2Q64 2 42 0Z"></path></g><g data-mml-node="msup" transform="translate(3689.4,0)"><g data-mml-node="mi"><path data-c="1D44C" d="M66 637Q54 637 49 637T39 638T32 641T30 647T33 664T42 682Q44 683 56 683Q104 680 165 680Q288 680 306 683H316Q322 677 322 674T320 656Q316 643 310 637H298Q242 637 242 624Q242 619 292 477T343 333L346 336Q350 340 358 349T379 373T411 410T454 461Q546 568 561 587T577 618Q577 634 545 637Q528 637 528 647Q528 649 530 661Q533 676 535 679T549 683Q551 683 578 682T657 680Q684 680 713 681T746 682Q763 682 763 673Q763 669 760 657T755 643Q753 637 734 637Q662 632 617 587Q608 578 477 424L348 273L322 169Q295 62 295 57Q295 46 363 46Q379 46 384 45T390 35Q390 33 388 23Q384 6 382 4T366 1Q361 1 324 1T232 2Q170 2 138 2T102 1Q84 1 84 9Q84 14 87 24Q88 27 89 30T90 35T91 39T93 42T96 44T101 45T107 45T116 46T129 46Q168 47 180 50T198 63Q201 68 227 171L252 274L129 623Q128 624 127 625T125 627T122 629T118 631T113 633T105 634T96 635T83 636T66 637Z"></path></g><g data-mml-node="mo" transform="translate(855.1,363) scale(0.707)"><path data-c="2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path></g></g><g data-mml-node="mo" transform="translate(5066.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mi" transform="translate(6122.6,0)"><path data-c="1D44B" d="M42 0H40Q26 0 26 11Q26 15 29 27Q33 41 36 43T55 46Q141 49 190 98Q200 108 306 224T411 342Q302 620 297 625Q288 636 234 637H206Q200 643 200 645T202 664Q206 677 212 683H226Q260 681 347 681Q380 681 408 681T453 682T473 682Q490 682 490 671Q490 670 488 658Q484 643 481 640T465 637Q434 634 411 620L488 426L541 485Q646 598 646 610Q646 628 622 635Q617 635 609 637Q594 637 594 648Q594 650 596 664Q600 677 606 683H618Q619 683 643 683T697 681T738 680Q828 680 837 683H845Q852 676 852 672Q850 647 840 637H824Q790 636 763 628T722 611T698 593L687 584Q687 585 592 480L505 384Q505 383 536 304T601 142T638 56Q648 47 699 46Q734 46 734 37Q734 35 732 23Q728 7 725 4T711 1Q708 1 678 1T589 2Q528 2 496 2T461 1Q444 1 444 10Q444 11 446 25Q448 35 450 39T455 44T464 46T480 47T506 54Q523 62 523 64Q522 64 476 181L429 299Q241 95 236 84Q232 76 232 72Q232 53 261 47Q262 47 267 47T273 46Q276 46 277 46T280 45T283 42T284 35Q284 26 282 19Q279 6 276 4T261 1Q258 1 243 1T201 2T142 2Q64 2 42 0Z"></path></g></g></g></svg></mjx-container></span>.</li>
+<li>Check off all the terms that is combinable.</li>
+<li>The leftovers are "prime implicants".</li>
+</ol>
+<h2 id="finding-the-minimum-solutionthe-prime-implicant-chart">Finding
+the Minimum Solution(The Prime Implicant Chart)</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/VMqGFso.png"></p>
+<h3 id="steps-to-find-the-minimum-solution">Steps to Find the Minimum
+Solution</h3>
+<ol type="1">
+<li>Construct the prime implicant table.</li>
+<li>Make a cross under each decimal number that is a term contained in
+the prime number implicant at that row.</li>
+<li>Find all the columns that contain only one cross and circle them.
+Place a star at the left of those rows in which you circle.</li>
+<li>Repeat Step 1-3.</li>
+<li>The rows marked with a star are the essential prime implicants.</li>
+</ol>
+<h3 id="cyclic-prime-implicant-table">Cyclic Prime Implicant Table</h3>
 <ul>
-<li>Continue -&gt; Only skip a specific process.</li>
-<li>Break -&gt; Skip the whole process.</li>
-</ul>
-<h2 id="boolalpha">Boolalpha</h2>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">std::cout&lt;&lt;<span class="literal">true</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">std::cout&lt;&lt;std::boolalpha;</span><br><span class="line">std::cout&lt;&lt;<span class="literal">true</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line"><span class="comment">//The result will be 1 and true.</span></span><br></pre></td></tr></table></figure></div>
-<h2 id="operators-precedence">Operator's Precedence</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/MyvXHDH.png"></p>
-<ul>
-<li>The right side of the &amp;&amp; will only be considered if the left
-side is true.</li>
-<li>The &amp;&amp; operator has a higher precedence than ||.</li>
-<li>Any nonezero value is interpreted as ture. Which means if(a=5){...}
-will be true.</li>
+<li>The minimum form can be more than one.</li>
 </ul>
 
             </div>
@@ -597,11 +608,11 @@ will be true.</li>
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li>Post title：Control Statement_2-程式設計筆記</li>
+        <li>Post title：Quine-McClusky Method-數位邏輯設計筆記</li>
         <li>Post author：Shih Jiun Lin</li>
-        <li>Create time：2023-01-17 23:00:50</li>
+        <li>Create time：2023-03-05 20:30:00</li>
         <li>
-            Post link：https://shih-jiun-lin.github.io/2023/01/17/Chapter 4, Control Statement_ Part 2/
+            Post link：https://shih-jiun-lin.github.io/2023/03/05/Quine-McClusky Method/
         </li>
         <li>
             Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
@@ -620,15 +631,11 @@ will be true.</li>
                         </li>
                     
                         <li class="tag-item">
-                            <a href="/tags/C/">#C++</a>&nbsp;
+                            <a href="/tags/%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF%E8%A8%AD%E8%A8%88/">#數位邏輯設計</a>&nbsp;
                         </li>
                     
                         <li class="tag-item">
-                            <a href="/tags/%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98/">#課堂筆記</a>&nbsp;
-                        </li>
-                    
-                        <li class="tag-item">
-                            <a href="/tags/%E5%BD%B0%E5%8C%96%E5%B8%AB%E7%AF%84%E5%A4%A7%E5%AD%B8-%E5%BC%B5%E5%AD%9F%E6%B4%B2/">#彰化師範大學-張孟洲</a>&nbsp;
+                            <a href="/tags/%E6%B8%85%E8%8F%AF%E5%A4%A7%E5%AD%B8-%E7%8E%8B%E4%BF%8A%E5%A0%AF/">#清華大學-王俊堯</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -637,29 +644,14 @@ will be true.</li>
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                            rel="prev"
-                            href="/2023/01/17/Chapter%202,%20Introduction%20to%20C++%20Programing/"
-                            >
-                                <span class="left arrow-icon flex-center">
-                                    <i class="fa-solid fa-chevron-left"></i>
-                                </span>
-                                <span class="title flex-center">
-                                    <span class="post-nav-title-item">Introduction to C++ Programing-程式設計筆記</span>
-                                    <span class="post-nav-item">Prev posts</span>
-                                </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/01/17/Chapter%205%20Functions%20and%20Introduction%20to%20Recursion/"
+                            href="/2023/03/02/Lecture%2001-Perceptron/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">Functions and Introduction to Recursion-程式設計筆記</span>
+                                    <span class="post-nav-title-item">Perceptron-人工智慧及其應用筆記</span>
                                     <span class="post-nav-item">Next posts</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -679,8 +671,13 @@ will be true.</li>
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>Contents</strong></div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#chapter-4-control-statement_2"><span class="nav-text">Chapter 4, Control
-Statement_2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#do...while"><span class="nav-text">do...while</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#switch-case"><span class="nav-text">switch case</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#setw"><span class="nav-text">setw()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#eof"><span class="nav-text">EOF</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cin.get-vs-cin"><span class="nav-text">cin.get() vs cin&gt;&gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c-modified-data-types"><span class="nav-text">C++ Modified Data Types</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#continue-vs-break"><span class="nav-text">Continue vs Break</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#boolalpha"><span class="nav-text">Boolalpha</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#operators-precedence"><span class="nav-text">Operator&#39;s Precedence</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#quine-mcclusky-method"><span class="nav-text">Quine-McClusky Method</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#overview"><span class="nav-text">Overview</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#what-is-quine-mcclusky-method"><span class="nav-text">What is Quine-McClusky
+Method?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#steps-to-do-quine-mcclusky-method"><span class="nav-text">Steps to Do Quine-McClusky
+Method</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#determination-of-prime-implicants"><span class="nav-text">Determination of Prime
+Implicants</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#steps-to-determine-prime-implicants"><span class="nav-text">Steps to Determine Prime
+Implicants</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#finding-the-minimum-solutionthe-prime-implicant-chart"><span class="nav-text">Finding
+the Minimum Solution(The Prime Implicant Chart)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#steps-to-find-the-minimum-solution"><span class="nav-text">Steps to Find the Minimum
+Solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cyclic-prime-implicant-table"><span class="nav-text">Cyclic Prime Implicant Table</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
             </div>

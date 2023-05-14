@@ -2204,6 +2204,41 @@ c-string.</li>
       </tags>
   </entry>
   <entry>
+    <title>Sequential-Access Files-程式設計筆記</title>
+    <url>/2023/01/17/Chaper%208%20Sequential-Access%20Files/</url>
+    <content><![CDATA[<h1 id="chaper-8-sequential-access-files">Chaper 8 Sequential-Access
+Files</h1>
+<h2 id="fstream">fstream</h2>
+<ul>
+<li>ofstream and ifstream is include in fstream
+<ul>
+<li>ofstream: creats and writes files</li>
+<li>ifstream: reads from files</li>
+</ul></li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/BXqxxcS.png"></p>
+<p>Ex1(Input data to txt): <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    fstream file;</span><br><span class="line">    file.<span class="built_in">open</span>(<span class="string">"test.txt"</span>, ios::out);</span><br><span class="line">    string name, birthday;</span><br><span class="line">    <span class="keyword">if</span>(!file){</span><br><span class="line">        cerr&lt;&lt;<span class="string">"File could not be open."</span>&lt;&lt;endl; </span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);    <span class="comment">//exit with error</span></span><br><span class="line">    }</span><br><span class="line">    cout&lt;&lt;<span class="string">"Input the name and birthday(input end-of-file to end the program):"</span>;</span><br><span class="line">    <span class="keyword">while</span>(cin&gt;&gt;name&gt;&gt;birthday){</span><br><span class="line">        outClientFile&lt;&lt;name&lt;&lt;<span class="string">' '</span>&lt;&lt;birthday&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">        cout&lt;&lt;<span class="string">"Input the name and birthday(input end-of-file to end the program):"</span>;</span><br><span class="line">    }</span><br><span class="line">    outClientFile.<span class="built_in">close</span>();</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
+<p>Ex2(Read from txt): <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="function">fstream <span class="title">file</span><span class="params">(<span class="string">"test.txt"</span>, ios::in)</span></span>;</span><br><span class="line">    string name, birthday;</span><br><span class="line">    <span class="keyword">if</span>(!file){</span><br><span class="line">        cerr&lt;&lt;<span class="string">"The file cannot be opened."</span>;</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">while</span>(file&gt;&gt;name&gt;&gt;birthday){</span><br><span class="line">        cout&lt;&lt;name&lt;&lt;<span class="string">" "</span>&lt;&lt;birthday&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    }</span><br><span class="line">    outClientFile.<span class="built_in">close</span>();</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
+<ul>
+<li><p>Reading from a specific line(seekg(), seekp()) Reference: <a class="link" href="http://c.biancheng.net/view/1541.html">link <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p></li>
+<li><p>name.seekg(0); =&gt; reposition the pointer to location
+0.</p></li>
+<li><p>To read a sequential file again, we need to add name.clear()
+before the seekg. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/8Ourtup.png"></p></li>
+<li><p>Telling you the current location(tellg(), tellp()) <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/QbXSudS.png"></p></li>
+</ul>
+]]></content>
+      <categories>
+        <category>個人筆記-程式設計</category>
+      </categories>
+      <tags>
+        <tag>個人筆記</tag>
+        <tag>C++</tag>
+        <tag>課堂筆記</tag>
+        <tag>彰化師範大學-張孟洲</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Struct and Class-程式設計筆記</title>
     <url>/2023/01/17/Chaper%209%20Struct,%20Class/</url>
     <content><![CDATA[<h1 id="chaper-9-struct-and-class">Chaper 9 Struct and Class</h1>
@@ -2354,6 +2389,66 @@ Operators</h2>
       </tags>
   </entry>
   <entry>
+    <title>Control Statement_2-程式設計筆記</title>
+    <url>/2023/01/17/Chapter%204,%20Control%20Statement_%20Part%202/</url>
+    <content><![CDATA[<h1 id="chapter-4-control-statement_2">Chapter 4, Control
+Statement_2</h1>
+<h2 id="do...while">do...while</h2>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">do</span>{</span><br><span class="line"></span><br><span class="line">}<span class="keyword">while</span>;(condition)</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>do...while always check the continuation after the code inside the
+{} has been excecuted. Therefore, it will execute at least one time.
+<img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/OQEIHFE.png"></li>
+</ul>
+<h2 id="switch-case">switch case</h2>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span>(expression){</span><br><span class="line">    <span class="keyword">case</span> constant1:</span><br><span class="line">        <span class="comment">//execute while expression is constant1;</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> constant2:</span><br><span class="line">        <span class="comment">//execute while expression is constant2;</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'F'</span>:</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'f'</span>:</span><br><span class="line">        <span class="comment">//execute while expression is F or f;</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>+<span class="number">2</span>:</span><br><span class="line">        <span class="comment">//not allowed</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>+<span class="number">4</span>:</span><br><span class="line">        <span class="comment">//not allowed</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        ...</span><br><span class="line">        <span class="comment">//code to be executed if expression doesn't</span></span><br><span class="line">        <span class="comment">// match any constant</span></span><br><span class="line">        </span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>Perform many different actions based on the value of expression.
+<img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ygwibqG.png"></li>
+</ul>
+<h2 id="setw">setw()</h2>
+<ul>
+<li>setw() =&gt; print spaces to make it tidy. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rY3G69w.png"></li>
+</ul>
+<h2 id="eof">EOF</h2>
+<ul>
+<li>EOF =&gt; End of file by entering ctrl+z. <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line">cin&gt;&gt;sth;</span><br><span class="line"><span class="keyword">while</span>(cin.<span class="built_in">get</span>()!=EOF){</span><br><span class="line">    ...</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h2 id="cin.get-vs-cin">cin.get() vs cin&gt;&gt;</h2>
+<ul>
+<li>cin.get() -&gt; only read one character.</li>
+<li>cin -&gt; depends on &gt;&gt;. <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> grade, aC{<span class="number">0</span>}, bC{<span class="number">0</span>}, cC{<span class="number">0</span>};</span><br><span class="line">    <span class="keyword">while</span>((grade=std::cin.<span class="built_in">get</span>())!=EOF){</span><br><span class="line">        <span class="keyword">switch</span>(grade){</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'a'</span>:</span><br><span class="line">            aC++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'b'</span>:</span><br><span class="line">            bC++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'c'</span>:</span><br><span class="line">            cC++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'\n'</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'\t'</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="string">' '</span>:</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    std::cout&lt;&lt;aC&lt;&lt;<span class="string">' '</span>&lt;&lt;bC&lt;&lt;<span class="string">' '</span>&lt;&lt;cC;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h2 id="c-modified-data-types">C++ Modified Data Types</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/tTgVBZW.png"></p>
+<h2 id="continue-vs-break">Continue vs Break</h2>
+<ul>
+<li>Continue -&gt; Only skip a specific process.</li>
+<li>Break -&gt; Skip the whole process.</li>
+</ul>
+<h2 id="boolalpha">Boolalpha</h2>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line">std::cout&lt;&lt;<span class="literal">true</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">std::cout&lt;&lt;std::boolalpha;</span><br><span class="line">std::cout&lt;&lt;<span class="literal">true</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line"><span class="comment">//The result will be 1 and true.</span></span><br></pre></td></tr></table></figure></div>
+<h2 id="operators-precedence">Operator's Precedence</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/MyvXHDH.png"></p>
+<ul>
+<li>The right side of the &amp;&amp; will only be considered if the left
+side is true.</li>
+<li>The &amp;&amp; operator has a higher precedence than ||.</li>
+<li>Any nonezero value is interpreted as ture. Which means if(a=5){...}
+will be true.</li>
+</ul>
+]]></content>
+      <categories>
+        <category>個人筆記-程式設計</category>
+      </categories>
+      <tags>
+        <tag>個人筆記</tag>
+        <tag>C++</tag>
+        <tag>課堂筆記</tag>
+        <tag>彰化師範大學-張孟洲</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Control Statement_1-程式設計筆記</title>
     <url>/2023/01/17/Chapter%203,%20Control%20Statement_%20Part%201/</url>
     <content><![CDATA[<h1 id="chapter-3-control-statement_1">Chapter 3, Control
@@ -2412,66 +2507,6 @@ the expression in which a resides.</li>
 which a resides, then increment a by 1.</li>
 </ul>
 <p>Ex: <div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> a=<span class="number">1</span>;</span><br><span class="line">    cout&lt;&lt;a&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    cout&lt;&lt;a++&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    <span class="comment">//do a=a+1 after cout</span></span><br><span class="line">    <span class="type">int</span> b=<span class="number">1</span>;</span><br><span class="line">    cout&lt;&lt;b&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    cout&lt;&lt;++b&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    <span class="comment">//do b=b+1 before cout</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
-]]></content>
-      <categories>
-        <category>個人筆記-程式設計</category>
-      </categories>
-      <tags>
-        <tag>個人筆記</tag>
-        <tag>C++</tag>
-        <tag>課堂筆記</tag>
-        <tag>彰化師範大學-張孟洲</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Control Statement_2-程式設計筆記</title>
-    <url>/2023/01/17/Chapter%204,%20Control%20Statement_%20Part%202/</url>
-    <content><![CDATA[<h1 id="chapter-4-control-statement_2">Chapter 4, Control
-Statement_2</h1>
-<h2 id="do...while">do...while</h2>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">do</span>{</span><br><span class="line"></span><br><span class="line">}<span class="keyword">while</span>;(condition)</span><br></pre></td></tr></table></figure></div>
-<ul>
-<li>do...while always check the continuation after the code inside the
-{} has been excecuted. Therefore, it will execute at least one time.
-<img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/OQEIHFE.png"></li>
-</ul>
-<h2 id="switch-case">switch case</h2>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span>(expression){</span><br><span class="line">    <span class="keyword">case</span> constant1:</span><br><span class="line">        <span class="comment">//execute while expression is constant1;</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> constant2:</span><br><span class="line">        <span class="comment">//execute while expression is constant2;</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'F'</span>:</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'f'</span>:</span><br><span class="line">        <span class="comment">//execute while expression is F or f;</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>+<span class="number">2</span>:</span><br><span class="line">        <span class="comment">//not allowed</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>+<span class="number">4</span>:</span><br><span class="line">        <span class="comment">//not allowed</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        ...</span><br><span class="line">        <span class="comment">//code to be executed if expression doesn't</span></span><br><span class="line">        <span class="comment">// match any constant</span></span><br><span class="line">        </span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-<ul>
-<li>Perform many different actions based on the value of expression.
-<img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ygwibqG.png"></li>
-</ul>
-<h2 id="setw">setw()</h2>
-<ul>
-<li>setw() =&gt; print spaces to make it tidy. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rY3G69w.png"></li>
-</ul>
-<h2 id="eof">EOF</h2>
-<ul>
-<li>EOF =&gt; End of file by entering ctrl+z. <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line">cin&gt;&gt;sth;</span><br><span class="line"><span class="keyword">while</span>(cin.<span class="built_in">get</span>()!=EOF){</span><br><span class="line">    ...</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
-</ul>
-<h2 id="cin.get-vs-cin">cin.get() vs cin&gt;&gt;</h2>
-<ul>
-<li>cin.get() -&gt; only read one character.</li>
-<li>cin -&gt; depends on &gt;&gt;. <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> grade, aC{<span class="number">0</span>}, bC{<span class="number">0</span>}, cC{<span class="number">0</span>};</span><br><span class="line">    <span class="keyword">while</span>((grade=std::cin.<span class="built_in">get</span>())!=EOF){</span><br><span class="line">        <span class="keyword">switch</span>(grade){</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'a'</span>:</span><br><span class="line">            aC++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'b'</span>:</span><br><span class="line">            bC++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'c'</span>:</span><br><span class="line">            cC++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'\n'</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'\t'</span>:</span><br><span class="line">        <span class="keyword">case</span> <span class="string">' '</span>:</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    std::cout&lt;&lt;aC&lt;&lt;<span class="string">' '</span>&lt;&lt;bC&lt;&lt;<span class="string">' '</span>&lt;&lt;cC;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
-</ul>
-<h2 id="c-modified-data-types">C++ Modified Data Types</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/tTgVBZW.png"></p>
-<h2 id="continue-vs-break">Continue vs Break</h2>
-<ul>
-<li>Continue -&gt; Only skip a specific process.</li>
-<li>Break -&gt; Skip the whole process.</li>
-</ul>
-<h2 id="boolalpha">Boolalpha</h2>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line">std::cout&lt;&lt;<span class="literal">true</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">std::cout&lt;&lt;std::boolalpha;</span><br><span class="line">std::cout&lt;&lt;<span class="literal">true</span>&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line"><span class="comment">//The result will be 1 and true.</span></span><br></pre></td></tr></table></figure></div>
-<h2 id="operators-precedence">Operator's Precedence</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/MyvXHDH.png"></p>
-<ul>
-<li>The right side of the &amp;&amp; will only be considered if the left
-side is true.</li>
-<li>The &amp;&amp; operator has a higher precedence than ||.</li>
-<li>Any nonezero value is interpreted as ture. Which means if(a=5){...}
-will be true.</li>
-</ul>
 ]]></content>
       <categories>
         <category>個人筆記-程式設計</category>
@@ -2725,41 +2760,6 @@ part of the string bewteen <span class="math inline"><mjx-container class="MathJ
       </tags>
   </entry>
   <entry>
-    <title>Sequential-Access Files-程式設計筆記</title>
-    <url>/2023/01/17/Chaper%208%20Sequential-Access%20Files/</url>
-    <content><![CDATA[<h1 id="chaper-8-sequential-access-files">Chaper 8 Sequential-Access
-Files</h1>
-<h2 id="fstream">fstream</h2>
-<ul>
-<li>ofstream and ifstream is include in fstream
-<ul>
-<li>ofstream: creats and writes files</li>
-<li>ifstream: reads from files</li>
-</ul></li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/BXqxxcS.png"></p>
-<p>Ex1(Input data to txt): <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    fstream file;</span><br><span class="line">    file.<span class="built_in">open</span>(<span class="string">"test.txt"</span>, ios::out);</span><br><span class="line">    string name, birthday;</span><br><span class="line">    <span class="keyword">if</span>(!file){</span><br><span class="line">        cerr&lt;&lt;<span class="string">"File could not be open."</span>&lt;&lt;endl; </span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);    <span class="comment">//exit with error</span></span><br><span class="line">    }</span><br><span class="line">    cout&lt;&lt;<span class="string">"Input the name and birthday(input end-of-file to end the program):"</span>;</span><br><span class="line">    <span class="keyword">while</span>(cin&gt;&gt;name&gt;&gt;birthday){</span><br><span class="line">        outClientFile&lt;&lt;name&lt;&lt;<span class="string">' '</span>&lt;&lt;birthday&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">        cout&lt;&lt;<span class="string">"Input the name and birthday(input end-of-file to end the program):"</span>;</span><br><span class="line">    }</span><br><span class="line">    outClientFile.<span class="built_in">close</span>();</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
-<p>Ex2(Read from txt): <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="function">fstream <span class="title">file</span><span class="params">(<span class="string">"test.txt"</span>, ios::in)</span></span>;</span><br><span class="line">    string name, birthday;</span><br><span class="line">    <span class="keyword">if</span>(!file){</span><br><span class="line">        cerr&lt;&lt;<span class="string">"The file cannot be opened."</span>;</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">while</span>(file&gt;&gt;name&gt;&gt;birthday){</span><br><span class="line">        cout&lt;&lt;name&lt;&lt;<span class="string">" "</span>&lt;&lt;birthday&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    }</span><br><span class="line">    outClientFile.<span class="built_in">close</span>();</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
-<ul>
-<li><p>Reading from a specific line(seekg(), seekp()) Reference: <a class="link" href="http://c.biancheng.net/view/1541.html">link <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p></li>
-<li><p>name.seekg(0); =&gt; reposition the pointer to location
-0.</p></li>
-<li><p>To read a sequential file again, we need to add name.clear()
-before the seekg. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/8Ourtup.png"></p></li>
-<li><p>Telling you the current location(tellg(), tellp()) <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/QbXSudS.png"></p></li>
-</ul>
-]]></content>
-      <categories>
-        <category>個人筆記-程式設計</category>
-      </categories>
-      <tags>
-        <tag>個人筆記</tag>
-        <tag>C++</tag>
-        <tag>課堂筆記</tag>
-        <tag>彰化師範大學-張孟洲</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Combinational Circuit Design/Simulation Using Gates-數位邏輯設計筆記</title>
     <url>/2023/03/18/Combinational%20Circuit%20Design%20and%20Simulation%20Using%20Gates/</url>
     <content><![CDATA[<p>一定愛配王俊堯教授開放課程食用:<a class="link" href="https://ocw.nthu.edu.tw/ocw/index.php?page=course&amp;cid=230">課程連結 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
@@ -2932,6 +2932,96 @@ circuit, we need to...</h3>
       </tags>
   </entry>
   <entry>
+    <title>Interactive Christmas Ornament-個人專題</title>
+    <url>/2023/01/20/Interactive%20Christmas%20Ornament/</url>
+    <content><![CDATA[<p>簡報網址: <a class="link" href="https://www.canva.com/design/DAFWgMy5ioo/ayE-qH0-uqzdko61G2RWNA/view?utm_content=DAFWgMy5ioo&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=sharebutton">canva <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h1 id="interactive-christmas-ornament">Interactive Christmas
+Ornament</h1>
+<h2 id="功能及運作">功能及運作</h2>
+<ul>
+<li>當感應器沒感應到人時，於愛心及向前凝視的眼睛做隨機顯示。</li>
+<li>左側感應器偵測到人時，切換到看向左側的眼睛。</li>
+<li>右側感應器偵測到人時，切換到看向右側的眼睛。</li>
+<li>偵測距離:75公分。</li>
+</ul>
+<h2 id="材料準備">材料準備</h2>
+<ul>
+<li>Arduino 開發板 *1</li>
+<li>小塊麵包板 *1</li>
+<li>杜邦線(公對母、母對母) *n</li>
+<li>超聲波感應器(HC-SR04) *2</li>
+<li>配有 max7219 的 LEE 8<em>8 矩陣(Generic) </em>2</li>
+</ul>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/BixUQLd.png"></p>
+<h2 id="電路連接">電路連接</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/4sNAzyY.png"></p>
+<ul>
+<li>max7219 腳位連接
+<ul>
+<li>DIN(Data in): 10</li>
+<li>CLK(Clock): 11</li>
+<li>CS(Load): 12</li>
+</ul></li>
+<li>Ultrasonic Sensor(Right)
+<ul>
+<li>Trig: 2</li>
+<li>Echo: 1</li>
+</ul></li>
+<li>Ultrasonic Sensor(Left)
+<ul>
+<li>Trig: 4</li>
+<li>Echo: 3</li>
+</ul></li>
+</ul>
+<h2 id="程式編寫">程式編寫</h2>
+<ul>
+<li><p>需要先安裝LedControl函式庫 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ItXYyEa.png"></p></li>
+<li><p>LED矩陣自定義顯示:</p>
+<ul>
+<li>你可以透過這網站來自定義LED顯示內容: <a class="link" href="https://xantorohara.github.io/led-matrix-editor/">LED Matrix
+Editor <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li>教學影片:</li>
+</ul>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/qwOpcOtBPpw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></p></li>
+<li><p>程式碼: <a class="link" href="https://drive.google.com/drive/folders/1ONCjLl8s2UZTs6K40MRol_e-MdEnxy3h?usp=sharing">程式碼下載 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p></li>
+</ul>
+<div class="highlight-container" data-rel="Arduino"><figure class="iseeu highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">"LedControl.h"</span></span></span><br><span class="line">LedControl LEDmatrix=<span class="built_in">LedControl</span>(<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>,<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//顯示內容</span></span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> middle[] = {</span><br><span class="line">  <span class="number">0x007e425a5a427e00</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> left[] = {</span><br><span class="line">  <span class="number">0x007e424e4e427e00</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> right[] = {</span><br><span class="line">  <span class="number">0x007e427272427e00</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> heart[] = {</span><br><span class="line">  <span class="number">0x00183c7effffff66</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="comment">//顯示圖形</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">displayImage</span><span class="params">(<span class="type">uint64_t</span> image)</span> </span>{</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">8</span>; i++) {</span><br><span class="line">    <span class="type">byte</span> row = (image &gt;&gt; i * <span class="number">8</span>) &amp; <span class="number">0xFF</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">8</span>; j++) {</span><br><span class="line">      LEDmatrix.<span class="built_in">setLed</span>(<span class="number">0</span>, i, j, <span class="built_in">bitRead</span>(row, j));</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">//獲取距離</span></span><br><span class="line"><span class="function"><span class="type">float</span> <span class="title">getDistance</span><span class="params">(<span class="type">int</span> trig,<span class="type">int</span> echo)</span></span>{</span><br><span class="line">    <span class="built_in">pinMode</span>(trig,<span class="literal">OUTPUT</span>);</span><br><span class="line">    <span class="built_in">digitalWrite</span>(trig,<span class="literal">LOW</span>);</span><br><span class="line">    <span class="built_in">delayMicroseconds</span>(<span class="number">2</span>);</span><br><span class="line">    <span class="built_in">digitalWrite</span>(trig,<span class="literal">HIGH</span>);</span><br><span class="line">    <span class="built_in">delayMicroseconds</span>(<span class="number">10</span>);</span><br><span class="line">    <span class="built_in">digitalWrite</span>(trig,<span class="literal">LOW</span>);</span><br><span class="line">    <span class="built_in">pinMode</span>(echo, <span class="literal">INPUT</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">pulseIn</span>(echo,<span class="literal">HIGH</span>,<span class="number">30000</span>)/<span class="number">58.0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span> </span>{</span><br><span class="line">  LEDmatrix.<span class="built_in">clearDisplay</span>(<span class="number">0</span>);    </span><br><span class="line">  LEDmatrix.<span class="built_in">shutdown</span>(<span class="number">0</span>, <span class="literal">false</span>);  </span><br><span class="line">  LEDmatrix.<span class="built_in">setIntensity</span>(<span class="number">0</span>, <span class="number">10</span>); </span><br><span class="line">  <span class="built_in">randomSeed</span>(<span class="number">69</span>);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">loop</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="comment">//如果右側sensor於75公分處感應到物體，顯示看右方的圖形</span></span><br><span class="line">  <span class="keyword">if</span>(<span class="built_in">getDistance</span>(<span class="number">2</span>,<span class="number">1</span>) &lt; <span class="number">75</span>){</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(right[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  <span class="comment">//如果左側sensor於75公分處感應到物體，顯示看左方的圖形</span></span><br><span class="line">  <span class="keyword">if</span>(<span class="built_in">getDistance</span>(<span class="number">4</span>,<span class="number">3</span>) &lt; <span class="number">75</span>){</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(left[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  <span class="comment">//如果兩側sensor於75公分處未感應到物體，於愛心眼與凝視前方做隨機顯示</span></span><br><span class="line">  <span class="keyword">if</span>((<span class="built_in">getDistance</span>(<span class="number">2</span>,<span class="number">1</span>) &gt; <span class="number">75</span>) &amp;&amp; (<span class="built_in">getDistance</span>(<span class="number">4</span>,<span class="number">3</span>) &gt; <span class="number">75</span>)){</span><br><span class="line">    <span class="type">int</span> random_num=<span class="built_in">random</span>(<span class="number">1</span>, <span class="number">3</span>);</span><br><span class="line">    <span class="keyword">if</span>(random_num==<span class="number">1</span>){</span><br><span class="line">      <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(middle[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">      }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">if</span>(random_num==<span class="number">2</span>){</span><br><span class="line">      <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(heart[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">      }</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<h2 id="外觀設計">外觀設計</h2>
+<ul>
+<li>主要以塑膠瓦楞紙板透過保麗龍膠拼接而成。(建議使用熱熔膠，保麗龍膠穩固度不佳!)</li>
+<li>一個似房子形狀的五邊形柱體為主體。
+<ul>
+<li>頂部:
+<ul>
+<li>頂部: 透過束帶的幫助，我將其設計成翻蓋式，以便後續維修或組裝。 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/yGoVvDc.jpg"></li>
+</ul></li>
+<li>正面及背面
+<ul>
+<li><p>正面: 挖出兩個正方形及長方形來放置LED矩陣及Sensor。 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/v66Spc1.jpg"></p></li>
+<li><p>背面: 挖出一方形小孔來放置電源供應線。 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/bwzeTJR.jpg"></p></li>
+</ul></li>
+</ul></li>
+<li>裝飾
+<ul>
+<li>以聖誕帽作點綴。</li>
+</ul></li>
+</ul>
+<h2 id="功能展示">功能展示</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lgVJnPT9_88" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+]]></content>
+      <categories>
+        <category>個人專題</category>
+      </categories>
+      <tags>
+        <tag>Arduino</tag>
+        <tag>個人專題</tag>
+        <tag>物聯網</tag>
+        <tag>LED矩陣</tag>
+        <tag>超聲波感應器</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Karnaugh Maps-數位邏輯設計筆記</title>
     <url>/2023/02/27/Karnaugh%20Maps/</url>
     <content><![CDATA[<p>一定愛配王俊堯教授開放課程食用:<a class="link" href="https://ocw.nthu.edu.tw/ocw/index.php?page=course&amp;cid=230">課程連結 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
@@ -3014,52 +3104,24 @@ the prime implicant is essential prime implicant.</li>
       </tags>
   </entry>
   <entry>
-    <title></title>
+    <title>Multiplexer, Decoders, and Programmable Logic Devices-數位邏輯設計筆記</title>
     <url>/2023/05/14/Multiplexer,%20Decoders,%20and%20Programmable%20Logic%20Devices/</url>
-    <content><![CDATA[<h6 id="tags-digital-logic-design">tags:
-<code>Digital Logic Design</code></h6>
-<p>一定愛配王俊堯教授開放課程食用:<a class="link" 
- href="https://ocw.nthu.edu.tw/ocw/index.php?page=course&amp;cid=230" >課程連結 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h1
-id="multiplexer-decoders-and-programmable-logic-devices">Multiplexer,
+    <content><![CDATA[<p>一定愛配王俊堯教授開放課程食用:<a class="link" href="https://ocw.nthu.edu.tw/ocw/index.php?page=course&amp;cid=230">課程連結 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h1 id="multiplexer-decoders-and-programmable-logic-devices">Multiplexer,
 Decoders, and Programmable Logic Devices</h1>
 <h2 id="mutiplexer多工器-mux">Mutiplexer(多工器, Mux)</h2>
 <ul>
-<li>Reference:<a class="link" 
- href="https://www.electronics-tutorials.ws/combination/comb_2.html" >link <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li>Reference:<a class="link" href="https://www.electronics-tutorials.ws/combination/comb_2.html">link <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
 </ul>
 <h3 id="introduction-to-mux">Introduction to Mux</h3>
 <ul>
 <li><p>Mux is also known as Data Selector.</p></li>
-<li><p>A <span class="math inline">\(2^n\)</span> to <span
-class="math inline">\(1\)</span> mux needs n control inputs.</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://hackmd.io/_uploads/B14KDxANh.png"
-                      
-                ></p></li>
-<li><p>The structure of <span class="math inline">\(4\)</span> to <span
-class="math inline">\(1\)</span> mux.</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://hackmd.io/_uploads/H11dOgRN2.png"
-                      
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://hackmd.io/_uploads/BJ74KlCVh.png"
-                      
-                ></p></li>
+<li><p>A <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.279ex" height="1.528ex" role="img" focusable="false" viewBox="0 -675.5 1007.3 675.5"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="mi" transform="translate(533,363) scale(0.707)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g></g></g></g></svg></mjx-container></span> to <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="1.131ex" height="1.507ex" role="img" focusable="false" viewBox="0 -666 500 666"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g></svg></mjx-container></span> mux needs n control inputs.</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/uOPty9Y.png"></p></li>
+<li><p>The structure of <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="1.131ex" height="1.532ex" role="img" focusable="false" viewBox="0 -677 500 677"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><path data-c="34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z"></path></g></g></g></svg></mjx-container></span> to <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="1.131ex" height="1.507ex" role="img" focusable="false" viewBox="0 -666 500 666"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g></svg></mjx-container></span> mux.</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/JEqvy92.png"></p></li>
 <li><p>The structure of a quad multiplexer</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://hackmd.io/_uploads/Hk99cg0N2.png"
-                      
-                ></p></li>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/pMnTbBT.png"></p></li>
 </ul>
 <h3 id="using-4-1-mux-to-realize-3-variable-function">Using 4-1 mux to
 realize 3-variable function</h3>
@@ -3068,14 +3130,8 @@ realize 3-variable function</h3>
 the same general form as the 4-1 mux.</li>
 <li>Ex
 <ul>
-<li><p><span class="math inline">\(F(A, B, C)=A&#39;B+AC=A&#39;B&#39;
-\cdot1+AB&#39;C+ABC\)</span></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://hackmd.io/_uploads/B18v3e0Vh.png"
-                      
-                ></p></li>
+<li><p><span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="50.72ex" height="2.283ex" role="img" focusable="false" viewBox="0 -759 22418 1009"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D439" d="M48 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H742Q749 676 749 669Q749 664 736 557T722 447Q720 440 702 440H690Q683 445 683 453Q683 454 686 477T689 530Q689 560 682 579T663 610T626 626T575 633T503 634H480Q398 633 393 631Q388 629 386 623Q385 622 352 492L320 363H375Q378 363 398 363T426 364T448 367T472 374T489 386Q502 398 511 419T524 457T529 475Q532 480 548 480H560Q567 475 567 470Q567 467 536 339T502 207Q500 200 482 200H470Q463 206 463 212Q463 215 468 234T473 274Q473 303 453 310T364 317H309L277 190Q245 66 245 60Q245 46 334 46H359Q365 40 365 39T363 19Q359 6 353 0H336Q295 2 185 2Q120 2 86 2T48 1Z"></path></g><g data-mml-node="mo" transform="translate(749,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(1138,0)"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path></g><g data-mml-node="mo" transform="translate(1888,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mi" transform="translate(2332.7,0)"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g><g data-mml-node="mo" transform="translate(3091.7,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mi" transform="translate(3536.3,0)"><path data-c="1D436" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q484 659 454 652T382 628T299 572T226 479Q194 422 175 346T156 222Q156 108 232 58Q280 24 350 24Q441 24 512 92T606 240Q610 253 612 255T628 257Q648 257 648 248Q648 243 647 239Q618 132 523 55T319 -22Q206 -22 128 53T50 252Z"></path></g><g data-mml-node="mo" transform="translate(4296.3,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g><g data-mml-node="mo" transform="translate(4963.1,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="msup" transform="translate(6018.9,0)"><g data-mml-node="mi"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path></g><g data-mml-node="mo" transform="translate(783,363) scale(0.707)"><path data-c="2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path></g></g><g data-mml-node="mi" transform="translate(7046.3,0)"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g><g data-mml-node="mo" transform="translate(8027.6,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(9027.8,0)"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path></g><g data-mml-node="mi" transform="translate(9777.8,0)"><path data-c="1D436" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q484 659 454 652T382 628T299 572T226 479Q194 422 175 346T156 222Q156 108 232 58Q280 24 350 24Q441 24 512 92T606 240Q610 253 612 255T628 257Q648 257 648 248Q648 243 647 239Q618 132 523 55T319 -22Q206 -22 128 53T50 252Z"></path></g><g data-mml-node="mo" transform="translate(10815.6,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="msup" transform="translate(11871.3,0)"><g data-mml-node="mi"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path></g><g data-mml-node="mo" transform="translate(783,363) scale(0.707)"><path data-c="2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path></g></g><g data-mml-node="msup" transform="translate(12898.8,0)"><g data-mml-node="mi"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g><g data-mml-node="mo" transform="translate(792,363) scale(0.707)"><path data-c="2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path></g></g><g data-mml-node="mo" transform="translate(14157.5,0)"><path data-c="22C5" d="M78 250Q78 274 95 292T138 310Q162 310 180 294T199 251Q199 226 182 208T139 190T96 207T78 250Z"></path></g><g data-mml-node="mn" transform="translate(14657.7,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g><g data-mml-node="mo" transform="translate(15379.9,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(16380.1,0)"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path></g><g data-mml-node="msup" transform="translate(17130.1,0)"><g data-mml-node="mi"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g><g data-mml-node="mo" transform="translate(792,363) scale(0.707)"><path data-c="2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path></g></g><g data-mml-node="mi" transform="translate(18166.6,0)"><path data-c="1D436" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q484 659 454 652T382 628T299 572T226 479Q194 422 175 346T156 222Q156 108 232 58Q280 24 350 24Q441 24 512 92T606 240Q610 253 612 255T628 257Q648 257 648 248Q648 243 647 239Q618 132 523 55T319 -22Q206 -22 128 53T50 252Z"></path></g><g data-mml-node="mo" transform="translate(19148.8,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(20149,0)"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path></g><g data-mml-node="mi" transform="translate(20899,0)"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g><g data-mml-node="mi" transform="translate(21658,0)"><path data-c="1D436" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q484 659 454 652T382 628T299 572T226 479Q194 422 175 346T156 222Q156 108 232 58Q280 24 350 24Q441 24 512 92T606 240Q610 253 612 255T628 257Q648 257 648 248Q648 243 647 239Q618 132 523 55T319 -22Q206 -22 128 53T50 252Z"></path></g></g></g></svg></mjx-container></span></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/cLeKvML.pngX"></p></li>
 </ul></li>
 </ul>
 <h3 id="using-a-8-1-mux-to-realize-4-variable-function">Using a 8-1 mux
@@ -3085,30 +3141,21 @@ to realize 4-variable function</h3>
 the same general form as the 8-1 mux.</li>
 <li>Ex
 <ul>
-<li><span class="math inline">\(F(A, B, C,
-D)=A&#39;B&#39;C&#39;+A&#39;BC+ABD&#39;+AC&#39;D&#39;+B&#39;CD=\)</span></li>
-<li><span
-class="math inline">\(A&#39;B&#39;C&#39;(D+D&#39;)+A&#39;BC(D+D&#39;)+AB(C+C&#39;)D&#39;+A(B+B&#39;)C&#39;D&#39;+(A+A&#39;)B&#39;CD\)</span></li>
+<li><span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="61.36ex" height="2.283ex" role="img" focusable="false" viewBox="0 -759 27121.2 1009"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D439" d="M48 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H742Q749 676 749 669Q749 664 736 557T722 447Q720 440 702 440H690Q683 445 683 453Q683 454 686 477T689 530Q689 560 682 579T663 610T626 626T575 633T503 634H480Q398 633 393 631Q388 629 386 623Q385 622 352 492L320 363H375Q378 363 398 363T426 364T448 367T472 374T489 386Q502 398 511 419T524 457T529 475Q532 480 548 480H560Q567 475 567 470Q567 467 536 339T502 207Q500 200 482 200H470Q463 206 463 212Q463 215 468 234T473 274Q473 303 453 310T364 317H309L277 190Q245 66 245 60Q245 46 334 46H359Q365 40 365 39T363 19Q359 6 353 0H336Q295 2 185 2Q120 2 86 2T48 1Z"></path></g><g data-mml-node="mo" transform="translate(749,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(1138,0)"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path></g><g data-mml-node="mo" transform="translate(1888,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mi" transform="translate(2332.7,0)"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g><g data-mml-node="mo" transform="translate(3091.7,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mi" transform="translate(3536.3,0)"><path data-c="1D436" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q484 659 454 652T382 628T299 572T226 479Q194 422 175 346T156 222Q156 108 232 58Q280 24 350 24Q441 24 512 92T606 240Q610 253 612 255T628 257Q648 257 648 248Q648 243 647 239Q618 132 523 55T319 -22Q206 -22 128 53T50 252Z"></path></g><g data-mml-node="mo" transform="translate(4296.3,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mi" transform="translate(4741,0)"><path data-c="1D437" d="M287 628Q287 635 230 637Q207 637 200 638T193 647Q193 655 197 667T204 682Q206 683 403 683Q570 682 590 682T630 676Q702 659 752 597T803 431Q803 275 696 151T444 3L430 1L236 0H125H72Q48 0 41 2T33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM703 469Q703 507 692 537T666 584T629 613T590 629T555 636Q553 636 541 636T512 636T479 637H436Q392 637 386 627Q384 623 313 339T242 52Q242 48 253 48T330 47Q335 47 349 47T373 46Q499 46 581 128Q617 164 640 212T683 339T703 469Z"></path></g><g data-mml-node="mo" transform="translate(5569,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g><g data-mml-node="mo" transform="translate(6235.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="msup" transform="translate(7291.6,0)"><g data-mml-node="mi"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path></g><g data-mml-node="mo" transform="translate(783,363) scale(0.707)"><path data-c="2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path></g></g><g data-mml-node="msup" transform="translate(8319,0)"><g data-mml-node="mi"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g><g data-mml-node="mo" transform="translate(792,363) scale(0.707)"><path data-c="2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path></g></g><g data-mml-node="msup" transform="translate(9355.5,0)"><g data-mml-node="mi"><path data-c="1D436" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q484 659 454 652T382 628T299 572T226 479Q194 422 175 346T156 222Q156 108 232 58Q280 24 350 24Q441 24 512 92T606 240Q610 253 612 255T628 257Q648 257 648 248Q648 243 647 239Q618 132 523 55T319 -22Q206 -22 128 53T50 252Z"></path></g><g data-mml-node="mo" transform="translate(845.3,363) scale(0.707)"><path data-c="2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path></g></g><g data-mml-node="mo" transform="translate(10667.4,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="msup" transform="translate(11667.6,0)"><g data-mml-node="mi"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path></g><g data-mml-node="mo" transform="translate(783,363) scale(0.707)"><path data-c="2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path></g></g><g data-mml-node="mi" transform="translate(12695.1,0)"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g><g data-mml-node="mi" transform="translate(13454.1,0)"><path data-c="1D436" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q484 659 454 652T382 628T299 572T226 479Q194 422 175 346T156 222Q156 108 232 58Q280 24 350 24Q441 24 512 92T606 240Q610 253 612 255T628 257Q648 257 648 248Q648 243 647 239Q618 132 523 55T319 -22Q206 -22 128 53T50 252Z"></path></g><g data-mml-node="mo" transform="translate(14436.3,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(15436.5,0)"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path></g><g data-mml-node="mi" transform="translate(16186.5,0)"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g><g data-mml-node="msup" transform="translate(16945.5,0)"><g data-mml-node="mi"><path data-c="1D437" d="M287 628Q287 635 230 637Q207 637 200 638T193 647Q193 655 197 667T204 682Q206 683 403 683Q570 682 590 682T630 676Q702 659 752 597T803 431Q803 275 696 151T444 3L430 1L236 0H125H72Q48 0 41 2T33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM703 469Q703 507 692 537T666 584T629 613T590 629T555 636Q553 636 541 636T512 636T479 637H436Q392 637 386 627Q384 623 313 339T242 52Q242 48 253 48T330 47Q335 47 349 47T373 46Q499 46 581 128Q617 164 640 212T683 339T703 469Z"></path></g><g data-mml-node="mo" transform="translate(861,363) scale(0.707)"><path data-c="2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path></g></g><g data-mml-node="mo" transform="translate(18273.2,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(19273.4,0)"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path></g><g data-mml-node="msup" transform="translate(20023.4,0)"><g data-mml-node="mi"><path data-c="1D436" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q484 659 454 652T382 628T299 572T226 479Q194 422 175 346T156 222Q156 108 232 58Q280 24 350 24Q441 24 512 92T606 240Q610 253 612 255T628 257Q648 257 648 248Q648 243 647 239Q618 132 523 55T319 -22Q206 -22 128 53T50 252Z"></path></g><g data-mml-node="mo" transform="translate(845.3,363) scale(0.707)"><path data-c="2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path></g></g><g data-mml-node="msup" transform="translate(21113.1,0)"><g data-mml-node="mi"><path data-c="1D437" d="M287 628Q287 635 230 637Q207 637 200 638T193 647Q193 655 197 667T204 682Q206 683 403 683Q570 682 590 682T630 676Q702 659 752 597T803 431Q803 275 696 151T444 3L430 1L236 0H125H72Q48 0 41 2T33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM703 469Q703 507 692 537T666 584T629 613T590 629T555 636Q553 636 541 636T512 636T479 637H436Q392 637 386 627Q384 623 313 339T242 52Q242 48 253 48T330 47Q335 47 349 47T373 46Q499 46 581 128Q617 164 640 212T683 339T703 469Z"></path></g><g data-mml-node="mo" transform="translate(861,363) scale(0.707)"><path data-c="2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path></g></g><g data-mml-node="mo" transform="translate(22440.8,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="msup" transform="translate(23441,0)"><g data-mml-node="mi"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g><g data-mml-node="mo" transform="translate(792,363) scale(0.707)"><path data-c="2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path></g></g><g data-mml-node="mi" transform="translate(24477.5,0)"><path data-c="1D436" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q484 659 454 652T382 628T299 572T226 479Q194 422 175 346T156 222Q156 108 232 58Q280 24 350 24Q441 24 512 92T606 240Q610 253 612 255T628 257Q648 257 648 248Q648 243 647 239Q618 132 523 55T319 -22Q206 -22 128 53T50 252Z"></path></g><g data-mml-node="mi" transform="translate(25237.5,0)"><path data-c="1D437" d="M287 628Q287 635 230 637Q207 637 200 638T193 647Q193 655 197 667T204 682Q206 683 403 683Q570 682 590 682T630 676Q702 659 752 597T803 431Q803 275 696 151T444 3L430 1L236 0H125H72Q48 0 41 2T33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM703 469Q703 507 692 537T666 584T629 613T590 629T555 636Q553 636 541 636T512 636T479 637H436Q392 637 386 627Q384 623 313 339T242 52Q242 48 253 48T330 47Q335 47 349 47T373 46Q499 46 581 128Q617 164 640 212T683 339T703 469Z"></path></g><g data-mml-node="mo" transform="translate(26343.2,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g></g></g></svg></mjx-container></span></li>
+<li><span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="86.121ex" height="2.283ex" role="img" focusable="false" viewBox="0 -759 38065.7 1009"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mi"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path></g><g data-mml-node="mo" transform="translate(783,363) scale(0.707)"><path data-c="2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path></g></g><g data-mml-node="msup" transform="translate(1027.5,0)"><g data-mml-node="mi"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g><g data-mml-node="mo" transform="translate(792,363) scale(0.707)"><path data-c="2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path></g></g><g data-mml-node="msup" transform="translate(2063.9,0)"><g data-mml-node="mi"><path data-c="1D436" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q484 659 454 652T382 628T299 572T226 479Q194 422 175 346T156 222Q156 108 232 58Q280 24 350 24Q441 24 512 92T606 240Q610 253 612 255T628 257Q648 257 648 248Q648 243 647 239Q618 132 523 55T319 -22Q206 -22 128 53T50 252Z"></path></g><g data-mml-node="mo" transform="translate(845.3,363) scale(0.707)"><path data-c="2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path></g></g><g data-mml-node="mo" transform="translate(3153.6,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(3542.6,0)"><path data-c="1D437" d="M287 628Q287 635 230 637Q207 637 200 638T193 647Q193 655 197 667T204 682Q206 683 403 683Q570 682 590 682T630 676Q702 659 752 597T803 431Q803 275 696 151T444 3L430 1L236 0H125H72Q48 0 41 2T33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM703 469Q703 507 692 537T666 584T629 613T590 629T555 636Q553 636 541 636T512 636T479 637H436Q392 637 386 627Q384 623 313 339T242 52Q242 48 253 48T330 47Q335 47 349 47T373 46Q499 46 581 128Q617 164 640 212T683 339T703 469Z"></path></g><g data-mml-node="mo" transform="translate(4592.8,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="msup" transform="translate(5593.1,0)"><g data-mml-node="mi"><path data-c="1D437" d="M287 628Q287 635 230 637Q207 637 200 638T193 647Q193 655 197 667T204 682Q206 683 403 683Q570 682 590 682T630 676Q702 659 752 597T803 431Q803 275 696 151T444 3L430 1L236 0H125H72Q48 0 41 2T33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM703 469Q703 507 692 537T666 584T629 613T590 629T555 636Q553 636 541 636T512 636T479 637H436Q392 637 386 627Q384 623 313 339T242 52Q242 48 253 48T330 47Q335 47 349 47T373 46Q499 46 581 128Q617 164 640 212T683 339T703 469Z"></path></g><g data-mml-node="mo" transform="translate(861,363) scale(0.707)"><path data-c="2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path></g></g><g data-mml-node="mo" transform="translate(6698.5,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g><g data-mml-node="mo" transform="translate(7309.7,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="msup" transform="translate(8310,0)"><g data-mml-node="mi"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path></g><g data-mml-node="mo" transform="translate(783,363) scale(0.707)"><path data-c="2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path></g></g><g data-mml-node="mi" transform="translate(9337.4,0)"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g><g data-mml-node="mi" transform="translate(10096.4,0)"><path data-c="1D436" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q484 659 454 652T382 628T299 572T226 479Q194 422 175 346T156 222Q156 108 232 58Q280 24 350 24Q441 24 512 92T606 240Q610 253 612 255T628 257Q648 257 648 248Q648 243 647 239Q618 132 523 55T319 -22Q206 -22 128 53T50 252Z"></path></g><g data-mml-node="mo" transform="translate(10856.4,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(11245.4,0)"><path data-c="1D437" d="M287 628Q287 635 230 637Q207 637 200 638T193 647Q193 655 197 667T204 682Q206 683 403 683Q570 682 590 682T630 676Q702 659 752 597T803 431Q803 275 696 151T444 3L430 1L236 0H125H72Q48 0 41 2T33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM703 469Q703 507 692 537T666 584T629 613T590 629T555 636Q553 636 541 636T512 636T479 637H436Q392 637 386 627Q384 623 313 339T242 52Q242 48 253 48T330 47Q335 47 349 47T373 46Q499 46 581 128Q617 164 640 212T683 339T703 469Z"></path></g><g data-mml-node="mo" transform="translate(12295.6,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="msup" transform="translate(13295.9,0)"><g data-mml-node="mi"><path data-c="1D437" d="M287 628Q287 635 230 637Q207 637 200 638T193 647Q193 655 197 667T204 682Q206 683 403 683Q570 682 590 682T630 676Q702 659 752 597T803 431Q803 275 696 151T444 3L430 1L236 0H125H72Q48 0 41 2T33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM703 469Q703 507 692 537T666 584T629 613T590 629T555 636Q553 636 541 636T512 636T479 637H436Q392 637 386 627Q384 623 313 339T242 52Q242 48 253 48T330 47Q335 47 349 47T373 46Q499 46 581 128Q617 164 640 212T683 339T703 469Z"></path></g><g data-mml-node="mo" transform="translate(861,363) scale(0.707)"><path data-c="2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path></g></g><g data-mml-node="mo" transform="translate(14401.3,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g><g data-mml-node="mo" transform="translate(15012.5,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(16012.8,0)"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path></g><g data-mml-node="mi" transform="translate(16762.8,0)"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g><g data-mml-node="mo" transform="translate(17521.8,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(17910.8,0)"><path data-c="1D436" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q484 659 454 652T382 628T299 572T226 479Q194 422 175 346T156 222Q156 108 232 58Q280 24 350 24Q441 24 512 92T606 240Q610 253 612 255T628 257Q648 257 648 248Q648 243 647 239Q618 132 523 55T319 -22Q206 -22 128 53T50 252Z"></path></g><g data-mml-node="mo" transform="translate(18893,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="msup" transform="translate(19893.2,0)"><g data-mml-node="mi"><path data-c="1D436" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q484 659 454 652T382 628T299 572T226 479Q194 422 175 346T156 222Q156 108 232 58Q280 24 350 24Q441 24 512 92T606 240Q610 253 612 255T628 257Q648 257 648 248Q648 243 647 239Q618 132 523 55T319 -22Q206 -22 128 53T50 252Z"></path></g><g data-mml-node="mo" transform="translate(845.3,363) scale(0.707)"><path data-c="2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path></g></g><g data-mml-node="mo" transform="translate(20982.9,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g><g data-mml-node="msup" transform="translate(21371.9,0)"><g data-mml-node="mi"><path data-c="1D437" d="M287 628Q287 635 230 637Q207 637 200 638T193 647Q193 655 197 667T204 682Q206 683 403 683Q570 682 590 682T630 676Q702 659 752 597T803 431Q803 275 696 151T444 3L430 1L236 0H125H72Q48 0 41 2T33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM703 469Q703 507 692 537T666 584T629 613T590 629T555 636Q553 636 541 636T512 636T479 637H436Q392 637 386 627Q384 623 313 339T242 52Q242 48 253 48T330 47Q335 47 349 47T373 46Q499 46 581 128Q617 164 640 212T683 339T703 469Z"></path></g><g data-mml-node="mo" transform="translate(861,363) scale(0.707)"><path data-c="2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path></g></g><g data-mml-node="mo" transform="translate(22699.6,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(23699.8,0)"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path></g><g data-mml-node="mo" transform="translate(24449.8,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(24838.8,0)"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g><g data-mml-node="mo" transform="translate(25820,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="msup" transform="translate(26820.2,0)"><g data-mml-node="mi"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g><g data-mml-node="mo" transform="translate(792,363) scale(0.707)"><path data-c="2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path></g></g><g data-mml-node="mo" transform="translate(27856.7,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g><g data-mml-node="msup" transform="translate(28245.7,0)"><g data-mml-node="mi"><path data-c="1D436" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q484 659 454 652T382 628T299 572T226 479Q194 422 175 346T156 222Q156 108 232 58Q280 24 350 24Q441 24 512 92T606 240Q610 253 612 255T628 257Q648 257 648 248Q648 243 647 239Q618 132 523 55T319 -22Q206 -22 128 53T50 252Z"></path></g><g data-mml-node="mo" transform="translate(845.3,363) scale(0.707)"><path data-c="2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path></g></g><g data-mml-node="msup" transform="translate(29335.4,0)"><g data-mml-node="mi"><path data-c="1D437" d="M287 628Q287 635 230 637Q207 637 200 638T193 647Q193 655 197 667T204 682Q206 683 403 683Q570 682 590 682T630 676Q702 659 752 597T803 431Q803 275 696 151T444 3L430 1L236 0H125H72Q48 0 41 2T33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM703 469Q703 507 692 537T666 584T629 613T590 629T555 636Q553 636 541 636T512 636T479 637H436Q392 637 386 627Q384 623 313 339T242 52Q242 48 253 48T330 47Q335 47 349 47T373 46Q499 46 581 128Q617 164 640 212T683 339T703 469Z"></path></g><g data-mml-node="mo" transform="translate(861,363) scale(0.707)"><path data-c="2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path></g></g><g data-mml-node="mo" transform="translate(30663.1,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mo" transform="translate(31663.3,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(32052.3,0)"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path></g><g data-mml-node="mo" transform="translate(33024.5,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="msup" transform="translate(34024.7,0)"><g data-mml-node="mi"><path data-c="1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path></g><g data-mml-node="mo" transform="translate(783,363) scale(0.707)"><path data-c="2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path></g></g><g data-mml-node="mo" transform="translate(35052.2,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g><g data-mml-node="msup" transform="translate(35441.2,0)"><g data-mml-node="mi"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g><g data-mml-node="mo" transform="translate(792,363) scale(0.707)"><path data-c="2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path></g></g><g data-mml-node="mi" transform="translate(36477.7,0)"><path data-c="1D436" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q484 659 454 652T382 628T299 572T226 479Q194 422 175 346T156 222Q156 108 232 58Q280 24 350 24Q441 24 512 92T606 240Q610 253 612 255T628 257Q648 257 648 248Q648 243 647 239Q618 132 523 55T319 -22Q206 -22 128 53T50 252Z"></path></g><g data-mml-node="mi" transform="translate(37237.7,0)"><path data-c="1D437" d="M287 628Q287 635 230 637Q207 637 200 638T193 647Q193 655 197 667T204 682Q206 683 403 683Q570 682 590 682T630 676Q702 659 752 597T803 431Q803 275 696 151T444 3L430 1L236 0H125H72Q48 0 41 2T33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM703 469Q703 507 692 537T666 584T629 613T590 629T555 636Q553 636 541 636T512 636T479 637H436Q392 637 386 627Q384 623 313 339T242 52Q242 48 253 48T330 47Q335 47 349 47T373 46Q499 46 581 128Q617 164 640 212T683 339T703 469Z"></path></g></g></g></svg></mjx-container></span></li>
 </ul>
-<img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://hackmd.io/_uploads/r1WPb-A43.png"
-                      
-                ></li>
+<img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/OgVaVqe.png"></li>
 </ul>
 <h2 id="demultiplexera-brief-introduction">Demultiplexer(A brief
 introduction)</h2>
 <ul>
-<li><a class="link" 
- href="https://www.electronics-tutorials.ws/combination/comb_3.html" >Introduction
+<li><a class="link" href="https://www.electronics-tutorials.ws/combination/comb_3.html">Introduction
 of Demux <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
 </ul>
 <h2 id="three-state-bufferstri-state-buffer">Three-State
 Buffers(Tri-state buffer)</h2>
 <ul>
-<li>Reference:<a class="link" 
- href="https://www.electronics-tutorials.ws/logic/logic_9.html" >link <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li>Reference:<a class="link" href="https://www.electronics-tutorials.ws/logic/logic_9.html">link <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
 </ul>
 <h3 id="introuduction-to-buffer">Introuduction to Buffer</h3>
 <ul>
@@ -3118,12 +3165,7 @@ signal, to increase the drving capibility of a gate output.</p></li>
 circuit.</p></li>
 <li><p>Buffer can actually be recognized as two NOT gates.</p></li>
 <li><p>The truth table of buffer</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://hackmd.io/_uploads/SJspvfANn.png"
-                      
-                ></p></li>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/WRYIsni.png"></p></li>
 </ul>
 <h3 id="introduction-to-tri-state-buffer">Introduction to Tri-State
 Buffer</h3>
@@ -3138,52 +3180,21 @@ switch.</p></li>
 </ul></li>
 <li><p>There are 4 genres of Tri-state buffer</p>
 <ul>
-<li><p>Active High <img 
-
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://hackmd.io/_uploads/ByHxRGRV2.png"
-                      
-                ></p></li>
+<li><p>Active High <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/Tr8E7Nf.png"></p></li>
 <li><p>Inverting Active High</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://hackmd.io/_uploads/SyU-Af0N3.png"
-                      
-                ></p></li>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/chxdarE.png"></p></li>
 <li><p>Active Low</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://hackmd.io/_uploads/HJtz0zAVh.png"
-                      
-                ></p></li>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/iZle0Bx.png"></p></li>
 <li><p>Inverting Active Low</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://hackmd.io/_uploads/rk9QCGA42.png"
-                      
-                ></p></li>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/sZkySax.png"></p></li>
 </ul></li>
 <li><p>Data selection can be done by combining mutiple tri-state
 buffers.</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://hackmd.io/_uploads/SkCm6fRNh.png"
-                      
-                ></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/xiDGSPj.png"></p>
 <ul>
 <li><p>The truth table of connecting two tri-state buffers(X =&gt;
 unknown).</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://hackmd.io/_uploads/SyEJ170V2.png"
-                      
-                ></p></li>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/lesj6Ye.png"></p></li>
 </ul></li>
 </ul>
 <h3 id="application-of-tri-state-buffer">Application of tri-state
@@ -3194,29 +3205,26 @@ buffer</h3>
 <li>Tri-state Buffer can be used to isolate devices and circuits from
 the data bus and one another.</li>
 </ul>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://hackmd.io/_uploads/HJlY1Q0E2.png"
-                      
-                ></p></li>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/J7A1jIu.png"></p></li>
 <li><p>Chip I/O</p>
 <ul>
 <li>Tri-state Buffer enables a pin on an IC to function
 bidirectionally.</li>
 </ul>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://hackmd.io/_uploads/HkLi-XAN3.png"
-                      
-                ></p></li>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/0QtTXuC.png"></p></li>
 </ul>
 <h2 id="decoder">Decoder</h2>
-<h1
-id="第9f講-multiplexers-decoders-and-programmable-logic-devices">2023/05/14
+<h1 id="第9f講-multiplexers-decoders-and-programmable-logic-devices">2023/05/14
 第9F講 Multiplexers, Decoders, and Programmable Logic Devices</h1>
 ]]></content>
+      <categories>
+        <category>個人筆記-數位邏輯設計</category>
+      </categories>
+      <tags>
+        <tag>個人筆記</tag>
+        <tag>數位邏輯設計</tag>
+        <tag>清華大學-王俊堯</tag>
+      </tags>
   </entry>
   <entry>
     <title>Number Systems and Conversion-數位邏輯設計筆記</title>
@@ -3397,96 +3405,6 @@ occurs。</li>
         <tag>個人筆記</tag>
         <tag>數位邏輯設計</tag>
         <tag>清華大學-王俊堯</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Interactive Christmas Ornament-個人專題</title>
-    <url>/2023/01/20/Interactive%20Christmas%20Ornament/</url>
-    <content><![CDATA[<p>簡報網址: <a class="link" href="https://www.canva.com/design/DAFWgMy5ioo/ayE-qH0-uqzdko61G2RWNA/view?utm_content=DAFWgMy5ioo&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=sharebutton">canva <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h1 id="interactive-christmas-ornament">Interactive Christmas
-Ornament</h1>
-<h2 id="功能及運作">功能及運作</h2>
-<ul>
-<li>當感應器沒感應到人時，於愛心及向前凝視的眼睛做隨機顯示。</li>
-<li>左側感應器偵測到人時，切換到看向左側的眼睛。</li>
-<li>右側感應器偵測到人時，切換到看向右側的眼睛。</li>
-<li>偵測距離:75公分。</li>
-</ul>
-<h2 id="材料準備">材料準備</h2>
-<ul>
-<li>Arduino 開發板 *1</li>
-<li>小塊麵包板 *1</li>
-<li>杜邦線(公對母、母對母) *n</li>
-<li>超聲波感應器(HC-SR04) *2</li>
-<li>配有 max7219 的 LEE 8<em>8 矩陣(Generic) </em>2</li>
-</ul>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/BixUQLd.png"></p>
-<h2 id="電路連接">電路連接</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/4sNAzyY.png"></p>
-<ul>
-<li>max7219 腳位連接
-<ul>
-<li>DIN(Data in): 10</li>
-<li>CLK(Clock): 11</li>
-<li>CS(Load): 12</li>
-</ul></li>
-<li>Ultrasonic Sensor(Right)
-<ul>
-<li>Trig: 2</li>
-<li>Echo: 1</li>
-</ul></li>
-<li>Ultrasonic Sensor(Left)
-<ul>
-<li>Trig: 4</li>
-<li>Echo: 3</li>
-</ul></li>
-</ul>
-<h2 id="程式編寫">程式編寫</h2>
-<ul>
-<li><p>需要先安裝LedControl函式庫 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ItXYyEa.png"></p></li>
-<li><p>LED矩陣自定義顯示:</p>
-<ul>
-<li>你可以透過這網站來自定義LED顯示內容: <a class="link" href="https://xantorohara.github.io/led-matrix-editor/">LED Matrix
-Editor <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li>教學影片:</li>
-</ul>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/qwOpcOtBPpw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></p></li>
-<li><p>程式碼: <a class="link" href="https://drive.google.com/drive/folders/1ONCjLl8s2UZTs6K40MRol_e-MdEnxy3h?usp=sharing">程式碼下載 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p></li>
-</ul>
-<div class="highlight-container" data-rel="Arduino"><figure class="iseeu highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">"LedControl.h"</span></span></span><br><span class="line">LedControl LEDmatrix=<span class="built_in">LedControl</span>(<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>,<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//顯示內容</span></span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> middle[] = {</span><br><span class="line">  <span class="number">0x007e425a5a427e00</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> left[] = {</span><br><span class="line">  <span class="number">0x007e424e4e427e00</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> right[] = {</span><br><span class="line">  <span class="number">0x007e427272427e00</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"><span class="type">const</span> <span class="type">uint64_t</span> heart[] = {</span><br><span class="line">  <span class="number">0x00183c7effffff66</span>,</span><br><span class="line">  <span class="number">0x000000ffff000000</span></span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="comment">//顯示圖形</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">displayImage</span><span class="params">(<span class="type">uint64_t</span> image)</span> </span>{</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">8</span>; i++) {</span><br><span class="line">    <span class="type">byte</span> row = (image &gt;&gt; i * <span class="number">8</span>) &amp; <span class="number">0xFF</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">8</span>; j++) {</span><br><span class="line">      LEDmatrix.<span class="built_in">setLed</span>(<span class="number">0</span>, i, j, <span class="built_in">bitRead</span>(row, j));</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">//獲取距離</span></span><br><span class="line"><span class="function"><span class="type">float</span> <span class="title">getDistance</span><span class="params">(<span class="type">int</span> trig,<span class="type">int</span> echo)</span></span>{</span><br><span class="line">    <span class="built_in">pinMode</span>(trig,<span class="literal">OUTPUT</span>);</span><br><span class="line">    <span class="built_in">digitalWrite</span>(trig,<span class="literal">LOW</span>);</span><br><span class="line">    <span class="built_in">delayMicroseconds</span>(<span class="number">2</span>);</span><br><span class="line">    <span class="built_in">digitalWrite</span>(trig,<span class="literal">HIGH</span>);</span><br><span class="line">    <span class="built_in">delayMicroseconds</span>(<span class="number">10</span>);</span><br><span class="line">    <span class="built_in">digitalWrite</span>(trig,<span class="literal">LOW</span>);</span><br><span class="line">    <span class="built_in">pinMode</span>(echo, <span class="literal">INPUT</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">pulseIn</span>(echo,<span class="literal">HIGH</span>,<span class="number">30000</span>)/<span class="number">58.0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span> </span>{</span><br><span class="line">  LEDmatrix.<span class="built_in">clearDisplay</span>(<span class="number">0</span>);    </span><br><span class="line">  LEDmatrix.<span class="built_in">shutdown</span>(<span class="number">0</span>, <span class="literal">false</span>);  </span><br><span class="line">  LEDmatrix.<span class="built_in">setIntensity</span>(<span class="number">0</span>, <span class="number">10</span>); </span><br><span class="line">  <span class="built_in">randomSeed</span>(<span class="number">69</span>);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">loop</span><span class="params">()</span> </span>{</span><br><span class="line">  <span class="comment">//如果右側sensor於75公分處感應到物體，顯示看右方的圖形</span></span><br><span class="line">  <span class="keyword">if</span>(<span class="built_in">getDistance</span>(<span class="number">2</span>,<span class="number">1</span>) &lt; <span class="number">75</span>){</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(right[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  <span class="comment">//如果左側sensor於75公分處感應到物體，顯示看左方的圖形</span></span><br><span class="line">  <span class="keyword">if</span>(<span class="built_in">getDistance</span>(<span class="number">4</span>,<span class="number">3</span>) &lt; <span class="number">75</span>){</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(left[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  <span class="comment">//如果兩側sensor於75公分處未感應到物體，於愛心眼與凝視前方做隨機顯示</span></span><br><span class="line">  <span class="keyword">if</span>((<span class="built_in">getDistance</span>(<span class="number">2</span>,<span class="number">1</span>) &gt; <span class="number">75</span>) &amp;&amp; (<span class="built_in">getDistance</span>(<span class="number">4</span>,<span class="number">3</span>) &gt; <span class="number">75</span>)){</span><br><span class="line">    <span class="type">int</span> random_num=<span class="built_in">random</span>(<span class="number">1</span>, <span class="number">3</span>);</span><br><span class="line">    <span class="keyword">if</span>(random_num==<span class="number">1</span>){</span><br><span class="line">      <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(middle[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">      }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">if</span>(random_num==<span class="number">2</span>){</span><br><span class="line">      <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++){</span><br><span class="line">      <span class="built_in">displayImage</span>(heart[i]);</span><br><span class="line">      <span class="built_in">delay</span>(<span class="number">750</span>); </span><br><span class="line">      }</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-<h2 id="外觀設計">外觀設計</h2>
-<ul>
-<li>主要以塑膠瓦楞紙板透過保麗龍膠拼接而成。(建議使用熱熔膠，保麗龍膠穩固度不佳!)</li>
-<li>一個似房子形狀的五邊形柱體為主體。
-<ul>
-<li>頂部:
-<ul>
-<li>頂部: 透過束帶的幫助，我將其設計成翻蓋式，以便後續維修或組裝。 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/yGoVvDc.jpg"></li>
-</ul></li>
-<li>正面及背面
-<ul>
-<li><p>正面: 挖出兩個正方形及長方形來放置LED矩陣及Sensor。 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/v66Spc1.jpg"></p></li>
-<li><p>背面: 挖出一方形小孔來放置電源供應線。 <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/bwzeTJR.jpg"></p></li>
-</ul></li>
-</ul></li>
-<li>裝飾
-<ul>
-<li>以聖誕帽作點綴。</li>
-</ul></li>
-</ul>
-<h2 id="功能展示">功能展示</h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lgVJnPT9_88" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
-</iframe>
-]]></content>
-      <categories>
-        <category>個人專題</category>
-      </categories>
-      <tags>
-        <tag>Arduino</tag>
-        <tag>個人專題</tag>
-        <tag>物聯網</tag>
-        <tag>LED矩陣</tag>
-        <tag>超聲波感應器</tag>
       </tags>
   </entry>
   <entry>

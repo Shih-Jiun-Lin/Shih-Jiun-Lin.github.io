@@ -6,7 +6,7 @@
     <meta name="keywords" content="Hexo Theme Redefine">
     <meta name="description" content="Hexo Theme Redefine">
     <meta name="author" content="Shih Jiun Lin">
-    <link rel="canonical" href="http://example.com/2023/01/17/Chapter%203,%20Control%20Statement_%20Part%201/" />
+    <link rel="canonical" href="http://example.com/2023/09/29/The%20Design%20of%20Half_Adder,%20Full_Adder%20and%20Ripple_Adder%20-%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF%E6%8A%80%E8%A1%93/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
     <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no" sizes="192x192">
     <link rel="apple-touch-icon" sizes="180x180" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no">
@@ -14,7 +14,7 @@
     
     <title>
         
-            Control Statement_1-程式設計筆記 |
+            The Design of Half_Adder, Full_Adder and Ripple_Adder -數位邏輯技術 |
         
         Shih-Jiun-Lin&#39;s Blog
     </title>
@@ -463,7 +463,7 @@ mjx-container[display="true"] + br {
     <div class="post-page-container">
         <div class="article-content-container">
             <div class="article-title">
-                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">Control Statement_1-程式設計筆記</h1></span>
+                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">The Design of Half_Adder, Full_Adder and Ripple_Adder -數位邏輯技術</h1></span>
             </div>
 
             
@@ -480,8 +480,8 @@ mjx-container[display="true"] + br {
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="pc">2023-01-17 23:00:50</span>
-        <span class="mobile">2023-01-17 23:00</span>
+        <span class="pc">2023-09-29 01:00:00</span>
+        <span class="mobile">2023-09-29 01:00</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -489,7 +489,7 @@ mjx-container[display="true"] + br {
             <ul>
                 
                     <li>
-                        <a href="/categories/%E5%80%8B%E4%BA%BA%E7%AD%86%E8%A8%98-%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/">個人筆記-程式設計</a>&nbsp;
+                        <a href="/categories/%E5%80%8B%E4%BA%BA%E7%AD%86%E8%A8%98-%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF%E6%8A%80%E8%A1%93/">個人筆記-數位邏輯技術</a>&nbsp;
                     </li>
                 
             </ul>
@@ -505,15 +505,11 @@ mjx-container[display="true"] + br {
                     </li>
                 
                     <li>
-                        | <a href="/tags/C/">C++</a>&nbsp;
+                        | <a href="/tags/VHDL/">VHDL</a>&nbsp;
                     </li>
                 
                     <li>
-                        | <a href="/tags/%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98/">課堂筆記</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        | <a href="/tags/%E5%BD%B0%E5%8C%96%E5%B8%AB%E7%AF%84%E5%A4%A7%E5%AD%B8-%E5%BC%B5%E5%AD%9F%E6%B4%B2/">彰化師範大學-張孟洲</a>&nbsp;
+                        | <a href="/tags/%E5%BD%B0%E5%8C%96%E5%B8%AB%E7%AF%84%E5%A4%A7%E5%AD%B8-%E9%BB%83%E6%B7%87%E6%B3%AE/">彰化師範大學-黃淇泮</a>&nbsp;
                     </li>
                 
             </ul>
@@ -523,7 +519,7 @@ mjx-container[display="true"] + br {
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>336 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>374 Words</span>
         </span>
     
     
@@ -544,62 +540,42 @@ mjx-container[display="true"] + br {
             
 
             <div class="article-content markdown-body">
-                <h1 id="chapter-3-control-statement_1">Chapter 3, Control
-Statement_1</h1>
-<h2 id="control-structure">Control Structure</h2>
+                <h1 id="the-design-of-half_adder-full_adder-and-ripple_adder--數位邏輯技術">The
+Design of Half_Adder, Full_Adder and Ripple_Adder -數位邏輯技術</h1>
+<h2 id="half_adder">Half_Adder</h2>
 <ul>
-<li>The sequence structure</li>
-<li>The selection strcture</li>
-<li>The repetition structure</li>
-</ul>
-<h2 id="selection-statements">Selection Statements</h2>
+<li><p>Truth Table of Half_Adder</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/ry-kM5Gep.png"></p></li>
+<li><p>Boolean Function of Half_Adder</p>
 <ul>
-<li>To choose among courses of action.</li>
-<li>if: A single-selection statement</li>
-<li>if...else: A double-selection statement</li>
-<li>switch: A multiselection statement</li>
+<li><span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.464ex;" xmlns="http://www.w3.org/2000/svg" width="9.645ex" height="2.059ex" role="img" focusable="false" viewBox="0 -705 4263 910"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D446" d="M308 24Q367 24 416 76T466 197Q466 260 414 284Q308 311 278 321T236 341Q176 383 176 462Q176 523 208 573T273 648Q302 673 343 688T407 704H418H425Q521 704 564 640Q565 640 577 653T603 682T623 704Q624 704 627 704T632 705Q645 705 645 698T617 577T585 459T569 456Q549 456 549 465Q549 471 550 475Q550 478 551 494T553 520Q553 554 544 579T526 616T501 641Q465 662 419 662Q362 662 313 616T263 510Q263 480 278 458T319 427Q323 425 389 408T456 390Q490 379 522 342T554 242Q554 216 546 186Q541 164 528 137T492 78T426 18T332 -20Q320 -22 298 -22Q199 -22 144 33L134 44L106 13Q83 -14 78 -18T65 -22Q52 -22 52 -14Q52 -11 110 221Q112 227 130 227H143Q149 221 149 216Q149 214 148 207T144 186T142 153Q144 114 160 87T203 47T255 29T308 24Z"></path></g><g data-mml-node="mo" transform="translate(922.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mi" transform="translate(1978.6,0)"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mo" transform="translate(2772.8,0)"><path data-c="2295" d="M56 250Q56 394 156 488T384 583Q530 583 626 485T722 250Q722 110 625 14T390 -83Q249 -83 153 14T56 250ZM364 542Q308 539 251 509T148 418T96 278V270H369V542H364ZM681 278Q675 338 650 386T592 462T522 509T458 535T412 542H409V270H681V278ZM96 222Q104 150 139 95T219 12T302 -29T366 -42H369V230H96V222ZM681 222V230H409V-42H412Q429 -42 456 -36T521 -10T590 37T649 113T681 222Z"></path></g><g data-mml-node="mi" transform="translate(3773,0)"><path data-c="1D466" d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g></g></g></svg></mjx-container></span></li>
+<li><span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.464ex;" xmlns="http://www.w3.org/2000/svg" width="8.774ex" height="2.059ex" role="img" focusable="false" viewBox="0 -705 3878 910"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D436" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q484 659 454 652T382 628T299 572T226 479Q194 422 175 346T156 222Q156 108 232 58Q280 24 350 24Q441 24 512 92T606 240Q610 253 612 255T628 257Q648 257 648 248Q648 243 647 239Q618 132 523 55T319 -22Q206 -22 128 53T50 252Z"></path></g><g data-mml-node="mo" transform="translate(1037.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mi" transform="translate(2093.6,0)"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mo" transform="translate(2887.8,0)"><path data-c="22C5" d="M78 250Q78 274 95 292T138 310Q162 310 180 294T199 251Q199 226 182 208T139 190T96 207T78 250Z"></path></g><g data-mml-node="mi" transform="translate(3388,0)"><path data-c="1D466" d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g></g></g></svg></mjx-container></span></li>
+</ul></li>
+<li><p>Block Diagram of Half_Adder</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/BJqPX9zeT.png"></p></li>
+<li><p>VHDL of Half_Adder</p>
+<p><div class="highlight-container" data-rel="Vhdl"><figure class="iseeu highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span> ieee;</span><br><span class="line"><span class="keyword">use</span> ieee.std_logic_1164.<span class="keyword">all</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">entity</span> half_adder <span class="keyword">is</span></span><br><span class="line">    <span class="keyword">port</span></span><br><span class="line">    (</span><br><span class="line">        x: <span class="keyword">in</span> <span class="built_in">std_logic</span>;</span><br><span class="line">        y: <span class="keyword">in</span> <span class="built_in">std_logic</span>;</span><br><span class="line">        s: <span class="keyword">out</span> <span class="built_in">std_logic</span>;</span><br><span class="line">        c: <span class="keyword">out</span> <span class="built_in">std_logic</span></span><br><span class="line">    );</span><br><span class="line"><span class="keyword">END</span> half_adder;</span><br><span class="line"></span><br><span class="line"><span class="keyword">ARCHITECTURE</span> behavioral <span class="keyword">of</span> half_adder <span class="keyword">is</span></span><br><span class="line"><span class="keyword">begin</span> </span><br><span class="line">c &lt;= x <span class="keyword">xor</span> y;</span><br><span class="line">s &lt;= x <span class="keyword">and</span> y;</span><br><span class="line"><span class="keyword">end</span> behavioral;</span><br></pre></td></tr></table></figure></div></p></li>
 </ul>
-<h3 id="conditional-operators">Conditional Operators(?:)</h3>
+<h2 id="full_adder">Full_Adder</h2>
 <ul>
-<li>Closely related to the if..else function.</li>
-</ul>
-<p>Ex: <div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> x{<span class="number">0</span>}, y{<span class="number">1</span>};</span><br><span class="line">    result=x&lt;y?<span class="string">"x&lt;y"</span>:<span class="string">"x&gt;y"</span>;</span><br><span class="line">    std::cout&lt;&lt;result;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> Accodring to the code, it will cout x<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.09ex;" xmlns="http://www.w3.org/2000/svg" width="1.76ex" height="1.312ex" role="img" focusable="false" viewBox="0 -540 778 580"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="3C" d="M694 -11T694 -19T688 -33T678 -40Q671 -40 524 29T234 166L90 235Q83 240 83 250Q83 261 91 266Q664 540 678 540Q681 540 687 534T694 519T687 505Q686 504 417 376L151 250L417 124Q686 -4 687 -5Q694 -11 694 -19Z"></path></g></g></g></svg></mjx-container></span>y in the command prompt.</p>
+<li><p>Truth Table of Full_Adder</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/Bkb275Gxa.png"></p></li>
+<li><p>Block Diagram of Full_Adder</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/SkhFVqfxT.png"></p></li>
+<li><p>VHDL of Full_Adder</p>
+<p><div class="highlight-container" data-rel="Vhdl"><figure class="iseeu highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span> ieee;</span><br><span class="line"><span class="keyword">use</span> ieee.std_logic_1164.<span class="keyword">all</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">entity</span> full_adder <span class="keyword">is</span></span><br><span class="line">    <span class="keyword">port</span></span><br><span class="line">    (</span><br><span class="line">        a: <span class="keyword">in</span> <span class="built_in">std_logic</span>;</span><br><span class="line">        b: <span class="keyword">in</span> <span class="built_in">std_logic</span>;</span><br><span class="line">        ci: <span class="keyword">in</span> <span class="built_in">std_logic</span>;</span><br><span class="line">        sum: <span class="keyword">out</span> <span class="built_in">std_logic</span>;</span><br><span class="line">        co: <span class="keyword">out</span> <span class="built_in">std_logic</span>		</span><br><span class="line">    );</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">entity</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">architecture</span> behavioral <span class="keyword">of</span> full_adder <span class="keyword">is</span></span><br><span class="line">    <span class="keyword">signal</span> sum1, sum2, carry1, carry2: <span class="built_in">std_logic</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">component</span> half_adder <span class="keyword">is</span></span><br><span class="line">        <span class="keyword">port</span> </span><br><span class="line">        (</span><br><span class="line">            x: <span class="keyword">in</span> <span class="built_in">std_logic</span>; </span><br><span class="line">            y: <span class="keyword">in</span> <span class="built_in">std_logic</span>;</span><br><span class="line">            s: <span class="keyword">out</span> <span class="built_in">std_logic</span>;</span><br><span class="line">            c: <span class="keyword">out</span> <span class="built_in">std_logic</span></span><br><span class="line">    );</span><br><span class="line">    <span class="keyword">end</span> <span class="keyword">component</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    half_adder1: half_adder</span><br><span class="line">        <span class="keyword">port</span> <span class="keyword">map</span> (</span><br><span class="line">                x =&gt; a,</span><br><span class="line">                y =&gt; b,</span><br><span class="line">                s =&gt; sum1,</span><br><span class="line">                c =&gt; carry1</span><br><span class="line">            );</span><br><span class="line"></span><br><span class="line">    half_adder2: half_adder</span><br><span class="line">        <span class="keyword">port</span> <span class="keyword">map</span>(</span><br><span class="line">            x =&gt; sum1,</span><br><span class="line">            y =&gt; ci,</span><br><span class="line">            s =&gt; sum2,</span><br><span class="line">            c =&gt; carry2</span><br><span class="line"></span><br><span class="line">        );</span><br><span class="line">    sum &lt;= sum2;</span><br><span class="line">    co &lt;= carry1 <span class="keyword">or</span> carry2 ;</span><br><span class="line"><span class="keyword">end</span> behavioral;</span><br><span class="line">	 </span><br></pre></td></tr></table></figure></div></p></li>
+<li><p>Cautions</p>
 <ul>
-<li>Another way to declare integers: int x{0} equals to int x=0</li>
+<li>在使用Component時，須將子元件的.vhd及.cmp檔放在相同資料夾。</li>
+</ul></li>
 </ul>
-<h2 id="repetition-statementslooping-statements">Repetition
-Statements(Looping Statements)</h2>
+<h2 id="bits_ripple_adder">4_bits_Ripple_Adder</h2>
 <ul>
-<li>while: do the action zero or more times.</li>
-<li>do...while: do the action at least once.</li>
-<li>for: do the action zero or more times.</li>
+<li><p>Block Diagram</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/Bkh1WNXga.png"></p></li>
+<li><p>VHDL of 4_bits_Ripple_Adder</p>
+<p><div class="highlight-container" data-rel="Vhdl"><figure class="iseeu highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span> ieee;</span><br><span class="line"><span class="keyword">use</span> ieee.std_logic_1164.<span class="keyword">all</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">entity</span> ripple_adder <span class="keyword">is</span></span><br><span class="line">    <span class="keyword">port</span></span><br><span class="line">        (</span><br><span class="line">            a0: <span class="keyword">in</span> <span class="built_in">std_logic</span>;</span><br><span class="line">            a1: <span class="keyword">in</span> <span class="built_in">std_logic</span>;</span><br><span class="line">            a2: <span class="keyword">in</span> <span class="built_in">std_logic</span>;</span><br><span class="line">            a3: <span class="keyword">in</span> <span class="built_in">std_logic</span>;</span><br><span class="line"></span><br><span class="line">            b0: <span class="keyword">in</span> <span class="built_in">std_logic</span>;</span><br><span class="line">            b1: <span class="keyword">in</span> <span class="built_in">std_logic</span>;</span><br><span class="line">            b2: <span class="keyword">in</span> <span class="built_in">std_logic</span>;</span><br><span class="line">            b3: <span class="keyword">in</span> <span class="built_in">std_logic</span>;</span><br><span class="line"></span><br><span class="line">            c_initial: <span class="keyword">in</span> <span class="built_in">std_logic</span>;</span><br><span class="line">            c_final: <span class="keyword">out</span> <span class="built_in">std_logic</span>;</span><br><span class="line"></span><br><span class="line">            s0: <span class="keyword">out</span> <span class="built_in">std_logic</span>;</span><br><span class="line">            s1: <span class="keyword">out</span> <span class="built_in">std_logic</span>;</span><br><span class="line">            s2: <span class="keyword">out</span> <span class="built_in">std_logic</span>;</span><br><span class="line">            s3: <span class="keyword">out</span> <span class="built_in">std_logic</span></span><br><span class="line">        );</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">entity</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">architecture</span> behavioral <span class="keyword">of</span> ripple_adder <span class="keyword">is</span></span><br><span class="line">    <span class="keyword">signal</span> carry0, carry1, carry2: <span class="built_in">std_logic</span>;</span><br><span class="line">    <span class="keyword">component</span> full_adder <span class="keyword">is</span></span><br><span class="line">        <span class="keyword">port</span> </span><br><span class="line">        (</span><br><span class="line">            a: <span class="keyword">in</span> <span class="built_in">std_logic</span>;</span><br><span class="line">            b: <span class="keyword">in</span> <span class="built_in">std_logic</span>;</span><br><span class="line">            ci: <span class="keyword">in</span> <span class="built_in">std_logic</span>;</span><br><span class="line">            sum: <span class="keyword">out</span> <span class="built_in">std_logic</span>;</span><br><span class="line">            co: <span class="keyword">out</span> <span class="built_in">std_logic</span>		</span><br><span class="line">        );</span><br><span class="line">    <span class="keyword">end</span> <span class="keyword">component</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    full_adder0: full_adder</span><br><span class="line">        <span class="keyword">port</span> <span class="keyword">map</span></span><br><span class="line">        (</span><br><span class="line">            a =&gt; a0,</span><br><span class="line">            b =&gt; b0,</span><br><span class="line">            ci =&gt; c_initial,</span><br><span class="line">            co =&gt; carry0,</span><br><span class="line">            sum =&gt; s0</span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">    full_adder1: full_adder</span><br><span class="line">        <span class="keyword">port</span> <span class="keyword">map</span></span><br><span class="line">        (</span><br><span class="line">            a =&gt; a1,</span><br><span class="line">            b =&gt; b1,</span><br><span class="line">            ci =&gt; carry0,</span><br><span class="line">            co =&gt; carry1,</span><br><span class="line">            sum =&gt; s1</span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">    full_adder2: full_adder</span><br><span class="line">        <span class="keyword">port</span> <span class="keyword">map</span></span><br><span class="line">        (</span><br><span class="line">            a =&gt; a2,</span><br><span class="line">            b =&gt; b2,</span><br><span class="line">            ci =&gt; carry1,</span><br><span class="line">            co =&gt; carry2,</span><br><span class="line">            sum =&gt; s2</span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">    full_adder3: full_adder</span><br><span class="line">        <span class="keyword">port</span> <span class="keyword">map</span></span><br><span class="line">        (</span><br><span class="line">            a =&gt; a3,</span><br><span class="line">            b =&gt; b3,</span><br><span class="line">            ci =&gt; carry2,</span><br><span class="line">            co =&gt; c_final,</span><br><span class="line">            sum =&gt; s3</span><br><span class="line">        );</span><br><span class="line"><span class="keyword">end</span> behavioral;</span><br></pre></td></tr></table></figure></div></p></li>
 </ul>
-<h3 id="counter-controlled-repetition">Counter Controlled
-Repetition</h3>
-<ul>
-<li>Counter variables are normally initialized to zero or one, depending
-on their use.</li>
-<li>Remember to initialize the counter varible, or it might contain some
-garbage variable.</li>
-</ul>
-<h2 id="how-to-change-the-tpye-of-a-object">How to change the tpye of a
-object</h2>
-<div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="built_in">static_cast</span>&lt;type&gt;(object);</span><br><span class="line">    (type)object;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-<h2 id="setprecision">setprecision()</h2>
-<div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#inlcude <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    std::cout&lt;&lt;std::<span class="built_in">setprecision</span>(<span class="number">2</span>)&lt;&lt;floatnum; <span class="comment">//start from the first num after fixed point</span></span><br><span class="line">    std::cout&lt;&lt;fixed::std::<span class="built_in">setprecision</span>(<span class="number">2</span>)&lt;&lt;floatnum; <span class="comment">//start from the first num before fixed point</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-<h2 id="common-keywords-in-c-and-c">Common Keywords in C++ and C</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/qm5wD9b.png"></p>
-<h2 id="assignment-operators">Assignment Operators</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/JHI93gS.png"></p>
-<h2 id="preincrement-and-postincrement">Preincrement and
-Postincrement</h2>
-<ul>
-<li>Preincrement =&gt; Increment a by 1, then use the new value of a in
-the expression in which a resides.</li>
-<li>Postincrement =&gt; Use the current value of a in the expression in
-which a resides, then increment a by 1.</li>
-</ul>
-<p>Ex: <div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> a=<span class="number">1</span>;</span><br><span class="line">    cout&lt;&lt;a&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    cout&lt;&lt;a++&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    <span class="comment">//do a=a+1 after cout</span></span><br><span class="line">    <span class="type">int</span> b=<span class="number">1</span>;</span><br><span class="line">    cout&lt;&lt;b&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    cout&lt;&lt;++b&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    <span class="comment">//do b=b+1 before cout</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
 
             </div>
 
@@ -607,11 +583,11 @@ which a resides, then increment a by 1.</li>
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li>Post title：Control Statement_1-程式設計筆記</li>
+        <li>Post title：The Design of Half_Adder, Full_Adder and Ripple_Adder -數位邏輯技術</li>
         <li>Post author：Shih Jiun Lin</li>
-        <li>Create time：2023-01-17 23:00:50</li>
+        <li>Create time：2023-09-29 01:00:00</li>
         <li>
-            Post link：https://shih-jiun-lin.github.io/2023/01/17/Chapter 3, Control Statement_ Part 1/
+            Post link：https://shih-jiun-lin.github.io/2023/09/29/The Design of Half_Adder, Full_Adder and Ripple_Adder -數位邏輯技術/
         </li>
         <li>
             Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
@@ -630,15 +606,11 @@ which a resides, then increment a by 1.</li>
                         </li>
                     
                         <li class="tag-item">
-                            <a href="/tags/C/">#C++</a>&nbsp;
+                            <a href="/tags/VHDL/">#VHDL</a>&nbsp;
                         </li>
                     
                         <li class="tag-item">
-                            <a href="/tags/%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98/">#課堂筆記</a>&nbsp;
-                        </li>
-                    
-                        <li class="tag-item">
-                            <a href="/tags/%E5%BD%B0%E5%8C%96%E5%B8%AB%E7%AF%84%E5%A4%A7%E5%AD%B8-%E5%BC%B5%E5%AD%9F%E6%B4%B2/">#彰化師範大學-張孟洲</a>&nbsp;
+                            <a href="/tags/%E5%BD%B0%E5%8C%96%E5%B8%AB%E7%AF%84%E5%A4%A7%E5%AD%B8-%E9%BB%83%E6%B7%87%E6%B3%AE/">#彰化師範大學-黃淇泮</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -647,29 +619,14 @@ which a resides, then increment a by 1.</li>
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                            rel="prev"
-                            href="/2023/01/17/Chapter%202,%20Introduction%20to%20C++%20Programing/"
-                            >
-                                <span class="left arrow-icon flex-center">
-                                    <i class="fa-solid fa-chevron-left"></i>
-                                </span>
-                                <span class="title flex-center">
-                                    <span class="post-nav-title-item">Introduction to C++ Programing-程式設計筆記</span>
-                                    <span class="post-nav-item">Prev posts</span>
-                                </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/01/17/Chaper%209%20Struct,%20Class/"
+                            href="/2023/09/22/2023-01-17-Operating%20System(I)/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">Struct and Class-程式設計筆記</span>
+                                    <span class="post-nav-title-item">Operating System-計算機概論筆記</span>
                                     <span class="post-nav-item">Next posts</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -689,12 +646,8 @@ which a resides, then increment a by 1.</li>
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>Contents</strong></div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#chapter-3-control-statement_1"><span class="nav-text">Chapter 3, Control
-Statement_1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#control-structure"><span class="nav-text">Control Structure</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#selection-statements"><span class="nav-text">Selection Statements</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#conditional-operators"><span class="nav-text">Conditional Operators(?:)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#repetition-statementslooping-statements"><span class="nav-text">Repetition
-Statements(Looping Statements)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#counter-controlled-repetition"><span class="nav-text">Counter Controlled
-Repetition</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#how-to-change-the-tpye-of-a-object"><span class="nav-text">How to change the tpye of a
-object</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#setprecision"><span class="nav-text">setprecision()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#common-keywords-in-c-and-c"><span class="nav-text">Common Keywords in C++ and C</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#assignment-operators"><span class="nav-text">Assignment Operators</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#preincrement-and-postincrement"><span class="nav-text">Preincrement and
-Postincrement</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#the-design-of-half_adder-full_adder-and-ripple_adder--%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF%E6%8A%80%E8%A1%93"><span class="nav-text">The
+Design of Half_Adder, Full_Adder and Ripple_Adder -數位邏輯技術</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#half_adder"><span class="nav-text">Half_Adder</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#full_adder"><span class="nav-text">Full_Adder</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bits_ripple_adder"><span class="nav-text">4_bits_Ripple_Adder</span></a></li></ol></li></ol>
     </div>
 </div>
             </div>

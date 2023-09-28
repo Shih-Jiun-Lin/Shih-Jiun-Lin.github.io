@@ -346,46 +346,143 @@
             <div class="main-content">
 
                 
-                    <div class="page-template-container">
-    
-    
-    
-    <div class="page-template-content markdown-body">
-        
-            <h1 id="關於我">關於我</h1>
-<p><img  style="float: right" width="200" height="200"  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://scontent.ftpe4-2.fna.fbcdn.net/v/t39.30808-6/371349586_2978996838902554_3064146477294290521_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=N-r-2KCGKlsAX9SDHcw&_nc_ht=scontent.ftpe4-2.fna&oh=00_AfBx6vtVb9h4c6XI53siWjjM67aGevvLkEzHcRaGABIj2g&oe=651ABEEB"
-                     
-                ></p>
-<ul>
-<li><p>目前就讀彰化師範大學電子工程學系，大一生。</p></li>
-<li><p>一個喜歡接觸各領域的maker。</p></li>
-<li><p>主要專精在微電腦控制器領域(Arduino，Esp32，Esp8266，Raspberry
-Pi...)。</p></li>
-<li><p>近期在努力鑽研VHDL的編寫，歡迎交流! <br></br></p></li>
-</ul>
-<h1 id="更多資訊">更多資訊</h1>
-<ul>
-<li>-畢業於國立宜蘭高級中學</li>
-<li>-畢業於私立慧燈高級中學國中部</li>
-<li>-畢業於宜蘭縣光復國小</li>
-</ul>
-<h1 id="與我聯繫">與我聯繫</h1>
-<p><a class="link"   href="mailto:Ryanlin0426@gmail.com" >Gmail <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p><a class="link" 
- target="_blank" rel="noopener" href="https://www.instagram.com/l__junjun__l/?hl=zh-tw" >Instagram <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p><a class="link"   target="_blank" rel="noopener" href="https://www.facebook.com/ryan.lin.98892/" >Facebook <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p><a class="link" 
- target="_blank" rel="noopener" href="https://discordapp.com/users/389053119549538309" >Discord <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+                    $friend-link-item-height = 82px
+$friend-link-item-height-tablet = 68px
+$friend-link-item-interval = 16px
+$friend-link-item-border-radius = 9px
 
-        
-    </div>
-    <div class="page-template-comments">
-        
-    </div>
-</div>
+@import '../../common/variables'
+
+.page-template-container
+  redefine-container(
+    false,
+    0,
+    0,
+    30px,
+    30px
+  )
+
+  +redefine-mobile()
+    padding 1.2rem 0.2rem
+    box-shadow none
+
+    &:hover
+      box-shadow none
+
+  .page-template-content
+    color var(--default-text-color)
+
+    h1, h2, h3, h4, h5, h6
+      &:first-child
+        margin 6px 0 36px 0
+        border-bottom none
+        line-height 1
+
+  #shuoshuo-content
+    img:hover
+      cursor zoom-in
+
+
+  #masonry-container
+    position relative
+    display none
+    opacity 0
+    transition opacity 0.1s ease-in
+
+    .masonry-item
+      position absolute
+      box-sizing border-box
+
+      &:hover
+        img
+          box-shadow var(--redefine-box-shadow)
+
+      img
+        width 100%
+        border-radius $redefine-border-radius-medium
+        box-shadow var(--redefine-box-shadow-flat)
+        cursor zoom-in
+
+  /* Loading */
+  .loading-placeholder
+    display block
+    justify-content center
+    align-items center
+    opacity 1
+    transition opacity 0.1s ease-out
+
+  .loading
+    -webkit-animation gradient-slide 1.1s ease infinite
+    animation gradient-slide 1.1s ease infinite
+    background 0 0 / 300% 300% linear-gradient(120deg, #9c9c9c20 40%, #83838325 50%, #9c9c9c20 60%)
+
+  .flex-grid
+    display block
+
+    @media screen and (min-width 540px)
+      display flex
+      justify-content space-between
+
+  .card
+    border 1px solid var(--border-color)
+    border-radius $redefine-border-radius-medium
+    box-sizing border-box
+    flex 1
+    margin 5px
+    min-height 80vh
+    padding 30px
+
+  @keyframes gradient-slide
+    0%
+      background-position 100% 50%
+
+    to
+      background-position 0% 50%
+
+  /* Images */
+  .image-container
+    position relative
+
+  .image-title
+    position absolute
+    top 5px
+    left 5px
+    color var(--default-text-color)
+    background-color var(--background-color-transparent-40)
+    padding 5px 10px
+    font-size 14px
+    opacity 0
+    backdrop-filter blur(10px)
+    -webkit-backdrop-filter blur(10px)
+    border-radius $redefine-border-radius-small
+    transition opacity 0.2s ease-out
+
+  .image-description
+    position absolute
+    bottom 11px
+    right 5px
+    color var(--default-text-color)
+    background-color var(--background-color-transparent-40)
+    padding 5px 10px
+    font-size 14px
+    opacity 0
+    max-width 80%
+    backdrop-filter blur(10px)
+    -webkit-backdrop-filter blur(10px)
+    border-radius $redefine-border-radius-small
+    transition opacity 0.2s ease-out
+
+  .image-container:hover .image-title, .image-container:hover .image-description
+    opacity 1
+
+  .image-container img
+    width 100%
+    height auto
+    transition box-shadow 0.3s ease-in-out
+    overflow hidden
+
+  .image-container:hover img
+    box-shadow var(--redefine-box-shadow-hover)
 
 
                 
@@ -425,6 +522,10 @@ Pi...)。</p></li>
                 
             </div>
         
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.4.4</a></span>
+        </div>
         
         
             <div>

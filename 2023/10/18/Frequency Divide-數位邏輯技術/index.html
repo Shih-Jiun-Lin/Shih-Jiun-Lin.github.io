@@ -26,7 +26,7 @@
 <meta property="og:description" content="Frequency Divider-數位邏輯技術 Introduction to Frequency Divider    When a high frequency signal source is provided, you can lowering the frequency of the signal by applying frequency divider.  Im">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-10-18T14:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-17T16:34:50.989Z">
+<meta property="article:modified_time" content="2023-11-12T15:02:55.027Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="個人筆記">
 <meta property="article:tag" content="VHDL">
@@ -495,8 +495,8 @@ mjx-container[display="true"] + br {
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-10-18 00:34:50</span>
-            <span class="mobile">2023-10-18 00:34:50</span>
+            <span class="desktop">2023-11-12 23:02:55</span>
+            <span class="mobile">2023-11-12 23:02:55</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -542,7 +542,7 @@ mjx-container[display="true"] + br {
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>170 Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>172 Words</span>
         </span>
     
     
@@ -592,6 +592,8 @@ frequency will be lowered to 1 hz.</li>
 <h3 id="mhz-to-1hz-frequecny-divider-vhdl-implemnetation">50Mhz to 1hz
 Frequecny Divider VHDL Implemnetation</h3>
 <div class="highlight-container" data-rel="Vhdl"><figure class="iseeu highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span> ieee;</span><br><span class="line"><span class="keyword">use</span> ieee.std_logic_1164.<span class="keyword">all</span>;</span><br><span class="line"><span class="keyword">use</span> ieee.std_logic_unsigned.<span class="keyword">all</span>;</span><br><span class="line"><span class="keyword">use</span> ieee.numeric_std.<span class="keyword">all</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">entity</span> to_1hz_divider <span class="keyword">is</span></span><br><span class="line">	<span class="keyword">port</span>(</span><br><span class="line">		</span><br><span class="line">		CLK_IN: <span class="keyword">in</span> <span class="built_in">std_logic</span>;</span><br><span class="line">		CLK_OUT: <span class="keyword">out</span> <span class="built_in">std_logic</span></span><br><span class="line">	</span><br><span class="line">	);</span><br><span class="line"><span class="keyword">end</span> to_1hz_divider;</span><br><span class="line"></span><br><span class="line"><span class="keyword">architecture</span> behavioral <span class="keyword">of</span> to_1hz_divider <span class="keyword">is</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">signal</span> count: <span class="built_in">integer</span> := <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">begin</span> </span><br><span class="line">	</span><br><span class="line">	<span class="keyword">process</span>(CLK_IN)</span><br><span class="line">	<span class="keyword">begin</span> </span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span> rising_edge(CLK_IN) <span class="keyword">then</span></span><br><span class="line">		</span><br><span class="line">			count &lt;= count + <span class="number">1</span>;</span><br><span class="line">		</span><br><span class="line">			<span class="keyword">if</span> count = <span class="number">50000000</span> <span class="keyword">then</span></span><br><span class="line">			</span><br><span class="line">				CLK_OUT &lt;= <span class="string">'1'</span>;</span><br><span class="line">				</span><br><span class="line">				count &lt;= <span class="number">0</span>;</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">else</span> </span><br><span class="line">				</span><br><span class="line">				CLK_OUT &lt;= <span class="string">'0'</span>;</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">end</span> <span class="keyword">if</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">end</span> <span class="keyword">if</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">end</span> <span class="keyword">process</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span> behavioral;</span><br></pre></td></tr></table></figure></div>
+<p><a class="link" target="_blank" rel="noopener" href="https://github.com/Shih-Jiun-Lin/Frequency_Divider">CODE
+LINK <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 
         </div>
 
@@ -606,7 +608,7 @@ Frequecny Divider VHDL Implemnetation</h3>
         
             <li>
                 <strong>Updated at
-                    :</strong> 2023-10-18 00:34:50
+                    :</strong> 2023-11-12 23:02:55
             </li>
         
         <li>
@@ -649,6 +651,21 @@ Frequecny Divider VHDL Implemnetation</h3>
 
         
             <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2023/11/12/Comparator-%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF%E6%8A%80%E8%A1%93/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">Comparator-數位邏輯技術</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
                 
                 
                     <div class="article-next">

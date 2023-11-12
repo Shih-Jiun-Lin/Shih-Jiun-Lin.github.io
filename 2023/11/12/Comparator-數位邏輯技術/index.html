@@ -13,18 +13,27 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/archives/2023/01/"/>
+    <link rel="canonical" href="http://example.com/2023/11/12/comparator-數位邏輯技術/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta property="og:type" content="website">
-<meta property="og:title">
-<meta property="og:url" content="http://example.com/archives/2023/01/index.html">
+        <meta name="description" content="Comparator-數位邏輯技術 Introduction to Comparator Main Idea of the Implementation of Comparator  By doing subtraction and making use of common status flag, which is known as OVERFLOW, ZEOR, NEGATIVE">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Comparator-數位邏輯技術">
+<meta property="og:url" content="http://example.com/2023/11/12/Comparator-%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF%E6%8A%80%E8%A1%93/index.html">
 <meta property="og:site_name">
+<meta property="og:description" content="Comparator-數位邏輯技術 Introduction to Comparator Main Idea of the Implementation of Comparator  By doing subtraction and making use of common status flag, which is known as OVERFLOW, ZEOR, NEGATIVE">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://hackmd.io/_uploads/Hk5AHD0Qp.png">
+<meta property="article:published_time" content="2023-11-12T14:00:00.000Z">
+<meta property="article:modified_time" content="2023-11-12T15:03:35.285Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="個人筆記">
+<meta property="article:tag" content="VHDL">
+<meta property="article:tag" content="彰化師範大學-黃淇泮">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hackmd.io/_uploads/Hk5AHD0Qp.png">
     
     
     <!--- Icon Part-->
@@ -36,7 +45,7 @@
     
     <title>
         
-            Archive: 2023/1 -
+            Comparator-數位邏輯技術 -
         
         Shih-Jiun-Lin&#39;s Blog
     </title>
@@ -100,7 +109,119 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 
 <body>
@@ -342,227 +463,232 @@
             <div class="main-content">
 
                 
-                    <div class="archive-container ">
-    
-<div class="archive-list-container">
-    
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2023</span>
-                <span class="archive-year-post-count">[34]</span>
+                    <div class="post-page-container">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            
+                <h1 class="article-title-regular">Comparator-數位邏輯技術</h1>
+            
             </div>
-            <ul class="article-list">
-              
-              <li class="article-item" date-is='11-12'>
-                <a href="/2023/11/12/Comparator-%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF%E6%8A%80%E8%A1%93/">
-                  <span class="article-title">Comparator-數位邏輯技術</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='10-18'>
-                <a href="/2023/10/18/Frequency%20Divide-%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF%E6%8A%80%E8%A1%93/">
-                  <span class="article-title">The Design of Frequency Divider-數位邏輯技術</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='10-18'>
-                <a href="/2023/10/18/The%20Design%20of%20Multiplier-%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF%E6%8A%80%E8%A1%93/">
-                  <span class="article-title">The Design of Multiplier-數位邏輯技術</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='10-04'>
-                <a href="/2023/10/04/The%20Design%20of%20Carry-lookahead%20Adder%20and%20Subtractor-%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF%E6%8A%80%E8%A1%93/">
-                  <span class="article-title">The Design of Carry-lookahead Adder and Subtractor-數位邏輯技術</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='10-04'>
-                <a href="/2023/10/04/The%20Design%20of%20Hex%20to%207-seg%20Decoder-%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF%E6%8A%80%E8%A1%93/">
-                  <span class="article-title">The Design of Hex to 7-seg Decoder-數位邏輯技術</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='09-29'>
-                <a href="/2023/09/29/The%20Design%20of%20Half_Adder,%20Full_Adder%20and%20Ripple_Adder%20-%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF%E6%8A%80%E8%A1%93/">
-                  <span class="article-title">The Design of Half_Adder, Full_Adder and Ripple_Adder -數位邏輯技術</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='09-22'>
-                <a href="/2023/09/22/2023-01-17-Data%20Storage(I)/">
-                  <span class="article-title">Data Storage(I)-計算機概論筆記</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='09-22'>
-                <a href="/2023/09/22/2023-01-17-Data%20Storage(II)/">
-                  <span class="article-title">Data Storage(II)-計算機概論筆記</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='09-22'>
-                <a href="/2023/09/22/2023-01-17-Operating%20System(I)/">
-                  <span class="article-title">Operating System-計算機概論筆記</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='09-22'>
-                <a href="/2023/09/22/2023-01-17-Networking%20and%20the%20internet(I)/">
-                  <span class="article-title">Networking and the Internet-計算機概論筆記</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='06-12'>
-                <a href="/2023/06/12/%E9%9B%BB%E8%B7%AF%E5%AD%B8%E6%9C%9F%E6%9C%AB%E5%B0%88%E9%A1%8C-%20Low-cost%20Facial%20Recognition%20Doorlock%20System/">
-                  <span class="article-title">電路學期末專題- Low-cost Facial Recognition Doorlock System</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='05-14'>
-                <a href="/2023/05/14/Multiplexer,%20Decoders,%20and%20Programmable%20Logic%20Devices/">
-                  <span class="article-title">Multiplexer, Decoders, and Programmable Logic Devices-數位邏輯設計筆記</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='03-18'>
-                <a href="/2023/03/18/Combinational%20Circuit%20Design%20and%20Simulation%20Using%20Gates/">
-                  <span class="article-title">Combinational Circuit Design/Simulation Using Gates-數位邏輯設計筆記</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='03-05'>
-                <a href="/2023/03/05/Quine-McClusky%20Method/">
-                  <span class="article-title">Quine-McClusky Method-數位邏輯設計筆記</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='02-27'>
-                <a href="/2023/02/27/Karnaugh%20Maps/">
-                  <span class="article-title">Karnaugh Maps-數位邏輯設計筆記</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='02-13'>
-                <a href="/2023/02/13/Application%20of%20Boolean%20Algebra%20_%20Minterm%20and%20Maxterm%20Expansion/">
-                  <span class="article-title">Application of Boolean Algebra / Minterm and Maxterm Expansion-數位邏輯設計筆記</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='02-04'>
-                <a href="/2023/02/04/Advanced%20Techniques%20for%20Circuit%20Analysis/">
-                  <span class="article-title">Advanced Techniques for Circuit Analysis-電路學筆記</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='01-27'>
-                <a href="/2023/01/27/Boolean%20Algebra/">
-                  <span class="article-title">Boolean Algebra-數位邏輯設計筆記</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='01-21'>
-                <a href="/2023/01/21/Basic%20Concepts%20of%20Circuit%20Analysis/">
-                  <span class="article-title">Basic Concepts of Circuit Analysis-電路學筆記</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='01-20'>
-                <a href="/2023/01/20/Number%20Systems%20and%20Conversion/">
-                  <span class="article-title">Number Systems and Conversion-數位邏輯設計筆記</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='01-20'>
-                <a href="/2023/01/20/Interactive%20Christmas%20Ornament/">
-                  <span class="article-title">Interactive Christmas Ornament-個人專題</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='01-20'>
-                <a href="/2023/01/20/WiFi%20Sync%20Clock/">
-                  <span class="article-title">WiFi Sync Clock-個人專題</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='01-18'>
-                <a href="/2023/01/18/2023-01-17-Data%20Manipulation(I)/">
-                  <span class="article-title">Data Manipulation-計算機概論筆記</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='01-17'>
-                <a href="/2023/01/17/Chaper%207%20Pointers/">
-                  <span class="article-title">Pointers-程式設計筆記</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='01-17'>
-                <a href="/2023/01/17/Chaper%208%20Sequential-Access%20Files/">
-                  <span class="article-title">Sequential-Access Files-程式設計筆記</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='01-17'>
-                <a href="/2023/01/17/Chaper%209%20Struct,%20Class/">
-                  <span class="article-title">Struct and Class-程式設計筆記</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='01-17'>
-                <a href="/2023/01/17/Chapter%202,%20Introduction%20to%20C++%20Programing/">
-                  <span class="article-title">Introduction to C++ Programing-程式設計筆記</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='01-17'>
-                <a href="/2023/01/17/Chapter%203,%20Control%20Statement_%20Part%201/">
-                  <span class="article-title">Control Statement_1-程式設計筆記</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='01-17'>
-                <a href="/2023/01/17/Chapter%204,%20Control%20Statement_%20Part%202/">
-                  <span class="article-title">Control Statement_2-程式設計筆記</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='01-17'>
-                <a href="/2023/01/17/Chapter%206%20Arrays,%20Strings%20and%20Vectors/">
-                  <span class="article-title">Arrays, Strings and Vectors-程式設計筆記</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='01-17'>
-                <a href="/2023/01/17/Chapter%205%20Functions%20and%20Introduction%20to%20Recursion/">
-                  <span class="article-title">Functions and Introduction to Recursion-程式設計筆記</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='01-17'>
-                <a href="/2023/01/17/STL(Standard%20Template%20Library)/">
-                  <span class="article-title">STL(Standard Template Library)-程式設計筆記</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='01-17'>
-                <a href="/2023/01/17/Supplementary%20Materials/">
-                  <span class="article-title">Supplementary Materials-程式設計筆記</span>
-                </a>
-              </li>
-              
-              <li class="article-item" date-is='01-17'>
-                <a href="/2023/01/17/Welcome!/">
-                  <span class="article-title">Welcome!</span>
-                </a>
-              </li>
-              
+            
+                    
+        
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/main.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Shih Jiun Lin</span>
+                        
+                            <span class="author-label">Lv4</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-11-12 22:00</span>
+        <span class="mobile">2023-11-12 22:00</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2023-11-12 23:03:35</span>
+            <span class="mobile">2023-11-12 23:03:35</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E5%80%8B%E4%BA%BA%E7%AD%86%E8%A8%98-%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF%E6%8A%80%E8%A1%93/">個人筆記-數位邏輯技術</a>&nbsp;
+                        </li>
+                    
+                    
+                
             </ul>
-        </section>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E5%80%8B%E4%BA%BA%E7%AD%86%E8%A8%98/">個人筆記</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/VHDL/">VHDL</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E5%BD%B0%E5%8C%96%E5%B8%AB%E7%AF%84%E5%A4%A7%E5%AD%B8-%E9%BB%83%E6%B7%87%E6%B3%AE/">彰化師範大學-黃淇泮</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>326 Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>2 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
 
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body">
+            <h1 id="comparator-數位邏輯技術">Comparator-數位邏輯技術</h1>
+<h2 id="introduction-to-comparator">Introduction to Comparator</h2>
+<h3 id="main-idea-of-the-implementation-of-comparator">Main Idea of the
+Implementation of Comparator</h3>
+<ul>
+<li><p>By doing subtraction and making use of common status flag, which
+is known as OVERFLOW, ZEOR, NEGATIVE and CARRY. We can simply achieve
+the goal of comparison by doing so.</p></li>
+<li><p>Reference (Intel Instruction Set)</p>
+<figure>
+<img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/Hk5AHD0Qp.png" alt="image">
+<figcaption aria-hidden="true">image</figcaption>
+</figure></li>
+</ul>
+<h3 id="comparator-vhdl-implemnetation">Comparator VHDL
+Implemnetation</h3>
+<ul>
+<li>In order to successfully implement comparator, PLZ CHECK OUT MY POST
+ABOUT ADDER and SUBTRACTOR FIRST! <a class="link" target="_blank" rel="noopener" href="https://shih-jiun-lin.github.io/2023/10/04/The%20Design%20of%20Carry-lookahead%20Adder%20and%20Subtractor-%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF%E6%8A%80%E8%A1%93/">link <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ul>
+<div class="highlight-container" data-rel="Vhdl"><figure class="iseeu highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span> ieee;</span><br><span class="line"><span class="keyword">use</span> ieee.std_logic_1164.<span class="keyword">all</span>;</span><br><span class="line"><span class="keyword">use</span> ieee.numeric_std.<span class="keyword">all</span>;</span><br><span class="line"><span class="keyword">use</span> ieee.std_logic_unsigned.<span class="keyword">all</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">entity</span> carry_lookahead_adder <span class="keyword">is</span></span><br><span class="line">	<span class="keyword">Port</span>( </span><br><span class="line">		x: <span class="keyword">in</span> <span class="built_in">std_logic_vector</span>(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line">		</span><br><span class="line">      y: <span class="keyword">in</span> <span class="built_in">std_logic_vector</span>(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line">		</span><br><span class="line">      sel: <span class="keyword">in</span> <span class="built_in">std_logic</span>; <span class="comment">--signal to do addition or subtraction</span></span><br><span class="line">		</span><br><span class="line">      s: <span class="keyword">out</span> <span class="built_in">std_logic_vector</span>(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line">		</span><br><span class="line">      co: <span class="keyword">out</span> <span class="built_in">std_logic</span>; <span class="comment">--carry from last bit</span></span><br><span class="line">		overflow: <span class="keyword">out</span> <span class="built_in">std_logic</span>; <span class="comment">--to check if overflow occurs</span></span><br><span class="line">		sign: <span class="keyword">out</span> <span class="built_in">std_logic</span>; <span class="comment">--to display the sign of the result</span></span><br><span class="line">		zero: <span class="keyword">out</span> <span class="built_in">std_logic</span></span><br><span class="line">	);</span><br><span class="line"><span class="keyword">end</span> carry_lookahead_adder;</span><br><span class="line"></span><br><span class="line"><span class="keyword">architecture</span> behavioral <span class="keyword">of</span> carry_lookahead_adder <span class="keyword">is</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">signal</span> sum_temp, sum, y_final: <span class="built_in">std_logic_vector</span>(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>) := <span class="string">"0000"</span>;</span><br><span class="line"><span class="keyword">signal</span> c : <span class="built_in">std_logic_vector</span>(<span class="number">4</span> <span class="keyword">downto</span> <span class="number">0</span>) := <span class="string">"00000"</span>; <span class="comment">--c4 for last carry(cout)</span></span><br><span class="line"><span class="keyword">signal</span> p : <span class="built_in">std_logic_vector</span>(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>) := <span class="string">"0000"</span>; </span><br><span class="line"><span class="keyword">signal</span> g : <span class="built_in">std_logic_vector</span>(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>) := <span class="string">"0000"</span>; </span><br><span class="line"></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">	y_to_2s: <span class="keyword">process</span>(y) <span class="comment">--to do 2's complement if sel is 1</span></span><br><span class="line">		<span class="keyword">begin</span></span><br><span class="line">			<span class="keyword">if</span>(sel=<span class="string">'1'</span>) <span class="keyword">then</span></span><br><span class="line">				y_final &lt;= <span class="keyword">not</span>(y) + sel; </span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				y_final &lt;= y;</span><br><span class="line">			<span class="keyword">end</span> <span class="keyword">if</span>;</span><br><span class="line">	<span class="keyword">end</span> <span class="keyword">process</span>;</span><br><span class="line">	</span><br><span class="line">	sum_temp &lt;= x <span class="keyword">xor</span> y_final; </span><br><span class="line">   </span><br><span class="line">	g &lt;= x <span class="keyword">and</span> y_final; <span class="comment">--to generate term g</span></span><br><span class="line">   p &lt;= x <span class="keyword">or</span> y_final; <span class="comment">--to generte term p</span></span><br><span class="line">	</span><br><span class="line">	c(<span class="number">0</span>) &lt;= <span class="string">'0'</span>; <span class="comment">--assign 0 to c(0)</span></span><br><span class="line">	</span><br><span class="line">   cla: <span class="keyword">process</span>(c, p, g)</span><br><span class="line">		<span class="keyword">begin</span></span><br><span class="line">			clc: <span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0</span> <span class="keyword">to</span> <span class="number">3</span> <span class="keyword">loop</span> <span class="comment">--carry lookahead circuits</span></span><br><span class="line">				c(i+<span class="number">1</span>) &lt;= g(i) <span class="keyword">or</span> (p(i) <span class="keyword">and</span> c(i)); </span><br><span class="line">		<span class="keyword">end</span> <span class="keyword">loop</span>;</span><br><span class="line">	<span class="keyword">end</span> <span class="keyword">process</span>;</span><br><span class="line">	 </span><br><span class="line">   co &lt;= c(<span class="number">4</span>); </span><br><span class="line">   sum &lt;= sum_temp <span class="keyword">xor</span> c(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>); </span><br><span class="line">	s &lt;= sum;</span><br><span class="line">	overflow &lt;= c(<span class="number">4</span>) <span class="keyword">xor</span> c(<span class="number">3</span>);</span><br><span class="line">	sign &lt;= sum(<span class="number">3</span>);</span><br><span class="line">	zero &lt;= <span class="keyword">not</span> (sum(<span class="number">0</span>) <span class="keyword">or</span> sum(<span class="number">1</span>) <span class="keyword">or</span> sum(<span class="number">2</span>) <span class="keyword">or</span> sum(<span class="number">3</span>));</span><br><span class="line"><span class="keyword">end</span> behavioral;</span><br></pre></td></tr></table></figure></div>
+<p><a class="link" target="_blank" rel="noopener" href="https://github.com/Shih-Jiun-Lin/Comparator">CODE
+LINK <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> Comparator-數位邏輯技術</li>
+        <li><strong>Author:</strong> Shih Jiun Lin</li>
+        <li><strong>Created at
+                :</strong> 2023-11-12 22:00:00</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2023-11-12 23:03:35
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://shih-jiun-lin.github.io/2023/11/12/Comparator-數位邏輯技術/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+            This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
+            
+
+        </li>
+    </ul>
 </div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E5%80%8B%E4%BA%BA%E7%AD%86%E8%A8%98/">#個人筆記</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/VHDL/">#VHDL</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E5%BD%B0%E5%8C%96%E5%B8%AB%E7%AF%84%E5%A4%A7%E5%AD%B8-%E9%BB%83%E6%B7%87%E6%B3%AE/">#彰化師範大學-黃淇泮</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                        rel="next"
+                        href="/2023/10/18/Frequency%20Divide-%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF%E6%8A%80%E8%A1%93/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">The Design of Frequency Divider-數位邏輯技術</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">Comparator-數位邏輯技術</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#comparator-%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF%E6%8A%80%E8%A1%93"><span class="nav-text">Comparator-數位邏輯技術</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#introduction-to-comparator"><span class="nav-text">Introduction to Comparator</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#main-idea-of-the-implementation-of-comparator"><span class="nav-text">Main Idea of the
+Implementation of Comparator</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#comparator-vhdl-implemnetation"><span class="nav-text">Comparator VHDL
+Implemnetation</span></a></li></ol></li></ol></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
 
                 
 
@@ -637,6 +763,23 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-side-tools-container">

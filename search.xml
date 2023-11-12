@@ -571,165 +571,6 @@ will correct 010100 to 011100(D)</li>
       </tags>
   </entry>
   <entry>
-    <title>Operating System-計算機概論筆記</title>
-    <url>/2023/09/22/2023-01-17-Operating%20System(I)/</url>
-    <content><![CDATA[<p>一定愛配于天立教授開放課程食用:<a class="link" href="http://ocw.aca.ntu.edu.tw/ntu-ocw/ocw/cou/101S210">課程連結 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h1 id="operating-system">Operating System</h1>
-<h2 id="batch-processingearly-era">Batch processing(early era)</h2>
-<ul>
-<li>The process of computer operators entering data to the computers and
-give the result back to you. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/mVRCkv6.png"></li>
-</ul>
-<h2 id="interactive-processingearly-era">Interactive processing(early
-era)</h2>
-<ul>
-<li>OS with remote terminals <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/Kovmajm.png"></li>
-<li>Types of operating system Reference: <a class="link" href="http://www.chwa.com.tw/TResource/VS/book1/ch3/3-2.htm">link <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>
-<ul>
-<li>Batch(批次)</li>
-<li>Interactive</li>
-<li>Real-time
-<ul>
-<li>Response time is critical.</li>
-</ul></li>
-<li>Time-sharing and multitasking
-<ul>
-<li>Dividing time into intervals.</li>
-<li>Only one task is being performed at any given time.</li>
-</ul></li>
-<li>Multiprocessor
-<ul>
-<li>Load balancing</li>
-<li>Scaling</li>
-</ul></li>
-</ul></li>
-<li>Software classification <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/WyObhvz.png"></li>
-<li>Shells
-<ul>
-<li>Communication with users
-<ul>
-<li>Text based</li>
-<li>GUI(Graphical user interface )</li>
-</ul></li>
-</ul></li>
-</ul>
-<h2 id="kernel">Kernel</h2>
-<ul>
-<li>File manager
-<ul>
-<li>Directory/folder path</li>
-</ul></li>
-<li>Device drivers</li>
-<li>Memory manager
-<ul>
-<li>Allocating main memory</li>
-<li>Paging, virtual memory<br>
-</li>
-</ul></li>
-<li>Schedular
-<ul>
-<li>The component which selects process to execute.</li>
-</ul></li>
-<li>Dispatcher
-<ul>
-<li>The component which gives control of CPU to execute the process
-selected by Schedular.</li>
-</ul></li>
-</ul>
-<h2 id="linux">Linux</h2>
-<ul>
-<li>Made by Linus Torvalds</li>
-<li>Freeware and open-source</li>
-<li>Many distribution (Ex: Ubuntu，Kali)</li>
-<li>Linux only means the kernel</li>
-</ul>
-<h2 id="how-is-os-being-loaded">How is OS being loaded?</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/2CzC6fw.png"></p>
-<ul>
-<li>BIOS(Basic Input/Output Sytem)is usually stored on a EEPEROM
-chip(Electrically-Erasable Programable Read-Only Memory)</li>
-</ul>
-<h2 id="process">Process</h2>
-<ul>
-<li>The activity of executing a program</li>
-<li>Process state
-<ul>
-<li>Program counter</li>
-<li>General purpose registers</li>
-<li>Associated memory cells</li>
-</ul></li>
-<li>Process table
-<ul>
-<li>Memory area assigned to the process</li>
-<li>Priority</li>
-<li>Ready/waiting(One process for each core)</li>
-</ul></li>
-</ul>
-<h2 id="process-administration">Process Administration</h2>
-<ul>
-<li>Schedular
-<ul>
-<li>Use: Maintaining the process table</li>
-<li>Introducing new process</li>
-<li>Removing completed process</li>
-<li>Deciding whether a process is ready or waiting</li>
-</ul></li>
-<li>Dispatcher <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ae6Hv5z.png">
-<ul>
-<li>Use: Getting the process to running state.</li>
-<li>Controling the allocation of time to the process in the process
-table.</li>
-<li>Process switch(interrupt) <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/vvtyj1e.png"> Multiprogramming between two
-processes.</li>
-</ul></li>
-</ul>
-<h2 id="semaphores">Semaphores</h2>
-<ul>
-<li>Meaning of semaphore: A visual sinaling appratus with flags,
-lights...</li>
-<li>Test-and-set: Uninterruptible process, it will change the status of
-false to true and return it.</li>
-<li>Critical region(臨界區段): A region that is only accessible to a
-program.
-<ul>
-<li>Mutual exclusion(互斥鎖): A process that prevents simultaneous
-access to a shared resource.</li>
-</ul></li>
-</ul>
-<h2 id="prerequisites-for-deadlock">Prerequisites for Deadlock</h2>
-<ul>
-<li>Deadlock may occur only if all three of the following
-conditions(necessary but insufficient) are satisfied
-<ol type="1">
-<li>Competition for non-shareable resources</li>
-<li>Resources are requested on a partial basis, receiving some resources
-and return later to request more.</li>
-<li>Once a resource has been allocated, it cannot be forcibly retrieved.
-<img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/LWgDTY9.png"></li>
-</ol></li>
-<li>To prevent Deadlock from happening, we have to avoid the conditions
-mentioned above being satisfied.</li>
-</ul>
-<h2 id="the-consequence-of-preventing-deadlock-from-happening">The
-Consequence of Preventing Deadlock from Happening</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/HxCTDOU.png"></p>
-<ul>
-<li>Starvation: Process cannot get the resources needed for a long time
-because the resources keep being allocated to other processes.</li>
-<li>The solution to starvation -&gt; (Aging): Adding an aging factor to
-the priority of each request.</li>
-</ul>
-]]></content>
-      <categories>
-        <category>個人筆記-計算機概論</category>
-      </categories>
-      <tags>
-        <tag>計算機概論</tag>
-        <tag>台灣大學-于天立</tag>
-        <tag>個人筆記</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Networking and the Internet-計算機概論筆記</title>
     <url>/2023/09/22/2023-01-17-Networking%20and%20the%20internet(I)/</url>
     <content><![CDATA[<p>一定愛配于天立教授開放課程食用:<a class="link" href="http://ocw.aca.ntu.edu.tw/ntu-ocw/ocw/cou/101S210">課程連結 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
@@ -1426,6 +1267,165 @@ Subtractors</h2>
         <tag>個人筆記</tag>
         <tag>數位邏輯設計</tag>
         <tag>清華大學-王俊堯</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Operating System-計算機概論筆記</title>
+    <url>/2023/09/22/2023-01-17-Operating%20System(I)/</url>
+    <content><![CDATA[<p>一定愛配于天立教授開放課程食用:<a class="link" href="http://ocw.aca.ntu.edu.tw/ntu-ocw/ocw/cou/101S210">課程連結 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h1 id="operating-system">Operating System</h1>
+<h2 id="batch-processingearly-era">Batch processing(early era)</h2>
+<ul>
+<li>The process of computer operators entering data to the computers and
+give the result back to you. <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/mVRCkv6.png"></li>
+</ul>
+<h2 id="interactive-processingearly-era">Interactive processing(early
+era)</h2>
+<ul>
+<li>OS with remote terminals <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/Kovmajm.png"></li>
+<li>Types of operating system Reference: <a class="link" href="http://www.chwa.com.tw/TResource/VS/book1/ch3/3-2.htm">link <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>
+<ul>
+<li>Batch(批次)</li>
+<li>Interactive</li>
+<li>Real-time
+<ul>
+<li>Response time is critical.</li>
+</ul></li>
+<li>Time-sharing and multitasking
+<ul>
+<li>Dividing time into intervals.</li>
+<li>Only one task is being performed at any given time.</li>
+</ul></li>
+<li>Multiprocessor
+<ul>
+<li>Load balancing</li>
+<li>Scaling</li>
+</ul></li>
+</ul></li>
+<li>Software classification <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/WyObhvz.png"></li>
+<li>Shells
+<ul>
+<li>Communication with users
+<ul>
+<li>Text based</li>
+<li>GUI(Graphical user interface )</li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="kernel">Kernel</h2>
+<ul>
+<li>File manager
+<ul>
+<li>Directory/folder path</li>
+</ul></li>
+<li>Device drivers</li>
+<li>Memory manager
+<ul>
+<li>Allocating main memory</li>
+<li>Paging, virtual memory<br>
+</li>
+</ul></li>
+<li>Schedular
+<ul>
+<li>The component which selects process to execute.</li>
+</ul></li>
+<li>Dispatcher
+<ul>
+<li>The component which gives control of CPU to execute the process
+selected by Schedular.</li>
+</ul></li>
+</ul>
+<h2 id="linux">Linux</h2>
+<ul>
+<li>Made by Linus Torvalds</li>
+<li>Freeware and open-source</li>
+<li>Many distribution (Ex: Ubuntu，Kali)</li>
+<li>Linux only means the kernel</li>
+</ul>
+<h2 id="how-is-os-being-loaded">How is OS being loaded?</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/2CzC6fw.png"></p>
+<ul>
+<li>BIOS(Basic Input/Output Sytem)is usually stored on a EEPEROM
+chip(Electrically-Erasable Programable Read-Only Memory)</li>
+</ul>
+<h2 id="process">Process</h2>
+<ul>
+<li>The activity of executing a program</li>
+<li>Process state
+<ul>
+<li>Program counter</li>
+<li>General purpose registers</li>
+<li>Associated memory cells</li>
+</ul></li>
+<li>Process table
+<ul>
+<li>Memory area assigned to the process</li>
+<li>Priority</li>
+<li>Ready/waiting(One process for each core)</li>
+</ul></li>
+</ul>
+<h2 id="process-administration">Process Administration</h2>
+<ul>
+<li>Schedular
+<ul>
+<li>Use: Maintaining the process table</li>
+<li>Introducing new process</li>
+<li>Removing completed process</li>
+<li>Deciding whether a process is ready or waiting</li>
+</ul></li>
+<li>Dispatcher <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ae6Hv5z.png">
+<ul>
+<li>Use: Getting the process to running state.</li>
+<li>Controling the allocation of time to the process in the process
+table.</li>
+<li>Process switch(interrupt) <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/vvtyj1e.png"> Multiprogramming between two
+processes.</li>
+</ul></li>
+</ul>
+<h2 id="semaphores">Semaphores</h2>
+<ul>
+<li>Meaning of semaphore: A visual sinaling appratus with flags,
+lights...</li>
+<li>Test-and-set: Uninterruptible process, it will change the status of
+false to true and return it.</li>
+<li>Critical region(臨界區段): A region that is only accessible to a
+program.
+<ul>
+<li>Mutual exclusion(互斥鎖): A process that prevents simultaneous
+access to a shared resource.</li>
+</ul></li>
+</ul>
+<h2 id="prerequisites-for-deadlock">Prerequisites for Deadlock</h2>
+<ul>
+<li>Deadlock may occur only if all three of the following
+conditions(necessary but insufficient) are satisfied
+<ol type="1">
+<li>Competition for non-shareable resources</li>
+<li>Resources are requested on a partial basis, receiving some resources
+and return later to request more.</li>
+<li>Once a resource has been allocated, it cannot be forcibly retrieved.
+<img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/LWgDTY9.png"></li>
+</ol></li>
+<li>To prevent Deadlock from happening, we have to avoid the conditions
+mentioned above being satisfied.</li>
+</ul>
+<h2 id="the-consequence-of-preventing-deadlock-from-happening">The
+Consequence of Preventing Deadlock from Happening</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/HxCTDOU.png"></p>
+<ul>
+<li>Starvation: Process cannot get the resources needed for a long time
+because the resources keep being allocated to other processes.</li>
+<li>The solution to starvation -&gt; (Aging): Adding an aging factor to
+the priority of each request.</li>
+</ul>
+]]></content>
+      <categories>
+        <category>個人筆記-計算機概論</category>
+      </categories>
+      <tags>
+        <tag>計算機概論</tag>
+        <tag>台灣大學-于天立</tag>
+        <tag>個人筆記</tag>
       </tags>
   </entry>
   <entry>
@@ -2239,6 +2239,52 @@ before the seekg. <img lazyload="" src="/images/loading.svg" data-src="https://i
       </tags>
   </entry>
   <entry>
+    <title>Introduction to C++ Programing-程式設計筆記</title>
+    <url>/2023/01/17/Chapter%202,%20Introduction%20to%20C++%20Programing/</url>
+    <content><![CDATA[<h1 id="chapter-2-introduction-to-c-programing">Chapter 2, Introduction
+to C++ Programing</h1>
+<h2 id="the-sturcture-of-basic-c-program">The Sturcture of Basic C++
+Program</h2>
+<ul>
+<li>The lines start with # are processed by the preprocessor.</li>
+<li>&lt;iostream&gt; is the input/output stream header file.</li>
+<li>The int main() means that the main program will return an integar
+value.</li>
+<li>std::cout specifies that we are using namspace std.</li>
+</ul>
+<h2 id="the-use-of-escape-sequence">The Use of Escape Sequence</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/G8kcne8.png"></p>
+<h2 id="the-declaration-of-variables">The Declaration of Variables</h2>
+<ul>
+<li><p>void =&gt; Function does not return a value.</p></li>
+<li><p>int =&gt; Declare integar variables.</p></li>
+<li><p>char =&gt; Declare character variables.</p>
+<ul>
+<li>char can also be stored as integer.</li>
+</ul></li>
+<li><p>float =&gt; Declare floating-point variables.</p></li>
+<li><p>double =&gt; Declare double-precision variables.</p></li>
+<li><p>bool =&gt; To hold a boolean value, true/false. ## Arithmetic
+Operators <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/IhflKJP.png"></p></li>
+<li><p>The rules of operator precedence as generally same as those in
+algebra.</p></li>
+<li><p>Exponentiation -&gt; Import &lt;math.h&gt;</p></li>
+</ul>
+<h2 id="equality-and-relational-operators">Equality and Relational
+Operators</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rmHds4R.png"></p>
+]]></content>
+      <categories>
+        <category>個人筆記-程式設計</category>
+      </categories>
+      <tags>
+        <tag>個人筆記</tag>
+        <tag>C++</tag>
+        <tag>課堂筆記</tag>
+        <tag>彰化師範大學-張孟洲</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Struct and Class-程式設計筆記</title>
     <url>/2023/01/17/Chaper%209%20Struct,%20Class/</url>
     <content><![CDATA[<h1 id="chaper-9-struct-and-class">Chaper 9 Struct and Class</h1>
@@ -2343,52 +2389,6 @@ class.</li>
       </tags>
   </entry>
   <entry>
-    <title>Introduction to C++ Programing-程式設計筆記</title>
-    <url>/2023/01/17/Chapter%202,%20Introduction%20to%20C++%20Programing/</url>
-    <content><![CDATA[<h1 id="chapter-2-introduction-to-c-programing">Chapter 2, Introduction
-to C++ Programing</h1>
-<h2 id="the-sturcture-of-basic-c-program">The Sturcture of Basic C++
-Program</h2>
-<ul>
-<li>The lines start with # are processed by the preprocessor.</li>
-<li>&lt;iostream&gt; is the input/output stream header file.</li>
-<li>The int main() means that the main program will return an integar
-value.</li>
-<li>std::cout specifies that we are using namspace std.</li>
-</ul>
-<h2 id="the-use-of-escape-sequence">The Use of Escape Sequence</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/G8kcne8.png"></p>
-<h2 id="the-declaration-of-variables">The Declaration of Variables</h2>
-<ul>
-<li><p>void =&gt; Function does not return a value.</p></li>
-<li><p>int =&gt; Declare integar variables.</p></li>
-<li><p>char =&gt; Declare character variables.</p>
-<ul>
-<li>char can also be stored as integer.</li>
-</ul></li>
-<li><p>float =&gt; Declare floating-point variables.</p></li>
-<li><p>double =&gt; Declare double-precision variables.</p></li>
-<li><p>bool =&gt; To hold a boolean value, true/false. ## Arithmetic
-Operators <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/IhflKJP.png"></p></li>
-<li><p>The rules of operator precedence as generally same as those in
-algebra.</p></li>
-<li><p>Exponentiation -&gt; Import &lt;math.h&gt;</p></li>
-</ul>
-<h2 id="equality-and-relational-operators">Equality and Relational
-Operators</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/rmHds4R.png"></p>
-]]></content>
-      <categories>
-        <category>個人筆記-程式設計</category>
-      </categories>
-      <tags>
-        <tag>個人筆記</tag>
-        <tag>C++</tag>
-        <tag>課堂筆記</tag>
-        <tag>彰化師範大學-張孟洲</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Control Statement_1-程式設計筆記</title>
     <url>/2023/01/17/Chapter%203,%20Control%20Statement_%20Part%201/</url>
     <content><![CDATA[<h1 id="chapter-3-control-statement_1">Chapter 3, Control
@@ -2447,6 +2447,118 @@ the expression in which a resides.</li>
 which a resides, then increment a by 1.</li>
 </ul>
 <p>Ex: <div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> a=<span class="number">1</span>;</span><br><span class="line">    cout&lt;&lt;a&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    cout&lt;&lt;a++&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    <span class="comment">//do a=a+1 after cout</span></span><br><span class="line">    <span class="type">int</span> b=<span class="number">1</span>;</span><br><span class="line">    cout&lt;&lt;b&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    cout&lt;&lt;++b&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    <span class="comment">//do b=b+1 before cout</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></p>
+]]></content>
+      <categories>
+        <category>個人筆記-程式設計</category>
+      </categories>
+      <tags>
+        <tag>個人筆記</tag>
+        <tag>C++</tag>
+        <tag>課堂筆記</tag>
+        <tag>彰化師範大學-張孟洲</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Functions and Introduction to Recursion-程式設計筆記</title>
+    <url>/2023/01/17/Chapter%205%20Functions%20and%20Introduction%20to%20Recursion/</url>
+    <content><![CDATA[<h1 id="chapter-5-functions-and-introduction-to-recursion">Chapter 5
+Functions and Introduction to Recursion</h1>
+<h2 id="cmath">Cmath</h2>
+<p><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br></pre></td></tr></table></figure></div> <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/wRjFGr7.png"> <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/QFZhdi3.png"></p>
+<h2 id="defining-our-own-fucntion">Defining Our Own Fucntion</h2>
+<ul>
+<li>Exapmple(square function) <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">square</span><span class="params">(<span class="type">int</span>)</span></span>; <span class="comment">//function prototype declaration</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    ...sth</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">square</span><span class="params">(<span class="type">int</span> y)</span></span>{</span><br><span class="line">    <span class="keyword">return</span> y*y;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
+<li>We can define a function with default value.</li>
+<li>Default value must be the rightmost in a function’s parameter
+list.</li>
+</ul>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">square</span><span class="params">(<span class="type">int</span> y=<span class="number">1</span>)</span></span>{</span><br><span class="line">    <span class="keyword">return</span> y*y;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="built_in">square</span>(); <span class="comment">//cout 1</span></span><br><span class="line">    <span class="built_in">square</span>(<span class="number">2</span>); <span class="comment">//cout 4</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<h2 id="void">void</h2>
+<ul>
+<li>Used when defining a function that doesn't return a value.
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">square</span><span class="params">(<span class="type">int</span> x)</span></span>{</span><br><span class="line">    std::cout&lt;&lt;x*x;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h2 id="standard-library-header-files">Standard Library Header
+Files</h2>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/QO6ThdF.png"> <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/JFYKrW9.png"> <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/JBLkhgH.png"> <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ROPhZnW.png"></p>
+<h2 id="random-number">Random Number</h2>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="built_in">rand</span>()</span><br></pre></td></tr></table></figure></div>
+<h2 id="time-function">Time Function</h2>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ctime&gt;</span></span></span><br><span class="line">...</span><br><span class="line"><span class="built_in">time</span>();/How many seconds has passed since <span class="number">1970.1</span><span class="number">.1</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span></span><br></pre></td></tr></table></figure></div>
+<h2 id="why-is-rand-not-that-random">Why is rand() not that random?</h2>
+<ul>
+<li>You have to set random seed. <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line">...</span><br><span class="line"><span class="type">unsigned</span> <span class="type">int</span> seed{<span class="number">0</span>};</span><br><span class="line">cin&gt;&gt;seed; <span class="comment">//input a random number.</span></span><br><span class="line"><span class="built_in">srand</span>(seed);</span><br></pre></td></tr></table></figure></div> <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ctime&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line">...</span><br><span class="line"><span class="built_in">srand</span>(<span class="built_in">time</span>());</span><br><span class="line">...</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h2 id="enumerate">Enumerate</h2>
+<ul>
+<li>If i set win=1, lost will be 2, continue will be 3.</li>
+<li>win{1} is not allowed, only win=1 will work. <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//example</span></span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">Game_Status</span>{WIN, LOST, CONTINUE}; </span><br><span class="line"><span class="comment">//win=0, lost=1, continue=2.</span></span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h2 id="static-using-with-local-variables">static using with local
+variables</h2>
+<ul>
+<li>You can see it as a way to make local variable to become a global
+variable.</li>
+<li>It will only be initialized one time! <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//example</span></span><br><span class="line"><span class="type">static</span> <span class="type">int</span> x=<span class="number">1</span>;</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//Example code</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">static_num</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">static</span> <span class="type">int</span> x=<span class="number">1</span>;</span><br><span class="line">    cout&lt;&lt;x&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    x++;</span><br><span class="line">    cout&lt;&lt;x&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="built_in">static_num</span>();</span><br><span class="line">    <span class="built_in">static_num</span>();</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h2 id="static-using-with-global-variables">static using with global
+variables</h2>
+<ul>
+<li>The variable used with static is only accessible for the specific
+file.</li>
+</ul>
+<h2 id="extern">extern</h2>
+<ul>
+<li>Get a variable from another file. Ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//file_1</span></span><br><span class="line"><span class="type">int</span> a=<span class="number">1</span>;</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//file_2</span></span><br><span class="line"><span class="keyword">extern</span> a;</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h2 id="inline">inline</h2>
+<ul>
+<li>The cost of defining a function is too big，inline will decrease the
+cost.</li>
+<li>The concept of inline is expansion</li>
+<li>inline can only be used when doing simple calculation.
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="title">cube</span><span class="params">(<span class="type">int</span> x)</span></span>{</span><br><span class="line">    <span class="keyword">return</span> x*x*x;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> x=<span class="number">0</span>;</span><br><span class="line">    cin&gt;&gt;x;</span><br><span class="line">    cout&lt;&lt;<span class="built_in">cube</span>(x); <span class="comment">//cube(x)=x*x*x</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h2 id="pass-by-reference.">Pass by reference.</h2>
+<ul>
+<li>It will affect the original value of a variable.</li>
+<li>Adding a '&amp;' in front of a variable, with '&amp;' the function
+will directly put the variable (num) into the function.</li>
+<li>It won't use extra ram space to store a number. (int a=1; int b=a;
+will use extra ram space)</li>
+<li>The concept is like domain. <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">function</span><span class="params">(<span class="type">int</span> &amp;number)</span></span>{</span><br><span class="line">    ...</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//example</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">cube</span><span class="params">(<span class="type">int</span> &amp;x)</span></span>{</span><br><span class="line">    x=x*x*x;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> num=<span class="number">0</span>;</span><br><span class="line">    cin&gt;&gt;num;</span><br><span class="line">    <span class="built_in">cube</span>(num);</span><br><span class="line">    cout&lt;&lt;num;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h2 id="acces-to-a-global-variable">Acces to a global variable</h2>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="type">int</span> x=<span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> x=<span class="number">5</span>;</span><br><span class="line">    std::cout&lt;&lt;::x;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
+<h2 id="function-overloading">Function overloading</h2>
+<ul>
+<li>C++ enables several functions of the same name to be defined, as
+long as they have different signatures.</li>
+<li>The compiler will automatically choose the proper function to
+execute. Depending on the data type or the amount of the parameter
+list<br>
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">square</span><span class="params">(<span class="type">int</span> x)</span></span>{</span><br><span class="line">    std::cout&lt;&lt;x*x&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">square</span><span class="params">(<span class="type">double</span> x)</span></span>{</span><br><span class="line">    std::cout&lt;&lt;x*x&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="built_in">square</span>(<span class="number">1</span>); <span class="comment">//cout 1</span></span><br><span class="line">    <span class="built_in">square</span>(<span class="number">1.1</span>); <span class="comment">//cout 1.21</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h2 id="making-and-using-your-own-library">Making and using your own
+library</h2>
+<ul>
+<li>Example: Finding max of three numbers.</li>
+<li>.h template</li>
+<li>template &lt;class T&gt; means that every type of data can use this
+function.</li>
+<li>The way to decalre a template function is the same as normal
+function. <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="function">T <span class="title">maximum</span><span class="params">(T value1, T Value2, T Value3)</span></span>{</span><br><span class="line">    T maximumValue =value1;</span><br><span class="line">    <span class="keyword">if</span>(Value2&gt;maximumValue){</span><br><span class="line">        maximumValue=Value2;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">if</span>(Value3&gt;maximumValue){</span><br><span class="line">        maximumValue=Value3;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> maximumValue;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
+<li>main program <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">"maximum.h"</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> x, y, z;</span><br><span class="line">    <span class="keyword">while</span>(std::cin&gt;&gt;x&gt;&gt;y&gt;&gt;z){</span><br><span class="line">        std::cout&lt;&lt;<span class="string">"Max= "</span>&lt;&lt;<span class="built_in">maximum</span>(x, y, z);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h2 id="recursion">Recursion</h2>
+<ul>
+<li>A function calling oneself.</li>
+<li>Example of factorial of a nonnegative function with recursion.
+<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">unsigned</span> <span class="type">long</span> <span class="title">factorial</span><span class="params">(<span class="type">unsigned</span> <span class="type">long</span> num)</span></span>{</span><br><span class="line">    <span class="keyword">if</span>(num&lt;=<span class="number">1</span>){</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span>{</span><br><span class="line">        <span class="keyword">return</span> num*<span class="built_in">factorial</span>(num<span class="number">-1</span>);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
+<li>Example of Fibonacci Series <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">unsigned</span> <span class="type">long</span> <span class="title">fib</span><span class="params">(usigned <span class="type">long</span> num)</span></span>{</span><br><span class="line">    <span class="keyword">if</span>(num==<span class="number">1</span>||num==<span class="number">0</span>){</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span>{</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">fib</span>(num<span class="number">-1</span>)+<span class="built_in">fib</span>(num<span class="number">-2</span>);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
+</ul>
 ]]></content>
       <categories>
         <category>個人筆記-程式設計</category>
@@ -2636,118 +2748,6 @@ part of the string bewteen <span class="math inline"><mjx-container class="MathJ
 <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">swap</span><span class="params">(<span class="type">int</span> &amp;a, <span class="type">int</span> &amp;b)</span></span>{</span><br><span class="line">    <span class="type">int</span> temp=a;</span><br><span class="line">    a=b;</span><br><span class="line">    b=temp;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> a[<span class="number">5</span>]={<span class="number">40</span>, <span class="number">30</span>, <span class="number">50</span>, <span class="number">60</span>, <span class="number">20</span>};</span><br><span class="line">    <span class="type">int</span> len=<span class="built_in">sizeof</span>(a)/<span class="built_in">sizeof</span>(a[<span class="number">0</span>]);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;len<span class="number">-1</span>; i++){</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=i+<span class="number">1</span>; j&lt;len; j++){</span><br><span class="line">            <span class="keyword">if</span>(a[i]&gt;a[j]){</span><br><span class="line">                <span class="built_in">swap</span>(a[i], a[j]);</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;len; i++){</span><br><span class="line">        cout&lt;&lt;a[i]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
 <h2 id="vectors">Vectors</h2>
 <p>Reference: <a class="link" href="https://shih-jiun-lin.github.io/2023/01/18/STL(Standard%20Template%20Library)/">link <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-]]></content>
-      <categories>
-        <category>個人筆記-程式設計</category>
-      </categories>
-      <tags>
-        <tag>個人筆記</tag>
-        <tag>C++</tag>
-        <tag>課堂筆記</tag>
-        <tag>彰化師範大學-張孟洲</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Functions and Introduction to Recursion-程式設計筆記</title>
-    <url>/2023/01/17/Chapter%205%20Functions%20and%20Introduction%20to%20Recursion/</url>
-    <content><![CDATA[<h1 id="chapter-5-functions-and-introduction-to-recursion">Chapter 5
-Functions and Introduction to Recursion</h1>
-<h2 id="cmath">Cmath</h2>
-<p><div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br></pre></td></tr></table></figure></div> <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/wRjFGr7.png"> <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/QFZhdi3.png"></p>
-<h2 id="defining-our-own-fucntion">Defining Our Own Fucntion</h2>
-<ul>
-<li>Exapmple(square function) <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">square</span><span class="params">(<span class="type">int</span>)</span></span>; <span class="comment">//function prototype declaration</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    ...sth</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">square</span><span class="params">(<span class="type">int</span> y)</span></span>{</span><br><span class="line">    <span class="keyword">return</span> y*y;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
-<li>We can define a function with default value.</li>
-<li>Default value must be the rightmost in a function’s parameter
-list.</li>
-</ul>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">square</span><span class="params">(<span class="type">int</span> y=<span class="number">1</span>)</span></span>{</span><br><span class="line">    <span class="keyword">return</span> y*y;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="built_in">square</span>(); <span class="comment">//cout 1</span></span><br><span class="line">    <span class="built_in">square</span>(<span class="number">2</span>); <span class="comment">//cout 4</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-<h2 id="void">void</h2>
-<ul>
-<li>Used when defining a function that doesn't return a value.
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">square</span><span class="params">(<span class="type">int</span> x)</span></span>{</span><br><span class="line">    std::cout&lt;&lt;x*x;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
-</ul>
-<h2 id="standard-library-header-files">Standard Library Header
-Files</h2>
-<p><img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/QO6ThdF.png"> <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/JFYKrW9.png"> <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/JBLkhgH.png"> <img lazyload="" src="/images/loading.svg" data-src="https://i.imgur.com/ROPhZnW.png"></p>
-<h2 id="random-number">Random Number</h2>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="built_in">rand</span>()</span><br></pre></td></tr></table></figure></div>
-<h2 id="time-function">Time Function</h2>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ctime&gt;</span></span></span><br><span class="line">...</span><br><span class="line"><span class="built_in">time</span>();/How many seconds has passed since <span class="number">1970.1</span><span class="number">.1</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span></span><br></pre></td></tr></table></figure></div>
-<h2 id="why-is-rand-not-that-random">Why is rand() not that random?</h2>
-<ul>
-<li>You have to set random seed. <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line">...</span><br><span class="line"><span class="type">unsigned</span> <span class="type">int</span> seed{<span class="number">0</span>};</span><br><span class="line">cin&gt;&gt;seed; <span class="comment">//input a random number.</span></span><br><span class="line"><span class="built_in">srand</span>(seed);</span><br></pre></td></tr></table></figure></div> <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ctime&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line">...</span><br><span class="line"><span class="built_in">srand</span>(<span class="built_in">time</span>());</span><br><span class="line">...</span><br></pre></td></tr></table></figure></div></li>
-</ul>
-<h2 id="enumerate">Enumerate</h2>
-<ul>
-<li>If i set win=1, lost will be 2, continue will be 3.</li>
-<li>win{1} is not allowed, only win=1 will work. <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//example</span></span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">Game_Status</span>{WIN, LOST, CONTINUE}; </span><br><span class="line"><span class="comment">//win=0, lost=1, continue=2.</span></span><br></pre></td></tr></table></figure></div></li>
-</ul>
-<h2 id="static-using-with-local-variables">static using with local
-variables</h2>
-<ul>
-<li>You can see it as a way to make local variable to become a global
-variable.</li>
-<li>It will only be initialized one time! <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//example</span></span><br><span class="line"><span class="type">static</span> <span class="type">int</span> x=<span class="number">1</span>;</span><br></pre></td></tr></table></figure></div>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//Example code</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">static_num</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">static</span> <span class="type">int</span> x=<span class="number">1</span>;</span><br><span class="line">    cout&lt;&lt;x&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    x++;</span><br><span class="line">    cout&lt;&lt;x&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="built_in">static_num</span>();</span><br><span class="line">    <span class="built_in">static_num</span>();</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
-</ul>
-<h2 id="static-using-with-global-variables">static using with global
-variables</h2>
-<ul>
-<li>The variable used with static is only accessible for the specific
-file.</li>
-</ul>
-<h2 id="extern">extern</h2>
-<ul>
-<li>Get a variable from another file. Ex: <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//file_1</span></span><br><span class="line"><span class="type">int</span> a=<span class="number">1</span>;</span><br></pre></td></tr></table></figure></div>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//file_2</span></span><br><span class="line"><span class="keyword">extern</span> a;</span><br></pre></td></tr></table></figure></div></li>
-</ul>
-<h2 id="inline">inline</h2>
-<ul>
-<li>The cost of defining a function is too big，inline will decrease the
-cost.</li>
-<li>The concept of inline is expansion</li>
-<li>inline can only be used when doing simple calculation.
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="title">cube</span><span class="params">(<span class="type">int</span> x)</span></span>{</span><br><span class="line">    <span class="keyword">return</span> x*x*x;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> x=<span class="number">0</span>;</span><br><span class="line">    cin&gt;&gt;x;</span><br><span class="line">    cout&lt;&lt;<span class="built_in">cube</span>(x); <span class="comment">//cube(x)=x*x*x</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
-</ul>
-<h2 id="pass-by-reference.">Pass by reference.</h2>
-<ul>
-<li>It will affect the original value of a variable.</li>
-<li>Adding a '&amp;' in front of a variable, with '&amp;' the function
-will directly put the variable (num) into the function.</li>
-<li>It won't use extra ram space to store a number. (int a=1; int b=a;
-will use extra ram space)</li>
-<li>The concept is like domain. <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">function</span><span class="params">(<span class="type">int</span> &amp;number)</span></span>{</span><br><span class="line">    ...</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div> <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//example</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">cube</span><span class="params">(<span class="type">int</span> &amp;x)</span></span>{</span><br><span class="line">    x=x*x*x;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> num=<span class="number">0</span>;</span><br><span class="line">    cin&gt;&gt;num;</span><br><span class="line">    <span class="built_in">cube</span>(num);</span><br><span class="line">    cout&lt;&lt;num;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
-</ul>
-<h2 id="acces-to-a-global-variable">Acces to a global variable</h2>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="type">int</span> x=<span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> x=<span class="number">5</span>;</span><br><span class="line">    std::cout&lt;&lt;::x;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
-<h2 id="function-overloading">Function overloading</h2>
-<ul>
-<li>C++ enables several functions of the same name to be defined, as
-long as they have different signatures.</li>
-<li>The compiler will automatically choose the proper function to
-execute. Depending on the data type or the amount of the parameter
-list<br>
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">square</span><span class="params">(<span class="type">int</span> x)</span></span>{</span><br><span class="line">    std::cout&lt;&lt;x*x&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">square</span><span class="params">(<span class="type">double</span> x)</span></span>{</span><br><span class="line">    std::cout&lt;&lt;x*x&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="built_in">square</span>(<span class="number">1</span>); <span class="comment">//cout 1</span></span><br><span class="line">    <span class="built_in">square</span>(<span class="number">1.1</span>); <span class="comment">//cout 1.21</span></span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
-</ul>
-<h2 id="making-and-using-your-own-library">Making and using your own
-library</h2>
-<ul>
-<li>Example: Finding max of three numbers.</li>
-<li>.h template</li>
-<li>template &lt;class T&gt; means that every type of data can use this
-function.</li>
-<li>The way to decalre a template function is the same as normal
-function. <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="function">T <span class="title">maximum</span><span class="params">(T value1, T Value2, T Value3)</span></span>{</span><br><span class="line">    T maximumValue =value1;</span><br><span class="line">    <span class="keyword">if</span>(Value2&gt;maximumValue){</span><br><span class="line">        maximumValue=Value2;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">if</span>(Value3&gt;maximumValue){</span><br><span class="line">        maximumValue=Value3;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> maximumValue;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
-<li>main program <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">"maximum.h"</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="type">int</span> x, y, z;</span><br><span class="line">    <span class="keyword">while</span>(std::cin&gt;&gt;x&gt;&gt;y&gt;&gt;z){</span><br><span class="line">        std::cout&lt;&lt;<span class="string">"Max= "</span>&lt;&lt;<span class="built_in">maximum</span>(x, y, z);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
-</ul>
-<h2 id="recursion">Recursion</h2>
-<ul>
-<li>A function calling oneself.</li>
-<li>Example of factorial of a nonnegative function with recursion.
-<div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">unsigned</span> <span class="type">long</span> <span class="title">factorial</span><span class="params">(<span class="type">unsigned</span> <span class="type">long</span> num)</span></span>{</span><br><span class="line">    <span class="keyword">if</span>(num&lt;=<span class="number">1</span>){</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span>{</span><br><span class="line">        <span class="keyword">return</span> num*<span class="built_in">factorial</span>(num<span class="number">-1</span>);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
-<li>Example of Fibonacci Series <div class="highlight-container" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">unsigned</span> <span class="type">long</span> <span class="title">fib</span><span class="params">(usigned <span class="type">long</span> num)</span></span>{</span><br><span class="line">    <span class="keyword">if</span>(num==<span class="number">1</span>||num==<span class="number">0</span>){</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span>{</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">fib</span>(num<span class="number">-1</span>)+<span class="built_in">fib</span>(num<span class="number">-2</span>);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div></li>
-</ul>
 ]]></content>
       <categories>
         <category>個人筆記-程式設計</category>
@@ -3362,6 +3362,40 @@ occurs。</li>
       </tags>
   </entry>
   <entry>
+    <title>Mod_N Counter-數位邏輯技術</title>
+    <url>/2023/11/12/Mod_N%20Counter/</url>
+    <content><![CDATA[<h1 id="mod_n-counter-數位邏輯技術">Mod_N Counter-數位邏輯技術</h1>
+<h2 id="introduction-to-counter">Introduction to Counter</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZTZAYnT9Iaw?si=m_6yEBOB9q_qlqsn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+<h2 id="main-idea-of-the-implementation-of-mod_n-counter">Main Idea of
+the Implementation of Mod_N Counter</h2>
+<h3 id="main-idea-of-the-implementation">Main Idea of the
+Implementation</h3>
+<ul>
+<li><p>A Mod-N counter is triggered by a clock. After declaring a
+variable (countr) to store counting information, when rising edge of a
+clock is detected, <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="20.045ex" height="1.692ex" role="img" focusable="false" viewBox="0 -666 8860 748"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D450" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z"></path></g><g data-mml-node="mi" transform="translate(433,0)"><path data-c="1D45C" d="M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z"></path></g><g data-mml-node="mi" transform="translate(918,0)"><path data-c="1D462" d="M21 287Q21 295 30 318T55 370T99 420T158 442Q204 442 227 417T250 358Q250 340 216 246T182 105Q182 62 196 45T238 27T291 44T328 78L339 95Q341 99 377 247Q407 367 413 387T427 416Q444 431 463 431Q480 431 488 421T496 402L420 84Q419 79 419 68Q419 43 426 35T447 26Q469 29 482 57T512 145Q514 153 532 153Q551 153 551 144Q550 139 549 130T540 98T523 55T498 17T462 -8Q454 -10 438 -10Q372 -10 347 46Q345 45 336 36T318 21T296 6T267 -6T233 -11Q189 -11 155 7Q103 38 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(1490,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(2090,0)"><path data-c="1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path></g><g data-mml-node="mi" transform="translate(2451,0)"><path data-c="1D45F" d="M21 287Q22 290 23 295T28 317T38 348T53 381T73 411T99 433T132 442Q161 442 183 430T214 408T225 388Q227 382 228 382T236 389Q284 441 347 441H350Q398 441 422 400Q430 381 430 363Q430 333 417 315T391 292T366 288Q346 288 334 299T322 328Q322 376 378 392Q356 405 342 405Q286 405 239 331Q229 315 224 298T190 165Q156 25 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 114 189T154 366Q154 405 128 405Q107 405 92 377T68 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mo" transform="translate(3179.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mi" transform="translate(4235.6,0)"><path data-c="1D450" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z"></path></g><g data-mml-node="mi" transform="translate(4668.6,0)"><path data-c="1D45C" d="M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z"></path></g><g data-mml-node="mi" transform="translate(5153.6,0)"><path data-c="1D462" d="M21 287Q21 295 30 318T55 370T99 420T158 442Q204 442 227 417T250 358Q250 340 216 246T182 105Q182 62 196 45T238 27T291 44T328 78L339 95Q341 99 377 247Q407 367 413 387T427 416Q444 431 463 431Q480 431 488 421T496 402L420 84Q419 79 419 68Q419 43 426 35T447 26Q469 29 482 57T512 145Q514 153 532 153Q551 153 551 144Q550 139 549 130T540 98T523 55T498 17T462 -8Q454 -10 438 -10Q372 -10 347 46Q345 45 336 36T318 21T296 6T267 -6T233 -11Q189 -11 155 7Q103 38 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(5725.6,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(6325.6,0)"><path data-c="1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path></g><g data-mml-node="mi" transform="translate(6686.6,0)"><path data-c="1D45F" d="M21 287Q22 290 23 295T28 317T38 348T53 381T73 411T99 433T132 442Q161 442 183 430T214 408T225 388Q227 382 228 382T236 389Q284 441 347 441H350Q398 441 422 400Q430 381 430 363Q430 333 417 315T391 292T366 288Q346 288 334 299T322 328Q322 376 378 392Q356 405 342 405Q286 405 239 331Q229 315 224 298T190 165Q156 25 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 114 189T154 366Q154 405 128 405Q107 405 92 377T68 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mo" transform="translate(7359.8,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mn" transform="translate(8360,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g></svg></mjx-container></span>.
+When <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="11.592ex" height="1.731ex" role="img" focusable="false" viewBox="0 -683 5123.6 765"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D450" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z"></path></g><g data-mml-node="mi" transform="translate(433,0)"><path data-c="1D45C" d="M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z"></path></g><g data-mml-node="mi" transform="translate(918,0)"><path data-c="1D462" d="M21 287Q21 295 30 318T55 370T99 420T158 442Q204 442 227 417T250 358Q250 340 216 246T182 105Q182 62 196 45T238 27T291 44T328 78L339 95Q341 99 377 247Q407 367 413 387T427 416Q444 431 463 431Q480 431 488 421T496 402L420 84Q419 79 419 68Q419 43 426 35T447 26Q469 29 482 57T512 145Q514 153 532 153Q551 153 551 144Q550 139 549 130T540 98T523 55T498 17T462 -8Q454 -10 438 -10Q372 -10 347 46Q345 45 336 36T318 21T296 6T267 -6T233 -11Q189 -11 155 7Q103 38 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(1490,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(2090,0)"><path data-c="1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path></g><g data-mml-node="mi" transform="translate(2451,0)"><path data-c="1D45F" d="M21 287Q22 290 23 295T28 317T38 348T53 381T73 411T99 433T132 442Q161 442 183 430T214 408T225 388Q227 382 228 382T236 389Q284 441 347 441H350Q398 441 422 400Q430 381 430 363Q430 333 417 315T391 292T366 288Q346 288 334 299T322 328Q322 376 378 392Q356 405 342 405Q286 405 239 331Q229 315 224 298T190 165Q156 25 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 114 189T154 366Q154 405 128 405Q107 405 92 377T68 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mo" transform="translate(3179.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mi" transform="translate(4235.6,0)"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></g></g></g></svg></mjx-container></span>, clear countr to
+zero.</p></li>
+<li><p>In order to observe the changing of numbers, the code below uses
+a frequency divider.(1hz)</p></li>
+</ul>
+<div class="highlight-container" data-rel="Vhdl"><figure class="iseeu highlight vhdl"><table><tr><td class="code"><pre><span class="line"><span class="keyword">library</span> ieee;</span><br><span class="line"><span class="keyword">use</span> ieee.std_logic_1164.<span class="keyword">all</span>;</span><br><span class="line"><span class="keyword">use</span> ieee.std_logic_unsigned.<span class="keyword">all</span>;</span><br><span class="line"><span class="keyword">use</span> ieee.numeric_std.<span class="keyword">all</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">entity</span> counter <span class="keyword">is</span></span><br><span class="line"><span class="keyword">port</span> (</span><br><span class="line">    CLK : <span class="keyword">in</span> <span class="built_in">std_logic</span>;</span><br><span class="line">    COUNT : <span class="keyword">out</span> <span class="built_in">std_logic_vector</span>(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>)</span><br><span class="line">);</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">entity</span> counter;</span><br><span class="line"></span><br><span class="line"><span class="keyword">architecture</span> behavioral <span class="keyword">of</span> counter <span class="keyword">is</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">component</span> to_1hz_divider <span class="keyword">is</span></span><br><span class="line">	<span class="keyword">port</span>(</span><br><span class="line">		</span><br><span class="line">		CLK_IN: <span class="keyword">in</span> <span class="built_in">std_logic</span>;</span><br><span class="line">		CLK_OUT: <span class="keyword">out</span> <span class="built_in">std_logic</span></span><br><span class="line">	</span><br><span class="line">	);</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">component</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">signal</span> CLK_COUNTR: <span class="built_in">std_logic</span>;</span><br><span class="line"><span class="keyword">signal</span> countr: <span class="built_in">std_logic_vector</span>(<span class="number">4</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">	</span><br><span class="line">	divider: to_1hz_divider</span><br><span class="line">		<span class="keyword">port</span> <span class="keyword">map</span>(</span><br><span class="line">			</span><br><span class="line">			CLK_IN =&gt; CLK,</span><br><span class="line">			</span><br><span class="line">			CLK_OUT =&gt; CLK_COUNTR</span><br><span class="line">		</span><br><span class="line">		);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">process</span>(CLK_COUNTR)</span><br><span class="line">	<span class="keyword">begin</span></span><br><span class="line">	</span><br><span class="line">		<span class="keyword">if</span> rising_edge(CLK_COUNTR) <span class="keyword">then</span></span><br><span class="line">			</span><br><span class="line">			countr &lt;= countr + <span class="number">1</span>;</span><br><span class="line">			</span><br><span class="line">		<span class="keyword">end</span> <span class="keyword">if</span>;</span><br><span class="line">		</span><br><span class="line">			<span class="keyword">if</span> countr(<span class="number">4</span>) = <span class="string">'1'</span> <span class="keyword">then</span></span><br><span class="line">				</span><br><span class="line">				countr &lt;= (<span class="keyword">others</span> =&gt; <span class="string">'0'</span>);</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">end</span> <span class="keyword">if</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">end</span> <span class="keyword">process</span>;</span><br><span class="line">	</span><br><span class="line">	COUNT &lt;= countr(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line">	 </span><br><span class="line"><span class="keyword">end</span> <span class="keyword">architecture</span> behavioral;</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>With 7-seg display <div class="highlight-container" data-rel="Vhdl"><figure class="iseeu highlight vhdl"><table><tr><td class="code"><pre><span class="line"><span class="keyword">library</span> ieee;</span><br><span class="line"><span class="keyword">use</span> ieee.std_logic_1164.<span class="keyword">all</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">entity</span> counter_with7seg <span class="keyword">is</span></span><br><span class="line">	<span class="keyword">port</span>(</span><br><span class="line">		</span><br><span class="line">		CLK_50mhz: <span class="keyword">in</span> <span class="built_in">std_logic</span>;</span><br><span class="line">		</span><br><span class="line">		display: <span class="keyword">out</span> <span class="built_in">std_logic_vector</span>(<span class="number">6</span> <span class="keyword">downto</span> <span class="number">0</span>)</span><br><span class="line">	</span><br><span class="line">	);</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">entity</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">architecture</span> behavioral <span class="keyword">of</span> counter_with7seg <span class="keyword">is</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">signal</span> data_temp: <span class="built_in">std_logic_vector</span>(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">component</span> counter <span class="keyword">is</span></span><br><span class="line"><span class="keyword">port</span> (</span><br><span class="line">	CLK : <span class="keyword">in</span> <span class="built_in">std_logic</span>;</span><br><span class="line">   COUNT : <span class="keyword">out</span> <span class="built_in">std_logic_vector</span>(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>)</span><br><span class="line">);</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">component</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">component</span> seven_segement_decoder <span class="keyword">is</span></span><br><span class="line"><span class="keyword">port</span> (</span><br><span class="line">	data: <span class="keyword">in</span> <span class="built_in">std_logic_vector</span>(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line">	display: <span class="keyword">out</span> <span class="built_in">std_logic_vector</span>(<span class="number">6</span> <span class="keyword">downto</span> <span class="number">0</span>)</span><br><span class="line">);</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">component</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line"></span><br><span class="line">	countr: counter</span><br><span class="line">		<span class="keyword">port</span> <span class="keyword">map</span>(</span><br><span class="line">			</span><br><span class="line">			CLK =&gt; CLK_50mhz,</span><br><span class="line">			</span><br><span class="line">			count =&gt; data_temp</span><br><span class="line">		);</span><br><span class="line">		</span><br><span class="line">	display0: seven_segement_decoder </span><br><span class="line">		<span class="keyword">port</span> <span class="keyword">map</span>(</span><br><span class="line">			</span><br><span class="line">			data =&gt; data_temp,</span><br><span class="line">			</span><br><span class="line">			display =&gt; display</span><br><span class="line">		);</span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span> behavioral;</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+]]></content>
+      <categories>
+        <category>個人筆記-數位邏輯技術</category>
+      </categories>
+      <tags>
+        <tag>個人筆記</tag>
+        <tag>VHDL</tag>
+        <tag>彰化師範大學-黃淇泮</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Multiplexer, Decoders, and Programmable Logic Devices-數位邏輯設計筆記</title>
     <url>/2023/05/14/Multiplexer,%20Decoders,%20and%20Programmable%20Logic%20Devices/</url>
     <content><![CDATA[<p>一定愛配王俊堯教授開放課程食用:<a class="link" href="https://ocw.nthu.edu.tw/ocw/index.php?page=course&amp;cid=230">課程連結 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
@@ -3904,16 +3938,6 @@ example =&gt; (a, b, c, d are all 4-bit data)</p>
       </tags>
   </entry>
   <entry>
-    <title>Welcome!</title>
-    <url>/2023/01/17/Welcome!/</url>
-    <content><![CDATA[<h3 id="大家好我是shih-jiun目前就讀彰化師範大學電子工程學系大一本網站的目的是為了對大學四年的課堂內容及個人手做小專題做些紀錄及分享歡迎你的到來">大家好，我是Shih
-Jiun，目前就讀彰化師範大學電子工程學系大一，本網站的目的是為了對大學四年的課堂內容及個人手做小專題做些紀錄及分享，歡迎你的到來!</h3>
-]]></content>
-      <tags>
-        <tag>Welcome!</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>WiFi Sync Clock-個人專題</title>
     <url>/2023/01/20/WiFi%20Sync%20Clock/</url>
     <content><![CDATA[<h1 id="wifi-sync-clock">WiFi Sync Clock</h1>
@@ -4161,6 +4185,16 @@ Password!"，並於3s後可重新輸入。</li>
         <tag>個人專題</tag>
         <tag>物聯網</tag>
         <tag>AMB82</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Welcome!</title>
+    <url>/2023/01/17/Welcome!/</url>
+    <content><![CDATA[<h3 id="大家好我是shih-jiun目前就讀彰化師範大學電子工程學系大一本網站的目的是為了對大學四年的課堂內容及個人手做小專題做些紀錄及分享歡迎你的到來">大家好，我是Shih
+Jiun，目前就讀彰化師範大學電子工程學系大一，本網站的目的是為了對大學四年的課堂內容及個人手做小專題做些紀錄及分享，歡迎你的到來!</h3>
+]]></content>
+      <tags>
+        <tag>Welcome!</tag>
       </tags>
   </entry>
 </search>

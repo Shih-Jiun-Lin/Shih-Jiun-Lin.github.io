@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="Shih Jiun Lin">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2023/10/18/the design of multiplier-數位邏輯技術/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="The Design of Multiplier-數位邏輯技術 Introduction to Multiplier   Implementation of 4-bit multiplier with CLA Main Idea of the Implementation     VHDL implementation 1234567891011121314151617">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Design of Multiplier-數位邏輯技術">
+<meta property="og:url" content="http://example.com/2023/10/18/The%20Design%20of%20Multiplier-%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF%E6%8A%80%E8%A1%93/index.html">
+<meta property="og:site_name">
+<meta property="og:description" content="The Design of Multiplier-數位邏輯技術 Introduction to Multiplier   Implementation of 4-bit multiplier with CLA Main Idea of the Implementation     VHDL implementation 1234567891011121314151617">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://hackmd.io/_uploads/Hy4AbTs-a.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/S1I1Gao-p.png">
+<meta property="article:published_time" content="2023-10-18T14:00:00.000Z">
+<meta property="article:modified_time" content="2023-11-12T14:31:19.590Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="個人筆記">
+<meta property="article:tag" content="VHDL">
+<meta property="article:tag" content="彰化師範大學-黃淇泮">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hackmd.io/_uploads/Hy4AbTs-a.png">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no">
+    <meta name="theme-color" content="#005080">
+    <link rel="shortcut icon" href="https://lh3.googleusercontent.com/a/AEdFTp7Tgny7cBDF9PGBhKpyUXvZ7snfGzALuMLxKms9YA=s288-p-rw-no">
+    <!--- Page Info-->
+    
+    <title>
+        
+            The Design of Multiplier-數位邏輯技術 -
+        
+        Shih-Jiun-Lin&#39;s Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/css/build/styles.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/fonts.css">
+
+    
+<link rel="stylesheet" href="/fonts/Satoshi/satoshi.css">
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+    <!--- Font Part-->
+    
+    
+    
+        <link href="" rel="stylesheet">
+    
+    
+        <link href="" rel="stylesheet">
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    let Global = window.Global || {};
+    Global.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.xml"};
+    Global.theme_config = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推薦閱讀","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#005080","secondary":null},"global":{"fonts":{"chinese":{"enable":"enable","family":null,"url":null},"english":{"enable":"enable","family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/white_bg.webp","dark":"/images/black_bg.webp"},"title":"一個電子工程技術宅🖥️","subtitle":{"text":[],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#00000","dark":"#fffafa"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":"enable","links":{"github":"https://github.com/Shih-Jiun-Lin","instagram":"https://www.instagram.com/l__junjun__l/?hl=zh-tw","facebook":"https://www.facebook.com/ryan.lin.98892/","discord":"https://discordapp.com/users/389053119549538309","email":"Ryanlin0426@gmail.com"},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.4.4","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"主頁面":{"path":"/","icon":"fa-regular fa-house"},"照標籤分類":{"path":"/tags","icon":"fa-regular fa-tags"},"照種類分類":{"path":"/categories","icon":"fa-regular fa-stars"},"關於我":{"icon":"fa-regular fa-user","submenus":{"Me":"/about","Instagram":"https://www.instagram.com/l__junjun__l/?hl=zh-tw","Github":"https://github.com/Shih-Jiun-Lin","School":"https://www.ncue.edu.tw/"}}},"search":{"enable":"enable","preload":false}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"links":null},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
+    Global.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    Global.data_config = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="swup-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+    
+    <div class="navbar-content">
+        <div class="left">
+            
+            <a href="/" class="logo-title"  ">
+                
+                Shih-Jiun-Lin&#39;s Blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        主頁面
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/tags"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-tags"></i>
+                                        
+                                        照標籤分類
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/categories"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-stars"></i>
+                                        
+                                        照種類分類
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown" 
+                                    href="#" onClick="return false;">
+                                    
+                                        
+                                            <i class="fa-regular fa-user"></i>
+                                        
+                                        關於我&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                    
+                                        <li>
+                                        <a href="/about">ME
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://www.instagram.com/l__junjun__l/?hl=zh-tw">INSTAGRAM
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://github.com/Shih-Jiun-Lin">GITHUB
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://www.ncue.edu.tw/">SCHOOL
+                                        </a>
+                                        </li>
+                                    
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer w-full absolute top-0 left-0 bg-background-color">
+        <ul class="drawer-navbar-list flex flex-col justify-start items-center">
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group " 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                主頁面
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group " 
+                        href="/tags"  >
+                             
+                                
+                                    <i class="fa-regular fa-tags"></i>
+                                
+                                照標籤分類
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group " 
+                        href="/categories"  >
+                             
+                                
+                                    <i class="fa-regular fa-stars"></i>
+                                
+                                照種類分類
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group has-dropdown" 
+                        href="#" onClick="return false;">
+                            
+                                
+                                    <i class="fa-regular fa-user"></i>
+                                
+                                關於我&nbsp;<i class="group-hover:rotate-180 transition-transform fa-solid fa-chevron-down"></i>
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                              
+                        
+                            <li class="text-base flex justify-center items-center hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                <a class="py-0.5" href="/about">ME</a>
+                            </li>
+                        
+                            <li class="text-base flex justify-center items-center hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                <a class="py-0.5" target="_blank" rel="noopener" href="https://www.instagram.com/l__junjun__l/?hl=zh-tw">INSTAGRAM</a>
+                            </li>
+                        
+                            <li class="text-base flex justify-center items-center hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                <a class="py-0.5" target="_blank" rel="noopener" href="https://github.com/Shih-Jiun-Lin">GITHUB</a>
+                            </li>
+                        
+                            <li class="text-base flex justify-center items-center hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                <a class="py-0.5" target="_blank" rel="noopener" href="https://www.ncue.edu.tw/">SCHOOL</a>
+                            </li>
+                        
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            
+                <h1 class="article-title-regular">The Design of Multiplier-數位邏輯技術</h1>
+            
+            </div>
+            
+                    
+        
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/main.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Shih Jiun Lin</span>
+                        
+                            <span class="author-label">Lv4</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-10-18 22:00</span>
+        <span class="mobile">2023-10-18 22:00</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2023-11-12 22:31:19</span>
+            <span class="mobile">2023-11-12 22:31:19</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E5%80%8B%E4%BA%BA%E7%AD%86%E8%A8%98-%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF%E6%8A%80%E8%A1%93/">個人筆記-數位邏輯技術</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E5%80%8B%E4%BA%BA%E7%AD%86%E8%A8%98/">個人筆記</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/VHDL/">VHDL</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E5%BD%B0%E5%8C%96%E5%B8%AB%E7%AF%84%E5%A4%A7%E5%AD%B8-%E9%BB%83%E6%B7%87%E6%B3%AE/">彰化師範大學-黃淇泮</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>709 Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>4 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body">
+            <h1 id="the-design-of-multiplier-數位邏輯技術">The Design of
+Multiplier-數位邏輯技術</h1>
+<h2 id="introduction-to-multiplier">Introduction to Multiplier</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6TLLpUy7TXU?si=wR7KxtWm5-Nsomys" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+<h2 id="implementation-of-4-bit-multiplier-with-cla">Implementation of
+4-bit multiplier with CLA</h2>
+<h3 id="main-idea-of-the-implementation">Main Idea of the
+Implementation</h3>
+<ul>
+<li><p><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/Hy4AbTs-a.png"></p></li>
+<li><p><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/S1I1Gao-p.png"></p></li>
+</ul>
+<h3 id="vhdl-implementation">VHDL implementation</h3>
+<div class="highlight-container" data-rel="Vhdl"><figure class="iseeu highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span> ieee;</span><br><span class="line"><span class="keyword">use</span> ieee.std_logic_1164.<span class="keyword">all</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">entity</span> multiplier <span class="keyword">is</span></span><br><span class="line">	<span class="keyword">port</span>(</span><br><span class="line">		a: <span class="keyword">in</span> <span class="built_in">std_logic_vector</span>(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line">		b: <span class="keyword">in</span> <span class="built_in">std_logic_vector</span>(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line">		result: <span class="keyword">out</span> <span class="built_in">std_logic_vector</span>(<span class="number">7</span> <span class="keyword">downto</span> <span class="number">0</span>)</span><br><span class="line">	);</span><br><span class="line"><span class="keyword">end</span> multiplier;</span><br><span class="line"></span><br><span class="line"><span class="keyword">architecture</span> behavioral <span class="keyword">of</span> multiplier <span class="keyword">is</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">component</span> adder4multiplier <span class="keyword">is</span></span><br><span class="line">	<span class="keyword">port</span>(</span><br><span class="line">		x: <span class="keyword">in</span> <span class="built_in">std_logic_vector</span>(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line">      y: <span class="keyword">in</span> <span class="built_in">std_logic_vector</span>(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line">      sel: <span class="keyword">in</span> <span class="built_in">std_logic</span>; <span class="comment">--signal to do addition or subtraction</span></span><br><span class="line">      s: <span class="keyword">out</span> <span class="built_in">std_logic_vector</span>(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line">      co: <span class="keyword">out</span> <span class="built_in">std_logic</span> <span class="comment">--carry from last bit</span></span><br><span class="line">	);	</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">component</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">component</span> adder4multiplier <span class="keyword">is</span></span><br><span class="line">	<span class="keyword">port</span>(</span><br><span class="line">		bin :<span class="keyword">in</span> <span class="built_in">std_logic_vector</span> (<span class="number">7</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line">		bcd0 : <span class="keyword">out</span> <span class="built_in">std_logic_vector</span> (<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line">		bcd1 : <span class="keyword">out</span> <span class="built_in">std_logic_vector</span> (<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line">		bcd2 : <span class="keyword">out</span> <span class="built_in">std_logic_vector</span> (<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>)</span><br><span class="line">	);</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">component</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">signal</span> anb0, anb1, anb2, anb3: <span class="built_in">std_logic_vector</span>(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line"><span class="keyword">signal</span> y_4_adder0, y_4_adder1, y_4_adder2: <span class="built_in">std_logic_vector</span>(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line"><span class="keyword">signal</span> sum0, sum1, sum2: <span class="built_in">std_logic_vector</span>(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line"><span class="keyword">signal</span> carry0, carry1, carry2: <span class="built_in">std_logic</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">---a and with each bit in b</span></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">	a_and_b: <span class="keyword">process</span>(a, b)</span><br><span class="line">		<span class="keyword">begin</span></span><br><span class="line">			<span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0</span> <span class="keyword">to</span> <span class="number">3</span> <span class="keyword">loop</span></span><br><span class="line">				anb0(i) &lt;= b(<span class="number">0</span>) <span class="keyword">and</span> a(i);</span><br><span class="line">				anb1(i) &lt;= b(<span class="number">1</span>) <span class="keyword">and</span> a(i);</span><br><span class="line">				anb2(i) &lt;= b(<span class="number">2</span>) <span class="keyword">and</span> a(i);</span><br><span class="line">				anb3(i) &lt;= b(<span class="number">3</span>) <span class="keyword">and</span> a(i);</span><br><span class="line">		<span class="keyword">end</span> <span class="keyword">loop</span>;</span><br><span class="line">	<span class="keyword">end</span> <span class="keyword">process</span>;</span><br><span class="line">	<span class="comment">---</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">--- data for y in adder_0</span></span><br><span class="line">	data_4_adder0: <span class="keyword">process</span>(anb0)</span><br><span class="line">		<span class="keyword">begin</span></span><br><span class="line">			<span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0</span> <span class="keyword">to</span> <span class="number">2</span> <span class="keyword">loop</span></span><br><span class="line">				y_4_adder0(i) &lt;= anb0(i+<span class="number">1</span>);</span><br><span class="line">		<span class="keyword">end</span> <span class="keyword">loop</span>;</span><br><span class="line">	<span class="keyword">end</span> <span class="keyword">process</span>;</span><br><span class="line">		</span><br><span class="line">	y_4_adder0(<span class="number">3</span>) &lt;= <span class="string">'0'</span>;	</span><br><span class="line">	<span class="comment">---</span></span><br><span class="line"></span><br><span class="line">	adder_0: adder4multiplier</span><br><span class="line">			<span class="keyword">port</span> <span class="keyword">map</span>(</span><br><span class="line">				x =&gt; anb1,</span><br><span class="line">				y =&gt; y_4_adder0,</span><br><span class="line">				sel =&gt; <span class="string">'0'</span>,</span><br><span class="line">				s =&gt; sum0,</span><br><span class="line">				co =&gt; carry0</span><br><span class="line">			);</span><br><span class="line"></span><br><span class="line">	<span class="comment">--- data for y in adder_1</span></span><br><span class="line">	data_4_adder1: <span class="keyword">process</span>(sum0)</span><br><span class="line">		<span class="keyword">begin</span></span><br><span class="line">			<span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0</span> <span class="keyword">to</span> <span class="number">2</span> <span class="keyword">loop</span></span><br><span class="line">				y_4_adder1(i) &lt;= sum0(i+<span class="number">1</span>);</span><br><span class="line">		<span class="keyword">end</span> <span class="keyword">loop</span>;</span><br><span class="line">	<span class="keyword">end</span> <span class="keyword">process</span>;</span><br><span class="line"></span><br><span class="line">	y_4_adder1(<span class="number">3</span>) &lt;= carry0;	</span><br><span class="line">	<span class="comment">---		</span></span><br><span class="line"></span><br><span class="line">	adder_1: adder4multiplier</span><br><span class="line">			<span class="keyword">port</span> <span class="keyword">map</span>(</span><br><span class="line">				x =&gt; anb2,</span><br><span class="line">				y =&gt; y_4_adder1,</span><br><span class="line">				sel =&gt; <span class="string">'0'</span>,</span><br><span class="line">				s =&gt; sum1,</span><br><span class="line">				co =&gt; carry1</span><br><span class="line">			);</span><br><span class="line">			</span><br><span class="line">	<span class="comment">--- data for y in adder_2</span></span><br><span class="line">	data_4_adder2: <span class="keyword">process</span>(sum1)</span><br><span class="line">		<span class="keyword">begin</span></span><br><span class="line">			<span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0</span> <span class="keyword">to</span> <span class="number">2</span> <span class="keyword">loop</span></span><br><span class="line">				y_4_adder2(i) &lt;= sum1(i+<span class="number">1</span>);</span><br><span class="line">		<span class="keyword">end</span> <span class="keyword">loop</span>;</span><br><span class="line">	<span class="keyword">end</span> <span class="keyword">process</span>;</span><br><span class="line"></span><br><span class="line">	y_4_adder2(<span class="number">3</span>) &lt;= carry1;	</span><br><span class="line">	<span class="comment">---		</span></span><br><span class="line"></span><br><span class="line">	adder_2: adder4multiplier</span><br><span class="line">			<span class="keyword">port</span> <span class="keyword">map</span>(</span><br><span class="line">				x =&gt; anb3,</span><br><span class="line">				y =&gt; y_4_adder2,</span><br><span class="line">				sel =&gt; <span class="string">'0'</span>,</span><br><span class="line">				s =&gt; sum2,</span><br><span class="line">				co =&gt; carry2</span><br><span class="line">			);</span><br><span class="line"></span><br><span class="line">	<span class="comment">---processing result</span></span><br><span class="line">	result(<span class="number">0</span>) &lt;= anb0(<span class="number">0</span>);</span><br><span class="line">	result(<span class="number">1</span>) &lt;= sum0(<span class="number">0</span>);</span><br><span class="line">	result(<span class="number">2</span>) &lt;= sum1(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">	z3_to_z6: <span class="keyword">process</span>(sum2)</span><br><span class="line">		<span class="keyword">begin</span></span><br><span class="line">			<span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0</span> <span class="keyword">to</span> <span class="number">3</span> <span class="keyword">loop</span></span><br><span class="line">				result(i+<span class="number">3</span>) &lt;= sum2(i);</span><br><span class="line">		<span class="keyword">end</span> <span class="keyword">loop</span>;</span><br><span class="line">	<span class="keyword">end</span> <span class="keyword">process</span>;</span><br><span class="line"></span><br><span class="line">	result(<span class="number">7</span>) &lt;= carry2;</span><br><span class="line">	<span class="comment">---</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span> behavioral;</span><br></pre></td></tr></table></figure></div>
+<h2 id="implementation-of-8-bit-multiplier-based-on-4-bit-multiplier-with-data-shifting">Implementation
+of 8-bit multiplier based on 4-bit multiplier with data shifting</h2>
+<h3 id="main-idea-of-the-implementation-1">Main Idea of the
+Implementation</h3>
+<ul>
+<li><p>Basically, the idea is dividing both data into two part and do
+4-bit multiplication. After the multiplication, we shift all the result
+and do addition. (反正就直式乘法的概念)</p></li>
+<li><p>Take <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="7.089ex" height="1.595ex" role="img" focusable="false" viewBox="0 -694 3133.4 705"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g><g data-mml-node="mi" transform="translate(529,0)"><path data-c="1D44F" d="M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z"></path></g><g data-mml-node="mo" transform="translate(1180.2,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g data-mml-node="mi" transform="translate(2180.4,0)"><path data-c="1D450" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z"></path></g><g data-mml-node="mi" transform="translate(2613.4,0)"><path data-c="1D451" d="M366 683Q367 683 438 688T511 694Q523 694 523 686Q523 679 450 384T375 83T374 68Q374 26 402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487H491Q506 153 506 145Q506 140 503 129Q490 79 473 48T445 8T417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157Q33 205 53 255T101 341Q148 398 195 420T280 442Q336 442 364 400Q369 394 369 396Q370 400 396 505T424 616Q424 629 417 632T378 637H357Q351 643 351 645T353 664Q358 683 366 683ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path></g></g></g></svg></mjx-container></span> for
+example =&gt; (a, b, c, d are all 4-bit data)</p>
+<ul>
+<li><span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="62.88ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 27792.8 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g><g data-mml-node="mi" transform="translate(529,0)"><path data-c="1D44F" d="M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z"></path></g><g data-mml-node="mo" transform="translate(1180.2,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g data-mml-node="mi" transform="translate(2180.4,0)"><path data-c="1D450" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z"></path></g><g data-mml-node="mi" transform="translate(2613.4,0)"><path data-c="1D451" d="M366 683Q367 683 438 688T511 694Q523 694 523 686Q523 679 450 384T375 83T374 68Q374 26 402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487H491Q506 153 506 145Q506 140 503 129Q490 79 473 48T445 8T417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157Q33 205 53 255T101 341Q148 398 195 420T280 442Q336 442 364 400Q369 394 369 396Q370 400 396 505T424 616Q424 629 417 632T378 637H357Q351 643 351 645T353 664Q358 683 366 683ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path></g><g data-mml-node="mo" transform="translate(3411.2,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mo" transform="translate(4467,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(4856,0)"><path data-c="1D44F" d="M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z"></path></g><g data-mml-node="mo" transform="translate(5507.2,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g data-mml-node="mi" transform="translate(6507.4,0)"><path data-c="1D451" d="M366 683Q367 683 438 688T511 694Q523 694 523 686Q523 679 450 384T375 83T374 68Q374 26 402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487H491Q506 153 506 145Q506 140 503 129Q490 79 473 48T445 8T417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157Q33 205 53 255T101 341Q148 398 195 420T280 442Q336 442 364 400Q369 394 369 396Q370 400 396 505T424 616Q424 629 417 632T378 637H357Q351 643 351 645T353 664Q358 683 366 683ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path></g><g data-mml-node="mo" transform="translate(7027.4,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g><g data-mml-node="mo" transform="translate(7638.7,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mo" transform="translate(8638.9,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(9027.9,0)"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g><g data-mml-node="mo" transform="translate(9779.1,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g data-mml-node="mi" transform="translate(10779.3,0)"><path data-c="1D451" d="M366 683Q367 683 438 688T511 694Q523 694 523 686Q523 679 450 384T375 83T374 68Q374 26 402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487H491Q506 153 506 145Q506 140 503 129Q490 79 473 48T445 8T417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157Q33 205 53 255T101 341Q148 398 195 420T280 442Q336 442 364 400Q369 394 369 396Q370 400 396 505T424 616Q424 629 417 632T378 637H357Q351 643 351 645T353 664Q358 683 366 683ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path></g><g data-mml-node="mo" transform="translate(11299.3,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g><g data-mml-node="mo" transform="translate(11966.1,0)"><g data-mml-node="text"><path data-c="3C" d="M694 -11T694 -19T688 -33T678 -40Q671 -40 524 29T234 166L90 235Q83 240 83 250Q83 261 91 266Q664 540 678 540Q681 540 687 534T694 519T687 505Q686 504 417 376L151 250L417 124Q686 -4 687 -5Q694 -11 694 -19Z"></path></g><g data-mml-node="text" transform="translate(778,0)"><path data-c="3C" d="M694 -11T694 -19T688 -33T678 -40Q671 -40 524 29T234 166L90 235Q83 240 83 250Q83 261 91 266Q664 540 678 540Q681 540 687 534T694 519T687 505Q686 504 417 376L151 250L417 124Q686 -4 687 -5Q694 -11 694 -19Z"></path></g></g><g data-mml-node="mn" transform="translate(13799.9,0)"><path data-c="34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z"></path></g><g data-mml-node="mo" transform="translate(14522.1,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mo" transform="translate(15522.3,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(15911.3,0)"><path data-c="1D450" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z"></path></g><g data-mml-node="mo" transform="translate(16566.6,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g data-mml-node="mi" transform="translate(17566.8,0)"><path data-c="1D44F" d="M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z"></path></g><g data-mml-node="mo" transform="translate(17995.8,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g><g data-mml-node="mo" transform="translate(18662.6,0)"><g data-mml-node="text"><path data-c="3C" d="M694 -11T694 -19T688 -33T678 -40Q671 -40 524 29T234 166L90 235Q83 240 83 250Q83 261 91 266Q664 540 678 540Q681 540 687 534T694 519T687 505Q686 504 417 376L151 250L417 124Q686 -4 687 -5Q694 -11 694 -19Z"></path></g><g data-mml-node="text" transform="translate(778,0)"><path data-c="3C" d="M694 -11T694 -19T688 -33T678 -40Q671 -40 524 29T234 166L90 235Q83 240 83 250Q83 261 91 266Q664 540 678 540Q681 540 687 534T694 519T687 505Q686 504 417 376L151 250L417 124Q686 -4 687 -5Q694 -11 694 -19Z"></path></g></g><g data-mml-node="mn" transform="translate(20496.3,0)"><path data-c="34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z"></path></g><g data-mml-node="mo" transform="translate(21218.6,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mo" transform="translate(22218.8,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(22607.8,0)"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g><g data-mml-node="mo" transform="translate(23359,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g data-mml-node="mi" transform="translate(24359.2,0)"><path data-c="1D450" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z"></path></g><g data-mml-node="mo" transform="translate(24792.2,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g><g data-mml-node="mo" transform="translate(25459,0)"><g data-mml-node="text"><path data-c="3C" d="M694 -11T694 -19T688 -33T678 -40Q671 -40 524 29T234 166L90 235Q83 240 83 250Q83 261 91 266Q664 540 678 540Q681 540 687 534T694 519T687 505Q686 504 417 376L151 250L417 124Q686 -4 687 -5Q694 -11 694 -19Z"></path></g><g data-mml-node="text" transform="translate(778,0)"><path data-c="3C" d="M694 -11T694 -19T688 -33T678 -40Q671 -40 524 29T234 166L90 235Q83 240 83 250Q83 261 91 266Q664 540 678 540Q681 540 687 534T694 519T687 505Q686 504 417 376L151 250L417 124Q686 -4 687 -5Q694 -11 694 -19Z"></path></g></g><g data-mml-node="mn" transform="translate(27292.8,0)"><path data-c="38" d="M70 417T70 494T124 618T248 666Q319 666 374 624T429 515Q429 485 418 459T392 417T361 389T335 371T324 363L338 354Q352 344 366 334T382 323Q457 264 457 174Q457 95 399 37T249 -22Q159 -22 101 29T43 155Q43 263 172 335L154 348Q133 361 127 368Q70 417 70 494ZM286 386L292 390Q298 394 301 396T311 403T323 413T334 425T345 438T355 454T364 471T369 491T371 513Q371 556 342 586T275 624Q268 625 242 625Q201 625 165 599T128 534Q128 511 141 492T167 463T217 431Q224 426 228 424L286 386ZM250 21Q308 21 350 55T392 137Q392 154 387 169T375 194T353 216T330 234T301 253T274 270Q260 279 244 289T218 306L210 311Q204 311 181 294T133 239T107 157Q107 98 150 60T250 21Z"></path></g></g></g></svg></mjx-container></span></li>
+</ul></li>
+</ul>
+<h3 id="vhdl-implementation-1">VHDL implementation</h3>
+<div class="highlight-container" data-rel="Vhdl"><figure class="iseeu highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span> ieee;                       </span><br><span class="line"><span class="keyword">use</span> ieee.std_logic_1164.<span class="keyword">ALL</span>; </span><br><span class="line"><span class="keyword">use</span> ieee.numeric_std.<span class="keyword">all</span>;  </span><br><span class="line"><span class="keyword">use</span> ieee.std_logic_unsigned.<span class="keyword">all</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">entity</span> multiplier_8bits <span class="keyword">is</span></span><br><span class="line">	<span class="keyword">port</span>(</span><br><span class="line">		x: <span class="keyword">in</span> <span class="built_in">std_logic_vector</span>(<span class="number">7</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line">		y: <span class="keyword">in</span> <span class="built_in">std_logic_vector</span>(<span class="number">7</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line">		output: <span class="keyword">out</span> <span class="built_in">std_logic_vector</span>(<span class="number">15</span> <span class="keyword">downto</span> <span class="number">0</span>)</span><br><span class="line">	);</span><br><span class="line"><span class="keyword">end</span> multiplier_8bits;</span><br><span class="line"></span><br><span class="line"><span class="keyword">architecture</span> behavioral <span class="keyword">of</span> multiplier_8bits <span class="keyword">is</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">component</span> multiplier <span class="keyword">is</span></span><br><span class="line">	<span class="keyword">port</span>(</span><br><span class="line">		a: <span class="keyword">in</span> <span class="built_in">std_logic_vector</span>(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line">		b: <span class="keyword">in</span> <span class="built_in">std_logic_vector</span>(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line">		result: <span class="keyword">out</span> <span class="built_in">std_logic_vector</span>(<span class="number">7</span> <span class="keyword">downto</span> <span class="number">0</span>)</span><br><span class="line">	);</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">component</span>;</span><br><span class="line">	</span><br><span class="line"><span class="keyword">signal</span> temp0, temp1, temp2, temp3: <span class="built_in">std_logic_vector</span>(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line"><span class="keyword">signal</span> result0, result1, result2, result3: <span class="built_in">std_logic_vector</span>(<span class="number">7</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line"><span class="keyword">signal</span> add0, add1, add2, add3: <span class="built_in">std_logic_vector</span>(<span class="number">15</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line"><span class="keyword">signal</span> result_readable: <span class="built_in">std_logic_vector</span>(<span class="number">15</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line">	</span><br><span class="line"><span class="keyword">begin</span> </span><br><span class="line"></span><br><span class="line">	<span class="comment">---processing temp0123</span></span><br><span class="line">	temp0 &lt;= x(<span class="number">7</span> <span class="keyword">downto</span> <span class="number">4</span>);</span><br><span class="line">	temp1 &lt;= x(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line">	temp2 &lt;= y(<span class="number">7</span> <span class="keyword">downto</span> <span class="number">4</span>);</span><br><span class="line">	temp3 &lt;= y(<span class="number">3</span> <span class="keyword">downto</span> <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">	<span class="comment">---processing 4 bits multipplication </span></span><br><span class="line">	multiplier0: multiplier</span><br><span class="line">		<span class="keyword">port</span> <span class="keyword">map</span>(</span><br><span class="line">			a =&gt; temp1,</span><br><span class="line">			b =&gt; temp3,</span><br><span class="line">			result =&gt; result0</span><br><span class="line">		);</span><br><span class="line"></span><br><span class="line">	multiplier1: multiplier</span><br><span class="line">		<span class="keyword">port</span> <span class="keyword">map</span>(</span><br><span class="line">			a =&gt; temp0,</span><br><span class="line">			b =&gt; temp3,</span><br><span class="line">			result =&gt; result1</span><br><span class="line">		);</span><br><span class="line"></span><br><span class="line">	multiplier2: multiplier</span><br><span class="line">		<span class="keyword">port</span> <span class="keyword">map</span>(</span><br><span class="line">			a =&gt; temp2,</span><br><span class="line">			b =&gt; temp1,</span><br><span class="line">			result =&gt; result2</span><br><span class="line">		);</span><br><span class="line"></span><br><span class="line">	multiplier3: multiplier</span><br><span class="line">		<span class="keyword">port</span> <span class="keyword">map</span>(</span><br><span class="line">			a =&gt; temp0,</span><br><span class="line">			b =&gt; temp2,</span><br><span class="line">			result =&gt; result3</span><br><span class="line">		);</span><br><span class="line"></span><br><span class="line">	<span class="comment">---doing shift on the result of 4 bits multiplication</span></span><br><span class="line">	add0(<span class="number">7</span> <span class="keyword">downto</span> <span class="number">0</span>) &lt;= result0;</span><br><span class="line">	add1(<span class="number">11</span> <span class="keyword">downto</span> <span class="number">4</span>) &lt;= result1;</span><br><span class="line">	add2(<span class="number">11</span> <span class="keyword">downto</span> <span class="number">4</span>) &lt;= result2;</span><br><span class="line">	add3(<span class="number">15</span> <span class="keyword">downto</span> <span class="number">8</span>) &lt;= result3;</span><br><span class="line"></span><br><span class="line">	<span class="comment">---doing addition</span></span><br><span class="line">	result_readable &lt;= <span class="built_in">std_logic_vector</span>(<span class="built_in">unsigned</span>(add0) + <span class="built_in">unsigned</span>(add1) + <span class="built_in">unsigned</span>(add2) + <span class="built_in">unsigned</span>(add3));  </span><br><span class="line">	output &lt;= result_readable;</span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span> behavioral;</span><br></pre></td></tr></table></figure></div>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> The Design of Multiplier-數位邏輯技術</li>
+        <li><strong>Author:</strong> Shih Jiun Lin</li>
+        <li><strong>Created at
+                :</strong> 2023-10-18 22:00:00</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2023-11-12 22:31:19
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://shih-jiun-lin.github.io/2023/10/18/The Design of Multiplier-數位邏輯技術/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+            This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
+            
+
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E5%80%8B%E4%BA%BA%E7%AD%86%E8%A8%98/">#個人筆記</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/VHDL/">#VHDL</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E5%BD%B0%E5%8C%96%E5%B8%AB%E7%AF%84%E5%A4%A7%E5%AD%B8-%E9%BB%83%E6%B7%87%E6%B3%AE/">#彰化師範大學-黃淇泮</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2023/10/18/Frequency%20Divide-%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF%E6%8A%80%E8%A1%93/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">The Design of Frequency Divider-數位邏輯技術</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                        rel="next"
+                        href="/2023/10/04/The%20Design%20of%20Hex%20to%207-seg%20Decoder-%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF%E6%8A%80%E8%A1%93/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">The Design of Hex to 7-seg Decoder-數位邏輯技術</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">The Design of Multiplier-數位邏輯技術</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#the-design-of-multiplier-%E6%95%B8%E4%BD%8D%E9%82%8F%E8%BC%AF%E6%8A%80%E8%A1%93"><span class="nav-text">The Design of
+Multiplier-數位邏輯技術</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#introduction-to-multiplier"><span class="nav-text">Introduction to Multiplier</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#implementation-of-4-bit-multiplier-with-cla"><span class="nav-text">Implementation of
+4-bit multiplier with CLA</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#main-idea-of-the-implementation"><span class="nav-text">Main Idea of the
+Implementation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vhdl-implementation"><span class="nav-text">VHDL implementation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#implementation-of-8-bit-multiplier-based-on-4-bit-multiplier-with-data-shifting"><span class="nav-text">Implementation
+of 8-bit multiplier based on 4-bit multiplier with data shifting</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#main-idea-of-the-implementation-1"><span class="nav-text">Main Idea of the
+Implementation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vhdl-implementation-1"><span class="nav-text">VHDL implementation</span></a></li></ol></li></ol></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2023&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">Shih Jiun Lin</a>
+        </div>
+        
+            <script data-swup-reload-script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.4.4</a></span>
+        </div>
+        
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-expand-width flex justify-center items-center">
+            <i class="fa-regular fa-expand"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+        ],
+        containers: ["#swup"],
+    });
+
+    swup.hooks.on("page:view", () => {
+        Global.refresh();
+    });
+
+    // if (document.readyState === "complete") {
+    //
+    // } else {
+    //     document.addEventListener("DOMContentLoaded", () => init());
+    // }
+</script>
+
+
+
+
+
+
+<script src="/js/utils.js" type="module"></script>
+
+<script src="/js/main.js" type="module"></script>
+
+<script src="/js/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/layouts/categoryList.js" type="module"></script>
+
+
+
+    
+<script src="/js/tools/localSearch.js"></script>
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js"></script>
+
+
+
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        
+<script src="/js/libs/anime.min.js"></script>
+
+        
+<script src="/js/tools/tocToggle.js" type="module"></script>
+
+<script src="/js/layouts/toc.js" type="module"></script>
+
+<script src="/js/plugins/tabs.js" type="module"></script>
+
+    
+</div>
+
+
+</body>
+</html>

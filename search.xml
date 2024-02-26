@@ -4276,12 +4276,6 @@ Password!"，並於3s後可重新輸入。</li>
       </tags>
   </entry>
   <entry>
-    <title>test</title>
-    <url>/2024/02/26/test/</url>
-    <content><![CDATA[<p><img lazyload="" src="/images/loading.svg" data-src="image.png"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>Matlab Notes_Scripts, Functions and Plots-學習記筆</title>
     <url>/2024/02/26/Matlab%20Notes-Scripts,%20Functions%20and%20Plots/</url>
     <content><![CDATA[<h1 id="matlab-notes-scripts-functions-and-plots">Matlab Notes-Scripts,
@@ -4311,7 +4305,7 @@ Wave of <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg 
 'b'); %plot the graph with color "black" xlabel('t in sec');
 ylabel('sin(n<em>pi</em>t)'); %setting labels for x and y axises
 title('plot of sin(n<em>pi</em>t)'); %setting title for the plot
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">* Script</span><br><span class="line">    * ```matlab=</span><br><span class="line">        ft=0:0.01:1; n=2;</span><br><span class="line">        plot_sin(n, t);</span><br></pre></td></tr></table></figure></div></li>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">* Script</span><br><span class="line">    * ```matlab=</span><br><span class="line">      ft=0:0.01:1; n=2;</span><br><span class="line">      plot_sin(n, t);</span><br></pre></td></tr></table></figure></div></li>
 </ul></li>
 <li>Result
 <ul>
@@ -4328,7 +4322,7 @@ stem(n, x, 'b', 'filled'); %stem plot set(x_plot, 'markersize', 4);
 %chagne the size of the circle xlabel('n');
 ylabel('sin(k<em>pi</em>n)'); %setting labels for x and y axises
 title('plot of sin(k<em>pi</em>n)'); %setting title for the plot
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">* Script</span><br><span class="line">    * ```matlab=</span><br><span class="line">        n=0:1:20; k=0.1;</span><br><span class="line">        plot_dt_sin(k, n);</span><br></pre></td></tr></table></figure></div></li>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">* Script</span><br><span class="line">    * ```matlab=</span><br><span class="line">      n=0:1:20; k=0.1;</span><br><span class="line">      plot_dt_sin(k, n);</span><br></pre></td></tr></table></figure></div></li>
 </ul></li>
 <li>Result
 <ul>

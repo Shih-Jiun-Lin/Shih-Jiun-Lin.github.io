@@ -4440,10 +4440,7 @@ implementation. Allowing you to model complex or abstract features of
 the circuit, without worrying about the hardware implementation. (MORE
 SUITABLE FOR SIMULATION)</li>
 </ul>
-<figure>
-<img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/HkC0FS8yyl.png" alt="{83AD4FE5-74D2-4DE3-9F78-775078F2ECF7}">
-<figcaption aria-hidden="true">{83AD4FE5-74D2-4DE3-9F78-775078F2ECF7}</figcaption>
-</figure>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/HkC0FS8yyl.png" alt="image"></p>
 <h2 id="data-types">Data Types</h2>
 <figure>
 <img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/rJtl1II1kl.png" alt="{36F7B552-E1D6-41F2-846C-08637D0E8C41}">

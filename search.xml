@@ -4423,4 +4423,91 @@ mean 0 and variance 1.</p></li>
         <tag>Matlab</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Verilog HDL Notes-Basic Introduction</title>
+    <url>/2024/10/12/Verilog%20HDL%20Notes-Basic%20Introduction/</url>
+    <content><![CDATA[<h1 id="verilog-hdl-notes-basic-introduction">Verilog HDL Notes-Basic
+Introduction</h1>
+<h2 id="basic-models-of-verilog">4 Basic Models of Verilog</h2>
+<h3 id="rtl-v.s.-behavioral">RTL V.S. Behavioral</h3>
+<ul>
+<li>RTL: it specifies how data flows between registers and logic gates.
+Allowing you to optimize the circuit by controlling the number and type
+of registers and logic gates. (MORE SUITABLE FOR SYNTHESIS)</li>
+<li>Behavioral: it describes the behavior of the circuit at a higher
+level of abstraction, without specifying the details of the hardware
+implementation. Allowing you to model complex or abstract features of
+the circuit, without worrying about the hardware implementation. (MORE
+SUITABLE FOR SIMULATION)</li>
+</ul>
+<figure>
+<img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/HkC0FS8yyl.png" alt="{83AD4FE5-74D2-4DE3-9F78-775078F2ECF7}">
+<figcaption aria-hidden="true">{83AD4FE5-74D2-4DE3-9F78-775078F2ECF7}</figcaption>
+</figure>
+<h2 id="data-types">Data Types</h2>
+<figure>
+<img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/rJtl1II1kl.png" alt="{36F7B552-E1D6-41F2-846C-08637D0E8C41}">
+<figcaption aria-hidden="true">{36F7B552-E1D6-41F2-846C-08637D0E8C41}</figcaption>
+</figure>
+<h2 id="basic-operations">Basic Operations</h2>
+<figure>
+<img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/HJvoCHU1ke.png" alt="{E12F0678-988D-4CA3-B9BD-727AA2C5307B}">
+<figcaption aria-hidden="true">{E12F0678-988D-4CA3-B9BD-727AA2C5307B}</figcaption>
+</figure>
+<h2 id="basic-blocks">Basic Blocks</h2>
+<h3 id="for-loop-v.s.-generate-for-loop">for loop v.s. generate for
+loop</h3>
+<ul>
+<li>For loop: a regular for loop in Verilog is a procedural statement
+used to iterate over a block of code during simulation. It is typically
+used inside procedural blocks such as always, initial, or within tasks
+and functions.</li>
+<li>Generate for loop: The generate block combined with a for loop
+allows you to instantiate multiple hardware components (e.g., modules,
+registers, gates) based on a loop index.</li>
+</ul>
+<h3 id="task-and-function">task and function</h3>
+<ul>
+<li>Referencel: <a class="link" href="https://blog.csdn.net/Michael177/article/details/120813179">verilog中的任务task和函数function用法及区别 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ul>
+<figure>
+<img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/ryT7zLLk1e.png" alt="{71D7B394-46F5-434A-80F6-0970131C576F}">
+<figcaption aria-hidden="true">{71D7B394-46F5-434A-80F6-0970131C576F}</figcaption>
+</figure>
+<h2 id="ways-of-assignments">Ways of Assignments</h2>
+<h3 id="blocking-assignment-v.s.-non-blocking-assignment">Blocking
+assignment v.s. Non-blocking assignment</h3>
+<ul>
+<li>Blocking Assignment: A blocking assignment in Verilog uses the " = "
+operator. It executes sequentially, just like traditional programming
+languages such as C or Python.</li>
+<li>A non-blocking assignment in Verilog uses the " &lt;= " operator. It
+executes parallelly, and the actual assignment is deferred until the end
+of the simulation time step.</li>
+</ul>
+<figure>
+<img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/rkHtK8I1Je.png" alt="{A7B14010-4373-4579-B263-B7C412D919B5}">
+<figcaption aria-hidden="true">{A7B14010-4373-4579-B263-B7C412D919B5}</figcaption>
+</figure>
+<h2 id="port-net-mapping">Port-Net Mapping</h2>
+<h3 id="port-associated-mapping-v.s.-ordered-mapping">Port-Associated
+Mapping v.s. Ordered Mapping</h3>
+<ul>
+<li>Port-Associated: M1 U1(.A(Node2), .CLK(Wire1), .B(Net3))</li>
+<li>Ordered Mapping: M1 U1(Wire1, Node2, Net3)</li>
+</ul>
+<figure>
+<img lazyload="" src="/images/loading.svg" data-src="https://hackmd.io/_uploads/S1mVewIkJg.png" alt="{6050B0C1-3517-4346-8680-AC0B9C3047C1}">
+<figcaption aria-hidden="true">{6050B0C1-3517-4346-8680-AC0B9C3047C1}</figcaption>
+</figure>
+]]></content>
+      <categories>
+        <category>個人筆記-硬體描述語</category>
+      </categories>
+      <tags>
+        <tag>個人筆記</tag>
+        <tag>Verilog HDL</tag>
+        <tag>彰化師範大學-黃宗柱</tag>
+      </tags>
+  </entry>
 </search>
